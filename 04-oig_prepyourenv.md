@@ -34,10 +34,10 @@ Prior to working through the sections looking at the three capabilities, you wil
 ![Connector](https://github.com/MarcoBlaesing/LabGuide/blob/main/images/06-07_oig.jpg?raw=true)
 
 7. Create a rule to push all the groups with a name starting by **“DL_”**
-8. 
+
 ![pushGroupsRule](https://github.com/MarcoBlaesing/LabGuide/blob/main/images/06-08_oig.jpg?raw=true)
 
-9. Check the creation of Distribution List in Google by navigating to Google Admin console, go to **Groups** under **Directory**
+8. Check the creation of Distribution List in Google by navigating to Google Admin console, go to **Groups** under **Directory**
     
 ![Groups](https://github.com/MarcoBlaesing/LabGuide/blob/main/images/06-09_oig.jpg?raw=true)
 
