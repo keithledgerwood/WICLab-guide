@@ -3,7 +3,7 @@ Okta Identity Governance (OIG) is a unified IAM and governance solution that inc
 -   Okta Workflows
 -   Okta Access Governance
 
-![Okta OIG](/images/06-01_oig.png)
+![Okta OIG](https://github.com/MarcoBlaesing/LabGuide/blob/main/images/06-01_oig.png?raw=true)
 
 **Okta Lifecycle Management** provides pre-built integrations between HR and IT systems, to automatically keep employee information and status in sync with the IT applications they use. As employees join, move, or leave the company, IT can automatically assign, upgrade, or revoke applications and access, to increase productivity, protect the organization from data loss, and eliminate orphaned accounts that increase the attack surface area.
 
