@@ -7,6 +7,8 @@ Prior to working through the sections looking at the three capabilities, you wil
     - Go to the **Flows** tab from the top hand side
 
     - Create a folder named **OKTA-WIC-WORKSHOP-IGA-LAB**
+  
+   
       
 ![Create Folder](https://github.com/MarcoBlaesing/LabGuide/blob/main/images/06-02_oig.png?raw=true)
 
