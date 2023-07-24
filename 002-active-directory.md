@@ -32,32 +32,19 @@ https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3
 
 1. Navigate to **Directory > Directory Integrations** in the Okta admin console
 
-    
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/002-image1.png "image_tooltip")
+![alt_text](images/002/image1.png "image_tooltip")
 
 
 2. Click **Add Active Directory**.
 
-    
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/002/image2.png "image_tooltip")
 
 
-3. S
-
-    
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+3. Click **Set Up Active Directory**
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/002/image3.png "image_tooltip")
 
 
 4. Click the **Download Agent **button. \
@@ -69,10 +56,7 @@ The AD Agent installer is downloaded to your local machine.
 * Copy the link shown after local download is complete and use it with a browser on the Windows Server instance to download the agent. Authentication is not required. \
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/002/image4.png "image_tooltip")
 
 * Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
 
@@ -80,7 +64,7 @@ The AD Agent installer is downloaded to your local machine.
 
 
 
-### Install agent on Windows Server {#install-agent-on-windows-server}
+### Install agent on Windows Server
 
 You will now install the AD Agent onto your Windows Server. In this demo environment, this Windows Server is a domain controller.  In a real environment, the AD Agent can be installed on any Windows Server that is a member of the Active Directory domain.
 
@@ -88,22 +72,14 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 
 1. Launch the AD Agent installer by double-clicking the executable. It should have a filename of the form: **OktaADAgentSetup-x.xx.x-xxx-xxxxxxx.exe**.
 
-    
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/002/image5.png "image_tooltip")
 
 
 2. Click **Next**.
 
-    
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/002/image6.png "image_tooltip")
 
 
 3. Click **Install**.
@@ -117,33 +93,20 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
     When the installation is complete, you will be prompted for configuration information:
 
 
-    
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/002/image7.png "image_tooltip")
 
 
 4. Click **Next **to accept the offered _AD Domain_. \
 You only have one domain in this demonstration environment.
 
-    
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/002/image8.png "image_tooltip")
 
 
 5. Click **Next **to _Create or use the OktaService account (recommended)_.
 
     
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/002/image9.png "image_tooltip")
 
 
 6. Enter and confirm a password for the _OktaService_ account. \
@@ -151,12 +114,8 @@ This password can be whatever you like.  Since this is a demo environment, maybe
 7. Click **Next**.
 8. Click **Next **on the _Proxy Configuration _page.
 
-    
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/002/image10.png "image_tooltip")
 
 
 9. Enter the URL of your Okta org. \
@@ -166,12 +125,7 @@ The installer is going to make a connection to this URL so that you can authenti
     At this point the installer launches an embedded browser.  In v3.14 and above, this is always an Edge Web View process - regardless of your default browser settings.
 
 
-    
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/002/image11.png "image_tooltip")
 
 
 11. Authenticate to your Okta org as an administrator. \
@@ -186,12 +140,7 @@ You may need to complete MFA as part of the login process.
     After login completes, you will see this consent prompt:
 
 
-    
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/002/image12.png "image_tooltip")
 
 
 12. Click **Allow Access** to grant the AD Agent permissions in your Okta org.
@@ -203,7 +152,7 @@ You may need to complete MFA as part of the login process.
 The AD Agent is now running on your Windows Server and will make an outgoing connection to your Okta Org.  You will now see it within your Okta Admin console.
 
 
-### Complete integration configuration {#complete-integration-configuration}
+### Complete integration configuration
 
 The AD Agent running on your Windows Server is now registered with your Okta org.  You can now complete integration configuration back in your Okta admin console.
 
@@ -214,22 +163,13 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     You should see that an Active Directory integration has been registered but is showing as _Not yet configured_:
 
 
-    
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/002/image13.png "image_tooltip")
 
 
 2.  Click on the **Active Directory **link of the new integration.
 
-    
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/002/image14.png "image_tooltip")
 
 
 
@@ -238,23 +178,15 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 3. For users, uncheck the checkbox at the **dc=_yourdemodomain_,dc=_com_** level.
 4. Check the checkboxes for the OUs containing your demo users.
 
-    
 
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/002/image15.png "image_tooltip")
 
 
 5. For groups, uncheck the checkbox at the **dc=_yourdemodomain_,dc=_com_** level.
 6. Check the checkboxes for the OUs containing your demo groups.
 
-    
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/002/image16.png "image_tooltip")
 
 
 
@@ -265,12 +197,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The agent is configured with the configuration you have provided.  When complete, a confirmation is shown:
 
 
-    
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/002/image17.png "image_tooltip")
 
 
 8. Click **Next**.
@@ -278,12 +205,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The _Build User Profile_ page is loaded.  This loads the attribute schema from your Active Directory so you can specify which attributes should be synced into Okta.
 
 
-    
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/002/image18.png "image_tooltip")
 
 
 
@@ -291,12 +213,8 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 9. Click **Next**.
 
-    
 
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/002/image19.png "image_tooltip")
 
 
 10. Click **Done**.
@@ -304,12 +222,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The AD integration settings are shown:
 
 
-    
-
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/002/image20.png "image_tooltip")
 
 
 
@@ -320,10 +233,10 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 
 
-### Validate integration {#validate-integration}
+### Validate integration
 
 
-#### Check agent status {#check-agent-status}
+#### Check agent status
 
 Your Active Directory is now integrated with your Okta org.  The Active Directory agent is running and is maintaining a connection to Okta.  You can see the status of the agent in the Admin console:
 
@@ -331,12 +244,8 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 
 1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
 
-    
 
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/002/image21.png "image_tooltip")
 
 
 2. Select the **Agents **tab.
@@ -345,7 +254,7 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 It’s worth noting that each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
 
 
-#### Test Delegated Authentication {#test-delegated-authentication}
+#### Test Delegated Authentication
 
 At this point, you can’t login to Okta as a user from Active Directory because no users have been syncrhonized and Just-In-Time (JIT) provisioning is not enabled.   However, you can test the credential check using the test facility in the admin console.
 
@@ -353,12 +262,8 @@ At this point, you can’t login to Okta as a user from Active Directory because
 
 1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
 
-    
 
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image22.png "image_tooltip")
+![alt_text](images/002/image22.png "image_tooltip")
 
 
 2. Select the **Provisioning **tab.
@@ -369,12 +274,8 @@ At this point, you can’t login to Okta as a user from Active Directory because
 4. Click **Test Delegated Authentication**. \
 A pop-up window is shown:
 
-    
 
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image23.png "image_tooltip")
+![alt_text](images/002/image23.png "image_tooltip")
 
 
 5. Enter the _AD Username_ and _AD Password _for a user in your Active Directory. \
@@ -384,12 +285,7 @@ The username must be the User Principal Name (UPN), e.g. username@domain.com, be
     At this point Okta asks the AD Agent to check the credentials against AD.  The response from AD (success or failure) is returned to Okta.
 
 
-    
-
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/002/image24.png "image_tooltip")
 
 
 7. Click **Close**.
@@ -397,12 +293,12 @@ The username must be the User Principal Name (UPN), e.g. username@domain.com, be
 You have successfully configured and validated Active Directory integration.  Next you will provision AD users to Okta so that they can log in.
 
 
-## Import from Active Directory {#import-from-active-directory}
+## Import from Active Directory 
 
 In this section you will configure provisioning from AD to Okta.  This will allow AD to act as a source for user and group information.  Once provisioning is enabled, user and group information can be pulled from AD by performing an import.  Imports can be scheduled or run on demand.
 
 
-### Configure provisioning to Okta {#configure-provisioning-to-okta}
+### Configure provisioning to Okta
 
 Before running an import, you should configure provisioning so that users are created and matched correctly in Okta.  This step isn’t strictly necessary (since you don’t need to do matching here) but it’s good to make a conscious decision on how matching should behave.
 
@@ -410,24 +306,16 @@ Before running an import, you should configure provisioning so that users are cr
 
 1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
 
-    
 
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/002/image25.png "image_tooltip")
 
 
 2. Select the **Provisioning **tab.
 3. Select **To Okta** under _Settings_.
 4. Click **Edit** in the _User Creation & Matching _section.
 
-    
 
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image26.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image26.png "image_tooltip")
+![alt_text](images/002/image26.png "image_tooltip")
 
 
 
@@ -437,7 +325,7 @@ Before running an import, you should configure provisioning so that users are cr
 6. Click **Save**.
 
 
-### Perform an import {#perform-an-import}
+### Perform an import
 
 You will now perform an import.  When an import is started, Okta instructs the AD Agent to pull user and group information from AD and return it to Okta.
 
@@ -449,12 +337,8 @@ The group information is used to create AD-sourced group definitions in Okta and
 
 1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
 
-    
 
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image27.png "image_tooltip")
+![alt_text](images/002/image27.png "image_tooltip")
 
 
 2. Select the **Import** tab.
@@ -463,12 +347,7 @@ The group information is used to create AD-sourced group definitions in Okta and
     You are given the choice of performing an incremental or full import.  An incremental import will only process changes made in AD since the last import.  This is the first import so all users and groups will be processed either way.
 
 
-    
-
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/002/image28.png "image_tooltip")
 
 
 4. Click **Import**.
@@ -476,12 +355,7 @@ The group information is used to create AD-sourced group definitions in Okta and
     The import is performed.  A progress bar is shown on the screen.  When the import is complete, a summary is shown:
 
 
-    
-
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image29.png "image_tooltip")
+![alt_text](images/002/image29.png "image_tooltip")
 
 
 
@@ -498,32 +372,19 @@ The group information is used to create AD-sourced group definitions in Okta and
     If an imported user is matched (or partially matched) to a user in Okta, the suggested action will be to assign the AD user to the Okta user. Otherwise, as is the case here, the suggested action is to create a new Okta user.
 
 
-    
-
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image30.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image30.png "image_tooltip")
+![alt_text](images/002/image30.png "image_tooltip")
 
 
 6. Check the checkbox that corresponds to one of your AD users (e.g. **Emily Boone**).
 
-    
 
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image31.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image31.png "image_tooltip")
+![alt_text](images/002/image31.png "image_tooltip")
 
 
 7. Click **Confirm Assignments**.
 
-    
 
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image32.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image32.png "image_tooltip")
+![alt_text](images/002/image32.png "image_tooltip")
 
 
 8. Check the checkbox to **Auto-activate users after confirmation**. \
@@ -534,10 +395,10 @@ This will activate the new user account so that it can be used.
 
 
 
-## Validate Integration {#validate-integration}
+## Validate Integration
 
 
-### Check imported groups {#check-imported-groups}
+### Check imported groups
 
 You will now check that the imported groups have been created as groups in Okta.
 
@@ -545,12 +406,8 @@ You will now check that the imported groups have been created as groups in Okta.
 
 1. In the Okta admin console, navigate to **Directory > Groups**.
 
-    
 
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image33.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image33.png "image_tooltip")
+![alt_text](images/002/image33.png "image_tooltip")
 
 
 
@@ -559,11 +416,7 @@ You will now check that the imported groups have been created as groups in Okta.
 2. Click the link for one of the AD-sourced groups (e.g. **US West**).
 
     
-
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image34.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image34.png "image_tooltip")
+![alt_text](images/002/image34.png "image_tooltip")
 
 
 
@@ -574,7 +427,7 @@ You will now check that the imported groups have been created as groups in Okta.
 
 
 
-### Check imported user {#check-imported-user}
+### Check imported user
 
 You will now view the user that you imported from Active Directory in Okta.
 
@@ -582,22 +435,14 @@ You will now view the user that you imported from Active Directory in Okta.
 
 1. In the Okta admin console, navigate to **Directory > People**.
 
-    
 
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image35.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image35.png "image_tooltip")
+![alt_text](images/002/image35.png "image_tooltip")
 
 
 2. Click on the link for the user you just imported.
 
-    
 
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image36.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image36.png "image_tooltip")
+![alt_text](images/002/image36.png "image_tooltip")
 
 
 3. Click **Profile**.
@@ -606,12 +451,8 @@ You will now view the user that you imported from Active Directory in Okta.
 
 4. Scroll down to the _Additional Active Directory Attributes _section.
 
-    
 
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image37.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image37.png "image_tooltip")
+![alt_text](images/002/image37.png "image_tooltip")
 
 
 5. Click **Show Attribute Names**. \
@@ -620,12 +461,7 @@ This will allow you to see the Okta attribute names as well as the display names
     Here you can see Directory-specific AD attributes that have been synced to Okta.  These can be referenced from Expressions to control things like application attribute mapping or group rules.
 
 
-    
-
-<p id="gdcalert38" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image38.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert39">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image38.png "image_tooltip")
+![alt_text](images/002/image38.png "image_tooltip")
 
 
 
@@ -642,24 +478,16 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 1. Start a new browser session.  This could be a private browsing window or a different browser process.
 2. Navigate to your Okta homepage: **https://yourdemoorg.okta.com**.
 
-    
 
-<p id="gdcalert39" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image39.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert40">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image39.png "image_tooltip")
+![alt_text](images/002/image39.png "image_tooltip")
 
 
 3. Enter the UPN of the user that you imported to Okta. \
 e.g. **emily.boone@yourdemodomain.com**.
 4. Click **Next**.
 
-    
 
-<p id="gdcalert40" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image40.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert41">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image40.png "image_tooltip")
+![alt_text](images/002/image40.png "image_tooltip")
 
 
 5. Enter the Active Directory password for your AD user.
@@ -672,12 +500,7 @@ e.g. **emily.boone@yourdemodomain.com**.
     When login is complete, you will the user launchpad:
 
 
-    
-
-<p id="gdcalert41" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image41.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert42">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image41.png "image_tooltip")
+![alt_text](images/002/image41.png "image_tooltip")
 
 
 
