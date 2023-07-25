@@ -1,12 +1,12 @@
 # LEARNING OBJECTIVES
 Today we are going to learn the following topics:
 
-- How to integrate Okta with SAP Successfactors (HR as a Source)
-- How to integrate Active Directoy with Okta
+- How to integrate Okta with SAP SuccessFactors (HR as a Source)
+- How to integrate Active Directory with Okta
 - How to integrate Salesforce and Google Workspace with Okta
 - How to automatically on and offboard employees
 - How to customize complex identity requirements with Okta Workflows
-- How ensure the right people have the right access to the right resources with the least amount of friction
+- How to ensure the right people have the right access to the right resources with the least amount of friction
 
 # WORKSHOP STRUCTURE
 
@@ -18,7 +18,7 @@ This workshop is broken into the sections listed below.
     - Integrate Active Directory
     - Integrate SAP Successfactors
 
-- INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecyclemanagement
+- INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
     - Salesforce
     - Google Workspace
 
@@ -32,4 +32,4 @@ This workshop is broken into the sections listed below.
     - Extend the onboarding experience
 
 
-The section **Additional Use Cases** is optional and will extend the demo environment or describes some more advanced topics. Please find the ones relevant for you and try them out.
+The section **Additional Use Cases** is optional and will extend the demo environment or describe more advanced topics. Please find the ones relevant for you and try them out.
