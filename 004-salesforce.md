@@ -13,9 +13,10 @@ This guide provides instructions for integrating Okta with Salesforce so that th
 * Single Sign-on (SSO) from Okta to Salesforce
 * Lifecycle Management (LCM) for Salesforce
 
-> [!NOTE]
-> You can find the credentials and tenant URL in the hand-out document.
-
+```
+Info!
+You can find the credentials and tenant URL in the hand-out document.
+```
 
 ## Introduction
 
