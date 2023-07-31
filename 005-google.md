@@ -12,9 +12,11 @@ This guide provides instructions for integrating Okta with Google Workspace so t
 * Single Sign-on (SSO) from Okta to Google Workspace
 * Lifecycle Management (LCM) for Google Workspace
 
-Before you can complete this guide you must have already signed up for a Google Workspace account which, in turn, requires a custom DNS domain.  You should also enable the “Cloud Identity Free” subscription so that you can create users without getting charged for them.
+```
+You will find the credentials to your Google Workspace account as well as the custom DNS domain in hand-out document.
+```
 
-This guide assumes that you have at least one test user (in addition to your admin user) defined in your Okta org.
+Before you can complete this guide you must have already signed up for a Google Workspace account which, in turn, requires a custom DNS domain.  You should also enable the “Cloud Identity Free” subscription so that you can create users without getting charged for them.
 
 
 # Introduction
