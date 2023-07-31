@@ -14,7 +14,7 @@ This guide provides instructions for integrating Okta with Salesforce so that th
 * Lifecycle Management (LCM) for Salesforce
 
 ```
-You can find the credentials as well as tenant URL in the hand-out document.
+You can find the credentials and tenant URL in the hand-out document.
 ```
 ## Introduction
 
