@@ -13,9 +13,10 @@ This guide provides instructions for integrating Okta with Salesforce so that th
 * Single Sign-on (SSO) from Okta to Salesforce
 * Lifecycle Management (LCM) for Salesforce
 
-```
-You can find the credentials and tenant URL in the hand-out document.
-```
+> **Note**
+> You can find the credentials and tenant URL in the hand-out document.
+
+
 ## Introduction
 
 Salesforce is a Customer Relationship Management (CRM) platform. As well as being a well known SaaS application, it is very useful as part of a demonstration environment because it has a free and non-expiring _developer edition_ which supports single sign-on and provisioning.
