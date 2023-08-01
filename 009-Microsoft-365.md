@@ -21,18 +21,8 @@ Microsoft E5 sandbox and configured it with a custom DNS domain. A
 custom DNS domain is required because it's not possible to set up
 federation against the default onmicrosoft.com domain.
 
-Instructions for this can be found here: [[Get Microsoft E5
-sandbox]{.underline}](https://docs.google.com/document/d/1qvjRcUefXQyfwOSJ0duK35ZdFX5HBgddsAguscZSpyo/edit?usp=sharing)
-
 This guide assumes that you have at least one test user (in addition to
 your admin user) defined in your Okta org.
-
-If you have questions about the topics covered in this document, or you
-get stuck while following the instructions, you can reach out to us on
-Slack in the
-[[#newhires-techfield]{.underline}](https://okta.slack.com/archives/C012ZBCB9ND)
-channel or email the team at
-[[techenablement@okta.com]{.underline}](mailto:techenablement@okta.com).
 
 
 # Introduction
