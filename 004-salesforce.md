@@ -15,7 +15,7 @@ This guide provides instructions for integrating Okta with Salesforce so that th
 
 ```
 Info!
-You can find the credentials and tenant URL in the hand-out document.
+You will find the credentials and tenant URL in the hand-out document.
 ```
 
 
