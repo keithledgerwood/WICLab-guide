@@ -66,8 +66,7 @@ these steps:
 1.  Use a browser to open the administration UI of your Okta demo org
     > and sign in as an administrator.
 
-> ![](media/image22.png){width="6.557292213473316in"
-> height="1.649080271216098in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image1.png "image_tooltip")
 
 2.  Navigate to **Applications \> Applications**.
 
