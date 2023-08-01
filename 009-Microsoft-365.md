@@ -66,7 +66,7 @@ these steps:
 1.  Use a browser to open the administration UI of your Okta demo org
     > and sign in as an administrator.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image1.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image22.png "image_tooltip")
 
 2.  Navigate to **Applications \> Applications**.
 
