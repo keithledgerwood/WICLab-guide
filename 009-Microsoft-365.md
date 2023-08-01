@@ -1,7 +1,3 @@
-Presales Technical Enablement\
-*techenablement@okta.com*
-
-Overview
 
 This guide provides instructions for integrating Okta with Microsoft
 Office 365 so that the following use cases can be demonstrated:
@@ -32,61 +28,6 @@ Slack in the
 channel or email the team at
 [[techenablement@okta.com]{.underline}](mailto:techenablement@okta.com).
 
-Contents
-
-[[Introduction]{.underline}](#introduction)
-
-[[Add Microsoft Office 365 Application to
-Okta]{.underline}](#add-microsoft-office-365-application-to-okta)
-
-[[Configure provisioning]{.underline}](#configure-provisioning)
-
-> [[Enable integration]{.underline}](#enable-integration)
->
-> [[Enable provisioning to
-> app]{.underline}](#enable-provisioning-to-app)
->
-> [[Configure attribute
-> mapping]{.underline}](#configure-attribute-mapping)
-
-[[Test provisioning and single
-sign-on]{.underline}](#test-provisioning-and-single-sign-on)
-
-> [[Assign user to Microsoft Office 365
-> application]{.underline}](#assign-user-to-microsoft-office-365-application)
->
-> [[Test single sign-on]{.underline}](#test-single-sign-on)
-
-[[Configure group assignment]{.underline}](#configure-group-assignment)
-
-> [[Create a group]{.underline}](#create-a-group)
->
-> [[Assign group to
-> application]{.underline}](#assign-group-to-application)
->
-> [[Assign user to group]{.underline}](#assign-user-to-group)
->
-> [[Test single sign-on]{.underline}](#test-single-sign-on-1)
-
-[[Keeping your developer instance
-active]{.underline}](#keeping-your-developer-instance-active)
-
-> [[Enable scheduled import]{.underline}](#enable-scheduled-import)
->
-> [[Configure Import and account
-> matching]{.underline}](#configure-import-and-account-matching)
->
-> [[Perform initial import]{.underline}](#perform-initial-import)
->
-> [[Create a scheduled
-> workflow]{.underline}](#create-a-scheduled-workflow)
->
-> [[Configure an Office 365 Admin
-> connection]{.underline}](#configure-an-office-365-admin-connection)
->
-> [[Create flow]{.underline}](#create-flow)
->
-> [[Test the flow]{.underline}](#test-the-flow)
 
 # Introduction
 
