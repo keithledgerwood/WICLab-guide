@@ -340,7 +340,7 @@ via group membership - you'll set that up later.
 9.  Confirm that the records indicating successful provisioning are
     > found.
 
-## Test single sign-on
+## Test single sign-on (SSO)
 
 You can now test single sign-on to Microsoft 365 for the assigned user.
 
