@@ -19,3 +19,7 @@ Add SAP Success Factors Application to Okta
 1. Search the Okta Integration Network (OIN) for SAP Success Factors
    
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image00.png "image_tooltip")
+
+2. Select to add the integartion
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image05.png "image_tooltip")
