@@ -14,12 +14,22 @@ This lab uses a pre-built and managed instance of SAP Success Factors. The envir
 
 This document covers the most straightforward integration you need to build a demo system.
 
-Add SAP Success Factors Application to Okta
+Okta maintains a specific integration for SAP Success Factors in the
+Okta Integration Network (OIN). To add this to your Okta org, follow
+these steps:
 
-1. Search the Okta Integration Network (OIN) for SAP Success Factors
+1.  Use a browser to open the administration UI of your Okta demo org
+
+2.  Navigate to **Applications \> Applications**.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
+
+3.  Click **Browse App Catalog** to open the Okta Integration Network
+
+4. Search the Okta Integration Network for SAP Success Factors
    
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image00.png "image_tooltip")
 
-2. Select to add the integartion
+5. Select to add the integration
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image05.png "image_tooltip")
