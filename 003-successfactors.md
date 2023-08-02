@@ -26,10 +26,14 @@ these steps:
 
 3.  Click **Browse App Catalog** to open the Okta Integration Network
 
-4. Search the Okta Integration Network for SAP Success Factors
+4. **Search** the Okta Integration Network for SAP Success Factors
    
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image00.png "image_tooltip")
 
-5. Select to add the integration
+5. Select to **add the integration**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image05.png "image_tooltip")
+
+6. In the **General tab** complete the required fields using the information below
+
+   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image01.png "image_tooltip")
