@@ -53,6 +53,12 @@ on-premises AD with Azure AD in the cloud.
 This document covers the simplest integration you need to build a demo
 system.
 
+```
+Info!
+You will find the credentials and tenant URL in the hand-out document.
+```
+
+
 # Add Microsoft Office 365 Application to Okta
 
 Okta maintains a specific integration for Microsoft Office 365 in the
