@@ -96,11 +96,11 @@ these steps:
 
 
 8.  Select the radio button for **WS-Federation**.
->
+
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image06.png "image_tooltip")
 
 9.  Enter the *username* and *password* for the administrator of your
-    > Microsoft tenant.\
+    > Microsoft tenant.
 
 10. Click **Fetch and Select** next to Office 365 Domains.
 
