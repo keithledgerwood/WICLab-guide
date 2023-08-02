@@ -1,7 +1,5 @@
 # Integrate SAP Successfactors
 
-HRaaS - SAP Success Factors
-
 Overview
 
 This guide provides instructions for integrating Okta with SAP Success Factors so that the following use cases can be demonstrated:
