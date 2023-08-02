@@ -49,7 +49,7 @@ SiteURL = https://hcm68sales.successfactors.com/
 
 7. In the **Provisioning tab** complete the required fields using the API infomration below
 
-   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image02.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image08.png "image_tooltip")
 
 
 ```
