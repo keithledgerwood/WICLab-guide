@@ -36,4 +36,4 @@ these steps:
 
 6. In the **General tab** complete the required fields using the information below
 
-   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image01.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image06.png "image_tooltip")
