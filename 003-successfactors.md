@@ -108,3 +108,9 @@ Email:
   appuser.person___email_information___email_address : appuser.person___logon_user_name + "@" + org.subdomain + ".com"
 
 ```
+
+10. Search for user XXXXX and selct the check box to only import this user from SAP Success Factors to your Okta Org
+    
+    ***IMPORTANT: DO NOT IMPORT ALL USERS FROM SAP SUCCESS FACTORS***
+
+       ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image07.png "image_tooltip")
