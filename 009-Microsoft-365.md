@@ -240,9 +240,9 @@ Follow these steps:
     > The available options are shown. These have been pulled via API
     > and so reflect the options relevant for your Microsoft tenant:
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image20.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
 >
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image21.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image021.png "image_tooltip")
 
 5.  Select the checkboxes for the following licenses:
 
@@ -267,7 +267,7 @@ Follow these steps:
 -   Exchange Online (Plan 2)
 
 >
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image22.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
 
 6.  Scroll to the bottom of the window and click **Save**.
 
