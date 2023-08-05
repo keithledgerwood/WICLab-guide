@@ -112,7 +112,7 @@ You only have one domain in this demonstration environment.
 6. Enter and confirm a password for the _OktaService_ account. \
 This password can be whatever you like.  Since this is a demo environment, maybe just make it the same as your administrator so you don’t have to remember another password.
 7. Click **Next**.
-8. Click **Next **on the _Proxy Configuration _page.
+8. Click **Next** on the _Proxy Configuration _page.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image10.png "image_tooltip")
@@ -166,7 +166,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image13.png "image_tooltip")
 
 
-2.  Click on the **Active Directory **link of the new integration.
+2.  Click on the **Active Directory** link of the new integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image14.png "image_tooltip")
@@ -242,13 +242,13 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image21.png "image_tooltip")
 
 
-2. Select the **Agents **tab.
+2. Select the **Agents** tab.
 3. Note the status of the agent.
 
 It’s worth noting that each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
@@ -260,13 +260,13 @@ At this point, you can’t login to Okta as a user from Active Directory because
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image22.png "image_tooltip")
 
 
-2. Select the **Provisioning **tab.
+2. Select the **Provisioning** tab.
 3. Select **Integration** under _Settings_.
 
     Notice that _Enable delegated authentication to Active Directory _is enabled.  This means that Okta can delegate authentication of user credentials (username and password) to Active Directory via the AD Agent.
@@ -304,13 +304,13 @@ Before running an import, you should configure provisioning so that users are cr
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image25.png "image_tooltip")
 
 
-2. Select the **Provisioning **tab.
+2. Select the **Provisioning** tab.
 3. Select **To Okta** under _Settings_.
 4. Click **Edit** in the _User Creation & Matching _section.
 
@@ -335,7 +335,7 @@ The group information is used to create AD-sourced group definitions in Okta and
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations **in the Okta Admin console and select the **Active Directory **integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image27.png "image_tooltip")
