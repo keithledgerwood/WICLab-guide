@@ -223,8 +223,9 @@ In this section you will install Okta Verify in your Windows test machine using 
 
 1. Download the .NET framework installer from the below URL on your Windows server.
 
-    [https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)
+[https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)
 
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image61.png "image_tooltip")
 
 2. Locate the installer in the download directory and execute it.
 
