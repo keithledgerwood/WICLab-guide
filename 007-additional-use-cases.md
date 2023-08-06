@@ -233,11 +233,6 @@ Once the installation was successful please follow these instructions:
 
 1. Go to the Admin UI of your Okta org.  Hopefully you are still logged in.
 
-    
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image15.png "image_tooltip")
 
 
