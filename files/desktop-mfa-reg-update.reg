@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Okta]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Okta\Okta Device Access]
+"MfaRequiredList"=hex(7):2a,00,00,00
+"MaxLoginsWithoutEnrolledFactors"=dword:00000032
+"MaxLoginsWithOfflineFactor"=dword:00000032
+"MFAGracePeriodInMinutes"=dword:0000003c
