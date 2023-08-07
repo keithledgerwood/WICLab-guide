@@ -115,19 +115,22 @@ Follow these instructions:
 4. Click on the **Desktop MFA** tile in the results.
 
 
-
-5. Click **Add Integration**.
-
-    If you get an error message at this point, check that you have enabled the Desktop MFA feature and enabled the Interaction Code grant type (both described above).
-
-
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image7.png "image_tooltip")
 
 
-6. Click **Done**. \
+5. Click **Add Integration**.
+
+```
+If you get an error message at this point, check that you have enabled the Desktop MFA feature and enabled the Interaction Code grant type (both described above).
+```
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image8.png "image_tooltip")
+
+
+6. Click **Done**.
 There’s no need to change the application label.
 
-    The application is added and you are taken to the application properties page.
+The application is added and you are taken to the application properties page.
 
 
 
@@ -136,7 +139,7 @@ There’s no need to change the application label.
 You will now make a configuration change to the Desktop MFA application definition and assign a test user.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image8.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image9.png "image_tooltip")
 
 
 Before assigning users, you should change the _Username Format_ for the application.  Account matching for Desktop MFA is done based on the sAMAccountName of the Windows user - not the full username.
@@ -146,15 +149,14 @@ Before assigning users, you should change the _Username Format_ for the applicat
 2. Click **Edit**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image9.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image10.png "image_tooltip")
 
 
 3. In the _Credentials Details_ section, select **AD SAM account name** from the _Application username format_ drop-down list.
 4. Click **Save**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image10.png "image_tooltip")
-
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image11.png "image_tooltip")
 
 
 Now you will assign a user to the application.  Only users that are assigned to the Desktop MFA application will be able to use online MFA factors to access their Windows workstations.
@@ -163,14 +165,14 @@ Now you will assign a user to the application.  Only users that are assigned to 
 6. Click **Assign** and select **Assign to People** from the drop-down menu.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image11.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image12.png "image_tooltip")
 
 
 7. Click **Assign** for your test user. \
 This user should be an Active Directory-sourced user who has an Okta Verify (OV) authentication factor registered on a mobile device so they can have OV Push and TOTP factors available.  If you have followed the enablement team’s demo build guides, _Emily Boone_ should meet these requirements.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image12.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image13.png "image_tooltip")
 
 
 You shouldn’t need to change the _User Name_ for the user - it should default to the sAMAccountName based on the previous configuration.
@@ -178,7 +180,7 @@ You shouldn’t need to change the _User Name_ for the user - it should default 
 8. Click **Save and Go Back**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image13.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image14.png "image_tooltip")
 
 
 9. Click **Done**.
@@ -205,7 +207,7 @@ Follow these instructions:
 1. If not already there, open the Okta admin console and authenticate as an administrator.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image14.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image15.png "image_tooltip")
 
 
 2. Select **Settings > Downloads **in the navigation menu.
@@ -234,21 +236,22 @@ Once the installation was successful please follow these instructions:
 
 1. Go to the Admin UI of your Okta org.  Hopefully you are still logged in.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image15.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image16.png "image_tooltip")
 
 
 2. Select **Applications > Applications **in the navigation menu.
 3. Click the **Desktop MFA **link to open the Desktop MFA application properties.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image16.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image17.png "image_tooltip")
 
 
 4. Select the **General **tab to find the _Client ID _and _Client secret_ fields.  You will need to cut-and-paste these values to build the installation command.
 5. Go to the Desktop of your Windows test machine.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image17.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image18.png "image_tooltip")
 
 
 6. Open search and enter **cmd**  Select the result.
@@ -279,7 +282,7 @@ For example:
 When you enter this command, the standard Okta Verify install UI will start:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image18.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image19.png "image_tooltip")
 
 
 9. Complete the installer as normal.
@@ -287,7 +290,7 @@ When you enter this command, the standard Okta Verify install UI will start:
 When the installer finishes, Okta Verify will be started.  You will see that there is a new _Device Access_ tab where you can register off-line MFA factors:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image19.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image20.png "image_tooltip")
 
 
 Installation of Okta Desktop MFA is complete on your Windows test machine.
@@ -318,13 +321,12 @@ To be able to use Okta Desktop MFA in this lab environment we need to reset the 
 
 **This is strongly  not recommended to be done in a production environment and is not necessary in a real world deployment.**
 
- \
 1. Go to the Desktop of your Windows Server
 
 2. Open the Powershell from the taskbar
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image20.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image21.png "image_tooltip")
 
 
 2. Enter the following two commands:
@@ -366,7 +368,7 @@ At this point you should be ready to test Desktop MFA for the first time.  You s
 #### Sign off from Windows test machine
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image21.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image22.png "image_tooltip")
 
 
 1. **Sign out** from within the Windows Desktop to log out.
@@ -375,28 +377,31 @@ At this point you should be ready to test Desktop MFA for the first time.  You s
 #### Perform desktop login
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image22.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image23.png "image_tooltip")
 
 
 1. Click on **Retry Connection **and** OK**
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image23.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image24.png "image_tooltip")
 
 
 2. Enter the username and password for your test user. \
 This should be an AD domain user that has been imported into Okta and assigned the Desktop MFA application.
 3. Click the arrow to login (or press **Enter**).
 
-    At this point, the Okta Desktop MFA Credential Provider contacts your Okta tenant to check for available authentication factors for online MFA authentication.  It should find the Okta Verify mobile registration for your test user which will populate an MFA selector:
+At this point, the Okta Desktop MFA Credential Provider contacts your Okta tenant to check for available authentication factors for online MFA authentication.  It should find the Okta Verify mobile registration for your test user which will populate an MFA selector:
+
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image25.png "image_tooltip")
 
 
 4. Select **Okta Verify push notification** from the drop-down list.
 
-    As soon as the option is selected it is executed. After a small pause, you’ll see this screen:
+As soon as the option is selected it is executed. After a small pause, you’ll see this screen:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image24.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image26.png "image_tooltip")
 
 
 A OV push authentication has been initiated.  The login process is now waiting for you to verify the login on your mobile device.
@@ -424,7 +429,7 @@ Follow the instructions below to add an offline authentication factor for your t
 When a user logs into their Windows account on a system where Desktop MFA is installed, Okta Verify will open if they do not have off-line authentication factors configured.  It will show the new _Device Access_ tab:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image25.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image27.png "image_tooltip")
 
 
 Notice the warning showing the number of logins you have remaining.  This number will decrease each time you login without configuring an offline method.  The limit is a configuration item stored in the registry.
@@ -433,7 +438,7 @@ Notice the warning showing the number of logins you have remaining.  This number
 1. Click the **+ One-time password** button.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image26.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image28.png "image_tooltip")
 
 
 
@@ -442,7 +447,7 @@ The first page has links to download Okta Verify (for a user that doesn’t have
 2. Click **Next**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image27.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image29.png "image_tooltip")
 
 
 3. With the Okta Verify app on your mobile device:
@@ -452,12 +457,12 @@ The first page has links to download Okta Verify (for a user that doesn’t have
     4. Scan the QR code shown on the Windows desktop screen
     5. Select **Done**.
 
-    The offline one-time password is now registered in your OV application.
+The offline one-time password is now registered in your OV application.
 
 4. On the OV App on Windows desktop, click **Next**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image28.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image30.png "image_tooltip")
 
 
 5. Enter the code displayed in the mobile OV app into the OV desktop app. \
@@ -465,7 +470,7 @@ If it is correct, the Next button will activate.
 6. Click **Next**.  The offline factor is now enabled:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image29.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image31.png "image_tooltip")
 
 
 You now have an offline authentication method enabled for your account on this Windows system.  You can now test that it works.
@@ -483,7 +488,7 @@ You can use any user for this but it makes sense to use your test Windows user.
 The desktop login is displayed:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image30.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image32.png "image_tooltip")
 
 
 3. Enter the username and password for your test user.
@@ -492,20 +497,20 @@ The desktop login is displayed:
 At this point push verification is automatically triggered because you are online and this was the last online method to be used.  This wouldn’t happen if the machine was offline because online methods are not available when offline:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image31.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image33.png "image_tooltip")
 
 
 5. Click **Try another way** to return to the authentication method selector.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image32.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image34.png "image_tooltip")
 
 
 6. Select **Offline one-time password **from the selection menu. \
 If the machine were really offline, this would be the only choice available.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image33.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image35.png "image_tooltip")
 
 
 7. Enter the offline one-time password shown in the OV app on your mobile device into the entry field on the Windows test machine.
