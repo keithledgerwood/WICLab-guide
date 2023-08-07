@@ -1,8 +1,9 @@
 **\
 \
 Before you begin** we need to add you to the Workflows app and add the
-Email Connection (Gmail or Office 365 Mail).**\
-**
+Email Connection (Gmail or Office 365 Mail).
+
+
 
 1.  In the Okta Admin panel, go to Applications -\> Applications and
     search for "**Workflows**" and make sure [you are assigned to both
@@ -21,7 +22,7 @@ Email Connection (Gmail or Office 365 Mail).**\
     **Note:** You can use your personal or company email. This is a
     connection directly to your email account to be used by Okta
     Workflows to take actions on its behalf, but we're only using it to
-    send emails. (You can delete the connection when you're done)**\
+    send emails. (You can delete the connection when you're done)\
      ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image13-27.png "image_tooltip")
 
 7.  Once you log in and give it access, you're done!
@@ -43,7 +44,7 @@ the Super Admin role.**
     that passes through the Flow?**", this is to remember the flow
     history for debugging purposes.
 
-5.  Click **Save\
+5.  Click **Save**\
  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image27-33.png "image_tooltip")
 
 
@@ -157,19 +158,15 @@ finishing our flow.
 
 1.  Back in our flow, click on "Add function" and select from the
     **Object** category **Get Multiple**.\
-    ![](media/image14.png){width="1.859375546806649in"
-    height="3.095495406824147in"}![](media/image1.png){width="2.5729166666666665in"
-    height="3.0833333333333335in"}
+   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image14-45.png "image_tooltip")   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image1-47.png "image_tooltip")
 
 2.  Now drag the **body** from the API Endpoint card to the Get Multiple
     card\
-    ![](media/image28.png){width="3.3281255468066493in"
-    height="3.4419816272965877in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image28-49.png "image_tooltip")
 
 3.  In the Get Multiple card, click on the bottom of the card to add our
     attribute paths(list below).\
-    ![](media/image10.png){width="1.8802088801399826in"
-    height="2.2390857392825896in"}\
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image10-51.png "image_tooltip")
     \
     **NOTE:** Once you paste a path press Enter to confirm it.
 
@@ -178,25 +175,20 @@ finishing our flow.
 -   **data.events.0.actor.alternateId -\> Who gave that privilege**
 
 -   **data.events.0.target.0.displayName -\> The display name of the
-    > target (who got the privileges)**
+  target (who got the privileges)**
 
 -   **data.events.0.target.0.type -\> The target type (user or group)**
 
 -   **data.events.0.target.0.alternateId -\> The target's alternate id
-    > (groups don't have one)\
-    > **
+  (groups don't have one)**
 
 You can always rename a field that you have put in place and you can add
 a description for it as well. **\
-**![](media/image11.png){width="1.9427088801399826in"
-height="4.085134514435696in"}![](media/image21.png){width="2.1912893700787404in"
-height="4.091791338582677in"}![](media/image15.png){width="2.057292213473316in"
-height="2.3672944006999126in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image11-53.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image21-55.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image15-57.png "image_tooltip")
 
 **Once you're finished adding them it should look like this:**
 
-> ![](media/image2.png){width="2.1302088801399823in"
-> height="3.7058584864391952in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image2-59.png "image_tooltip")
 
 To make sure we know what's what, we\'ll assign a different name for the
 value in each path.
@@ -208,12 +200,9 @@ value in each path.
     drag [from the Get Multiple card to the Assign card]{.underline} the
     corresponding paths.
 
-![](media/image4.png){width="2.5208333333333335in"
-height="3.0729166666666665in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image4-61.png "image_tooltip")
 
-![](media/image24.png){width="2.2266852580927385in"
-height="5.934375546806649in"}![](media/image26.png){width="4.504408355205599in"
-height="5.913542213473316in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image24-63.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image26-65.png "image_tooltip")
 
 Now we'll add a condition to only continue if the privilege is **equal
 to** Super administrator.
@@ -231,8 +220,7 @@ to** Super administrator.
 5.  For the otherwise message, type **Not a Super administrator** (since
     we only want the super admin privilege).
 
-> ![](media/image8.png){width="3.7864588801399823in"
-> height="5.0259372265966755in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image8-67.png "image_tooltip")
 
 What's left is to compose a message, set the Distribution List of emails
 that should receive this message and send it. But we'd like to have a
@@ -255,7 +243,7 @@ see how we do that:
     > only be the above 2 options
 
 **\
-**![](media/image17.png){width="7.0in" height="4.833333333333333in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image17-69.png "image_tooltip")
 
 Next we'll compose the Body of our email:
 
@@ -267,11 +255,9 @@ Next we'll compose the Body of our email:
 
 3.  And in between the text we'll drag and drop the required attributes:
 
-> ![](media/image19.png){width="4.604166666666667in"
-> height="3.0208333333333335in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image19-71.png "image_tooltip")
 
-![](media/image20.png){width="7.442708880139983in"
-height="3.432717629046369in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image20-73.png "image_tooltip")
 
 Now for the mailing list:
 
@@ -281,8 +267,7 @@ Now for the mailing list:
 2.  Click inside the card and add the address/es you'd like to send the
     > email to:
 
-> ![](media/image7.png){width="2.5104166666666665in"
-> height="3.6041666666666665in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image7-75.png "image_tooltip")
 
 Now for sending our email:
 
@@ -298,12 +283,11 @@ Now for sending our email:
 
 5.  Drag the composed body to the **Body** field
 
-![](media/image5.png){width="7.328125546806649in"
-height="5.070800524934383in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image5-77.png "image_tooltip")
 
 **Save your flow and turn it on!**
 
-![](media/image6.png){width="5.489583333333333in" height="0.5625in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image6-79.png "image_tooltip")
 
 **To test:**
 
@@ -322,12 +306,11 @@ height="5.070800524934383in"}
 7.  Under **Role** select [Super Administrator]{.underline} and click
     **Save Changes**
 
-![](media/image16.png){width="7.0in" height="3.7916666666666665in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image16-81.png "image_tooltip")
 
 That's it, you should have gotten an **email!**
 
 **If you want to see the flow in action, you can go back to your flow
 and on the top left hand corner click Flow History.**
 
-> ![](media/image9.png){width="2.9479166666666665in"
-> height="0.8020833333333334in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image9-83.png "image_tooltip")
