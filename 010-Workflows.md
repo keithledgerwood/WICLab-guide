@@ -7,9 +7,7 @@ Email Connection (Gmail or Office 365 Mail).**\
 1.  In the Okta Admin panel, go to Applications -\> Applications and
     search for "**Workflows**" and make sure [you are assigned to both
     applications]{.underline}.**\
-    **![](media/image30.png){width="3.75in"
-    height="1.3020833333333333in"}**\
-    **
+  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
 
 2.  In the Admin Panel go to Workflow -\> Workflows Console.
 
