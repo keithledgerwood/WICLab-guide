@@ -7,7 +7,7 @@ Email Connection (Gmail or Office 365 Mail).**\
 1.  In the Okta Admin panel, go to Applications -\> Applications and
     search for "**Workflows**" and make sure [you are assigned to both
     applications]{.underline}.**\
-  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
+  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image30-25.png "image_tooltip")
 
 2.  In the Admin Panel go to Workflow -\> Workflows Console.
 
@@ -21,25 +21,22 @@ Email Connection (Gmail or Office 365 Mail).**\
     **Note:** You can use your personal or company email. This is a
     connection directly to your email account to be used by Okta
     Workflows to take actions on its behalf, but we're only using it to
-    send emails. (You can delete the connection when you're done)\
-    ![](media/image13.png){width="4.536458880139983in"
-    height="3.9066163604549433in"}
+    send emails. (You can delete the connection when you're done)**\
+     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image13-27.png "image_tooltip")
 
-6.  Once you log in and give it access, you're done!
+7.  Once you log in and give it access, you're done!
 
 **The Task! - Create an email alert for when a user has been assigned
 the Super Admin role.**
 
 1.  In the Workflows Console, click on the plus "+" next to
     **Folders**.\
-    ![](media/image3.png){width="4.651042213473316in"
-    height="0.9302088801399825in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image3-29.png "image_tooltip")
 
 2.  Give your folder a name, we went with "**Super Admin Alert**".
 
 3.  Go into your folder and click **+New Flow**\
-    ![](media/image23.png){width="3.0104166666666665in"
-    height="1.9791666666666667in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image23-31.png "image_tooltip")
 
 4.  Once the new flow Opens, click Save, give the flow a name (we went
     with **SuperAdminEvent**). Also, check the box for "**Save all data
@@ -47,20 +44,18 @@ the Super Admin role.**
     history for debugging purposes.
 
 5.  Click **Save\
-    **![](media/image27.png){width="3.7031255468066493in"
-    height="3.9442136920384954in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image27-33.png "image_tooltip")
+
 
 Now it's time to add an event trigger, and for this we'll use an **API
 Endpoint**.
 
 1.  In your new flow, click **Add event**\
-    ![](media/image29.png){width="3.526042213473316in"
-    height="2.6661942257217848in"}
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image29-35.png "image_tooltip")
 
 2.  Now click on **API Endpoint**, choose Expose as Webhook, copy the
     Invoke URL and Close the pop-up.\
-    ![](media/image12.png){width="4.171875546806649in"
-    height="4.693359580052493in"}\
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image12-37.png "image_tooltip")
     \
     \
     \
@@ -70,8 +65,8 @@ Endpoint**.
     \
     **NOTE:** If you want to find the endpoint again, you **\</\>**
     symbol at the bottom right corner of the **API Endpoint** card.\
-    ![](media/image18.png){width="2.4791666666666665in"
-    height="5.302083333333333in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image18-39.png "image_tooltip")
+    \
 
 Now that we have the **API Endpoint**, we'll need to create an **event
 hook** that for each time a user or a group receives Super Admin
@@ -88,7 +83,8 @@ permissions it will send the information to our API Endpoint.
     and "**A User's admin privileges changed**".
 
 4.  Click Save & Continue**\
-    **![](media/image25.png){width="6.5in" height="6.805555555555555in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image25-41.png "image_tooltip")
+    \
 
 We can take a look at the event hook information that will be sent by
 clicking **Preview** under Actions and selecting the event type.
