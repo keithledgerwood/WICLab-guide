@@ -19,9 +19,12 @@ This lab guide provides step-by-step instructions for setting up Okta Desktop MF
 
 ### Feature Flags
 
-Info! Before starting this lab your instructors need to activate specific feature flags in your Okta org. Please use this link to provide us your Okta org URL.
-
+```
+Info!
+Before starting this lab your instructors need to activate specific feature flags in your Okta org. Please use the link below to provide us your Okta org URL.
+```
 [https://forms.gle/KUtL7cQQaj4DQsm66](https://forms.gle/KUtL7cQQaj4DQsm66)
+
 
 
 ### Okta Org with Okta Device Access SKU
