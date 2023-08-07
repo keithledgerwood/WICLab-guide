@@ -89,7 +89,7 @@ permissions it will send the information to our API Endpoint.
 We can take a look at the event hook information that will be sent by
 clicking **Preview** under Actions and selecting the event type.
 
-![](media/image22.png){width="6.5in" height="0.6111111111111112in"}
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image22-43.png "image_tooltip")
 
 After you select the event type you'll see the output in a JSON format.
 This is how the information will be sent to our flow.
