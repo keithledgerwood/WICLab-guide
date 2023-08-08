@@ -6,15 +6,15 @@ Email Connection (Gmail or Office 365 Mail).
 
 
 1.  In the Okta Admin panel, go to Applications -\> Applications and
-    search for "**Workflows**" and make sure [you are assigned to both
-    applications]{.underline}.**\
+    search for "**Workflows**" and make sure you <ins>are assigned to both
+    applications.<ins>\
   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image30-25.png "image_tooltip")
 
 2.  In the Admin Panel go to Workflow -\> Workflows Console.
 
 3.  Open up the Connections tab and click on **+New Connection**.
 
-4.  Search for [Gmail or Office 365 Mail]{.underline}, click on it and
+4.  Search for <ins>Gmail or Office 365 Mail</ins>, click on it and
     then again on **Create**.
 
 5.  A window will open for you to sign in with your Email Account\
@@ -55,7 +55,7 @@ Endpoint**.
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image29-35.png "image_tooltip")
 
 2.  Now click on **API Endpoint**, choose Expose as Webhook, copy the
-    Invoke URL and Close the pop-up.\
+    Invoke URL and close the pop-up.\
  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image12-37.png "image_tooltip")
     \
     \
@@ -83,7 +83,7 @@ permissions it will send the information to our API Endpoint.
 3.  Under Subscribe to events pick "**Group's admin privilege granted**"
     and "**A User's admin privileges changed**".
 
-4.  Click Save & Continue**\
+4.  Click Save & Continue\
  ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image25-41.png "image_tooltip")
     \
 
@@ -183,7 +183,7 @@ finishing our flow.
   (groups don't have one)**
 
 You can always rename a field that you have put in place and you can add
-a description for it as well. **\
+a description for it as well.\
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image11-53.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image21-55.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image15-57.png "image_tooltip")
 
 **Once you're finished adding them it should look like this:**
@@ -197,7 +197,7 @@ value in each path.
     **Assign**
 
 2.  Click inside and type a name you can work with (image below). Then
-    drag [from the Get Multiple card to the Assign card]{.underline} the
+    drag <ins>from the Get Multiple card to the Assign card</ins> the
     corresponding paths.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image4-61.png "image_tooltip")
@@ -231,21 +231,21 @@ see how we do that:
     **Lookup**
 
 2.  In the **Value** section drag and drop the **Type** field from the
-    [Assign card]{.underline}
+    <ins>Assign card</ins>.
 
-3.  Next we'll set the [Value and Result.]{.underline}
+3.  Next we'll set the <ins>Value and Result.</ins>
 
 4.  When Value is **User** then the result is **user**
 
 5.  When Value is **UserGroup** then the result is **group**
 
 6.  This time, the **Otherwise** option can be left blank since it can
-    > only be the above 2 options
+    only be the above 2 options
 
 **\
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image17-69.png "image_tooltip")
 
-Next we'll compose the Body of our email:
+Next we'll compose the body of our email:
 
 1.  Click on Add function and from the **Text** category select
     **Compose**
@@ -262,10 +262,10 @@ Next we'll compose the Body of our email:
 Now for the mailing list:
 
 1.  Click on Add function and from the **List** category select
-    > **Construct**
+    **Construct**
 
 2.  Click inside the card and add the address/es you'd like to send the
-    > email to:
+    email to:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image7-75.png "image_tooltip")
 
@@ -303,7 +303,7 @@ Now for sending our email:
 
 6.  Type in the name of the group in the **Select admin** box
 
-7.  Under **Role** select [Super Administrator]{.underline} and click
+7.  Under **Role** select <ins>Super Administrator</ins> and click
     **Save Changes**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/image16-81.png "image_tooltip")
