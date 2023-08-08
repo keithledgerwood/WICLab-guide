@@ -98,41 +98,7 @@ This is how the information will be sent to our flow.
 There is a lot of information in that JSON and we'll need to filter out
 what we need:
 
- \"data\": {
-
-\"events\": \[
-
-{
-
-> \"**privilegeGranted**\": \"Super administrator\"
->
-> \"actor\": {
->
-> \"**alternateId**\": \"actor.admin@isoft-lab.co.il\"
->
-> }
->
-> "target\": \[
-
-{
-
-\"**type**\": \"User\",
-
-\"**alternateId**\": \"new.admin@isoft-lab.co.il\",
-
-\"**displayName**\": \"new admin\"
-
-}
-
-> \]
->
-> }
-
-\]
-
-}
-
-
+ ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_1/Screenshot1.png "image_tooltip")
 
 In order to get the information we need we'll have to create the path to
 the attributes:
