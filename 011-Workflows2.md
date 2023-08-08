@@ -34,18 +34,18 @@ the **template**.
 4.  Create a group in Okta called "**Temp Group**"
 
 5.  Go back to your flows and go to the **Tables** tab and open the
-    > **Temporary Groups** table\
+    **Temporary Groups** table\
    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_2/image5-31.png "image_tooltip")
 
 6.  Add the **group name** and the **duration in minutes** and click
     **Create**. The duration will reflect how long a user should stay
-    in that group. For testing purposes we'll put in **[3
-    minutes]{.underline}**.\
+    in that group. For testing purposes we'll put in <ins>**3
+    minutes</ins>**.\
   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_2/image9-33.png "image_tooltip")
 
-7.  Now go back to your **Flows**, **turn ON** the [App
-   Event]{.underline} and [Helper]{.underline} flows and open up the
-    [Schedule]{.underline} one.\
+7.  Now go back to your **Flows**, **turn ON** the <ins>App
+   Event</ins> and <ins>Helper</ins> flows and open up the
+    <ins>Schedule</ins> one.\
    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/Workflows_2/image6-35.png "image_tooltip")
 
 8.  Once you\'re in, click on the clock icon on the bottom right hand
