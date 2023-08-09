@@ -1,4 +1,3 @@
-# Workflows
 # Okta Device Access Desktop MFA
 
 ## Configure Desktop MFA for Windows
