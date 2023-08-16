@@ -1,9 +1,9 @@
 # LEARNING OBJECTIVES
 Today we are going to learn the following topics:
 
-- How to integrate Okta with SAP SuccessFactors (HR as a Source)
+- How to integrate Okta with BambooHR (HR as a Source)
 - How to integrate Active Directory with Okta
-- How to integrate Salesforce and Google Workspace with Okta
+- How to integrate Microsoft Office365 and Salesforce with Okta
 - How to automatically on and offboard employees
 - How to customize complex identity requirements with Okta Workflows
 - How to ensure the right people have the right access to the right resources with the least amount of friction
@@ -16,11 +16,11 @@ This workshop is broken into the sections listed below.
 
 - IDENTITY SOURCES
     - Integrate Active Directory
-    - Integrate SAP Successfactors
+    - Integrate BambooHR
 
 - INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
+    - Microsoft Office 365
     - Salesforce
-    - Google Workspace
 
 - OKTA IDENTITY GOVERNANCE (OIG)
     - Prepare your Environment
