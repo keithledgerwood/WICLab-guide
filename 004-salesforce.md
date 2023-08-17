@@ -1,9 +1,6 @@
 ## Configure SSO and LCM for Salesforce
 
 
-### Demo setup guide
-
-
 Overview
 
 This guide provides instructions for integrating Okta with Salesforce so that the following use cases can be demonstrated:
