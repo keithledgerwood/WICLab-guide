@@ -12,10 +12,6 @@ Office 365 so that the following use cases can be demonstrated:
 
 -   Lifecycle Management (LCM) for Microsoft Office 365
 
-This guide also provides instructions for setting up a scheduled import
-and a scheduled workflow which will exercise the Microsoft Graph API in
-your E5 sandbox to prevent it from expiring.
-
 Before you can complete this guide you must have already signed up for a
 Microsoft E5 sandbox and configured it with a custom DNS domain. A
 custom DNS domain is required because it's not possible to set up
@@ -59,7 +55,7 @@ You will find the credentials and tenant URL in the hand-out document.
 ```
 
 
-# Add Microsoft Office 365 Application to Okta
+# Add Microsoft Office 365 App to Okta
 
 Okta maintains a specific integration for Microsoft Office 365 in the
 Okta Integration Network (OIN). To add this to your Okta org, follow
@@ -129,7 +125,7 @@ Your Okta org, and your Microsoft 365 tenant, are now configured for
 single sign-on from Okta to Azure AD.
 
 Note: You can't test single sign-on until you have enabled provisioning
-and assigned at least one user to this application in Okta.
+and assigned at least one user to this app in Okta.
 
 # Configure provisioning
 
@@ -143,7 +139,7 @@ The required Azure AD accounts could be created manually, or synced from
 a common identity source such as an on-premises AD but, in this case,
 you will set up provisioning in Okta so that it can automatically manage
 accounts in Azure AD. It will create accounts when users are assigned to
-the Office 365 application and deactivate these accounts when users are
+the Office 365 app and deactivate these accounts when users are
 unassigned. It will also manage user attributes and licenses.
 
 ## Enable integration
@@ -154,7 +150,7 @@ the steps below to grant this access and enable integration:
 
 1.  If you are not already there, open your Okta administration UI,
     > navigate to **Applications \> Applications**, and select the
-    > **Microsoft Office 365** application definition.
+    > **Microsoft Office 365** app definition.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image09.png "image_tooltip")
 
@@ -188,11 +184,11 @@ There are two provisioning directions supported by this integration:
 
 In this section you will enable provisioning to Microsoft 365. This will
 include creation of accounts in Azure AD when users are assigned to the
-application, updating attributes in Azure AD when things change in Okta,
+app, updating attributes in Azure AD when things change in Okta,
 and deactivating accounts in Azure AD when users are unassigned from the
-application in Okta.
+app in Okta.
 
-Note: In general, Okta does not delete accounts from applications - it
+Note: In general, Okta does not delete accounts from apps - it
 only deactivates them. This ensures that Okta is not responsible for any
 data loss in the backend system that could be triggered by deleting an
 account.
@@ -216,8 +212,8 @@ Follow these steps to enable provisioning:
 
 ## Configure attribute mapping
 
-When a user is assigned to an application, attribute mapping determines
-the default values that will be set for attributes in the application.
+When a user is assigned to an app, attribute mapping determines
+the default values that will be set for attributes in the app.
 If attribute mapping is not configured, values for attributes must be
 manually set whenever a user is assigned.
 
@@ -284,17 +280,17 @@ to test.
 
 Now that provisioning and single sign-on have both been configured, you
 can test them by assigning your Okta admin user to the Microsoft Office
-365 application and then attempting single sign-on.
+365 app and then attempting single sign-on.
 
 This section uses the Okta admin user ***your.name*\@okta.com** as the
 test user. This user will be mapped to
 ***your.name*\@yourdemodomain.com** by the custom username mapping you
 set up when configuring single sign-on.
 
-## Assign user to Microsoft Office 365 application
+## Assign user to Microsoft Office 365 app
 
 For this test you will directly assign your Okta admin user to the
-Office 365 application. You'll notice that it's also possible to assign
+Office 365 app. You'll notice that it's also possible to assign
 via group membership - you'll set that up later.
 
 1.  If not already there, navigate to **Applications \> Applications**
@@ -374,21 +370,21 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 # Configure group assignment
 
 In the previous section, you assigned a user directly to the Microsoft
-365 application. It was useful to do this so that you could assign the
+365 app. It was useful to do this so that you could assign the
 Global Administrator role. However, for assigning users in bulk, it's
-more usual to assign a group to an application and then assign users to
+more usual to assign a group to an app and then assign users to
 the group.
 
-When assigning a group to an application, you can specify values for
-application attributes. These will override any mapping for those
-attributes in the application definition. If you don't specify any value
-for an attribute, the mapping in the application definition will be
+When assigning a group to an app, you can specify values for
+app attributes. These will override any mapping for those
+attributes in the app definition. If you don't specify any value
+for an attribute, the mapping in the app definition will be
 applied instead.
 
 ## Create a group
 
 You will now create a group that will be assigned to the Microsoft
-Office 365 application.
+Office 365 app.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image034.png "image_tooltip")
 
@@ -408,11 +404,11 @@ Office 365 application.
 
 
 
-## Assign group to application
+## Assign group to app
 
-You can assign a group to an application by either assigning the group
-within the application definition or by adding the application to the
-group definition. In this case you will add the application from the
+You can assign a group to an app by either assigning the group
+within the app definition or by adding the app to the
+group definition. In this case you will add the app from the
 group definition.
 
 1.  If not already there, navigate to **Directory \> Groups**.
@@ -444,7 +440,7 @@ group definition.
 ## Assign user to group
 
 You will now assign a test user to the *O365Users* group. This will
-cause the user to be assigned the Microsoft Office 365 application
+cause the user to be assigned the Microsoft Office 365 app
 which, in turn, will trigger provisioning of an account.
 
 1.  If not already there, navigate to **Directory \> Groups**.
@@ -462,7 +458,7 @@ which, in turn, will trigger provisioning of an account.
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
 The user is now assigned to the group and will be assigned to the
-Microsoft Office 365 application using the attribute mapping associated
+Microsoft Office 365 app using the attribute mapping associated
 with the group assignment.
 
 ## Test single sign-on
