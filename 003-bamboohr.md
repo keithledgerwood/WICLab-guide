@@ -1,17 +1,20 @@
 ### Integrate BambooHR
 
 
-##Overview
+## Overview
 
 This guide provides instructions for integrating Okta with BambooHR so that the following use cases can be demonstrated:
 
 HRaaS - Sourcing a user profile from BambooHR into Universal Directory
 This guide also provides instructions for attribute mapping.
 
-Introduction
+# Introduction
+
 This lab uses a pre-built and managed instance of BambooHR. The environment has users and groups defined in a pre-designed organisational structure. The integration has two connections. The first uses SSO integration to access the BambooHR tenant. The Second uses an API connection to import users from BambooHR into Okta’s Universal Directory.
 
 This document covers the most straightforward integration you need to build a demo system.
+
+# Add BambooHR application to Okta
 
 Okta maintains a specific integration for BambooHR in the
 Okta Integration Network (OIN). To add this to your Okta org, follow
@@ -27,11 +30,11 @@ these steps:
 
 4. **Search** the Okta Integration Network for BambooHR
    
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image00.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/003/image001.png "image_tooltip")
 
 5. Select to **add the integration**
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/010/image05.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/003/image002.png "image_tooltip")
 
 6. In the **General tab** complete the required fields using the information below
 
