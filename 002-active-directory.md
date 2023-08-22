@@ -1,9 +1,7 @@
-## Integrate Active Directory
+### Integrate Active Directory
 
 
-### Demo setup guide
-
-Overview
+## Overview
 
 Many companies, especially small- and medium-sized enterprises, use Microsoft Active Directory (AD) as their primary on-premises directory.  They typically manage their user’s account information, including identity attributes; passwords; and group memberships, in Active Directory.
 
