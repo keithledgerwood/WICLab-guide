@@ -30,11 +30,11 @@ these steps:
 
 4. **Search** the Okta Integration Network for BambooHR
    
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/003/image001.png "image_tooltip")
+![alt_text](https://github.com/keithledgerwood/WICLab-guide/blob/main/images/003/image001.png "image_tooltip")
 
 5. Select to **add the integration**
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/003/image002.png "image_tooltip")
+![alt_text](https://github.com/keithledgerwood/WICLab-guide/blob/main/images/003/image002.png "image_tooltip")
 
 6. In the **General tab** complete the required fields using the information below
 
