@@ -1,9 +1,6 @@
-## Microsoft 365 - SSO/LCM
+### Configure SSO and LCM for Microsoft 365
 
-
-### Demo setup guide
-
-Overview
+## Overview
 
 This guide provides instructions for integrating Okta with Microsoft
 Office 365 so that the following use cases can be demonstrated:
