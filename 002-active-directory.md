@@ -9,6 +9,11 @@ When these companies look to adopt a new identity platform, such as Okta, they n
 
 This guide provides step-by-step instructions for integrating an Active Directory into your Okta demonstration environment.  You will be able to show Delegated Authentication, Just-In-Time (JIT) provisioning from AD to Okta, and provisioning from AD to Okta via scheduled import.
 
+```
+Info!
+You will find your Active Directory Virtual Infrastructure in the lab environment.
+```
+
 
 
 ## Add Active Directory
@@ -45,20 +50,21 @@ https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image3.png "image_tooltip")
 
 
-4. Click the **Download Agent **button. \
+4. Click the **Download Agent** button.
+
 The AD Agent installer is downloaded to your local machine.
 
     You need to get this installer onto your Windows Server instance.  There are a couple of ways you can do this:
 
 * Copy the downloaded file to the clipboard and then paste it onto the desktop of the Windows Server.  RDP will take care of the file transfer.
-* Copy the link shown after local download is complete and use it with a browser on the Windows Server instance to download the agent. Authentication is not required. \
+* Copy the link shown after local download is complete and use it with a browser on the Windows Server instance to download the agent. Authentication is not required.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image4.png "image_tooltip")
 
 * Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
 
-    It’s worth noting that the AD Agent can also be found, along with a lot of other downloadable assets, under Settings > Downloads in the Okta admin console.
+    It’s worth noting that the AD Agent can also be found, along with a lot of other downloadable assets, under **Settings** > **Downloads** in the Okta admin console.
 
 
 
@@ -94,14 +100,14 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image7.png "image_tooltip")
 
 
-4. Click **Next **to accept the offered _AD Domain_. \
+4. Click **Next** to accept the offered _AD Domain_. \
 You only have one domain in this demonstration environment.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image8.png "image_tooltip")
 
 
-5. Click **Next **to _Create or use the OktaService account (recommended)_.
+5. Click **Next** to _Create or use the OktaService account (recommended)_.
 
     
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image9.png "image_tooltip")
@@ -110,7 +116,7 @@ You only have one domain in this demonstration environment.
 6. Enter and confirm a password for the _OktaService_ account. \
 This password can be whatever you like.  Since this is a demo environment, maybe just make it the same as your administrator so you don’t have to remember another password.
 7. Click **Next**.
-8. Click **Next** on the _Proxy Configuration _page.
+8. Click **Next** on the _Proxy Configuration_ page.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image10.png "image_tooltip")
@@ -171,7 +177,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 
 
-    On the _Basic Settings _page you can determine which parts of Active Directory will be connected to your Okta tenant.  Only users and groups in the specified containers will be synced to Okta when provisioning is enabled. By default, the entire Active Directory is selected.
+On the _Basic Settings_ page you can determine which parts of Active Directory will be connected to your Okta tenant.  Only users and groups in the specified containers will be synced to Okta when provisioning is enabled. By default, the entire Active Directory is selected.
 
 3. For users, uncheck the checkbox at the **dc=_yourdemodomain_,dc=_com_** level.
 4. Check the checkboxes for the OUs containing your demo users.
@@ -224,10 +230,9 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 
 
-    It’s interesting to note that this page looks a lot like an Application settings page.  The _Provisioning_, _Import_, and _Assignments_ tabs have similar functions.
+>It’s interesting to note that this page looks a lot like an Application settings page.  The _Provisioning_, _Import_, and _Assignments_ tabs have similar functions.
 
-
-    You’ll notice a warning that _One or more required attributes are not mapped_. You can ignore it for now; it’s related to provisioning to AD and you’re going to be using AD as a source and provisioning to Okta.
+>You’ll notice a warning that _One or more required attributes are not mapped_. You can ignore it for now; it’s related to provisioning to AD and you’re going to be using AD as a source and provisioning to Okta.
 
 
 
@@ -267,7 +272,7 @@ At this point, you can’t login to Okta as a user from Active Directory because
 2. Select the **Provisioning** tab.
 3. Select **Integration** under _Settings_.
 
-    Notice that _Enable delegated authentication to Active Directory _is enabled.  This means that Okta can delegate authentication of user credentials (username and password) to Active Directory via the AD Agent.
+    Notice that _Enable delegated authentication to Active Directory_ is enabled.  This means that Okta can delegate authentication of user credentials (username and password) to Active Directory via the AD Agent.
 
 4. Click **Test Delegated Authentication**. \
 A pop-up window is shown:
@@ -276,7 +281,7 @@ A pop-up window is shown:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image23.png "image_tooltip")
 
 
-5. Enter the _AD Username_ and _AD Password _for a user in your Active Directory. \
+5. Enter the _AD Username_ and _AD Password_ for a user in your Active Directory. \
 The username must be the User Principal Name (UPN), e.g. username@domain.com, because that is what was configured.
 6. Click **Authenticate**.
 
@@ -310,7 +315,7 @@ Before running an import, you should configure provisioning so that users are cr
 
 2. Select the **Provisioning** tab.
 3. Select **To Okta** under _Settings_.
-4. Click **Edit** in the _User Creation & Matching _section.
+4. Click **Edit** in the _User Creation & Matching_ section.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image26.png "image_tooltip")
@@ -418,10 +423,10 @@ You will now check that the imported groups have been created as groups in Okta.
 
 
 
-    The _Assign people_ button is inactive.  It’s important to note that an AD-sourced group is managed by Active Directory; you can’t add users to it from within Okta.
+>The _Assign people_ button is inactive.  It’s important to note that an AD-sourced group is managed by Active Directory; you can’t add users to it from within Okta.
 
 
-    If you want to be able to manage group memberships of an AD group you should look into the _Push Group_ functionality.  This allows the membership of an Okta group to be pushed down into a group in Active Directory.
+If you want to be able to manage group memberships of an AD group you should look into the _Push Group_ functionality.  This allows the membership of an Okta group to be pushed down into a group in Active Directory.
 
 
 
@@ -447,7 +452,7 @@ You will now view the user that you imported from Active Directory in Okta.
 
     You can see that many user attributes have been synced from Active Directory.  This is controlled by the attribute mapping configuration under provisioning in the Directory Integration definition.
 
-4. Scroll down to the _Additional Active Directory Attributes _section.
+4. Scroll down to the _Additional Active Directory Attributes_ section.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image37.png "image_tooltip")
@@ -463,7 +468,7 @@ This will allow you to see the Okta attribute names as well as the display names
 
 
 
-    These attributes are controlled by the _active_directory_ profile for your directory under **Directory > Profile Sources**.
+>These attributes are controlled by the _active_directory_ profile for your directory under **Directory > Profile Sources**.
 
 
 
