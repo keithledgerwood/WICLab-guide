@@ -17,7 +17,6 @@ federation against the default onmicrosoft.com domain.
 This guide assumes that you have at least one test user (in addition to
 your admin user) defined in your Okta org.
 
-
 # Introduction
 
 Microsoft Office 365 uses Microsoft Azure AD as its user store and to
@@ -48,7 +47,7 @@ system.
 
 ```
 Info!
-You will find the credentials and tenant URL in the hand-out document.
+You will find the credentials and tenant URL in the lab environment.
 ```
 
 
@@ -73,15 +72,13 @@ these steps:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image03.png "image_tooltip")
 
-5.  Click **Add integration**.\
+5.  Click **Add integration**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
-6.  Complete the *Microsoft Tenant Name* field. This must match the
-    > tenant name you chose when setting up your Microsoft tenant. If
-    > your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then
-    > your Microsoft tenant name is *yourdemodomain*.
+6.  Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
+>If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
 
 7.  Click **Next**.
 
@@ -92,18 +89,13 @@ these steps:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image06.png "image_tooltip")
 
-9.  Enter the *username* and *password* for the administrator of your
-    > Microsoft tenant.
+9.  Enter the *username* and *password* for the administrator of your Microsoft tenant.
 
 10. Click **Fetch and Select** next to Office 365 Domains.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image07.png "image_tooltip")
 
-11. Select the custom DNS domain that you configured when you were
-
-> If no DNS domains are shown here, refer to these instructions: [[Get
-> Microsoft E5
-> sandbox]{.underline}](https://docs.google.com/document/d/1qvjRcUefXQyfwOSJ0duK35ZdFX5HBgddsAguscZSpyo/minimalstatic#heading=h.q5u9bvuz3rr2)
+11. Select the custom DNS domain that you configured.
 
 12. Click **Select**.
 
@@ -116,7 +108,7 @@ these steps:
 
 > **String.substringBefore(user.login,\"@\") + \"@yourdemodomain.com\"**
 
-15. Click **Done**.\
+15. Click **Done**.
 
 Your Okta org, and your Microsoft 365 tenant, are now configured for
 single sign-on from Okta to Azure AD.
@@ -151,7 +143,7 @@ the steps below to grant this access and enable integration:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image09.png "image_tooltip")
 
-2.  Click on the **Provisioning** tab and click the **Configure API
+2.  Click on the **Provisioning** tab and click the **Configure API**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image010.png "image_tooltip")
 
@@ -159,11 +151,11 @@ the steps below to grant this access and enable integration:
 
 4.  Click the **Authenticate with Microsoft Office 365** button.
 
-5.  Authenticate as the administrative user for your Microsoft tenant.\
+5.  Authenticate as the administrative user for your Microsoft tenant.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image011.png "image_tooltip")
 
-6.  Click **Accept** to allow your Okta org to manage users in your
+6.  Click **Accept** to allow your Okta org to manage users in your org.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image012.png "image_tooltip")
 
@@ -175,7 +167,7 @@ The API connection for provisioning is now in place. Provisioning
 configuration is now shown under the Provisioning tab. The integration
 configuration you just created is under the Integration tab.
 
-There are two provisioning directions supported by this integration:
+There are two provisioning directions supported by this integration.
 
 ## Enable provisioning to app
 
@@ -235,7 +227,7 @@ Follow these steps:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
 
 
-4.  Select **Same value for all users** from the drop-down list.\
+4.  Select **Same value for all users** from the drop-down list. 
     > The available options are shown. These have been pulled via API
     > and so reflect the options relevant for your Microsoft tenant:
 
@@ -336,8 +328,7 @@ via group membership - you'll set that up later.
 
 8.  In the Okta Admin UI, navigate to **Reports \> System Log**.
 
-9.  Confirm that the records indicating successful provisioning are
-    > found.
+9.  Confirm that the records indicating successful provisioning are found.
 
 ## Test single sign-on (SSO)
 
@@ -347,7 +338,7 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
 
-3.  Authenticate as your test user: e.g. ***your.name*\@okta.com**\
+3.  Authenticate as your test user: e.g. ***your.name*\@okta.com**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image031.png "image_tooltip")
 
@@ -361,7 +352,7 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 6.  Click the identity icon in the top-right of the page.
 
-7.  Click **Sign out** to clear the session. Close the browser you used
+7.  Click **Sign out** to clear the session. Close the browser you used.
 
 
 # Configure group assignment
@@ -386,7 +377,7 @@ Office 365 app.
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image034.png "image_tooltip")
 
 1.  In the administration UI for your Okta org, navigate to **Directory
-    > \> Groups**.
+    \> Groups**.
 
 2.  Click the **Add group** button.
 
@@ -450,7 +441,7 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
-4.  Click the **+ icon** for a test user in your Okta org.\
+4.  Click the **+ icon** for a test user in your Okta org.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
@@ -467,7 +458,7 @@ You can now test single sign-on to Microsoft 365 for your test user.
 2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
 
 3.  Authenticate as your test user: e.g.
-    > ***alex.anderson@yourdemodomain.com***\
+    > ***alex.anderson@yourdemodomain.com***
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image044.png "image_tooltip")
 
@@ -479,9 +470,8 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 6.  Click the identity icon in the top-right of the page.
 
-7.  Click **Sign out** to clear the session. Close the browser you used
+7.  Click **Sign out** to clear the session. Close the browser you used.
 
 Congratulations! You have successfully configured Lifecycle Management
-and Single Sign-On to Microsoft Office 365. Your demo environment can
-now be used to demonstrate these capabilities to customers.
+and Single Sign-On to Microsoft Office 365.
 
