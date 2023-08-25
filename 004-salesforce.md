@@ -113,13 +113,13 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     In Salesforce usernames must be globally unique; no two users in Salesforce can have the same username even if they are in different tenants. An easy way to ensure uniqueness is to include a username suffix that is unique to your environment.  In this case you will use a custom expression which replaces the domain part of the Okta username with the unique domain of your demo environment.
 
 11. Set _Application username format_ to **Custom**.
-12. Enter the following for the expression - replacing yourdomain.com with your own custom DNS domain:
+12. Enter the following for the expression - replacing yourdemodomain.com with your own custom DNS domain:
 
-        **String.substringBefore(user.login,"@") + "@yourdomain.com"**
+        **String.substringBefore(user.login,"@") + "@yourdemodomain.com"**
 
 
-    This will create the Salesforce username by taking the part of the Okta username attribute (okta.login) before the @ sign and then adding @yourdomain.com. \
-For example, _your.name**@okta.com**_ would become _your.name**@yourdomain.com**_.
+    This will create the Salesforce username by taking the part of the Okta username attribute (okta.login) before the @ sign and then adding @yourdemodomain.com. \
+For example, _your.name**@okta.com**_ would become _your.name**@yourdemodomain.com**_.
 
 13. Click **Done**.
 
