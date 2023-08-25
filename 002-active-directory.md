@@ -25,7 +25,7 @@ Launch a new browser window and follow the instructions below to navigate to you
 
    > **Note:** You can also download the installer from the direct URL:
    >    
-   > https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3.15.0-955-f74b959.exe
+   > <https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3.15.0-955-f74b959.exe>
 
 
 
