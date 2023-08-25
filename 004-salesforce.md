@@ -21,7 +21,7 @@ Salesforce provides REST APIs for management of users and groups. To provide API
 
 In this section you will sign-up for Salesforce Developer Edition tenant. Complete the following steps:
    
-1. In your browser, navigate to https://developer.salesforce.com/signup.  
+1. In your browser, navigate to <https://developer.salesforce.com/signup>.  
 If you are also using Salesforce in your daily work, this should be a browser that is not already logged into Salesforce. 
 2. Complete the "Sign up for your Salesforce Developer Edition" form with the required information.  
 Note that the Username must be unique across all of Salesforce.
