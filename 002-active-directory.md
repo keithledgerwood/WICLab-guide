@@ -1,35 +1,31 @@
-### Integrate Active Directory
-
-
 ## Overview
 
 Many companies, especially small- and medium-sized enterprises, use Microsoft Active Directory (AD) as their primary on-premises directory.  They typically manage their user’s account information, including identity attributes; passwords; and group memberships, in Active Directory.
 
 When these companies look to adopt a new identity platform, such as Okta, they naturally want to be assured that it will integrate with AD so their users and existing management processes are not impacted.  They may also want to understand how they can later migrate away from Active Directory as the primary source of identity information.
 
-This guide provides step-by-step instructions for integrating an Active Directory into your Okta demonstration environment.  You will be able to show Delegated Authentication, Just-In-Time (JIT) provisioning from AD to Okta, and provisioning from AD to Okta via scheduled import.
-
-```
-Info!
-You will find your Active Directory Virtual Infrastructure in the lab environment.
-```
-
-
+This guide provides step-by-step instructions for integrating an Active Directory into your Okta workshop environment.  You will be able to show Delegated Authentication, Just-In-Time (JIT) provisioning from AD to Okta, and provisioning from AD to Okta via scheduled import.
 
 ## Add Active Directory
 
+### Initiate the Virtual Infrastructure for Active Directory  
+
+In this workshop, you will be provided with a Virtual Infrastructure for the Active Directory in the lab environment. To initiate it, complete the following steps:
+
+1. In the Okta Workforce panel, under Active Directory, Click **Launch**.  
+This will open the Virtual Infrastructure tab in your browser. 
+2. Click **Launch Virtual Infrastructure**.  
+This will initiate the VM built which may take a few minutes to complete. When it is ready, you will see the the Windows Server window in the browser. The Windows Server includes a pre-installed AD and browsers (Google Chrome and Firefox) necessary to proceed with the lab.
 
 ### Initiate integration and download agent installer
 
 Active Directory is integrated with Okta as a Directory Integration. 
 
-Launch the lab AD environment in your browser. The Windows server will have Google Chrome and Firefox pre-installed and available on the Desktop. Launch a new browser window and follow the instructions below to navigate to your Okta Org and download the AD agent installer. 
+Launch a new browser window and follow the instructions below to navigate to your Okta org and download the AD agent installer. 
 
-Pro Tip!
-
-You can also download the installer from the direct link URL :
-
-https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3.15.0-955-f74b959.exe
+   > **Note:** You can also download the installer from the direct URL:
+   >    
+   > <https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3.15.0-955-f74b959.exe>
 
 
 
@@ -70,7 +66,7 @@ The AD Agent installer is downloaded to your local machine.
 
 ### Install agent on Windows Server
 
-You will now install the AD Agent onto your Windows Server. In this demo environment, this Windows Server is a domain controller.  In a real environment, the AD Agent can be installed on any Windows Server that is a member of the Active Directory domain.
+You will now install the AD Agent onto your Windows Server. In this workshop environment, this Windows Server is a domain controller.  In a real environment, the AD Agent can be installed on any Windows Server that is a member of the Active Directory domain.
 
 
 
@@ -101,7 +97,7 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 
 
 4. Click **Next** to accept the offered _AD Domain_. \
-You only have one domain in this demonstration environment.
+You only have one domain in this workshop environment.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image8.png "image_tooltip")
