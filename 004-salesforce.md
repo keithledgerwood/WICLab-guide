@@ -1,4 +1,4 @@
-## Configure SSO and LCM for Salesforce
+## Overview  
 
 
 This guide provides instructions for signing up for your own Salesforce Developer Edition tenant and then integrating Salesforce with Okta to practice the following use cases:
