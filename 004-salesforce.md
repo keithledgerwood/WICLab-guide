@@ -1,30 +1,46 @@
 ## Configure SSO and LCM for Salesforce
 
 
-Overview
-
-This guide provides instructions for integrating Okta with Salesforce so that the following use cases can be demonstrated:
+This guide provides instructions for signing up for your own Salesforce Developer Edition tenant and then integrating Salesforce with Okta to practice the following use cases:
 
 
 
 * Single Sign-on (SSO) from Okta to Salesforce
 * Lifecycle Management (LCM) for Salesforce
 
-```
-Info!
-You will find the credentials and tenant URL in the hand-out document.
-```
+
 
 
 ## Introduction
 
-Salesforce is a Customer Relationship Management (CRM) platform. As well as being a well known SaaS application, it is very useful as part of a demonstration environment because it has a free and non-expiring _developer edition_ which supports single sign-on and provisioning.
+Salesforce is a Customer Relationship Management (CRM) platform. It supports both SAML 2.0 and OpenID Connect (OIDC) for Single Sign-On (SSO) from an external Identity Provider such as Okta. In this workshop, you will integrate Okta SSO with Salesforce using SAML 2.0.
 
-Salesforce supports both SAML 2.0 and OpenID Connect (OIDC) for Single Sign-On (SSO) from an external Identity Provider such as Okta. The Okta SSO integration with Salesforce in the Okta Integration Network uses SAML 2.0.
+Salesforce provides REST APIs for management of users and groups. To provide API security, you will use an API Key and Consumer Secret (used in the same way as OAuth 2.0 client credentials).
 
-Salesforce provides REST APIs for management of users and groups.  Two different approaches to API security are currently supported.  The latest and recommended approach, supported by OIE,  uses an API Key and Consumer Secret (used in the same way as OAuth 2.0 client credentials).  This approach is used in this guide.
+## Get a Salesforce Developer Edition instance
 
-It’s worth noting that Okta Classic implements an older API security approach which uses an administrator password and API Token for access to the Salesforce provisioning APIs. You may see references to this in older documents.  This older integration method can be enabled in OIE, using Feature Flags, but that is not covered here.
+In this section you will sign-up for Salesforce Developer Edition tenant. Complete the following steps:
+   
+1. In your browser, navigate to https://developer.salesforce.com/signup.  
+If you are also using Salesforce in your daily work, this should be a browser that is not already logged into Salesforce. 
+2. Complete the "Sign up for your Salesforce Developer Edition" form with the required information.  
+Note that the Username must be unique across all of Salesforce.
+3. Click **Sign me Up**.  
+Your tenant is created and a verification email is sent to the email address you gave.  It may take a few minutes for this email to arrive.  Note that the email includes the URL and Username you can later use to sign in to your Salesforce tenant:
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/004/image62.png "image_tooltip")  
+
+  
+5. Click **Verify Account**.  
+This link is going to log you in to your new Salesforce tenant.
+6. Complete the "Change Your Password" form with the required information.
+7. Click **Change Password**.  
+You are logged into your Salesforce Developer Edition. It is now available and ready to be integrated with Okta.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/004/image63.png "image_tooltip")
+
+
+
 
 
 ## Add Salesforce application to Okta
@@ -39,8 +55,8 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image1.png "image_tooltip")
 
 
-2. Navigate to **Applications > Applications**.
-3. Click **Browse App Catalog **to open the Okta Integration Network browser.
+2. Navigate to **Applications** > **Applications**.
+3. Click **Browse App Catalog** to open the Okta Integration Network browser.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image2.png "image_tooltip")
@@ -83,7 +99,7 @@ This integration supports both Secure Web Authentication (SWA), for password inj
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image6.png "image_tooltip")
 
 
-9. While you’re here, click the **View Setup Instructions **button.  This will open org-specific instructions for setting up Salesforce to receive SAML 2.0 assertions from your Okta org.  It will open in a new tab which you’ll refer to later on.
+9. While you’re here, click **View Setup Instructions**.  This will open org-specific instructions for setting up Salesforce to receive SAML 2.0 assertions from your Okta org.  It will open in a new tab which you’ll refer to later on.
 10. Go back to the tab where the Okta administration UI is open:
 
 
@@ -97,13 +113,13 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     In Salesforce usernames must be globally unique; no two users in Salesforce can have the same username even if they are in different tenants. An easy way to ensure uniqueness is to include a username suffix that is unique to your environment.  In this case you will use a custom expression which replaces the domain part of the Okta username with the unique domain of your demo environment.
 
 11. Set _Application username format_ to **Custom**.
-12. Enter the following for the expression - replacing yourdemodomain.com with your own custom DNS domain:
+12. Enter the following for the expression - replacing yourdomain.com with your own custom DNS domain:
 
-        **String.substringBefore(user.login,"@") + "@yourdemodomain.com"**
+        **String.substringBefore(user.login,"@") + "@yourdomain.com"**
 
 
-    This will create the Salesforce username by taking the part of the Okta username attribute (okta.login) before the @ sign and then adding @yourdemodomain.com. \
-For example, _your.name**@okta.com**_ would become _your.name**@yourdemodomain.com**_.
+    This will create the Salesforce username by taking the part of the Okta username attribute (okta.login) before the @ sign and then adding @yourdomain.com. \
+For example, _your.name**@okta.com**_ would become _your.name**@yourdomain.com**_.
 
 13. Click **Done**.
 
@@ -165,7 +181,7 @@ Click **Switch to Lightning Experience** to go to the latest Salesforce UI.  The
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image12.png "image_tooltip")
 
 
-4. Click **New **under **SAML Single Sign-On Settings**.
+4. Click **New** under **SAML Single Sign-On Settings**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image13.png "image_tooltip")
@@ -174,7 +190,7 @@ Click **Switch to Lightning Experience** to go to the latest Salesforce UI.  The
 5. Enter a _Name_.  It can be whatever you like.
 6. Copy and paste the _Issuer, Identity Provider Login URL, _and _Custom Logout URL_ from the setup instructions.
 7. Enter **https://saml.salesforce.com** as the _Entity ID_.
-8. Click **Choose File **for _Identity Provider Certificate_ and upload the file you downloaded from setup instructions.
+8. Click **Choose File**for _Identity Provider Certificate_ and upload the file you downloaded from setup instructions.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image14.png "image_tooltip")
@@ -198,7 +214,7 @@ Click **Switch to Lightning Experience** to go to the latest Salesforce UI.  The
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image17.png "image_tooltip")
 
 
-12. Check the **SAML Enabled **checkbox.
+12. Check the **SAML Enabled** checkbox.
 13. Click **Save**.
 
 
@@ -261,7 +277,7 @@ You will now create a Connected App definition in Salesforce to represent your O
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image22.png "image_tooltip")
 
 
-2. Navigate to **Apps > App Manager**.
+2. Navigate to **Apps** > **App Manager**.
 3. Click **New Connected App**.
 
 
@@ -308,7 +324,7 @@ Now that the Connect App has been defined, you need to retrieve the application 
 
 
 
-1. If not already there, navigate to **Apps > App Manager** in your Salesforce admin UI.
+1. If not already there, navigate to **Apps** > **App Manager** in your Salesforce admin UI.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image27.png "image_tooltip")
@@ -343,13 +359,13 @@ Now that the Connect App has been defined, you need to retrieve the application 
 
 
 
-1. If you are not already there, open your Okta administration UI, navigate to **Applications > Applications**, and select the **Salesforce.com **application definition.
+1. If you are not already there, open your Okta administration UI, navigate to **Applications** > **Applications**, and select the **Salesforce.com** application definition.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image31.png "image_tooltip")
 
 
-2. Click on the **Provisioning** tab and click the **Configure API integration **button.
+2. Click the **Provisioning** tab and click **Configure API integration**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image32.png "image_tooltip")
@@ -529,7 +545,7 @@ This initiates a one time import operation.  When complete you will see a status
 
 
 5. Select the checkbox to accept the suggested match for the admin user.
-6. Click** Confirm Assignments**.
+6. Click **Confirm Assignments**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image47.png "image_tooltip")
@@ -591,15 +607,15 @@ You will now create a group that will be assigned to the Salesforce application.
 
 
 
-1. In the administration UI for your Okta org, navigate to **Directory > Groups**.
+1. In the administration UI for your Okta org, navigate to **Directory** > **Groups**.
 2. Click the **Add group **button.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image51.png "image_tooltip")
 
 
-3. Enter **SalesforceUsers **as the Name of the group.
-4. Enter **Salesforce Users ** as the Description.
+3. Enter **SalesforceUsers** as the Name of the group.
+4. Enter **Salesforce Users** as the Description.
 5. Click **Save**.
 
     Note: The group may not immediately show in the group list.  Click on the Group navigation item again to reload the page and it should be shown.
@@ -612,13 +628,13 @@ You can assign a group to an application by either assigning the group within th
 
 
 
-1. If not already there, navigate to** Directory > Groups**.
+1. If not already there, navigate to **Directory** > **Groups**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image52.png "image_tooltip")
 
 
-2. Click on the link for the** SalesforceUsers** group.
+2. Click on the link for the **SalesforceUsers** group.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image53.png "image_tooltip")
@@ -637,9 +653,9 @@ You can assign a group to an application by either assigning the group within th
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image55.png "image_tooltip")
 
 
-6. Select **Chatter Free User **as the _Profile URL_. \
+6. Select **Chatter Free User** as the _Profile URL_. \
 This profile is unlimited in Salesforce Developer Edition so it won’t run out.
-7. Select **– No Role – **as the _Role_. \
+7. Select **– No Role –** as the _Role_. \
 You can’t assign a role to a Chatter Free user.
 8. Scroll to the bottom of the page and click **Save and Go Back**.
 
@@ -658,7 +674,7 @@ You will now assign a test user to the_ SalesforceUsers_ group.  This will cause
 
 
 
-1. If not already there, navigate to **Directory > Groups**.
+1. If not already there, navigate to **Directory** > **Groups**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/004/image57.png "image_tooltip")
