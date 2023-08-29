@@ -19,35 +19,17 @@ Info!
 You will find the credentials and tenant URL in the lab environment.
 ```
 
-# Requirements (API key not required in the setup, but leaving optional)
-
-Before you start configuring provisioning for BambooHR, you need to obtain a Bamboo API Key:
-
-1. Login to BambooHR as an administrator.
-
-Note: Bamboo recommends using a service account to generate the API Key, as opposed to using an individual administrator's credentials.
-
-2. Select Account Settings in the upper right corner, then select API Keys.
-
-3. Select **Add a new key**, or use an existing one if you have one, see the list of **My API Keys**.
-
-4. Make a copy of the Key to enter in Okta later in this procedure.
-
-# Configure SAML 2.0 for BambooHR (I asume not required, leaving optional)
-
-1. Navigate to BambooHR at __https://<your_subdomain>.bamboohr.com__ where _<your_subdomain>_ is your organization's subdomain, and sign in with your existing credentials. This URL is the default relay state for your organization.
-
-2. Go to: **Settings \> Apps**
-
-3. Scroll down to **Okta**, then click **Install:**
-
 # Add BambooHR App to Okta
 
 Okta maintains a specific integration for BambooHR in the
 Okta Integration Network (OIN). To add this to your Okta org, follow
 these steps:
 
-1.  Use a browser to open the administration UI of your Okta demo org
+
+
+1.  Use a browser to open the administration UI of your Okta demo org, click *Launch* in the lab environment, login and click **Admin**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")
 
 2.  Navigate to **Applications \> Applications**.
 
@@ -65,17 +47,16 @@ these steps:
 
 6. In the **General Settings** tab complete the required fields using the information below
 
-- Verify that the **Subdomain** is your BambooHR subdomain. For example, enter **yourdemodomain** for http://**yourdemodomain**.bamboohr.com/.
+- Verify that the **Subdomain** is your BambooHR subdomain. For example, enter **yourwiclabdomain** for http://**yourwiclabdomain**.bamboohr.com/.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
 
-7. In the Sign On Methods section of the Sign-On Options panel, select **Secure Web Authn** as a sign-on option. If you select SAML 2.0, click **View Setup Instructions** and follow the instructions.
+7. In the Sign On Methods section of the Sign-On Options panel, select **Secure Web Authentification** as a sign-on option. If you select SAML 2.0, click **View Setup Instructions** and follow the instructions.
 
 
 # Enable integration and provisioning
 
 1. In the **Provisioning tab** complete the required fields as follows:
-
 
 * Check the checkbox for **Enable API integration**.
 
@@ -99,11 +80,49 @@ these steps:
 Select **Allow BambooHR to source Okta users** in the Profile & Lifecycle Sourcing area, BambooHR is the source for user profile data now.
 * Click **Save**.
 
-4. In the **Import tab**, click **Import Now**, and assing your users to Okta by clicking **Confirm Assignements**.
+# Configure import
+
+In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import so you can assign the existing your user to your Okta admin user.
+
+In fact, you could perform this one-time import without doing any configuration, and manually match the account, but it makes sense to set up account matching for completeness.  Follow these steps:
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
+
+1. Select the **Provisioning** tab in the BambooHR app definition.
+2. Select **To Okta**.
+3. In the **General** section, click **Edit** to define import settings.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-2.png "image_tooltip")
+
+The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BombooHR account.  You will use a custom expression to specify a replacement domain.
+
+4. Select Custom for Okta username format.
+5. Enter the following expression, using your own domain:
+```
+appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
+```
+
+6. Click **Save**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
+
+7. In the **Okta Attribute Mappings** section, edit *Primary email* parameter, by entering transformational expression, to import users with an email indicating your own domain parameters.
+
+
+```
+appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
+```
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
+
+8. Click **Save**.
+
+# Import users to Okta Universal Directory
+
+1. In the **Import tab**, click **Import Now**, and assing your users to Okta by selecting them and clicking **Confirm Assignements**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
 
-Select **Auto-activate users after confirmation** and click **Confirm**.
+2. Select **Auto-activate users after confirmation** and click **Confirm**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
@@ -114,15 +133,45 @@ For the best experience, create your own BambooHR provisioning with your own Okt
 Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD?)
 
 
-5. Complete the attribute mapping using the information below
+# Add/Hire a new employee to BambooHR
 
-```
-Departament, Division etc. are auto-mapped; we should be alright
-```
+1. In the Lab environment, click **Launch** in the BambooHR
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
+
+2. Click **Login to Tenant** and login using your *Credentials*.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
+
+3. In the BambooHR tenant, select **People** tab and click **New Employee**.
+
+4. Add yourself as a **New Employee** with the following **Job Information**.
+
+|||
+|:-----:|:-----:|
+|Hire Date |*Today*|
+|Work Email |*Your Email*|
+|Job Title | Director of Marketing|
+|Department | Marketing|
+|Location | Remote Worker|
+|Reports To | Trent Walsh|
+|Self-service access |*No Access*|
+
+5. Click **Save**.
+
+# Test provisioning
+
+1. Deactive your users in BambooHR.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
+
+2. Verify user profile and check if it was deactivated in Okta.
+
+------ can I enable JIT here anyhow or it always needs a manual import ------
 
 # Configure group assignment
 
-## Create a Marketing Groups
+## Create a Groups
 
 1. Navigate to **Directory > Groups**
 
@@ -131,6 +180,8 @@ Departament, Division etc. are auto-mapped; we should be alright
 3. Complete the details on the *Add group* page using the table below and click **Save**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image007.png "image_tooltip")
+
+4. Add another group for **Sales** department.
 
 ## Configure Group Rules
 
@@ -146,3 +197,4 @@ Departament, Division etc. are auto-mapped; we should be alright
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image009.png "image_tooltip")
 
+5. Create another rule for **Sales** department.
