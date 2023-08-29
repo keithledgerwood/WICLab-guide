@@ -19,7 +19,7 @@ This will initiate the VM built which may take a few minutes to complete. You ca
 
  
 
-   > **Note:** Please make sure to complete all steps of the hands-on in this virtual environment, unless otherwise stated.
+   > **Note:** Please make sure to complete all subsequent  steps of the hands-on in this virtual environment, unless otherwise stated.
    >  
 
 ### Initiate AD integration and download the agent installer
@@ -32,34 +32,33 @@ In your Windows VM (Windows Server), open a preferred browser (Chrome or Firefox
 
 2. Under the name of your Okta org, click **Resume**.
 
-1. In the left-hand Okta Workforce panel, under Workforce Identity Cloud, Click **Launch**.  
+3. In the left-hand Okta Workforce panel, under Workforce Identity Cloud, Click **Launch**.  
 This will open the Okta org tab in your browser.  
 
-2. Login with your Username, Password, and Okta Verify code or push notification. Use the credentials you set up after receiving the "Your New Okta account" e-mail and signing on to the Okta org.  
+4. Login with your Username, Password, and Okta Verify code or push notification. Use the credentials you set up after receiving the "Your New Okta account" e-mail and signing on to the Okta org.  
 You can now see the Okta End-User Dashboard.
 
-3. Click **Admin**.  
+5. Click **Admin**.  
 This will open the Admin Console tab in your browser. You may need to verify with an authenticator.
 
-4. In the Admin Console, select **Directory** > **Directory Integrations**.
+6. In the Admin Console, select **Directory** > **Directory Integrations**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image1.png "image_tooltip")
 
 
-5. Click **Add Active Directory**.
+7. Click **Add Active Directory**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image2.png "image_tooltip")
 
 
-6. Click **Set Up Active Directory**
+8. Click **Set Up Active Directory**
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image3.png "image_tooltip")
 
 
-7. Click the **Download Agent** button.
-
+9. Click the **Download Agent** button.  
 The AD Agent installer is downloaded to your Windows Server VM.
 
 ### Install agent on Windows Server
