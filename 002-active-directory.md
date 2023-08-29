@@ -8,61 +8,59 @@ This guide provides step-by-step instructions for integrating an Active Director
 
 ## Add Active Directory
 
-### Initiate the Virtual Infrastructure for Active Directory  
+### Initiate the Virtual Infrastructure  
 
-In this workshop, you will be provided with a Virtual Infrastructure for the Active Directory in the lab environment. To initiate it, complete the following steps:
+In this workshop, you will be provided with a Virtual Infrastructure including a Windows Virtual Machine (VM). To initiate it, complete the following steps:
 
-1. In the Okta Workforce panel, under Active Directory, Click **Launch**.  
+1. In the left-hand Okta Workforce panel, under Active Directory, Click **Launch**.  
 This will open the Virtual Infrastructure tab in your browser. 
 2. Click **Launch Virtual Infrastructure**.  
-This will initiate the VM built which may take a few minutes to complete. When it is ready, you will see the the Windows Server window in the browser. The Windows Server includes a pre-installed AD and browsers (Google Chrome and Firefox) necessary to proceed with the lab.
+This will initiate the VM built which may take a few minutes to complete. You can see the progress in the "VM is starting" screen and when the VM is ready, you will see the desktop of your Windows Server. The Windows Server includes a pre-installed Active Directory (AD) and browsers (Chrome and Firefox) necessary to proceed with the lab.  
 
-### Initiate integration and download agent installer
+ 
 
-Active Directory is integrated with Okta as a Directory Integration. 
+   > **Note:** Please make sure to complete all steps of the hands-on in this virtual environment, unless otherwise stated.
+   >  
 
-Launch a new browser window and follow the instructions below to navigate to your Okta org and download the AD agent installer. 
+### Initiate AD integration and download the agent installer
 
-   > **Note:** You can also download the installer from the direct URL:
-   >    
-   > <https://demo-**[YOURORG]-admin.okta.com**/artifacts/AD/3.15.0/OktaADAgentSetup-3.15.0-955-f74b959.exe>
+Active Directory is integrated with Okta as a Directory Integration.   
 
+In your Windows VM (Windows Server), open a preferred browser (Chrome or Firefox) and follow the instructions below to navigate to your Okta org and download the AD agent installer. 
 
+1. Open <https://labs.demo.okta.com/lab/create?course=wic_acceleration> to start the lab environment in the VM.
 
-1. Navigate to **Directory > Directory Integrations** in the Okta admin console
+2. Under the name of your Okta org, click **Resume**.
+
+1. In the left-hand Okta Workforce panel, under Workforce Identity Cloud, Click **Launch**.  
+This will open the Okta org tab in your browser.  
+
+2. Login with your Username, Password, and Okta Verify code or push notification. Use the credentials you set up after receiving the "Your New Okta account" e-mail and signing on to the Okta org.  
+You can now see the Okta End-User Dashboard.
+
+3. Click **Admin**.  
+This will open the Admin Console tab in your browser. You may need to verify with an authenticator.
+
+4. In the Admin Console, select **Directory** > **Directory Integrations**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image1.png "image_tooltip")
 
 
-2. Click **Add Active Directory**.
+5. Click **Add Active Directory**.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image2.png "image_tooltip")
 
 
-3. Click **Set Up Active Directory**
+6. Click **Set Up Active Directory**
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image3.png "image_tooltip")
 
 
-4. Click the **Download Agent** button.
+7. Click the **Download Agent** button.
 
-The AD Agent installer is downloaded to your local machine.
-
-    You need to get this installer onto your Windows Server instance.  There are a couple of ways you can do this:
-
-* Copy the downloaded file to the clipboard and then paste it onto the desktop of the Windows Server.  RDP will take care of the file transfer.
-* Copy the link shown after local download is complete and use it with a browser on the Windows Server instance to download the agent. Authentication is not required.
-
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image4.png "image_tooltip")
-
-* Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
-
-    It’s worth noting that the AD Agent can also be found, along with a lot of other downloadable assets, under **Settings** > **Downloads** in the Okta admin console.
-
-
+The AD Agent installer is downloaded to your Windows Server VM.
 
 ### Install agent on Windows Server
 
