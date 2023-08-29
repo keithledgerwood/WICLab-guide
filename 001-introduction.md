@@ -29,7 +29,7 @@ The workshop's learning objectives are covered in the following modules:
 
 - Enabling flawless lifecycle management:
     - [tbd]
-    
+
 - Enabling secure access policies and passwordless user login experience:
     - Security
 
@@ -38,8 +38,21 @@ The workshop's learning objectives are covered in the following modules:
 
 - Ensuring the right level of user access:
     - Identity Governance  
-   
-   >  
 
-   > **Note:** In this workshop, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). Please make sure to complete all steps of the hands-on in this environment, unless otherwise stated. You will initiate the Virtual Infrastructure in the next module.
+
+## Lab Environment
+
+In this workshop, you will be working in a dedicated lab environment.
+
+If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps:
+
+1. Open a browser and go to <https://labs.demo.okta.com/lab/create?course=wic_acceleration>.  
+This will open the Okta Workforce lab website.  
+
+2. Under Your Lab Name field, click **Get Started** to launch your own lab environment.  
+You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
+
+
+
+   > **Note:** In this workshop, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). Please make sure to complete all steps of the hands-on presented in subsequent modules in this virtual environment, unless otherwise stated. You will initiate your Virtual Infrastructure in the Active Directory module.
    >    
