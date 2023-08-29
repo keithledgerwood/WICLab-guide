@@ -1,35 +1,45 @@
-# LEARNING OBJECTIVES
-Today we are going to learn the following topics:
+## Learning Objectives  
 
-- How to integrate Okta with BambooHR (HR as a Source)
-- How to integrate Active Directory with Okta
-- How to integrate Microsoft Office365 and Salesforce with Okta
-- How to automatically on and offboard employees
-- How to customize complex identity requirements with Okta Workflows
-- How to ensure the right people have the right access to the right resources with the least amount of friction
+Welcome to the Okta’s Workforce Identity Cloud Workshop!
 
-# WORKSHOP STRUCTURE
+Workforce Identity Cloud (WIC) is a platform that can be used to tackle numerous Identity and Access Management (IAM) challenges and is by far the easiest and most secure solution for solving these use cases. This 101 course will give you a well-rounded primer into how to think about IAM and take advantage of Okta’s quick time-to-market.
 
-This workshop is broken into the sections listed below. 
+This Lab Guide will provide you with step-by-step instructions that you need to follow to complete the hands-on exercise and get practical experience with Okta’s Workforce Identity Cloud. 
 
-- Platform Review and Preparation
+In this workshop, you will learn how to:
 
-- IDENTITY SOURCES
-    - Integrate Active Directory
-    - Integrate BambooHR
+- Integrate Active Directory with Okta
+- Integrate BambooHR with Okta and use an HR system as source of user identity
+- Integrate Microsoft Office365 with Okta
+- Automatically on- and offboard employees  
+- Enable secure access policies and passwordless user login experience
+- Automate identity processes and customize complex identity requirements
+- Ensure the right people have the right access to the right resources with the least amount of friction
 
-- INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
-    - Microsoft Office 365
-    - Salesforce
+## Workshop Structure
 
-- OKTA IDENTITY GOVERNANCE (OIG)
-    - Prepare your Environment
-    - Access Requests
-    - Access Certifications
+The workshop's learning objectives are covered in the following modules:  
 
-- OKTA WORKFLOWS
-    - Learn how to automate identity processes
-    - Extend the onboarding experience
+- Identity Sources:
+    - Active Directory
+    - BambooHR
 
+- Integrating applications for secure Single-Sign-On:
+    - Microsoft Office365
 
-The section **Additional Use Cases** is optional and will extend the demo environment or describe more advanced topics. Please find the ones relevant for you and try them out.
+- Enabling flawless lifecycle management:
+    - [tbd]
+    
+- Enabling secure access policies and passwordless user login experience:
+    - Security
+
+- Automating identity processes:
+    - Workflows
+
+- Ensuring the right level of user access:
+    - Identity Governance  
+   
+   >  
+
+   > **Note:** In this workshop, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). Please make sure to complete all steps of the hands-on in this environment, unless otherwise stated. You will initiate the Virtual Infrastructure in the next module.
+   >    
