@@ -75,7 +75,7 @@ these steps:
 
 3. Change the BambooHR to Okta provisioning settings:
 
-* Select the Provisioning tab, and then select To Okta in the Settings list.
+* Select the **Provisioning** tab, and then select **To Okta** in the Settings list.
 * Click **Edit** in the **General, User Creation & Matching, Profile & Lifecycle Sourcing**, or **Import Safeguard** areas to edit the settings.\
 Select **Allow BambooHR to source Okta users** in the Profile & Lifecycle Sourcing area, BambooHR is the source for user profile data now.
 * Click **Save**.
@@ -96,13 +96,14 @@ In fact, you could perform this one-time import without doing any configuration,
 
 The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BombooHR account.  You will use a custom expression to specify a replacement domain.
 
-4. Select Custom for Okta username format.
-5. Enter the following expression, using your own domain:
+4. Select *Every hour* for Schedule import.
+5. Select *Custom* for Okta username format.
+6. Enter the following expression, using your own domain:
 ```
 appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 ```
 
-6. Click **Save**.
+7. Click **Save**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
 
