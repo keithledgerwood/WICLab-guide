@@ -93,6 +93,8 @@ these steps:
 
 10. Click **Fetch and Select** next to Office 365 Domains.
 
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image07-1.png "image_tooltip")
+
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image07.png "image_tooltip")
 
 11. Select the custom DNS domain that you configured.
