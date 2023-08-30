@@ -443,9 +443,10 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
-
-   > the **+ icon** will change into **Assigned**.
-
+    >
+    > the **+ icon** will change into **Assigned**.
+    >
+    
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
 4.  Click the **+ icon** for a test user in your Okta org.
