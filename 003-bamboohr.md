@@ -96,8 +96,9 @@ In fact, you could perform this one-time import without doing any configuration,
 
 The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BombooHR account.  You will use a custom expression to specify a replacement domain.
 
-4. Select *Custom* for Okta username format.
-5. Enter the following expression, using your own domain:
+4. Select *Every hour* for Schedule import.
+5. Select *Custom* for Okta username format.
+6. Enter the following expression, using your own domain:
 ```
 appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 ```
@@ -135,7 +136,7 @@ Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD
 
 # Add/Hire a new employee to BambooHR
 
-1. In the Lab environment, click **Launch** in the BambooHR field.
+1. In the Lab environment, click **Launch** in the BambooHR
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
 
@@ -145,7 +146,7 @@ Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD
 
 3. In the BambooHR tenant, select **People** tab and click **New Employee**.
 
-4. Add your new employee as a **New Employee** with the following **Job Information**.
+4. Add yourself as a **New Employee** with the following **Job Information**.
 
 |||
 |:-----:|:-----:|
@@ -161,13 +162,13 @@ Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD
 
 # Test provisioning
 
-1. Open your BambooHR tenant.
-2. In the **People** tab, select your newly added user and change its' **Status** to *Inactive*.
+1. Deactive your users in BambooHR.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
 
-3. Verify user profile and check if it was deactivated in Okta.
+2. Verify user profile and check if it was deactivated in Okta.
 
+------ can I enable JIT here anyhow or it always needs a manual import ------
 
 # Configure group assignment
 
