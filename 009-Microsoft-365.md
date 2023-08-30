@@ -183,16 +183,13 @@ account.
 
 Follow these steps to enable provisioning:
 
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image013.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
 
 1.  Click **Edit** to set the options for Okta provisioning to Azure AD.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image014.png "image_tooltip")
 
 2.  Click the **Enable** checkbox for *Create Users*.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
 
 3.  Click the **Enable** checkbox for *Update User Attributes*.
 
