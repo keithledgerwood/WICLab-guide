@@ -107,7 +107,7 @@ You only have one domain in this workshop environment.
 
 
 6. Enter and confirm a password for the _OktaService_ account. \
-This password can be whatever you like.  Since this is a demo environment, maybe just make it the same as your administrator so you don’t have to remember another password.
+This password can be whatever you like.  Note the password down for future use.
 7. Click **Next**.
 8. Click **Next** on the _Proxy Configuration_ page.
 
@@ -128,13 +128,11 @@ The installer is going to make a connection to this URL so that you can authenti
 11. Authenticate to your Okta org as an administrator. \
 You may need to complete MFA as part of the login process.
 
-        In general, it is strongly recommended that you do not use a personal admin account to set up agents.  If this account is later removed, the agent could also lose access.  For a demo system you can take the risk with the benefit that it’s easier and quicker this way.
+   > In general, it is strongly recommended that you do not use a personal admin account to set up agents.  If this account is later removed, the agent could also lose access. 
+   If you do create a dedicated admin account to register AD agents, it will need the Organizational Admin and Application Admin roles.
 
 
-        If you do create a dedicated admin account to register AD agents, it will need the Organizational Admin and Application Admin roles.
-
-
-    After login completes, you will see this consent prompt:
+After login completes, you will see this consent prompt:
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image12.png "image_tooltip")
@@ -151,7 +149,7 @@ The AD Agent is now running on your Windows Server and will make an outgoing con
 
 ### Complete integration configuration
 
-The AD Agent running on your Windows Server is now registered with your Okta org.  You can now complete integration configuration back in your Okta admin console.
+The AD Agent running on The Windows Server is now registered with your Okta org.  You can now complete integration configuration back in your Okta admin console.
 
 
 
@@ -180,18 +178,18 @@ On the _Basic Settings_ page you can determine which parts of Active Directory w
 
 
 5. For groups, uncheck the checkbox at the **dc=_yourdemodomain_,dc=_com_** level.
-6. Check the checkboxes for the OUs containing your demo groups.
+6. Check the checkboxes for the OUs containing your workshop groups.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image16.png "image_tooltip")
 
 
 
-    At the bottom of the page you have the option to set the Okta username format.  This determines which attribute is matched against the username entered on the Okta login page when performing Delegated Authentication.   You don’t need to change it.
+> At the bottom of the page you have the option to set the Okta username format.  This determines which attribute is matched against the username entered on the Okta login page when performing Delegated Authentication.   You don’t need to change it.
 
 7. Click **Next**.
 
-    The agent is configured with the configuration you have provided.  When complete, a confirmation is shown:
+> The agent is configured with the configuration you have provided.  When complete, a confirmation is shown:
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image17.png "image_tooltip")
@@ -206,7 +204,7 @@ On the _Basic Settings_ page you can determine which parts of Active Directory w
 
 
 
-    The suggested attribute list is sufficient but you can add additional attributes if you like.  This is important if you have defined custom attributes in Active Directory.
+   > The suggested attribute list is sufficient but you can add additional attributes if you like.  This is important if you have defined custom attributes in Active Directory.
 
 9. Click **Next**.
 
@@ -314,8 +312,7 @@ Before running an import, you should configure provisioning so that users are cr
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image26.png "image_tooltip")
 
 
-
-    The default is to match on Email address but, for the demo environment where UPN in AD will be used as the username format in Okta, it makes more sense to match on username format.
+   > The default is to match on Email address but, for the workshop environment where UPN in AD will be used as the username format in Okta, it makes more sense to match on username format.
 
 5. Select radio-button for **Okta username format matches**.
 6. Click **Save**.
@@ -460,7 +457,6 @@ This will allow you to see the Okta attribute names as well as the display names
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image38.png "image_tooltip")
 
 
-
 >These attributes are controlled by the _active_directory_ profile for your directory under **Directory > Profile Sources**.
 
 
@@ -470,16 +466,16 @@ This will allow you to see the Okta attribute names as well as the display names
 Now that you have a user in Okta who has an assigned account in Active Directory, that use should be able to authenticate to Okta using their Active Directory credentials.
 
 
-
 1. Start a new browser session.  This could be a private browsing window or a different browser process.
-2. Navigate to your Okta homepage: **https://yourdemoorg.okta.com**.
 
+2. Navigate to your Okta homepage: **https://yourdemoorg.okta.com**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image39.png "image_tooltip")
 
+3. Enter the UPN of the user that you imported to Okta.
 
-3. Enter the UPN of the user that you imported to Okta. \
-e.g. **emily.boone@yourdemodomain.com**.
+   > e.g. **emily.boone@yourdemodomain.com**.
+
 4. Click **Next**.
 
 
@@ -499,8 +495,7 @@ e.g. **emily.boone@yourdemodomain.com**.
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image41.png "image_tooltip")
 
 
-
-    Your imported user has authenticated to Okta using their Active Directory credentials.
+   > Your imported user has authenticated to Okta using their Active Directory credentials.
 
 
 Congratulations.  You have successfully imported groups, and a user, from Active Directory.  You could now assign the user to applications just like any other Okta-sourced user.  Methods to assign to an application include:
