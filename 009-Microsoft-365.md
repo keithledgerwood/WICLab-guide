@@ -208,30 +208,26 @@ For Microsoft 365, the licenses and roles to be assigned to users can be
 set up in attribute mapping. This is what you will configure here.
 Follow these steps:
 
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
+
+1.  If not already there, open the **To App** settings under Provisioning
+
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image016.png "image_tooltip")
 
-1.  If not already there, open the **To App** settings under the
+2.  Scroll to the bottom of the page and click **Show Unmapped**.
 
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
-
-2.  Scroll to the bottom of the page and click **Show Unmapped
-
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image018.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/3a364fb9695bd6b1c1cb8c97e0bc2feb8af7b624/images/009/image017-1.png "image_tooltip")
 
 3.  Click the **Edit** icon for the *Licenses* attribute.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
-
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
 
 4.  Select **Same value for all users** from the drop-down list. 
     > The available options are shown. These have been pulled via API
     > and so reflect the options relevant for your Microsoft tenant:
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
->
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image021.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image018.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
 
 5.  Select the checkboxes for the following licenses:
 
@@ -249,20 +245,20 @@ Follow these steps:
 
     -   Exchange Online Advanced Threat Protection
 
--   Microsoft Teams
+    -   Microsoft Teams
 
--   Intune
+    -   Intune
 
--   Exchange Online (Plan 2)
+    -   Exchange Online (Plan 2)
 
->
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
 
 6.  Scroll to the bottom of the window and click **Save**.
 
 OK. Provisioning is enabled and attribute mapping is done. You're ready
 to test.
 
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
 # Test provisioning and single sign-on
 
 Now that provisioning and single sign-on have both been configured, you
@@ -282,17 +278,18 @@ via group membership - you'll set that up later.
 
 1.  If not already there, navigate to **Applications \> Applications**
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
-
 2.  Select the **Assignments** tab.
 
-3.  Click the **Assign** button and select **Assign to People** from the
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image021.png "image_tooltip")
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
+3.  Click the **Assign** button and select **Assign to People** from the dropdown list.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
 
 4.  Select your admin user and click **Assign**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image025.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
+
 >
 > The User Name has been set based on the custom expression you
 > specified during configuration of single sign-on.
@@ -304,29 +301,33 @@ via group membership - you'll set that up later.
 >
 > Licenses have been set based on the attribute mapping you created.
 >
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image026.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
 5.  Scroll down to the *roles* and select the **Global Administrator**
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image027.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image025.png "image_tooltip")
 
 6.  Scroll to the bottom and click **Save and Go Back**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image026.png "image_tooltip")
 
 7.  Click **Done**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image029.png "image_tooltip")
 >
 > In the background, Okta is now attempting to create this user in your
 > Microsoft 365 tenant and assign the selected roles licenses. This
 > should only take a few seconds to complete.
 >
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image030.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
 
 8.  In the Okta Admin UI, navigate to **Reports \> System Log**.
 
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image027.png "image_tooltip")
+
 9.  Confirm that the records indicating successful provisioning are found.
+
 
 ## Test single sign-on (SSO)
 
@@ -338,17 +339,19 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 3.  Authenticate as your test user: e.g. ***your.name*\@okta.com**
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image031.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image029.png "image_tooltip")
 
 4.  Click the tile for **Microsoft Office 365 Office Portal**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image030.png "image_tooltip")
 
 5.  Click **Yes** to stay signed in.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image033.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image031.png "image_tooltip")
 
 6.  Click the identity icon in the top-right of the page.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
 
 7.  Click **Sign out** to clear the session. Close the browser you used.
 
@@ -379,7 +382,7 @@ Office 365 app.
 
 2.  Click the **Add group** button.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image035.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image033.png "image_tooltip")
 
 3.  Enter **O365Users** as the Name of the group.
 
@@ -403,7 +406,8 @@ group definition.
 
 2.  Click on the link for the **O365Users** group.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image040.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image035.png "image_tooltip")
+
 
 3.  Select the **Applications** tab in the group properties.
 
@@ -423,25 +427,29 @@ group definition.
 
 7.  Click **Done**.
 
+
 ## Assign user to group
 
 You will now assign a test user to the *O365Users* group. This will
 cause the user to be assigned the Microsoft Office 365 app
 which, in turn, will trigger provisioning of an account.
 
-1.  If not already there, navigate to **Directory \> Groups**.
+1.  If not already there, navigate to **Directory \> Groups** and Click on the link for the **O365Users** group.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image040.png "image_tooltip")
+
+2.  Select the **People** tab within the **O365Users** group.
+
+
+3.  Click **Assign people**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
-2.  Select the **People** tab.
-
-3.  Click **Assign people**.
+>the **+ icon+** will change into **Assigned**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
 4.  Click the **+ icon** for a test user in your Okta org.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
 The user is now assigned to the group and will be assigned to the
 Microsoft Office 365 app using the attribute mapping associated
@@ -457,14 +465,15 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 3.  Authenticate as your test user: e.g.
     > ***alex.anderson@yourdemodomain.com***
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image044.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
 4.  Click the tile for **Microsoft Office 365 Word Online**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image045.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image044.png "image_tooltip")
 
 5.  Click **Yes** to stay signed in.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image045.png "image_tooltip")
 
 6.  Click the identity icon in the top-right of the page.
 
