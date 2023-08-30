@@ -57,14 +57,13 @@ Okta maintains a specific integration for Microsoft Office 365 in the
 Okta Integration Network (OIN). To add this to your Okta org, follow
 these steps:
 
-1.  Use a browser to open the administration UI of your Okta demo org
-
+1.  Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
 
 2.  Navigate to **Applications \> Applications**.
 
-3.  Click **Browse App Catalog** to open the Okta Integration Network
+3.  Click **Browse App Catalog** to open the Okta Integration Network browser.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image02.png "image_tooltip")
 
@@ -73,14 +72,14 @@ these steps:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image03.png "image_tooltip")
 
 5.  Click **Add integration**.
-
+The Add Microsoft 365 wizard opens on the General Settings page:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
 6.  Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
     > If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
 
-7.  Click **Next**.
+7.  Click **Next**. This integration supports both Secure Web Authentication (SWA), for password injection, and WS-Federation, for federated single sign-on.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image05.png "image_tooltip")
 
@@ -183,7 +182,7 @@ account.
 
 Follow these steps to enable provisioning:
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image013-1.png "image_tooltip")
 
 1.  Click **Edit** to set the options for Okta provisioning to Azure AD.
 
@@ -210,7 +209,7 @@ Follow these steps:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
 
-1.  If not already there, open the **To App** settings under Provisioning
+1.  If not already there, open the **To App** settings under the Provisioning tab of the Microsoft Office 365 application.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image016.png "image_tooltip")
 
@@ -218,7 +217,7 @@ Follow these steps:
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/3a364fb9695bd6b1c1cb8c97e0bc2feb8af7b624/images/009/image017-1.png "image_tooltip")
 
-3.  Click the **Edit** icon for the *Licenses* attribute.
+3.  Click the **Edit** icon for the **Licenses** attribute.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
 
@@ -231,25 +230,27 @@ Follow these steps:
 
 5.  Select the checkboxes for the following licenses:
 
-    -   Nucleus
+    -   **Nucleus**
 
-    -   Content_Explorer
+    -   **Content_Explorer**
 
-    -   Microsoft_Search
+    -   **Microsoft_Search**
 
-    -   Sharepoint Online (Plan 2)
+    -   **Sharepoint Online (Plan 2)**
 
-    -   Office Online
+    -   **Office Online**
 
-    -   Office 365 ProPlus
+    -   **Office 365 ProPlus**
 
-    -   Exchange Online Advanced Threat Protection
+    -   **Exchange Online Advanced Threat Protection**
 
-    -   Microsoft Teams
+    -   **Microsoft Teams**
 
-    -   Intune
+    -   **Intune**
 
-    -   Exchange Online (Plan 2)
+    -   **Exchange Online (Plan 2)**
+
+ These will give access to Office apps and few additional features.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
 
@@ -391,7 +392,7 @@ Office 365 app.
 
 
 
-## Assign group to app
+## Assign group to application
 
 You can assign a group to an app by either assigning the group
 within the app definition or by adding the app to the
@@ -425,6 +426,7 @@ group definition.
 
 7.  Click **Done**.
 
+The application is now assigned to the O365Users group.
 
 ## Assign user to group
 
@@ -446,7 +448,7 @@ which, in turn, will trigger provisioning of an account.
     >
     > the **+ icon** will change into **Assigned**.
     >
-    
+
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
 4.  Click the **+ icon** for a test user in your Okta org.
