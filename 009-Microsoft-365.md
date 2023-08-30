@@ -443,7 +443,8 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
-    > the **+ icon** will change into **Assigned**.
+
+   > the **+ icon** will change into **Assigned**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
@@ -462,7 +463,9 @@ You can now test single sign-on to Microsoft 365 for your test user.
 2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
 
 3.  Authenticate as your test user: e.g.
+
     > ***alex.anderson@yourdemodomain.com***
+
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
 4.  Click the tile for **Microsoft Office 365 Word Online**.
