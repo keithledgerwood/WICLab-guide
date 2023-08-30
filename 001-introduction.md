@@ -47,7 +47,21 @@ In this workshop, you will be working in a dedicated lab environment.
 If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps:
 
 1. Open a browser and go to <https://labs.demo.okta.com/lab/create?course=wic_acceleration>.  
-This will open the Okta Workforce lab website.  
+This will open the Okta Workforce lab website. 
+
+2. Click **Continue with Okta Guests**.
+
+3.  Click **Sign up** to register your Okta Lab account.
+
+4. Enter the Email address and Password you want to use for this account.
+
+5. Click **Continue**.
+
+6. Read the "Okta demo.okta.com Access Agreement" and check "I accept the access agreement".
+
+7. Click **Accept**.
+
+
 
 2. Under Your Lab Name field, click **Get Started** to launch your own lab environment.  
 You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
