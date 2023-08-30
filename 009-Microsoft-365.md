@@ -78,7 +78,7 @@ these steps:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
 6.  Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
->If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
+    > If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
 
 7.  Click **Next**.
 
@@ -107,7 +107,7 @@ these steps:
 
 14. Enter the following for the expression - replacing
 
-> **String.substringBefore(user.login,\"@\") + \"@yourdemodomain.com\"**
+    > **String.substringBefore(user.login,\"@\") + \"@yourdemodomain.com\"**
 
 15. Click **Done**.
 
@@ -290,17 +290,17 @@ via group membership - you'll set that up later.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
 
->
-> The User Name has been set based on the custom expression you
-> specified during configuration of single sign-on.
->
-> The *Immutable ID* is blank. This would only be populated if the user
-> was AD sourced and already had an immutable ID synced from Azure AD
-> via Microsoft AD Connect or similar. In this case, the immutable ID
-> will be populated during provisioning to Azure AD.
->
-> Licenses have been set based on the attribute mapping you created.
->
+    > 
+    > The User Name has been set based on the custom expression you
+    > specified during configuration of single sign-on.
+    > 
+    > The *Immutable ID* is blank. This would only be populated if the user
+    > was AD sourced and already had an immutable ID synced from Azure AD
+    > via Microsoft AD Connect or similar. In this case, the immutable ID
+    > will be populated during provisioning to Azure AD.
+    > 
+    > Licenses have been set based on the attribute mapping you created.
+    > 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
@@ -314,11 +314,11 @@ via group membership - you'll set that up later.
 
 7.  Click **Done**.
 
->
-> In the background, Okta is now attempting to create this user in your
-> Microsoft 365 tenant and assign the selected roles licenses. This
-> should only take a few seconds to complete.
->
+    > 
+    > In the background, Okta is now attempting to create this user in your
+    > Microsoft 365 tenant and assign the selected roles licenses. This
+    > should only take a few seconds to complete.
+    > 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
 
@@ -351,8 +351,6 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 6.  Click the identity icon in the top-right of the page.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
-
 7.  Click **Sign out** to clear the session. Close the browser you used.
 
 
@@ -375,7 +373,7 @@ applied instead.
 You will now create a group that will be assigned to the Microsoft
 Office 365 app.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image034.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
 
 1.  In the administration UI for your Okta org, navigate to **Directory
     \> Groups**.
@@ -445,7 +443,7 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
->the **+ icon+** will change into **Assigned**.
+    > the **+ icon** will change into **Assigned**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
