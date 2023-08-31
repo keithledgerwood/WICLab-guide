@@ -40,11 +40,13 @@ The workshop's learning objectives are covered in the following modules:
     - Identity Governance  
 
 
-## Lab Environment
+## Lab Environment and Okta Org
 
-In this workshop, you will be working in a dedicated lab environment.
+In this workshop, you will be working in a dedicated lab environment and Okta org.
 
-If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps:
+If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps.  
+
+### Creating the Lab Environment
 
 1. Open a browser and go to <https://demo.okta.com>.  
 This will open the Okta Demo website. 
@@ -70,10 +72,13 @@ This will open the Okta Labs website.
 10. Under Your Lab Name field, click **Get Started**.  
 This will launch your own lab environment. You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
 
-11. In the mailbox you used for registration, find the "Your New Okta account" email and click **Sign On**.  
+### Signing On to Your Okta Org
 
-12. Follow the instructions on the screen to sign on to your Okta org.  
-This will require signing in with your temporary password (which can be found in the "Your New Okta account" email), setting up a new password and setting up the Okta Verify app on your mobile device.    
+1. In the mailbox you used for registration, find the "Your New Okta account" email and click **Sign On**.  
+
+2. Follow the instructions on the screen to sign on to your Okta org.  
+This will require signing in with your temporary password (which can be found in the "Your New Okta account" email), setting up a new password and setting up the Okta Verify app on your mobile device.  
+After successful sign on, you will see the Okta End-User Dashboard.     
 
    > **Note:** In this workshop, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). Please make sure to complete all steps of the hands-on presented in subsequent modules in this virtual environment, unless otherwise stated. You will initiate your Virtual Infrastructure in the Active Directory module.
    >    
