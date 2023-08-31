@@ -59,7 +59,7 @@ This will open the Okta Demo website.
 
 5. Click **Continue**.
 
-6. Read the "Okta demo.okta.com Access Agreement" and check "I accept the access agreement".
+6. Read the "Okta demo.okta.com Access Agreement" and select **I accept the access agreement**.
 
 7. Click **Accept**.  
 Your Okta Demo account is created.
