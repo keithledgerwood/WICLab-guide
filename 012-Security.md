@@ -49,11 +49,14 @@ Your account is added to the Okta Verify desktop app.
 
 ### Configure Enrollment Policy for Your Users
 
-1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment**.
+1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment**.  
 
-2. For the Default Policy, click **Edit**.
+2. For the Default Policy, click **Edit**.  
+This will open the Edit Policy window.
 
-3. 
+3. Make sure that Okta Verify is set to Optional and Password is set to Required.  
+
+3. Click **Update policy**.
 
 ### Create a new Authentication Policy for your O365 App
 
