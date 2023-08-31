@@ -67,10 +67,13 @@ This will open the Okta Labs website.
 
 9. Under [Name of Workshop - TBD] click **Start**.  
 
-2. Under Your Lab Name field, click **Get Started**.  
+10. Under Your Lab Name field, click **Get Started**.  
 This will launch your own lab environment. You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
 
+11. In the mailbox you used for registration, find the "Your New Okta account" email and click **Sign On**.  
 
+12. Follow the instructions on the screen to sign on to your Okta org.  
+This will require signing in with your temporary password (which can be found in the "Your New Okta account" email), setting up a new password and setting up the Okta Verify app on your mobile device.    
 
    > **Note:** In this workshop, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). Please make sure to complete all steps of the hands-on presented in subsequent modules in this virtual environment, unless otherwise stated. You will initiate your Virtual Infrastructure in the Active Directory module.
    >    
