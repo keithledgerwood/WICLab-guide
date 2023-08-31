@@ -118,8 +118,6 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 7. In the **Okta Attribute Mappings** section, edit *Primary email* parameter, by entering transformational expression, to import users with an email indicating your own domain parameters.
 
-
-
     > appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
@@ -168,7 +166,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 ## Configure Group Rules
 
-1. On the Groups page, click the **Rules** tab.
+1. On the Groups page, select the **Rules** tab.
 
 2. Click **Add Rule**.
 
@@ -181,6 +179,21 @@ The Okta username format specifies the Okta username that will be used if a new 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image009.png "image_tooltip")
 
 5. Repeat your steps by creating another rule for **Sales** and **Human Resources** department.
+
+## Assign Applications to the Groups
+
+1. On the Groups page, select your newly created Universal Directory Groups.
+
+2. In the **Applications tab**, click **Assign applications** to assign your applications according to the table below.
+
+|Group|Application|
+|:-----:|:-----:|
+|Marketing | Tableau|
+|Marketing | Lucid Chart|
+|Sales | SalesForce|
+|Sales | Vivun|
+|Human Resources | BambooHR |
+|Human Resources | 2nd Bookmark App|
 
 # Import users to Okta Universal Directory
 
@@ -218,6 +231,26 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-remove.png "image_tooltip")
 
-5. Navigate to **Directory > Users** to check if your users status has changed.
+5. Navigate to **Directory > Users** to check if your user status has changed.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-user.png "image_tooltip")
+
+# Test provisioning (mover flow)
+
+1. Move your user to the new *Department* in the BambooHR tenant.
+
+2. In the **People > Personal** tab, select your newly added user, and click **+ Add Entry** in the **Job Information** field.
+
+3. In the **Department** field, select **Sales**, and make sure that the **Effective Date** is set for *Today*, click **Save**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
+
+4. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
+
+5. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignements**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-updated.png "image_tooltip")
+
+6. Navigate to **Directory > Groups** to check if your user was automatically assigned to the new Group and has access to the new set of Apps.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-user.png "image_tooltip")
