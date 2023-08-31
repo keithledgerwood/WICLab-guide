@@ -152,23 +152,57 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 5. Click **Save**.
 
+# Configure group assignments
+
+## Create a Groups
+
+1. Navigate to **Directory > Groups**
+
+2. Click **Add Group**.
+
+3. Complete the details on the *Add group* page using the table below and click **Save**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image007.png "image_tooltip")
+
+4. Repeat your steps by creating another group for **Sales** and **Human Resources** department.
+
+## Configure Group Rules
+
+1. On the Groups page, click the **Rules** tab.
+
+2. Click **Add Rule**.
+
+3. Complete the details on the *Add Rule* page using the table below and click **Save**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image008.png "image_tooltip")
+
+4. On the Groups page, select **Activate** from the *Actions* drop-down list.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image009.png "image_tooltip")
+
+5. Repeat your steps by creating another rule for **Sales** and **Human Resources** department.
+
 # Import users to Okta Universal Directory
 
-1. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
+1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
 
 2. In the **Import tab**, click **Import Now**, and assing your users to Okta by selecting them and clicking **Confirm Assignements**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
 
-2. Select **Auto-activate users after confirmation** and click **Confirm**.
+3. Select **Auto-activate users after confirmation** and click **Confirm**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
-Your BambooHR-sourced users and groups will now be visible in the **Directory > People/Groups** tab.
+4. In the **Directory > People/Groups** tab, check if your users and groups are reflected.
 
-For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in BambooHR tenant. 
+For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in BambooHR tenant.
 
 Please do not configure "Schedule Import" in your own Okta tenant.
+
+5. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
 
 # Test provisioning (leaver flow)
 
@@ -187,34 +221,3 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 5. Navigate to **Directory > Users** to check if your users status has changed.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-user.png "image_tooltip")
-
-
-# Configure group assignments
-
-## Create a Groups
-
-1. Navigate to **Directory > Groups**
-
-2. Click **Add Group**.
-
-3. Complete the details on the *Add group* page using the table below and click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image007.png "image_tooltip")
-
-4. Add another group for **Sales** department.
-
-## Configure Group Rules
-
-1. On the Groups page, click the **Rules** tab.
-
-2. Click **Add Rule**.
-
-3. Complete the details on the *Add Rule* page using the table below and click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image008.png "image_tooltip")
-
-4. On the Groups page, select **Activate** from the *Actions* drop-down list.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image009.png "image_tooltip")
-
-5. Create another rule for **Sales** department.
