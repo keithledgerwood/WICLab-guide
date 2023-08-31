@@ -67,7 +67,7 @@ This will open the Edit Policy window.
 2. Click **Add a policy**.  
 This will open the Add Authentication Policy window.
 
-3. Name the new policy: O365.  
+3. Name the new policy: Office365.  
 
 4. Click **Save**.
 
@@ -106,11 +106,35 @@ This will open the Add Rule window.
 2. For Okta Verify, click **Actions**, and then select **Edit**.  
 This will open the Okta Verify window.
 
-2. Make sure that Push notification (Android and iOS only) and Okta FastPass (All platforms) is checked.  
+2. Make sure that the following options are checked:
+- Push notification (Android and iOS only)
+- Okta FastPass (All platforms)
+- Show the "Sign in with Okta FastPass" button
 
 3. Scroll down and click **Save**.
 
-###
+### Configure a FastPass Rule
+
+1. In the Admin Console, select **Security** > **Authentication policies**.
+
+2. Click **Office365**.
+
+3. For the O365 - Access for Marketing rule, click **Actions**, and then select **Edit**.  
+This will open the Edit Rule window.
+
+4. Make sure that the following options are selected:
+- Device state is: Registered
+- User must authenticate with: Possession factor
+
+5. Click **Save**.
+
+### Test FastPass Passwordless Login
+
+1. Sign in to your org as the New Employee (being a member of the Marketing group).
+
+2. In the End-User Dashboard, open the **Office365** app.
+
+3. Click **Sign in with Okta FastPass** to sign in without using your password.
 
 ## Configure Behavioral Security Measures 
 
