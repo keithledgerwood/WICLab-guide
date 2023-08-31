@@ -67,7 +67,7 @@ Your Okta Demo account is created.
 8. Go to <https://labs.demo.okta.com>.  
 This will open the Okta Labs website.
 
-9. Under [Okta Workforce - Name of Workshop - TBD] click **Start**.  
+9. Under [Name of Workshop - TBD] click **Start**.  
 
 10. Under Your Lab Name field, click **Get Started**.  
 This will launch your own lab environment. You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
