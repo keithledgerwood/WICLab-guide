@@ -96,9 +96,8 @@ In fact, you could perform this one-time import without doing any configuration,
 
 The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BombooHR account.  You will use a custom expression to specify a replacement domain.
 
-4. Select *Every hour* for Schedule import.
-5. Select *Custom* for Okta username format.
-6. Enter the following expression, using your own domain:
+4. Select *Custom* for Okta username format.
+5. Enter the following expression, using your own domain:
 ```
 appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 ```
@@ -117,26 +116,9 @@ appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 
 8. Click **Save**.
 
-# Import users to Okta Universal Directory
-
-1. In the **Import tab**, click **Import Now**, and assing your users to Okta by selecting them and clicking **Confirm Assignements**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
-
-2. Select **Auto-activate users after confirmation** and click **Confirm**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
-
-Your BambooHR-sourced users and groups will now be visible in the **Directory > People/Groups** tab.
-
-For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in BambooHR tenant. 
-
-Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD?)
-
-
 # Add/Hire a new employee to BambooHR
 
-1. In the Lab environment, click **Launch** in the BambooHR
+1. In the Lab environment, click **Launch** BambooHR.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
 
@@ -146,7 +128,7 @@ Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD
 
 3. In the BambooHR tenant, select **People** tab and click **New Employee**.
 
-4. Add yourself as a **New Employee** with the following **Job Information**.
+4. Add your new employee as a **New Employee** with the following **Job Information**.
 
 |||
 |:-----:|:-----:|
@@ -160,17 +142,44 @@ Please do not configure "Schedule Import" in your own Okta tenant. (OR WE SHOULD
 
 5. Click **Save**.
 
-# Test provisioning
+# Import users to Okta Universal Directory
 
-1. Deactive your users in BambooHR.
+1. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
+
+2. In the **Import tab**, click **Import Now**, and assing your users to Okta by selecting them and clicking **Confirm Assignements**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
+
+2. Select **Auto-activate users after confirmation** and click **Confirm**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
+
+Your BambooHR-sourced users and groups will now be visible in the **Directory > People/Groups** tab.
+
+For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in BambooHR tenant. 
+
+Please do not configure "Schedule Import" in your own Okta tenant.
+
+# Test provisioning (leaver flow)
+
+1. Deactive your users in the BambooHR tenant.
+
+2. In the **People** tab, select your newly added user and change its' **Status** to *Inactive*.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
 
-2. Verify user profile and check if it was deactivated in Okta.
+3. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
 
------- can I enable JIT here anyhow or it always needs a manual import ------
+4. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignements**.
 
-# Configure group assignment
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-remove.png "image_tooltip")
+
+5. Navigate to **Directory > Users** to check if your users status has changed.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-user.png "image_tooltip")
+
+
+# Configure group assignments
 
 ## Create a Groups
 
