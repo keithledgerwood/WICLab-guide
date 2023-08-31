@@ -6,7 +6,9 @@ To use Okta Verify, you must install the app on your device and set it up. This 
 
 Okta Verify also enables setting up the Okta FastPass which  provides passwordless authentication to any app in Okta. This means you don't have to enter your password when signing in, so the login experience is as smooth as possible but still highly secure. Okta FastPass obviously reduces the probability of data breaches that can occur from compromised credentials. The solution is supported on Android, iOS, macOS and Windows devices, from any location or network.  
 
-## Install Okta Verify on Your Virtual Machine
+## Install and Configure Okta Verify
+
+### Install Okta Verify on Your Virtual Machine
 
 To install Okta Verify on your Windows VM (Windows Server), open a preferred browser (Chrome or Firefox) in your VM and proceed with the following steps:
 
@@ -30,7 +32,7 @@ Wait for confirmation saying that Okta Verify was successfully installed.
 
 8. Click **Finish**.
 
-## Configure Okta Verify
+### Configure Okta Verify
 
 1. On Desktop, find and open **Okta Verify**.
 
@@ -58,30 +60,44 @@ This will open the Edit Policy window.
 
 3. Click **Update policy**.
 
-### Create a new Authentication Policy for your O365 App
+### Create a new Authentication Policy for your Office365 App
 
-1. Navigate to Security > Authentication policies.  
+1. Select **Security** > **Authentication policies**.  
 
-2. Click Add a policy.  
+2. Click **Add a policy**.  
+This will open the Add Authentication Policy window.
 
-2. Name the new policy: O365.  
+3. Name the new policy: O365.  
 
-4. Add your O365 app to the new policy, select the Applications tab and press the Add App button.
+4. Click **Save**.
 
-5. Select O365 from the list of applications.
+5. Click the **Applications** tab.
 
-6. Add a new rule and call it O365 - Access for Marketing.  
+6. Click **Add app**.
 
-7. Configure the rule as follows:
-- Select the Marketing group to be included in the rule.  
-- For User must authenticate with option, select Any 1 Factor type.
+7. For Office365, click **Add**.
 
-8. Save rule.
+8. Click **Close**.
+
+9. Click the **Rules** tab.
+
+10. Click **Add rule**.  
+This will open the Add Rule window.
+
+11. Configure the rule as follows:
+- Rule name: O365 - Access for Marketing
+- User's group membership includes: Marketing 
+- User must authenticate with: Any 1 Factor type
+
+12. Click **Save**.
 
 ### Test Multi-Factor Authentication
 
-1. Sign in to your org as ..... (who is in the Marketing group).
+1. Sign in to your org as the New Employee (being a member of the Marketing group).
 
+2. In the End-User Dashboard, open the **Office365** app.
+
+3. You should be asked asked to verify with your password when signing into Office365.
 
 ### Enable Okta Verify for FastPass Authentication
 
@@ -93,6 +109,8 @@ This will open the Okta Verify window.
 2. Make sure that Push notification (Android and iOS only) and Okta FastPass (All platforms) is checked.  
 
 3. Scroll down and click **Save**.
+
+###
 
 ## Configure Behavioral Security Measures 
 
