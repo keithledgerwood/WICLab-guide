@@ -76,8 +76,11 @@ these steps:
 3. Change the BambooHR to Okta provisioning settings:
 
 * Select the **Provisioning** tab, and then select **To Okta** in the Settings list.
+
 * Click **Edit** in the **General, User Creation & Matching, Profile & Lifecycle Sourcing**, or **Import Safeguard** areas to edit the settings.\
-Select **Allow BambooHR to source Okta users** in the Profile & Lifecycle Sourcing area, BambooHR is the source for user profile data now.
+
+* Select **Allow BambooHR to source Okta users** in the Profile & Lifecycle Sourcing area, to make BambooHR your main source for user profile data.
+
 * Click **Save**.
 
 # Configure import
