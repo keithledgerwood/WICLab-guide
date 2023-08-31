@@ -60,7 +60,12 @@ these steps:
 
 * Check the checkbox for **Enable API integration**.
 
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-1.png "image_tooltip")
+
 * Click **Authenticate with BambooHR** and login using your BambooHR admin account credentials.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip")
+
 
 * Leave other parameters unchanged and click **Save** when the successful verification message appears.
 
@@ -72,6 +77,8 @@ these steps:
 * Click **Edit**.
 * Select **Update User Attributes** to enable the functionality.
 * Click **Save**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
 
 3. Change the BambooHR to Okta provisioning settings:
 
@@ -101,9 +108,9 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 4. Select *Custom* for Okta username format.
 5. Enter the following expression, using your own domain:
-```
-appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
-```
+
+    > appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
+
 
 7. Click **Save**.
 
@@ -112,9 +119,9 @@ appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 7. In the **Okta Attribute Mappings** section, edit *Primary email* parameter, by entering transformational expression, to import users with an email indicating your own domain parameters.
 
 
-```
-appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
-```
+
+    > appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
+
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
 
 8. Click **Save**.

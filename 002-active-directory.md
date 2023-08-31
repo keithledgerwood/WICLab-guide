@@ -32,7 +32,7 @@ In your Windows VM (Windows Server), open a preferred browser (Chrome or Firefox
 
 2. Click **Continue with Okta Guests**.
 
-3. Login to your Okta Demo account with the registered credentials.  
+3. Login to your Okta workshop account with the registered credentials.  
 
 4. Under the name of your Okta org, click **Resume**.
 
@@ -175,7 +175,7 @@ The AD Agent running on The Windows Server is now registered with your Okta org.
 On the _Basic Settings_ page you can determine which parts of Active Directory will be connected to your Okta tenant.  Only users and groups in the specified containers will be synced to Okta when provisioning is enabled. By default, the entire Active Directory is selected.
 
 3. For users, uncheck the checkbox at the **dc=_yourdemodomain_,dc=_com_** level.
-4. Check the checkboxes for the OUs containing your demo users.
+4. Check the checkboxes for the OUs containing your workshop users.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image15.png "image_tooltip")
@@ -356,17 +356,17 @@ The group information is used to create AD-sourced group definitions in Okta and
 
 
 
-    Imported groups are automatically created as AD-sourced groups in Okta and can be found under **Directory > Groups**.
+   > Imported groups are automatically created as AD-sourced groups in Okta and can be found under **Directory > Groups**.
 
 
-    Based on the default provisioning configuration, imported users are not automatically created in Okta. Instead they are made available for manual review.
+   > Based on the default provisioning configuration, imported users are not automatically created in Okta. Instead they are made available for manual review.
 
 5. Click **OK**.
 
-    The imported users are shown along with a suggested action.
+   > The imported users are shown along with a suggested action.
 
 
-    If an imported user is matched (or partially matched) to a user in Okta, the suggested action will be to assign the AD user to the Okta user. Otherwise, as is the case here, the suggested action is to create a new Okta user.
+   > If an imported user is matched (or partially matched) to a user in Okta, the suggested action will be to assign the AD user to the Okta user. Otherwise, as is the case here, the suggested action is to create a new Okta user.
 
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image30.png "image_tooltip")
@@ -408,7 +408,7 @@ You will now check that the imported groups have been created as groups in Okta.
 
 
 
-    In the list of groups, you should see the groups from your Active Directory listed.  Notice that these groups are tagged with the Microsoft logo so you know they are AD-sourced groups.  The description of each group shows its location in AD.
+   > In the list of groups, you should see the groups from your Active Directory listed.  Notice that these groups are tagged with the Microsoft logo so you know they are AD-sourced groups.  The description of each group shows its location in AD.
 
 2. Click the link for one of the AD-sourced groups (e.g. **US West**).
 
