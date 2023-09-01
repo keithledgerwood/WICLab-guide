@@ -14,10 +14,8 @@ This lab uses a pre-built and managed instance of BambooHR. The environment has 
 
 This document covers the most straightforward integration you need to build a demo system.
 
-```
-Info!
-You will find the credentials and tenant URL in the lab environment.
-```
+   > **Info:** \
+   > You will find the credentials and tenant URL in the lab environment.
 
 # Add BambooHR App to Okta
 
@@ -217,7 +215,7 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
 
-> There's a rule setup to copy all of the @yourwiclabdomain emails to your administrator's Outlook inbox of the Office365 tenant. \
+   > There's a rule setup to copy all of the @yourwiclabdomain emails to your administrator's Outlook inbox of the Office365 tenant. \
 Please expect your user activation emails there.
 
 # Test provisioning (leaver flow)
