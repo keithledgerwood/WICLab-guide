@@ -45,10 +45,8 @@ on-premises AD with Azure AD in the cloud.
 This document covers the simplest integration you need to build a demo
 system.
 
-```
-Info!
+   > **Info:** \
 You will find the credentials and tenant URL in the lab environment.
-```
 
 
 # Add Microsoft Office 365 App to Okta
@@ -139,8 +137,7 @@ provisioning, Okta must be granted authority to call these APIs. Follow
 the steps below to grant this access and enable integration:
 
 1.  If you are not already there, open your Okta administration UI,
-    > navigate to **Applications \> Applications**, and select the
-    > **Microsoft Office 365** app definition.
+   > navigate to **Applications \> Applications**, and select the **Microsoft Office 365** app definition.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image09.png "image_tooltip")
 
@@ -223,8 +220,7 @@ Follow these steps:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
 
 4.  Select **Same value for all users** from the drop-down list. 
-    > The available options are shown. These have been pulled via API
-    > and so reflect the options relevant for your Microsoft tenant:
+   > The available options are shown. These have been pulled via API and so reflect the options relevant for your Microsoft tenant:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image018.png "image_tooltip")
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
@@ -293,11 +289,11 @@ via group membership - you'll set that up later.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
 
-> The User Name has been set based on the custom expression you specified during configuration of single sign-on.
+   > The User Name has been set based on the custom expression you specified during configuration of single sign-on.
     
-> The *Immutable ID* is blank. This would only be populated if the user was AD sourced and already had an immutable ID synced from Azure AD via Microsoft AD Connect or similar. In this case, the immutable ID will be populated during provisioning to Azure AD.
+   > The *Immutable ID* is blank. This would only be populated if the user was AD sourced and already had an immutable ID synced from Azure AD via Microsoft AD Connect or similar. In this case, the immutable ID will be populated during provisioning to Azure AD.
 
-> Licenses have been set based on the attribute mapping you created.
+   > Licenses have been set based on the attribute mapping you created.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
@@ -311,11 +307,7 @@ via group membership - you'll set that up later.
 
 7.  Click **Done**.
 
-    > 
-    > In the background, Okta is now attempting to create this user in your
-    > Microsoft 365 tenant and assign the selected roles licenses. This
-    > should only take a few seconds to complete.
-    > 
+    > In the background, Okta is now attempting to create this user in your Microsoft 365 tenant and assign the selected roles licenses. This should only take a few seconds to complete.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
 
