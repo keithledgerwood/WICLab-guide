@@ -167,3 +167,34 @@ This will open the Edit Rule window.
 4. Follow the instructions on screen to reset your password.
 
 ## Configure Access Requests
+
+1. In the Admin Console, select **Identity Governance** > **Access Requests**.  
+This will open the Access Requests Console.
+
+
+On the left-hand panel, click **Teams**
+
+Click **Add Team**
+Enter a Team name: Request Approvers and leave other settings as default
+
+Click **Create Team**
+
+
+2. On the left-hand panel, click **Access Requests**.
+
+3. Click **Create request type**.  
+This will open the Request Type Details window.
+
+4. Configure the request as follows:
+- Name: User App Request
+- Team: App Requests
+- Audience: Everyone at the org
+
+For Approval, click **Add to request type**
+
+In the right-hand panel, configure the approval as follows:
+- Text: Application Access approval required
+- Assigned to: A specific user... > You (this will enable approval from your own Admin account)
+
+At the bottom of the page, click **Action** > **Assign individual app to user**
+
