@@ -152,7 +152,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 # Configure group assignments
 
-## Create a Groups
+## Create Groups
 
 1. Navigate to **Directory > Groups**
 
@@ -180,7 +180,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 5. Repeat your steps by creating another rule for **Sales** and **Human Resources** department.
 
-## Assign Applications to the Groups
+## Assign Groups to Applications
 
 1. On the Groups page, select your newly created Universal Directory Groups.
 
@@ -195,7 +195,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 |Human Resources | BambooHR |
 |Human Resources | 2nd Bookmark App|
 
-# Import users to Okta Universal Directory
+# Import Users
 
 1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
 
@@ -216,6 +216,9 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 5. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
+
+> There's a rule setup to copy all of the @yourwiclabdomain emails to your administrator's Outlook inbox of the Office365 tenant. \
+Please expect your user activation emails there.
 
 # Test provisioning (leaver flow)
 
@@ -254,3 +257,7 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 6. Navigate to **Directory > Groups** to check if your user was automatically assigned to the new Group and has access to the new set of Apps.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-user.png "image_tooltip")
+
+
+Congratulations! You have successfully configured Lifecycle Management for
+BambooHR, and you have tested joiner/mover flow.
