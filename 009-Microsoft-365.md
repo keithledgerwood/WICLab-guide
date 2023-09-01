@@ -77,7 +77,8 @@ The Add Microsoft 365 wizard opens on the General Settings page:
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
 6.  Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
-    > If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
+
+> If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
 
 7.  Click **Next**. This integration supports both Secure Web Authentication (SWA), for password injection, and WS-Federation, for federated single sign-on.
 
@@ -104,7 +105,7 @@ The Add Microsoft 365 wizard opens on the General Settings page:
 
 13. Set *Application username format* to **Custom**.
 
-14. Enter the following for the expression - replacing
+14. Enter the following for the expression - replacing yourdemodomain.com with your own customer DNS domain:
 
     > **String.substringBefore(user.login,\"@\") + \"@yourdemodomain.com\"**
 
@@ -260,6 +261,7 @@ OK. Provisioning is enabled and attribute mapping is done. You're ready
 to test.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
+
 # Test provisioning and single sign-on
 
 Now that provisioning and single sign-on have both been configured, you
@@ -291,17 +293,11 @@ via group membership - you'll set that up later.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
 
-    > 
-    > The User Name has been set based on the custom expression you
-    > specified during configuration of single sign-on.
-    > 
-    > The *Immutable ID* is blank. This would only be populated if the user
-    > was AD sourced and already had an immutable ID synced from Azure AD
-    > via Microsoft AD Connect or similar. In this case, the immutable ID
-    > will be populated during provisioning to Azure AD.
-    > 
-    > Licenses have been set based on the attribute mapping you created.
-    > 
+> The User Name has been set based on the custom expression you specified during configuration of single sign-on.
+    
+> The *Immutable ID* is blank. This would only be populated if the user was AD sourced and already had an immutable ID synced from Azure AD via Microsoft AD Connect or similar. In this case, the immutable ID will be populated during provisioning to Azure AD.
+
+> Licenses have been set based on the attribute mapping you created.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
@@ -369,7 +365,7 @@ attributes in the app definition. If you don't specify any value
 for an attribute, the mapping in the app definition will be
 applied instead.
 
-## Create a group
+## Create a Group
 
 You will now create a group that will be assigned to the Microsoft
 Office 365 app.
@@ -390,9 +386,7 @@ Office 365 app.
 5.  Click **Save**.
 
 
-
-
-## Assign group to application
+## Assign Group to Application
 
 You can assign a group to an app by either assigning the group
 within the app definition or by adding the app to the
@@ -428,7 +422,7 @@ group definition.
 
 The application is now assigned to the O365Users group.
 
-## Assign user to group
+## Assign User to Group
 
 You will now assign a test user to the *O365Users* group. This will
 cause the user to be assigned the Microsoft Office 365 app
@@ -445,9 +439,7 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
-    >
-    > the **+ icon** will change into **Assigned**.
-    >
+> the **+ icon** will change into **Assigned**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
