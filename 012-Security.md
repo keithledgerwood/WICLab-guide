@@ -166,7 +166,9 @@ This will open the Edit Rule window.
 
 4. Follow the instructions on screen to reset your password.
 
-## Configure Access Requests
+## Okta Access Requests  
+
+### Configure Access Requests
 
 1. In the Admin Console, select **Directory** > **Groups**.
 
@@ -267,7 +269,7 @@ This will open the Request Type Details window.
 
 39. Click **Publish**.
 
-## Test Access Requests
+### Test Access Requests
 
 1. Sign out of your org as Admin.
 
@@ -294,3 +296,13 @@ This will open the Access Requests Console.
 
 12. In the End-User Dashboard, you can now see [Name of app - TBD] available.
 
+## Auditing and Reporting
+
+1. In the Admin Console, select **Reports** > **System Log**.
+
+2. In the Search field, enter the name of your New Employee.
+
+3. In the "Count of events over time" histogram, analyze the event columns:
+- Hover over each column to see the count of events recorded in particular time frames 
+
+4. Scroll down the Events table to see particular events for this user.
