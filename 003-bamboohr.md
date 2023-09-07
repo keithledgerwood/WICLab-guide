@@ -69,24 +69,25 @@ these steps:
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
 
-2. Change the Okta to BambooHR provisioning settings:
+2. Change the *Okta to BambooHR* provisioning settings:
 
 * Select the **Provisioning** tab then select **To App** in the Settings list.
 * Click **Edit**.
 * Select **Update User Attributes** to enable the functionality.
 * Click **Save**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/to-bamboo.png "image_tooltip")
 
-3. Change the BambooHR to Okta provisioning settings:
+3. Change the *BambooHR to Okta* provisioning settings:
 
 * Select the **Provisioning** tab, and then select **To Okta** in the Settings list.
-
-* Click **Edit** in the **General, User Creation & Matching, Profile & Lifecycle Sourcing**, or **Import Safeguard** areas to edit the settings.\
-
+* Click **Edit** in the **Profile & Lifecycle Sourcing** area to edit the settings.
 * Select **Allow BambooHR to source Okta users** in the Profile & Lifecycle Sourcing area, to make BambooHR your main source for user profile data.
+* Click **Save** and review that your **Update application username on** was set to **Create and update**.
 
-* Click **Save**.
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-2.png "image_tooltip")
 
 # Configure import
 
@@ -222,7 +223,7 @@ Please expect your user activation emails there.
 
 1. Deactive your users in the BambooHR tenant.
 
-2. In the **People** tab, select your newly added user and change its' **Status** to *Inactive*.
+2. In the **People** tab, select your newly added user, change its' **Status** to *Inactive* and click **Save Changes**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
 
