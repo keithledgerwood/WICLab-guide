@@ -273,5 +273,24 @@ This will open the Request Type Details window.
 
 2. Sign in to the org as the New Employee. 
 
-3. In the End-User Dashboard, open the **Okta Access Requests** app.
+3. In the End-User Dashboard, open the **Okta Access Requests** app.  
+This will open the Access Requests Console.
+
+4. In the left-hand panel, select **App Catalog**.
+
+5. Under [Name of app - TBD] Access Request, click **Request access**.
+
+6. Click **Submit new request**.
+
+7. Sign out of your org as the New Employee.
+
+8. In the mailbox you used for registration, find the "[Name of app - TBD] Access Request" email and click **Approve**.
+
+9. Sign in to the org as Admin.
+
+10. You can see the confirmation of granting access to [Name of app - TBD] to the New Employee.
+
+11. Sign out of your org as Admin and sign in as the New Employee.
+
+12. In the End-User Dashboard, you can now see [Name of app - TBD] available.
 
