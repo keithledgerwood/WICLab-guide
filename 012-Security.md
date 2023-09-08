@@ -298,11 +298,32 @@ This will open the Access Requests Console.
 
 ## Auditing and Reporting
 
-1. In the Admin Console, select **Reports** > **System Log**.
+Okta's auditing and reporting features enable you to get valuable insights about the authentication events recorded for your users. This information is captured and kept in system logs and can be analyzed to increase the security of your organization.
 
-2. In the Search field, enter the name of your New Employee.
+1. In the Admin Console, select **Security** > **Behavior Detection**.  
+This will take you to the Behavior Detection page, where you can see various user behavior criteria which are tracked by Okta, such as City, Country, Device, Geo-Location, IP, and other. It is detected and recorded whether user logs in from a "new" or "old" location or device. For each criterion, you can define how is it evaluated.
 
-3. In the "Count of events over time" histogram, analyze the event columns:
-- Hover over each column to see the count of events recorded in particular time frames 
+2. For New Device, click the **pen icon** (far right).  
+You can see that "Evaluate against past" is set to 20 authentications. This means that if a user logs in from other device than the one used for past 20 authentications, this will be recorded in system logs as new behavior.
 
-4. Scroll down the Events table to see particular events for this user.
+3. Click **Cancel** to close the window.
+
+4. In the left-hand panel, select **Reports** > **System Log**.  
+This will take you to the System Log page, where you can see the following items:
+- Search field - Here you can type your search queries about the system events to gain more insights from the data
+- Count of events over time - Histogram of events, showing the number of events recorded in the system for particular time frames
+- Events table - List of all system events with latest on top
+
+5. In the Search field, enter the first name of your New Employee.  
+This will filter the log results to show only the events pertaining to the New Employee.
+
+6. In the "Count of events over time" histogram, hover over each column to see the count of events recorded for the New Employee in particular time frames. 
+
+7. In the Events table, find the columns Event Info and Targets, which include information about actions, apps, and authenticators involved in particular events.  
+
+8. Scroll down the table to see particular events recorded for the New Employee. You may need to click **Show More** at the bottom to load all events.  
+Take a moment to analyze how the employee’s lifecycle and access has been recorded from hire to termination.
+
+9. 
+
+- After clicking ">", you can see details of particular event
