@@ -123,7 +123,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 8. Click **Save**.
 
-# Add/Hire a new employee to BambooHR
+# Add/Hire a new employee to BambooHR (joiner flow)
 
 1. In the Lab environment, click **Launch** BambooHR.
 
@@ -187,12 +187,12 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 |Group|Application|
 |:-----:|:-----:|
-|Marketing | Tableau|
-|Marketing | Lucid Chart|
+|Marketing | Office 365|
+|Marketing | Marketo|
+|Sales | Office 365|
 |Sales | SalesForce|
-|Sales | Vivun|
-|Human Resources | BambooHR |
-|Human Resources | 2nd Bookmark App|
+|Human Resources | Office 365 |
+|Human Resources | ServiceNow |
 
 # Import Users
 
@@ -216,8 +216,38 @@ Please do not configure "Schedule Import" in your own Okta tenant.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
 
-   > There's a rule setup to copy all of the @yourwiclabdomain emails to your administrator's Outlook inbox of the Office365 tenant. \
+
+## Activate Okta Account and test single sign-on
+
+You need to activate your Okta Account before testing single sign-on for your test user.
+
+   > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant. \
 Please expect your user activation emails there.
+
+1. In the Lab environment, click **Launch** Office365.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")
+
+2. Click **Login to Tenant** and login using your admin *Credentials*.
+
+3. Access your Admin's **Outlook** account from the **Apps** section.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
+
+4. In your newly delivered *Welcome to Okta!* email, click **Activate Okta Account** to activate your newly created user in a new browser window.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
+
+5. Set a new Password and Okta Verify as your security methods.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw2.png "image_tooltip")
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-ov.png "image_tooltip")
+
+6. Review your Okta End-user dashboard and the apps that the account got automatically provisioned to.
+
 
 # Test provisioning (leaver flow)
 
@@ -236,6 +266,20 @@ Please expect your user activation emails there.
 5. Navigate to **Directory > Users** to check if your user status has changed.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-user.png "image_tooltip")
+
+6. Open a new browser window that is not signed into Okta.
+
+7.  Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
+
+8.  Authenticate as your test user: e.g.
+
+    > ***Charlotte.Abbott@yourwiclabdomain.com***
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
+
+9. You should see an error, as your account was deactivated.
+
+
 
 # Test provisioning (mover flow)
 
@@ -257,6 +301,18 @@ Please expect your user activation emails there.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-user.png "image_tooltip")
 
+7. Open a new browser window that is not signed into Okta.
+
+8.  Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
+
+9.  Authenticate as your test user: e.g.
+
+    > ***Charlotte.Abbott@yourwiclabdomain.com***
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
+
+10. You should see a new set of apps, that were assigned to the user based on the *Deparment* that they were moved into.
+
 
 Congratulations! You have successfully configured Lifecycle Management for
-BambooHR, and you have tested joiner/mover flow.
+BambooHR, and you have tested joiner/mover/leaver flow.
