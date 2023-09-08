@@ -324,12 +324,11 @@ This will filter the log results to show only the events for the New Employee.
 8. Scroll down the table to see specific events recorded for the New Employee. You may need to click **Show More** at the bottom to load all events.  
 Take a moment to analyze how the employee’s lifecycle and access has been recorded from hire to termination.
 
-   > **Note:** In the Okta Expression Language, user behavior fields in the logs are stored as key : value pairs, where:
-   - Key is the type of behavior (following the Behavior Detection criteria: New City, New Country, New Device, New Geo-Location, New IP, and other)
-   - Value is either "negative" (meaning no change in behavior) or "positive" (meaning change in behavior detected).  
+   > **Note:** In the Okta Expression Language, user behavior fields in the logs are stored as key : value pairs, where:  
+   Key is the type of behavior (following the Behavior Detection criteria: New City, New Country, New Device, New Geo-Location, New IP, and other)  
+   Value is either "negative" (meaning no change in behavior) or "positive" (meaning change in behavior detected).  
   You will use this information in the next step.
    >
-   > 
 
 
 9. In the Search field, type "positive".  
