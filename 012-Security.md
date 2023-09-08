@@ -328,7 +328,9 @@ Take a moment to analyze how the employee’s lifecycle and access has been reco
    - Key is the type of behavior (following the Behavior Detection criteria: New City, New Country, New Device, New Geo-Location, New IP, and other)
    - Value is either "negative" (meaning no change in behavior) or "positive" (meaning change in behavior detected).  
   You will use this information in the next step.
+   >
    > 
+
 
 9. In the Search field, type "positive".  
 This will filter the log results to show only the events when a change in user behavior was detected.
