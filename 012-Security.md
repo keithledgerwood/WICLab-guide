@@ -351,7 +351,7 @@ This will take you to the Reports page, where you can find Okta’s out-of-the-b
 16. Close the Report requested window.  
 
 17. In the mailbox you used for registration, find the "Current Assignments Report" email and click **Download report**.  
-Your report should begin downloading automatically. If it does not, click **Download report**.  
+This will take you to the Okta org Admin Console and open the Downloading report window. Your report should download automatically. If it does not, in the Downloading report window, click **Download report**.  
 
 18. Close the Downloading report window. 
 
