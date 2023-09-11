@@ -136,8 +136,107 @@ This will open the Edit Rule window.
 
 3. Click **Sign in with Okta FastPass** to sign in without using your password.
 
-## Configure Behavioral Security Measures 
+## Set Up User Behavioral Analytics  
 
+### Configure Behavioral Security Measures 
+
+1. In the Admin Console, select **Security** > **Behavior Detection**.  
+This will take you to the Behavior Detection page, where you can see various user behavior criteria which are tracked by Okta, such as New City, New Country, New Device, New Geo-Location, New IP, and other. It is detected and recorded whether user logs in from a "new" or "old" location or device. For each criterion, you can define how is it evaluated.
+
+2. For New Device, click the **pen icon** (far right).  
+You can see that "Evaluate against past" is set to 20 authentications. This means that if a user logs in from other device than the one used for past 20 authentications, this will be recorded in system logs as new behavior.
+
+3. Click **Cancel** to close the window.
+
+4. For this step, you will need to go outside of your virtual environment. In your laptop browser, sign in to your org as the Admin.  
+This activity will be recorded in the system logs as login from a New Device. You will track this later in the Auditing and Reporting section.     
+
+5. Go back to your virtual environment.  
+
+6. In the Admin Console, select **Security** > **Networks**.
+
+7. Click **Add zone** and then **IP Zone**.
+
+8. Configure the IP Zone as follows:
+- Zone name: Allowed IP
+- For Gateway IPs, by Add your current IP address, click the IP of your VM
+
+9. Select **Security** > **Authentication policies**.  
+
+10. Click **Any two factors**.  
+
+11. Click **Add rule**.  
+This will open the Add Rule window.
+
+12. Configure the rule as follows:
+- Rule name: Travel Not Allowed
+- User's IP is: Not in any of the following zones > Allowed IP
+- Access is: Denied 
+
+13. Click **Save**.  
+
+14. For this step, you will need to go outside of your virtual environment. In your laptop browser, make an attempt to sign in to your org as the Admin.  
+Because you are now trying to log in from another IP than allowed, your login will be denied and you will get a notification saying "The resource owner or authorization server denied the request". If you login immediately after setting up the policy rule, it may happen that you will be able to initially sign in, however will be soon automatically signed out.  
+
+15. Go back to your virtual environment.  
+
+16. Select **Security** > **Authentication policies**.  
+
+17. Click **Any two factors**.  
+
+18. For Travel Not Allowed, click **Actions** and then **Deactivate**.  
+This will disable this policy rule.  
+
+19. Select **Security** > **Device Assurance Policies**.  
+
+20. Click **Add a policy**.
+
+21. Configure the device assurance policy as follows:
+- Policy name: Restrict access to old operating systems
+- Platform: Choose the platform appropriate for the phone on which you installed the Okta Verify app (Android or iOS)
+- Minimum macOS version > Customize: For Major, enter a value higher than your current OS version (even if it is a version not released yet)  
+
+22. Click **Save**.
+
+23. Select **Security** > **Authentication policies**.  
+
+17. Click **Any two factors**. 
+
+18. Click **Add rule**.  
+
+19. Configure the rule as follows:
+- Rule name: Access on New OS Only
+- Device state is: Registered  
+- Device management is: Not managed  
+- Device assurance policy is > Any of the following device assurance policies: Restrict access to old operating systems  
+- Access is: Allowed after successful authentication  
+
+20. Click **Save**.
+
+21. For Catch-all Rule, click **Actions** and then **Edit**.  
+
+22. Configure the rule as follows:
+- Access is: Denied  
+
+23. Click **Save**.  
+
+24. On the phone on which you installed the Okta Verify app, open the app and under your org and Admin user name tap the Dashboard link.  
+Because you are now trying to log in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.
+
+### Enable Okta ThreatInsight
+
+Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers. 
+
+To enable Okta ThreatInsight, proceed with the following steps:
+
+1. In the Admin Console, select **Security** > **General**.  
+
+2. Scroll down to Okta ThreatInsight settings and click **Edit**.
+
+3. Select **Log and enforce security based on threat level**.  
+This setting will make Okta automatically deny access to sign-in requests that come from potentially malicious IP addresses that ThreatInsight detects.  
+
+4. Click **Save**.
 
 ## Set Up Self-Service Password Reset
 
@@ -325,28 +424,20 @@ This will open the Access Requests Console.
 
 Okta's auditing and reporting features enable you to get valuable insights about the authentication events recorded for your users. This information is captured and kept in system logs and can be analyzed to increase the security of your organization.
 
-1. In the Admin Console, select **Security** > **Behavior Detection**.  
-This will take you to the Behavior Detection page, where you can see various user behavior criteria which are tracked by Okta, such as New City, New Country, New Device, New Geo-Location, New IP, and other. It is detected and recorded whether user logs in from a "new" or "old" location or device. For each criterion, you can define how is it evaluated.
-
-2. For New Device, click the **pen icon** (far right).  
-You can see that "Evaluate against past" is set to 20 authentications. This means that if a user logs in from other device than the one used for past 20 authentications, this will be recorded in system logs as new behavior.
-
-3. Click **Cancel** to close the window.
-
-4. In the left-hand panel, select **Reports** > **System Log**.  
+1. In the left-hand panel, select **Reports** > **System Log**.  
 This will take you to the System Log page, where you can see the following items:
 - Search field - Here you can type your search queries about the system events to gain more insights from the data
 - Count of events over time - Histogram of events, showing the number of events recorded in the system for particular time frames
 - Events table - List of all system events with latest on top
 
-5. In the Search field, type the first name of your New Employee.  
+2. In the Search field, type the first name of your New Employee.  
 This will filter the log results to show only the events for the New Employee.
 
-6. In the "Count of events over time" histogram, hover over each column to see the count of events recorded for the New Employee in particular time frames. 
+3. In the "Count of events over time" histogram, hover over each column to see the count of events recorded for the New Employee in particular time frames. 
 
-7. In the Events table, find the columns Event Info and Targets, which include information about actions, apps, and authenticators involved in particular events.  
+4. In the Events table, find the columns Event Info and Targets, which include information about actions, apps, and authenticators involved in particular events.  
 
-8. Scroll down the table to see specific events recorded for the New Employee. You may need to click **Show More** at the bottom to load all events.  
+5. Scroll down the table to see specific events recorded for the New Employee. You may need to click **Show More** at the bottom to load all events.  
 Take a moment to analyze how the employee’s lifecycle and access has been recorded from hire to termination.
 
    > **Note:** In the Okta Expression Language, user behavior fields in the logs are stored as key : value pairs, where:  
@@ -356,28 +447,28 @@ Take a moment to analyze how the employee’s lifecycle and access has been reco
    >
 
 
-9. In the Search field, type "positive".  
+6. In the Search field, type "positive".  
 This will filter the log results to show only the events when a change in user behavior was detected.
 
-10. In the Events table, choose one of the events and on its left-hand side click **>** to see details of this event.  
+7. In the Events table, choose one of the events and on its left-hand side click **>** to see details of this event.  
 
-11. On the right-hand side of the event, click **Expand All** to expand all the details. 
+8. On the right-hand side of the event, click **Expand All** to expand all the details. 
 
-12. Search for the Behaviors line.  
-You should see a record confirming a change in user behavior. For example, for the event in which you logged in from a New Device (following instructions in the User Behavioral Analytics section), this should be "New Device=POSITIVE" .  
+9. Search for the Behaviors line.  
+You should see a record confirming a change in user behavior. For the event in which you logged in from a New Device (following instructions in the User Behavioral Analytics section), this should be "New Device=POSITIVE" .  
 
-13. In the left-hand panel, select **Reports** > **Reports**.  
+10. In the left-hand panel, select **Reports** > **Reports**.  
 This will take you to the Reports page, where you can find Okta’s out-of-the-box auditing reports.  
 
-14. Under Application Access Audit, click **Current Assignments**.  
+11. Under Application Access Audit, click **Current Assignments**.  
 
-15. Click **Request report**.
+12. Click **Request report**.
 
-16. Close the Report requested window.  
+13. Close the Report requested window.  
 
-17. In the mailbox you used for registration, find the "Current Assignments Report" email and click **Download report**.  
+14. In the mailbox you used for registration, find the "Current Assignments Report" email and click **Download report**.  
 This will take you to the Okta org Admin Console and open the Downloading report window. Your report should download automatically. If it does not, in the Downloading report window, click **Download report**.  
 
-18. Close the Downloading report window. 
+15. Close the Downloading report window. 
 
-19. Open the downloaded "CurrentAssignmentsReport.csv" file and analyze the assignments of particular apps to the users.
+16. Open the downloaded "CurrentAssignmentsReport.csv" file and analyze the assignments of particular apps to the users.
