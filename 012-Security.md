@@ -194,34 +194,51 @@ This will disable this policy rule.
 21. Configure the device assurance policy as follows:
 - Policy name: Restrict access to old operating systems
 - Platform: Choose the platform appropriate for the phone on which you installed the Okta Verify app (Android or iOS)
-- Minimum macOS version > Customize: For Major, enter a value higher than your current OS version (even if it is a version not released yet)  
+- Minimum Android/iOS version > Customize: For Major, enter a value higher than your current OS version (even if it is a version not released yet)  
 
 22. Click **Save**.
 
 23. Select **Security** > **Authentication policies**.  
 
-17. Click **Any two factors**. 
+24. Click **Any two factors**. 
 
-18. Click **Add rule**.  
+25. Click **Add rule**.  
 
-19. Configure the rule as follows:
+26. Configure the rule as follows:
 - Rule name: Access on New OS Only
 - Device state is: Registered  
 - Device management is: Not managed  
 - Device assurance policy is > Any of the following device assurance policies: Restrict access to old operating systems  
 - Access is: Allowed after successful authentication  
 
-20. Click **Save**.
+27. Click **Save**.
 
-21. For Catch-all Rule, click **Actions** and then **Edit**.  
+28. For Catch-all Rule, click **Actions** and then **Edit**.  
 
-22. Configure the rule as follows:
+29. Configure the rule as follows:
 - Access is: Denied  
 
-23. Click **Save**.  
+30. Click **Save**.  
 
-24. On the phone on which you installed the Okta Verify app, open the app and under your org and Admin user name tap the Dashboard link.  
-Because you are now trying to log in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.
+31. On the phone on which you installed the Okta Verify app, open the app, and under your org and Admin user name tap the Dashboard link.  
+Because you are now trying to log in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.  
+
+32. Go back to your virtual environment.  
+
+33. Select **Security** > **Authentication policies**.  
+
+34. Click **Any two factors**.  
+
+35. For Access on New OS Only, click **Actions** and then **Deactivate**.  
+This will disable this policy rule.  
+
+36. For Catch-all Rule, click **Actions** and then **Edit**.  
+
+37. Configure the rule as follows:
+- Access is: Allowed after successful authentication  
+
+38. Click **Save**.  
+This will enable login from your phone again.
 
 ### Enable Okta ThreatInsight
 
