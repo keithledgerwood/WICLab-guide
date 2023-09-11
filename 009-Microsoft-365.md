@@ -360,7 +360,7 @@ applied instead.
 ## Create a Group
 
 You will now create a group that will be assigned to the Microsoft
-Office 365 app.
+Office 365 app. Alternatively you can assign Office365 to the groups that you already created before (*Sales, Marketing, Human Resources*).
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
 
