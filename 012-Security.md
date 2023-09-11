@@ -156,7 +156,7 @@ This will open the Edit Rule window.
 
 5. Click **Create rule**.
 
-### Test Password Reset 
+### Test Self-Service Password Reset 
 
 1. Make an attempt to sign in to your org as the New Employee with your Username, Password, and Okta Verify code or push notification. Do not use Okta FastPass for this test. When prompted to Verify with your password, click **Forgot password?**.
 
@@ -166,7 +166,32 @@ This will open the Edit Rule window.
 
 4. Follow the instructions on screen to reset your password.
 
-## Okta Access Requests  
+## Set Up Self-Service App Request
+
+### Configure Self-Service App Request
+
+1. In the Admin Console, select **Applications** > **Self Service**.
+
+2. In the Settings tab, for User App Requests, click **Edit**.
+
+3. Select **Allow users to add org-managed apps** and **Allow users to add personal apps**.
+
+4. Click **Save**.
+
+### Test Self-Service App Request
+
+1. Sign out of your org as Admin and sign in as the New Employee.
+
+2. In the End-User Dashboard, in the left-hand panel, click **Add apps**.  
+This will open the App Catalog page.
+
+3. For [Name of app - TBD], click **Add**.  
+You will see a notification saying "[Name of app - TBD] has been added to your dashboard".  
+
+4. In the left-hand panel, click **My Apps**.  
+You can now see [Name of app - TBD] available in your End-User Dashboard.
+
+## Set Up Okta Access Requests  
 
 ### Configure Access Requests
 
@@ -239,7 +264,7 @@ This will sync the resources from Okta.
 
 30. For both Applications and Okta Groups, click **Manage Access** and select the **App Request Approvers** team.
 
-31. On the left-hand panel, click **Access Requests**.
+31. In the left-hand panel, click **Access Requests**.
 
 32. Click **Create request type**.  
 This will open the Request Type Details window.
