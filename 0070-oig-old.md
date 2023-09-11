@@ -1,0 +1,393 @@
+
+## Lab description
+
+The first capability we will explore is Access Requests (Part 1). Once configured it can be used to grant access to be subsequently reviewed/revoked in Access Certifications (Part 2) and audited through our audit and reporting capabilities (Part3).
+
+This section of the document will explore the unconfigured Access Requests, walk through standard configuration (Okta and Slack integration), then create and run a simple approval flow.
+
+## Access Requests 
+
+Prior to working through the sections looking at the three capabilities, you will need to perform the following actions:
+
+1. Create distribution lists in google using Okta Workflows along with Okta OOTB Google Workspace Connector
+
+1. Open Okta Workflows Console from Okta Admin dashboard
+2. Go to the Flows tab from the top hand side
+3. Create a folder named OKTA-WIC-WORKSHOP-IGA-LAB
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image35.png "image_tooltip")
+
+4. Click on the three dots and Import the file oktaWicWorkshopIgaLab.folder
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image39.png "image_tooltip")
+
+5. Open the Flow 1\_Create Okta Group, choose the Okta Connection on the Create Group Card and activate the flow
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image49.png "image_tooltip")
+
+6. Activate the mail flow : 0\_Read DLs and run the flow to import the Distribution Lists in Okta as groups
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image51.png "image_tooltip")
+
+7. Navigate to the Okta Admin Console, go to Groups under Directory and check that the groups prefixed by “DL\_” are created
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image31.png "image_tooltip")
+
+8. Use Google Workspace Connector to push the groups as Distribution Lists to Google. Open Google Workspace integration under Applications -> Applications
+9. Go to Push Groups tab and create a group push policy rule
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image53.png "image_tooltip")
+
+10. Create a rule to push all the groups with a name starting by “DL\_”
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image14.png "image_tooltip")
+
+11. Check the creation of Distribution List in Google by navigating to Google Admin console, go to Groups under Directory
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image43.png "image_tooltip")
+
+2. Configure Okta Access Requests:
+
+1. Allow all users in Okta to request access from the Okta Access Requests application. From the Okta Admin Console, go to Applications -> Applications and select the Okta Access Requests
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image22.png "image_tooltip")
+
+2. Go to the Assignments tab and assign the group Everyone to the application, it will allow all users in Okta to access and submit requests
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image67.png "image_tooltip") 
+
+3. Now we will explore the vanilla Access Requests module. From within the Admin console go to Identity Governance > Access Requests (it will open a new browser tab)
+4. The default landing page is the Requests > Inbox view, where any requests awaiting action by this admin are displayed. It is empty.
+5. Go to Teams menu item :  Teams are an Access Requests grouping mechanism. Workflows must be assigned to a Team, and Teams can be used to scope who can run a workflow or participate in it. There is a default team created called IT. For the sake of the exercise, we will create a team called Request Admin
+6. Click the Add Team button
+7. Select the team icon and color (optional), give it a Name and Description (optional)
+8. Add team Members (type part of their name and select from the result list)
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image16.png "image_tooltip")
+
+9. Go to the Settings menu item. There are currently four integrations available – Slack, Jira, servicenow and Okta. The Okta integration is partially configured, and the others unconfigured. We will configure Slack in the next section. 
+10. Click on the Resources tab towards the top of the page.
+
+Configuration items in Access Requests are lists of objects that can be used in flows. The default lists that are automatically synced from Okta are all Applications and all Groups. 
+
+11. Click on the icon beside the Applications configuration item and click on sync Update now button
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image19.png "image_tooltip")
+
+12. On the Application configuration item, click on Manage Access button
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image55.png "image_tooltip")
+
+13. It opens a popup, select both options IT and Request Admins: these two teams can use all the applications when constructing access requests
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image33.png "image_tooltip")
+
+14. Do the same for the Groups configuration item
+15. Go to the Configuration lists tab and click on Create new list named List of Google DLs of type Resource list of Okta Groups, allowing the two teams IT and Request Admins to use the lists. Add the following items in the list
+
+<table class="c24"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c17">DL_UK_LONDON</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c17">DL_FRANCE_PARIS</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_GERMANY_BERLIN</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_SPAIN_MADRID</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_NETHERLANDS_AMSTERDAM</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_SAP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_JDE</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM_SLAESFORCE</span></p></td></tr></tbody></table>
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c7 c22">Note the </span><span class="c4 c22">Create new list</span><span class="c5">&nbsp;button. This feature can include static lists of items to include in an Access Request flow (e.g. include a drop-down list of standard items to select from). It also has the potential to pull groups of applications or similar from Okta in the future.</span></p></td></tr></tbody></table>
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image34.png "image_tooltip")
+
+16. Follow the same steps and create a second list named List of Risky Google DLs of type Resource list of Okta Groups, allowing the two teams IT and Request Admins to use the lists. Add the following items in the list.
+
+<table class="c24"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_SAP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_JDE</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM_SLAESFORCE</span></p></td></tr></tbody></table>
+
+### Create the Approval Workflow process
+
+To show workflow creation we will create a simple Access Request workflow for one of the Distribution Lists we have created previously. It will go through the manager's approval as a first step. If the DL is risky, it will go through a second level approval to the DL owner. For this to work, you need to have users that have a manager set (managerId field in the user profile).
+
+1. Create the approval workflow
+
+1. In the Access Requests UI as an administrator, go to Access Requests 
+2. Click one of the Create access request workflow buttons
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image17.png "image_tooltip")
+
+3. On the Workflow Details dialog, pick a workflow icon (optional), give the workflow a Name : Request Distribution List, and enter a Description (optional)
+4. You need to select a Team to own this workflow. Select the new team we added earlier
+5. The Audience is who can see and run this workflow. You can say everyone in the organization, a Team, or one of the groups synced from Okta. For this example, select the group everyone
+6. Click the Continue button
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image30.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c7 c22">Note that you can’t select the </span><span class="c4 c22">Mark as done automatically </span><span class="c5">toggle. The workflow needs steps before this can be done.</span></p></td></tr></tbody></table>
+
+The workflow is now ready for the steps to be added.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image8.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">Note that the workflow is in a Draft state and needs to be published to be used. Once a workflow is published, you normally must revert it to Draft to modify (which removes it from use).</span></p></td></tr></tbody></table>
+
+Workflows have four types of steps; Questions (prompt for input), Tasks (assign a todo), Approvals and Actions (which is how the Okta functions are implemented). We will add some Questions, two levels of Approval and an Action to add the user to the DL in Okta (which is an Okta Group). The UI has a dot-matrix area where you can work on the steps – I’ll refer to this as the workflow editor.
+
+The first step in an access request flow is to get the requester to supply some information, such as a justification and the selected Distribution List. We will add three fields to help the reviewers decide if access should be granted: a justification, the DL. You can use whatever fields you like.
+
+7. Click on the Add to workflow button beside Question
+8. Ignore the box in the middle of the page and go to the right of the screen under the Question heading
+9. Enter the title of the field Which Distribution List would you like to request? in the Text box (and notice that the box in the middle field is updated)
+10. Leave it as a required field
+11. Set  the Type as Dropdown
+12. Set Data source as Configuration Item and select List of Google DLs previously created
+13. Leave it Assigned to the Requester
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image7.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">You have the option of asking other people (like the requester’s manager) to supply information in a question, which may be useful for more complex flows requiring multiple inputs.</span></p></td></tr></tbody></table>
+
+14. Click the Question button at the bottom of the workflow editor
+15. Enter the title of the field (e.g. Justification) in the Text box
+16. Leave it as a required field
+17. Leave the Type as Text
+18. Leave it Assigned to the Requester
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image23.png "image_tooltip")
+
+Next, we will add two levels of approval with some conditional logic.
+
+19. Click the Approval button at the bottom of the workflow editor
+20. In the right pane give the task a name (like “Manager Approval”) and required
+21. Leave the Type as Approval Task
+22. From the Assigned to pulldown, select the Requester’s manager
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image46.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">Three things of note:</span></p><p class="c10"><span class="c5">1. Even though the step is called an Approval, it is just another type of “task”</span></p><p class="c10"><span class="c5">2. There is a lot of flexibility in who you can assign the approval step to. If it’s the manager,</span></p><p class="c10"><span class="c5">Access Requests is using the user&lt;-&gt;manager relationship from Okta. But it could also be a member of a Team, a specific user, an Okta group, or the requester themselves. It can also be dynamically assigned by the process owner at runtime</span></p><p class="c10"><span class="c5">3. You can set a due date (in minutes/hours) on the review</span></p></td></tr></tbody></table>
+
+This approval step will run once the requestor answers all the questions. With the second level of approval, we will apply some logic.
+
+23. Click the Approval button at the bottom of the workflow editor
+24. In the right pane give the task a name (like “DL Owner Approval”)
+25. Make sure the Make it a required Task in unchecked
+26. Leave the Type as Approval Task
+27. From the Assigned to pulldown, select the Okta Group Owner(s) and in the Select an Okta group, choose Which DL would you like to request?
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image4.png "image_tooltip")
+
+28. It will look like the following
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image11.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c7 c22">Note the icons on the task cards. The one for </span><span class="c4 c22">Manager Approval</span><span class="c7 c22">&nbsp;is a hierarchy, indicating the requester's manager. The one for </span><span class="c4 c22">DL Owner Approval</span><span class="c5">&nbsp;is the icon we chose when creating the Team. You can hover the mouse over the icon to see the assignment.</span></p></td></tr></tbody></table>
+
+Now we can apply logic to only run this approval if the manager has approved the request.
+
+29. Click the Edit logic button at the bottom
+30. Under the Logic tab, select Only show this task if
+31. On the second field, select the Manager Approval task (or whatever you called the first approval step above)
+32. On the third field, select is approved
+33. Click Add a condition
+34. On the Field or Task item, select Which DL would you like to request?
+35. Select condition as in configuration list
+36. choose the List of Risky Google DLs configuration list
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image10.png "image_tooltip")
+
+The final step to add is the action to add the requester to the DL (Okta Group).
+
+37. Click the Action button at the bottom of the workflow editor
+38. Select the Add user to group option
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c7 c22">There are many Okta actions that can be run in a workflow. The two that will be most used are </span><span class="c4 c22">Assign individual app to user</span><span class="c7 c22">&nbsp;and </span><span class="c4 c22">Add user to a group</span><span class="c5">. You could explore the other actions available, some of which will retrieve data from Okta and display it in the details of the flow or even run a custom Okta Workflow.</span></p></td></tr></tbody></table>
+
+39.  In the right pane give the task a name Add User to non risky DL 
+40. Make sure that Make it a required task is unchecked
+41. Set the Type as \[Okta\] Add user to group
+42. Select (enable) the Run automatically option (this will change the Assigned to value
+43. to “Okta”)
+44. In the expanded dialog, set the Email address as Requester email, the Select the
+45. group field as Which DL would you like to request?
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image13.png "image_tooltip")
+
+We also need to add logic
+
+46.  Click the Edit logic button at the bottom
+47. Under the Logic tab, select Only show this task if
+48. On the second field, select the Manager’s Approval task (or whatever you called the first approval step above)
+49. On the third field, select is approved
+50. Click the Add a condition
+51. On the Field or Task item, select Which DL would you like to request?
+52. Select condition as not in configuration list
+53. choose the List of Risky Google DLs configuration list
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image27.png "image_tooltip")
+
+54. Click the Action button at the bottom of the workflow editor
+55. Select the Add user to group option
+56.  In the right pane give the task a name Add User to risky DL
+57. Make sure that Make it a required task is unchecked
+58. Set the Type as \[Okta\] Add user to group
+59. Select (enable) the Run automatically option (this will change the Assigned to value
+60. to “Okta”)
+61. In the expanded dialog, set the Email address as Requester email, the Select the
+62. group field as Which DL would you like to request?
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image48.png "image_tooltip")
+
+We also need to add logic
+
+63.  Click the Edit logic button at the bottom
+64. Under the Logic tab, select Only show this task if
+65. On the second field, select the Manager’s Approval task (or whatever you called the first approval step above)
+66. On the third field, select is approved
+67. Click the Add a condition
+68. On the Field or Task item, select the DL Owner Approval task (or whatever you called the second approval step above)
+69. Select condition as in configuration list
+70. On the third field, select is approved
+71. Click the Add a condition
+72. On the Field or Task item, select Which DL would you like to request?
+73. Select condition as in configuration list
+74. choose the List of Risky Google DLs configuration list
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image61.png "image_tooltip")
+
+That is the last step to add to the workflow. We have one more thing to do before publishing.
+
+75. Click on the pencil icon beside the workflow name
+76. Enable the Mark as done automatically? option at the bottom
+77.  Click the Continue button
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image42.png "image_tooltip")
+
+To publish the flow:
+
+78. Click the Publish button on the top of the screen
+79. Go to Access Requests > All
+80. Your new workflow should be showing
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image68.png "image_tooltip")
+
+### Use an Access Request Workflow from the Access Request UI
+
+With the workflow created, the last step is to test it’s working. For this section you will need a user in the group you assigned to the workflow who has a manager defined in Okta an active Google Workspace account assigned.
+
+#### Requester Raised Access Request
+
+Access Request via Access Request UI:
+
+1. As this user log into your Okta Dashboard
+2. Click on the Okta Access Requests tile to open the Access Request UI
+
+You should see the new Access Request workflow showing under the App Catalog heading
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image18.png "image_tooltip")
+
+3.  Click the Request access button
+
+You should see the two questions you added to the flow in the dialog.
+
+4. Choose one of the risky DLs from the List and set a Justification
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image59.png "image_tooltip")
+
+5. Click Submit new request
+
+The view will change to show the details of the workflow, including the right panel showing the summary information about the request, the questions and the tasks.
+
+6. Click on the Tasks item to see the next step in the flow.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image25.png "image_tooltip")
+
+It is assigned to the requester's manager for review, as expected.
+
+Next, we will review the access as the manager.
+
+#### Manager Reviews Access Request
+
+We need to act as the manager. If you want to keep your requester session active, you may want to use a different browser, a new browser tab in incognito mode, or a different browser profile.
+
+1. Log into the Okta Dashboard as your manager
+2. Click on the Okta Access Requests tile
+3. The default view is the App Catalog. Click on the Requests menu item to see the new request in the Inbox.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image65.png "image_tooltip")
+
+4. Click on the item to open it
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image12.png "image_tooltip")
+
+The view is the same as the requester’s view. Note that the Tasks tab has a (1) beside it indicating there is some action required of the manager.
+
+5. Click the Tasks tab to see the option to Approve or Deny the request, Click Approve
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image9.png "image_tooltip")
+
+Obviously, the manager could Deny the request and the flow would stop here.
+
+After a brief pause the flow will update the view.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image47.png "image_tooltip")
+
+It shows in the main panel that the task (Manager Approval) has been Approved. It also shows in the right pane the next step in the flow, which is DL Owner Approval and it has been automatically assigned to the owner of DL (Alex Mayer in our example)
+
+#### Perform DL Owner Approval Step
+
+1. Log into the Okta Dashboard as your manager
+2. Log into the Okta Dashboard as the DL Owner
+3. You can retrieve the DL Owner from Okta Admin Dashboard
+
+1. Login to the Okta Admin Dashboard as a Super Admin
+2. Under Directory > Groups
+3. Search for you DL you have request previously
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image6.png "image_tooltip")
+
+4. Open the group and go to the Owners tab
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image44.png "image_tooltip")
+
+5. Click on the owner Display Name (Alex Meyer in our example)
+6. Go to the Profile tab and copy the username
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image24.png "image_tooltip")
+
+7. copy the username and login to Okta Dashboard using the password W1cLa61!
+
+4. Click on the Okta Access Requests tile
+5. The default view is the App Catalog. Click on the Requests menu item to see the new request in the Inbox.
+6. Click on the item to open it
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image64.png "image_tooltip")
+
+7. Click the Tasks tab to see the option to Approve or Deny the request, Click Approve
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image50.png "image_tooltip")
+
+After a brief pause the flow will update the view.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image40.png "image_tooltip")
+
+This last step will add the user to the requested DL (as a group) in Okta. Before we check in Okta, let’s confirm what the requester sees.
+
+#### Requester Confirmation
+
+If not already there, go back into the Access Requests UI as the requester
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image66.png "image_tooltip")
+
+The view is the same as what the last approver saw, showing the entire trail.
+
+#### Check the access was assigned in Okta
+
+The last thing to check is that the access was actually assigned in Okta:
+
+1. Login to the Okta Admin Dashboard as a Super Admin
+2. Under Directory > Groups
+3. Search for you DL you have request previously
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image6.png "image_tooltip")
+
+4. Open the group and go to the People tab
+5. You should see the request as a member of the group
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image32.png "image_tooltip")
+
+6. Navigate to the Google Admin Console: [https://admin.google.com/](https://www.google.com/url?q=https://admin.google.com/&sa=D&source=editors&ust=1691582006602285&usg=AOvVaw3rAIwaJb8A_MYPgLN0rcsD)
+7. Go to Directory > User
+8. Open your test user
+9. and check that the user is added to the Group or the DL
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image58.png "image_tooltip")
