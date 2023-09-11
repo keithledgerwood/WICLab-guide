@@ -160,6 +160,7 @@ This activity will be recorded in the system logs as login from a New Device. Yo
 8. Configure the IP Zone as follows:
 - Zone name: Allowed IP
 - For Gateway IPs, by Add your current IP address, click the IP of your VM
+- Click **Save**
 
 9. Select **Security** > **Authentication policies**.  
 
@@ -176,7 +177,8 @@ This will open the Add Rule window.
 13. Click **Save**.  
 
 14. For this step, you will need to go outside of your virtual environment. In your laptop browser, make an attempt to sign in to your org as the Admin.  
-Because you are now trying to log in from another IP than allowed, your login will be denied and you will get a notification saying "The resource owner or authorization server denied the request". If you login immediately after setting up the policy rule, it may happen that you will be able to initially sign in, however will be soon automatically signed out.  
+Because you are now trying to log in from another IP than allowed, your login will be denied and you will get a notification saying "The resource owner or authorization server denied the request".  
+If you login immediately after setting up the policy rule, it may happen that you will be able to initially sign in, however will be soon automatically signed out.  
 
 15. Go back to your virtual environment.  
 
