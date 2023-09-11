@@ -391,3 +391,99 @@ The last thing to check is that the access was actually assigned in Okta:
 9. and check that the user is added to the Group or the DL
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image58.png "image_tooltip")
+
+
+## Access Certification
+
+The next capability we will explore is Access Certification. Access Certification (aka attestation, recertification etc.) is the mechanism to validate that a user still needs the access they have. It is a common control in compliance regulations. Certification campaigns may be run periodically, or there may be continuous certification when user roles change. Okta Identity Governance currently supports user-group memberships and user-application assignments. Participants in a campaign (such as the users manager) will approve (access retained) or revoke access (access should be removed).
+
+This section of the document will explore the Access Certification mechanism in Okta Identity Governance by creating a campaign, launching it, and having a manager review access.
+
+### Creating an Access Certification Campaign
+
+Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns, and an end-user interface for participating in campaigns.
+
+We will create a campaign for resources in your environment. The example below will review the Distribution List (Okta Group) assignment, where the Distribution List is the one that was used in the Access Request section earlier. You can use any Distribution List in your environment but recall that the users should have valid managers and DL owners.
+
+#### Create a new campaign
+
+To create a new campaign:
+
+1. Login into Okta as an administrator and go to the Admin console
+2. Find the new Identity Governance menu item and expand it
+3. Click on Access Certifications
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image15.png "image_tooltip")
+
+4. Click Create Campaign to start the wizard
+
+The wizard will walk through five pages of settings to configure the campaign, the first being the General page.
+
+5. On the General page of the wizard, give the campaign a name, a description (optional) and specify a start date(put the date a few days in the future) and make it a recurring review
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image20.png "image_tooltip")
+
+The campaign creation progress is shown on the left and the right pane will build up a summary of the campaign as you progress through the wizard.
+
+6. Click Next Button
+
+The Resources page is where you decide what you are certifying – group membership or application assignment. You can only select one type or another, but you can select multiple of each.
+
+7. Select Type of Groups
+8. Select the risky DLs of your environment, you can see them in the table below
+
+<table class="c24"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_SAP</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_ERP_JDE</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM</span></p></td></tr><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">DL_PROJECT_CRM_SLAESFORCE</span></p></td></tr></tbody></table>
+
+10. The Resources section should look like the screenshot below
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image45.png "image_tooltip")
+
+11. Click Next
+
+On the Users page, you specify the scope of the users in the campaign. Are all users assigned to the group to be reviewed, or only some? Do you need to exclude specific users for some reason?
+
+12. Leave the All users assigned to the resource option selected
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image21.png "image_tooltip")
+
+13. Click Next
+
+The reviewers are the Okta users who will review the access. There could be a single (static) reviewer specified as an Okta user. Or you can specify a dynamic reviewer, where the reviewer is based on some data in the Universal Directory (we will do this).
+
+14. Select the First Level reviewer as the Manager
+15. Set the fallback reviewer as you own admin account
+16. Click on Add level to add a second reviewer level
+17. Select the second reviewer as the Group Owner
+18. Set the fallback reviewer as you own admin account
+19. select the option Only approved decisions under the Additional Settings
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image29.png "image_tooltip")
+
+20. Click Next
+
+The remediation settings are the most important page – it’s the reason for the campaign. Every item (i.e. group membership or application assignment) has three options: approve, revoke and reassign.
+
+If access is approved, the access is retained, and the decision is logged for audit purposes. If access is revoked, that’s indicating that the access should be removed. It can be flagged to be removed (i.e. don’t take any action) or removed. There may be implications on this depending on how the access was granted. Finally, a reviewer can reassign the review to someone else.
+
+You also need to decide what is to occur if there are unreviewed items at the end of the campaign – should they be removed or left as is?
+
+21. For the Reviewer revoke access option, select the Remove user from resource option
+22. For the Reviewer does not respond option, select the Remove user from resource option
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image28.png "image_tooltip")
+
+This is the last step in creating the campaign. You can go back and change things prior to scheduling.
+
+23. Click the Schedule Campaign button to schedule it
+
+The campaign will now appear under the Scheduled tab.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image5.png "image_tooltip")
+
+24. Click on the Campaign name to open it.
+
+You will see a summary of the campaign.
+
+![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/007/image26.png "image_tooltip")
+
+<table class="c8"><tbody><tr class="c23"><td class="c12" colspan="1" rowspan="1"><p class="c10"><span class="c5">This campaign will start on schedule. Analyzing campaign contents (users, review items, reviewers etc.) may be computationally expensive, so the default behavior is to launch it overnight. However, you can manually launch it, which we will do next.the flow or even run a custom Okta Workflow.</span></p></td></tr></tbody></table>
