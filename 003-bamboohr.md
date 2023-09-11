@@ -49,7 +49,8 @@ these steps:
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
 
-7. In the Sign On Methods section of the Sign-On Options panel, select **Secure Web Authentification** as a sign-on option. If you select SAML 2.0, click **View Setup Instructions** and follow the instructions.
+7. In the Sign On Methods section of the Sign-On Options panel, select **Secure Web Authentification** as a sign-on option. If you select SAML 2.0, click **View Setup Instructions** and follow the instructions.\
+You do not need to configure this parameter, as we will be mainly sourcing users from BambooHR, not logging to BambooHR using SSO.
 
 
 # Enable integration and provisioning
@@ -91,7 +92,7 @@ these steps:
 
 # Configure import
 
-In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import so you can assign the existing your user to your Okta admin user.
+In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import so you can assign your existing users to your Okta user (in Okta Universal Directory).
 
 In fact, you could perform this one-time import without doing any configuration, and manually match the account, but it makes sense to set up account matching for completeness.  Follow these steps:
 
@@ -115,7 +116,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
 
-7. In the **Okta Attribute Mappings** section, edit *Primary email* parameter, by entering transformational expression, to import users with an email indicating your own domain parameters.
+7. In the **Okta Attribute Mappings** section, edit *Primary email* parameter, by entering transformational expression, to import users with a new login, indicating your own domain parameters.
 
     > appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
 
@@ -311,7 +312,7 @@ Please expect your user activation emails there.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
-10. You should see a new set of apps, that were assigned to the user based on the *Deparment* that they were moved into.
+10. You should see a new set of apps, that were assigned to the user based on the *Department* that they were moved into.
 
 
 Congratulations! You have successfully configured Lifecycle Management for
