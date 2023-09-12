@@ -362,7 +362,7 @@ This will sync the resources from Okta.
 22. Configure the team as follows:
 - Name: App Request Approvers
 - Member: You (your Admin)
-- Auto Asign: On
+- Auto Assign: On
 - Assignment style: To a specific user
 - Assign all requests to: You (your Admin)
 
