@@ -2,28 +2,39 @@
 
 Welcome to the Okta’s Workforce Identity Cloud Workshop!
 
+Congratulations! You got the job - you’re in charge of handling your organization’s Workforce Identity Management. You’ve been given the high level directive by the CIO to do the following: 
+- (1) Reduce Cost related to IAM 
+- (2) Increase Security Posture and follow Zero Trust best practices 
+- (3) Improve Visibility into what employees are accessing and take actionable measures based on that visibility. 
+- (4) Create a great experience and increases productivity for your employees. 
+
+You’ve got 3 hours!
+
+Nervous yet? Don’t be! We’re going to take you from Zero to Hero within the next few hours! You’re working with Okta’s Workforce Identity Cloud, the best platform in the industry to achieve your Identity Goals. We’ll show you how to look for ways to take advantage of Okta’s platform to meet all of the business needs without needing weeks, months or even years to make it all work, you’re going to be hands on and learn all this within a few hours.
+
+
 Workforce Identity Cloud (WIC) is a platform that can be used to tackle numerous Identity and Access Management (IAM) challenges and is by far the easiest and most secure solution for solving these use cases. This 101 course will give you a well-rounded primer into how to think about IAM and take advantage of Okta’s quick time-to-market.
 
 This Lab Guide will provide you with step-by-step instructions that you need to follow to complete the hands-on exercise and get practical experience with Okta’s Workforce Identity Cloud. 
 
-In this workshop, you will complete the following use cases
+In this workshop, you will complete the following use cases:
 
-1. Onboarding New Team Members
+1. Onboard New Team Member
 -  Setup: 
     - Configure Bamboo HR as an Authoritative Identity Source
 - Validate:
     - Onboard a new team member
-    - Import the new team member
+    - Import the new team member in Okta
     - First Day Access: Simplifying the Initial Login
-        - Establish your password
-        - Viewing available applications in Okta dashboard
+        - Establish a password
+        - View available applications in Okta dashboard
 2. Integrating Office 365: Streamlining Workplace Tools
 - Setup: 
     - Configure Office 365 single sign-on
-    - Configuring Office 365 provisioning
+    - Configure Office 365 provisioning
 - Validate: 
     - Login as a new employee and checking your Office 365 access 
-3. Boost Security: Embracing a Passwordless Experience
+3. Boost Security: Embrace a Passwordless Experience
 - Setup:
     - Install / configure Okta Verify
     - Enhance security for Office 365
@@ -38,42 +49,24 @@ In this workshop, you will complete the following use cases
     - Request an additional application
     - Approve application requests
     - Revisit your application assignments
-Identity Governance: Managing and Securing Access Transitions
-Setting up an access certification campaign
-Internal Mobility: Navigating Job Transfers Efficiently
-Transfer a team member
-Access Certification: Ensuring Appropriate Permissions
-Performing access  certification
-Viewing your application assignments
-Offboarding: A Smooth Transition Out of the Organization
-Initiating team member termination
-Attempting a post-termination login
-Insights and Oversight: Audits and Reporting Essentials
-Reviewing the syslog for activity events
-Integrate Okta with Legacy Directory (Active Directory)
-
-## Workshop Structure
-
-The workshop's learning objectives are covered in the following modules:  
-
-- Identity Sources:
-    - Active Directory
-    - BambooHR
-
-- Integrating applications for secure Single-Sign-On:
-    - Microsoft Office365
-
-- Enabling flawless lifecycle management:
-    - [tbd]
-
-- Enabling secure access policies and passwordless user login experience:
-    - Security
-
-- Automating identity processes:
-    - Workflows
-
-- Ensuring the right level of user access:
-    - Identity Governance  
+5. Identity Governance: Managing and Securing Access Transitions
+- Setup:
+    - Transfer a team member in Bamboo HR
+    - Perform access  certification in Okta
+- Validate
+    - View application assignments
+6. Offboarding: A Smooth Transition Out of the Organization
+- Setup:
+    - Initiat team member termination in Bamboo HR
+- Validate: 
+    - Attempt a post-termination login
+7. Insights and Oversight: Audits and Reporting Essentials
+    - Review the syslog for activity events
+8. Integrate Okta with Legacy Directory (Active Directory)
+- Setup: 
+    - Install Active Directory Agent
+- Validate
+    - Employee provisioned to AD
 
 
 ## Lab Environment and Okta Org
