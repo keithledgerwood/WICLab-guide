@@ -261,5 +261,10 @@ Please expect your user activation emails there.
 6. Review your Okta End-user dashboard and the apps that the account got automatically provisioned to.
 
 
-## Conclusion
+## Challenge 1 - Conclusion
 
+Congrats! In just a few minutes, you made your HR system the authoritative source of Identities. You configured attribute mapping and created a transformation such that the username and email address would be a certain way upon the import. 
+
+Using these powerful features from Okta will allow you the flexiblity to onboard users from multiple sources and create a single record containing only the attributes you want, from the sources that you want.
+
+This is critial not just to keep your data clean and business secure, but to onboard other Lines of Business and possibly other companies in an M&A scenario. 

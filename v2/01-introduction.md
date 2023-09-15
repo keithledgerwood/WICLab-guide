@@ -17,7 +17,7 @@ Workforce Identity Cloud (WIC) is a platform that can be used to tackle numerous
 
 This Lab Guide will provide you with step-by-step instructions that you need to follow to complete the hands-on exercise and get practical experience with Okta’s Workforce Identity Cloud. 
 
-In this workshop, you will complete the following use cases:
+In this workshop, you will complete a series of Workforce Identity related challenges:
 
 1. Onboard New Team Member
 -  Setup: 
