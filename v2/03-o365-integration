@@ -118,7 +118,7 @@ single sign-on from Okta to Azure AD.
 Note: You can't test single sign-on until you have enabled provisioning
 and assigned at least one user to this app in Okta.
 
-# Configure provisioning
+## Challenge 2 - Setup: Configure Provisioning for Office 365
 
 The single sign-on configuration performed in the previous section
 allows your Okta org to assert identity information to your Microsoft
@@ -133,7 +133,7 @@ accounts in Azure AD. It will create accounts when users are assigned to
 the Office 365 app and deactivate these accounts when users are
 unassigned. It will also manage user attributes and licenses.
 
-## Enable integration
+### Enable integration
 
 Accounts in Azure AD can be managed via Microsoft APIs. To enable
 provisioning, Okta must be granted authority to call these APIs. Follow
@@ -168,7 +168,7 @@ configuration you just created is under the Integration tab.
 
 There are two provisioning directions supported by this integration.
 
-## Enable provisioning to app
+### Enable provisioning to app
 
 In this section you will enable provisioning to Microsoft 365. This will
 include creation of accounts in Azure AD when users are assigned to the
@@ -197,7 +197,7 @@ Follow these steps to enable provisioning:
 
 5.  Click **Save**.
 
-## Configure attribute mapping
+### Configure attribute mapping
 
 When a user is assigned to an app, attribute mapping determines
 the default values that will be set for attributes in the app.
@@ -261,7 +261,7 @@ to test.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
 
-# Test provisioning and single sign-on
+## Challenge 2 - Validate: Test provisioning and single sign-on
 
 Now that provisioning and single sign-on have both been configured, you
 can test them by assigning your Okta admin user to the Microsoft Office
@@ -321,7 +321,7 @@ via group membership - you'll set that up later.
 9.  Confirm that the records indicating successful provisioning are found.
 
 
-## Test single sign-on (SSO)
+### Test single sign-on (SSO)
 
 You can now test single sign-on to Microsoft 365 for the assigned user.
 
