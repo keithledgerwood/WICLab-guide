@@ -66,44 +66,7 @@ This will open the Edit Policy window.
 
 3. Click **Update policy**.
 
-### Create a new Authentication Policy for your Office365 App
 
-1. Select **Security** > **Authentication policies**.  
-
-2. Click **Add a policy**.  
-This will open the Add Authentication Policy window.
-
-3. Name the new policy: Office365.  
-
-4. Click **Save**.
-
-5. Click the **Applications** tab.
-
-6. Click **Add app**.
-
-7. For Office365, click **Add**.
-
-8. Click **Close**.
-
-9. Click the **Rules** tab.
-
-10. Click **Add rule**.  
-This will open the Add Rule window.
-
-11. Configure the rule as follows:
-- Rule name: O365 - Access for Marketing
-- User's group membership includes: Marketing 
-- User must authenticate with: Any 1 Factor type
-
-12. Click **Save**.
-
-### Test Multi-Factor Authentication
-
-1. Sign in to your org as the New Employee (being a member of the Marketing group).
-
-2. In the End-User Dashboard, open the **Office365** app.
-
-3. You should be asked asked to verify with your password when signing into Office365.
 
 ### Enable Okta Verify for FastPass Authentication
 
@@ -123,18 +86,25 @@ This will open the Okta Verify window.
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
 
-2. Click **Office365**.
+2. Click **Microsoft Office365**.
 
-3. For the O365 - Access for Marketing rule, click **Actions**, and then select **Edit**.  
-This will open the Edit Rule window.
+3. Click **Add Rule**. Name the rule O365 - Access for Marketing rule.
 
 4. Make sure that the following options are selected:
-- Device state is: Registered
-- User must authenticate with: Possession factor
+- User's group membership includes: At least one of the following Groups: Add Marketing Group 
+- Device state is: **Registered**
+- Device management is: **Not Managed**
+- Client is: One of the following clients: **Web Browser** and **Modern Authentication**
+- User must authenticate with: **Possession factor**
+- Possession factor constraints are 
+   - Phishing Resistant
+   - Hardware protected
+   - If Okta FastPass is used: The user must approve a prompt in Okta Verify or provide biometrics
+
 
 5. Click **Save**.
 
-### Test FastPass Passwordless Login
+### Challenge 3 - Verify: Test FastPass Passwordless Login
 
 1. Sign in to your org as the New Employee (being a member of the Marketing group).
 
