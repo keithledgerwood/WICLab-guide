@@ -1,4 +1,6 @@
-## Learning Objectives  
+#  Introduction - Okta Workforce Identity Workshop
+
+## Workshop Overview
 
 Welcome to the Okta’s Workforce Identity Cloud Workshop!
 
