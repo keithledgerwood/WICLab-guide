@@ -36,14 +36,15 @@ In this workshop, you will complete a series of Workforce Identity related chall
     - Configure Office 365 provisioning
 - Validate: 
     - Login as a new employee and checking your Office 365 access 
-3. Boost Security: Embrace a Passwordless Experience
-- Setup:
+3. Boost Security 
+- Passwordless Experience with Okta Fastpass - Setup:
     - Install / configure Okta Verify
     - Enhance security for Office 365
     - Enable  passwordless authentication
-    - Configure self-service password reset
 - Validate
     - Experience a passwordless login
+- Restrict Access Based on IP Address Network Zone
+- Restrict Access Based on OS Version
 4. Self-Service Solutions: Managing Passwords and Access Requests Independently
     - Perform a self-service password reset
     - Request access to an application
