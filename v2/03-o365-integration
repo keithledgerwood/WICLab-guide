@@ -408,12 +408,13 @@ group definition.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image038.png "image_tooltip")
 
+6. Refer to the above licenses and roles to assign the group. 
 
-6.  Scroll to the bottom of the page and click **Save and Go Back**.
+7.  Scroll to the bottom of the page and click **Save and Go Back**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image039.png "image_tooltip")
 
-7.  Click **Done**.
+8.  Click **Done**.
 
 The application is now assigned to the O365Users group.
 
@@ -470,6 +471,7 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 7.  Click **Sign out** to clear the session. Close the browser you used.
 
-Congratulations! You have successfully configured Lifecycle Management
-and Single Sign-On to Microsoft Office 365.
+## Challenge 2: Conclusion
+
+Congratulations! You have successfully onboarded Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. If Microsoft was that easy, imagine how quick and easy it will be to integrate the rest of you application ecosystem!
 
