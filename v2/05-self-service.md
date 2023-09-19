@@ -1,3 +1,5 @@
+# Self Service
+
 ## Set Up Self-Service Password Reset
 
 ### Configure Self-Service Password Reset
