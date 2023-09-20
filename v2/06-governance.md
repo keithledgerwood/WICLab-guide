@@ -176,7 +176,7 @@ For the workflows in the Okta Workflow Pack to work, you will first need to crea
 
 2. Find the menu in the content pane and click **TOKENS**
 
-3. Create a token by clicking **CREATE TOKEN**
+3. Create a token by giving it a name and clicking **CREATE TOKEN**
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/image2.png "image_tooltip")
 
