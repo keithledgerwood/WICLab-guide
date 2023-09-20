@@ -1,5 +1,7 @@
 # Identity Governance
 
+## Identity Governance - Introduction
+
 Okta Identity Governance (OIG) is a unified IAM and governance solution that includes three products to help governance, risk, and compliance teams simplify access fulfillment and entitlement tasks throughout the identity lifecycle:
 
 - Okta Lifecycle Management
@@ -30,7 +32,141 @@ Workflows to trigger actions based on specific events like the Change of the job
 This document section will use a pre-built flow and two connections with the Okta tenant.
 This document section will explore the unconfigured Access Requests, walk through standard configuration, and then create and run a simple approval flow.
 
-### Workflow connections pre-work
+# Self-Service Access Requests
+
+## Set Up Okta Access Requests  
+
+### Configure Access Requests
+
+1. In the Admin Console, select **Directory** > **Groups**.
+
+2. Click **Add group**.
+
+3. Enter a group name: Request Approvers and click **Save**.
+
+4. Click the **Request Approvers** link to open the group page.
+
+5. Click **Assign people**.
+
+6. Find your Admin account and click **+** (far right) to assign the Admin to the group.
+
+7. Click **Done**.
+ 
+8. Select **Applications** > **Applications** and click the **Okta Access Requests** app.
+
+9. Select the **Assignments** tab.
+
+10. Click **Assign** and then select **Assign to people**.
+
+11. In the assignment window, for both the Admin and New Employee, click **Assign**.
+
+12. Click **Done**.  
+This will assign the Okta Access Requests app to these users.
+
+13. Select the **Push Groups** tab.
+
+14. Click **Push Groups** and then select **Find groups by name**.
+
+15. Enter the group name: Request Approvers and click **Save**.      
+This will push the group to the Okta Access Requests app.
+
+16. Select **Identity Governance** > **Access Requests**.  
+This will open the Access Requests Console.
+
+17. In the left-hand panel, select **Settings**.
+
+18. Select the **Resources** tab.
+
+19. For both Applications and Okta Groups, click **Update now**.  
+This will sync the resources from Okta.
+
+20. In the left-hand panel, select **Teams**.
+
+21. Click **Add Team**.  
+
+22. Configure the team as follows:
+- Name: App Request Approvers
+- Member: You (your Admin)
+- Auto Assign: On
+- Assignment style: To a specific user
+- Assign all requests to: You (your Admin)
+
+23. Click **Create Team**.
+
+24. In the left-hand panel, select **Settings**.
+
+25. Select the **Integrations** tab.
+
+26. Under Access Request Configurations for Okta, click **Edit connection**.
+
+27. Click **Select teams** and then select **App Request Approvers**.
+
+28. Click **Update connection**.
+
+29. Select the **Resources** tab.
+
+30. For both Applications and Okta Groups, click **Manage Access** and select the **App Request Approvers** team.
+
+31. In the left-hand panel, click **Access Requests**.
+
+32. Click **Create request type**.  
+This will open the Request Type Details window.
+
+33. Configure the request as follows:
+- Name: Cornerstone Access Request
+- Team: App Request Approvers
+- Audience: Everyone at your org
+
+34. Click **Continue**.
+
+35. For Approval, click **Add to request type**.
+
+36. In the right-hand panel, configure the approval as follows:
+- Text: Admin Approval
+- Make it a required task: On
+- Assigned to: A specific user... > You (this will enable approval from your own Admin account)
+
+37. At the bottom of the page, click **Action** > **Assign individual app to user**.
+
+38. In the right-hand panel, configure the action as follows:
+- Text: Assign to Cornerstone
+- Make it a required task: On
+- Run automatically: On
+- Email address: Requester email
+- Select application: Cornerstone
+
+39. Click **Publish**.
+
+### Test Access Requests
+
+1. Sign out of your org as Admin.
+
+2. Sign in to the org as the New Employee. 
+
+3. In the End-User Dashboard, open the **Okta Access Requests** app.  
+This will open the Access Requests Console.
+
+4. In the left-hand panel, select **App Catalog**.
+
+5. Under Cornerstone Access Request, click **Request access**.
+
+6. Click **Submit new request**.
+
+7. Sign out of your org as the New Employee.
+
+8. In the mailbox you used for registration, find the "Cornerstone Access Request" email and click **Approve**.
+
+9. Sign in to the org as Admin.
+
+10. You can see the confirmation of granting access to Cornerstone to the New Employee.
+
+11. Sign out of your org as Admin and sign in as the New Employee.
+
+12. In the End-User Dashboard, you can now see Cornerstone available.
+
+# Workflow 
+
+## Workflow Setup
 
 For the workflows in the Okta Workflow Pack to work, you will first need to create a token to connect Okta APIs for that :
 
@@ -270,34 +406,3 @@ After each action, you will see a message displayed, and the item will disappear
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img34.png "image_tooltip")
 
 
-# Test provisioning (mover flow)
-
-1. Move your user to the new *Department* in the BambooHR tenant.
-
-2. In the **People > Personal** tab, select your newly added user, and click **+ Add Entry** in the **Job Information** field.
-
-3. In the **Department** field, select **Sales**, and make sure that the **Effective Date** is set for *Today*, click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
-
-4. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
-
-5. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignements**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-updated.png "image_tooltip")
-
-6. Navigate to **Directory > Groups** to check if your user was automatically assigned to the new Group and has access to the new set of Apps.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-user.png "image_tooltip")
-
-7. Open a new browser window that is not signed into Okta.
-
-8.  Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
-
-9.  Authenticate as your test user: e.g.
-
-    > ***Charlotte.Abbott@yourwiclabdomain.com***
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
-
-10. You should see a new set of apps, that were assigned to the user based on the *Department* that they were moved into.
