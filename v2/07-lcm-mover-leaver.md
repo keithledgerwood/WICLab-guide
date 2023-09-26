@@ -1,4 +1,5 @@
 # Lifecycle Management - Mover
+
 ## Lifecycle Management - Mover - Setup
 
 1. Move your user to the new *Department* in the BambooHR tenant.
@@ -11,7 +12,7 @@
 
 4. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
 
-5. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignements**.
+5. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignments**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-updated.png "image_tooltip")
 
@@ -21,20 +22,19 @@
 
 7. Open a new browser window that is not signed into Okta.
 
-8.  Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
+8. Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
 
-9.  Authenticate as your test user: e.g.
+9. Authenticate as your test user: e.g.
 
-    > ***Charlotte.Abbott@yourwiclabdomain.com***
+    > ***<Charlotte.Abbott@yourwiclabdomain.com>***
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
 10. You should see a new set of apps, that were assigned to the user based on the *Department* that they were moved into.
 
-
 # Terminate Employee
 
-1. Deactive your users in the BambooHR tenant.
+1. Deactivate your users in the BambooHR tenant.
 
 2. In the **People** tab, select your newly added user, change its' **Status** to *Inactive* and click **Save Changes**.
 
@@ -42,7 +42,7 @@
 
 3. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
 
-4. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignements**.
+4. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignments**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-remove.png "image_tooltip")
 
@@ -52,11 +52,11 @@
 
 6. Open a new browser window that is not signed into Okta.
 
-7.  Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
+7. Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
 
-8.  Authenticate as your test user: e.g.
+8. Authenticate as your test user: e.g.
 
-    > ***Charlotte.Abbott@yourwiclabdomain.com***
+    > ***<Charlotte.Abbott@yourwiclabdomain.com>***
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
