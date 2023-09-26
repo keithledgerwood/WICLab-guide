@@ -1,12 +1,10 @@
 # Challenge 2: Integrate Okta with Microsoft Office 365
 
-
-
 ## Introduction
 
-Okta integration with Microsoft Office 365 is a common pattern that provides Single Sign-On and Lifecycle Management to that application. 
+Okta integration with Microsoft Office 365 is a common pattern that provides Single Sign-On and Lifecycle Management to that application.
 
-The Okta Integration Network (OIN) will be used in order to speed up the time it takes to complete the integration. 
+The Okta Integration Network (OIN) will be used in order to speed up the time it takes to complete the integration.
 
 Microsoft Office 365 uses Microsoft Azure AD as its user store and to
 manage federation for single sign-on. This means that when you're
@@ -36,9 +34,9 @@ system.
 
 As part of this Challenge, you will configure:
 
--   Single Sign-on (SSO) from Okta to Microsoft Office 365
+- Single Sign-on (SSO) from Okta to Microsoft Office 365
 
--   Lifecycle Management (LCM) for Microsoft Office 365
+- Lifecycle Management (LCM) for Microsoft Office 365
 
 Before you can complete this guide you must have already signed up for a
 Microsoft E5 sandbox and configured it with a custom DNS domain. A
@@ -51,46 +49,44 @@ your admin user) defined in your Okta org.
    > **Info:** \
 You will find the credentials and tenant URL in the lab environment.
 
-
 ## Challenge 2 - Setup: Add Microsoft Office 365 App to Okta for SSO
 
 Okta maintains a specific integration for Microsoft Office 365 in the
 Okta Integration Network (OIN). To add this to your Okta org, follow
 these steps:
 
-1.  Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
+1. Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
 
-2.  Navigate to **Applications \> Applications**.
+2. Navigate to **Applications \> Applications**.
 
-3.  Click **Browse App Catalog** to open the Okta Integration Network browser.
+3. Click **Browse App Catalog** to open the Okta Integration Network browser.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image02.png "image_tooltip")
 
-4.  Search for and select the **Microsoft Office 365** integration.
+4. Search for and select the **Microsoft Office 365** integration.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image03.png "image_tooltip")
 
-5.  Click **Add integration**.
+5. Click **Add integration**.
 The Add Microsoft 365 wizard opens on the General Settings page:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
-6.  Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
+6. Complete the *Microsoft Tenant Name* field. This must match the tenant name you chose when setting up your Microsoft tenant.
 
 > If your Microsoft tenant is *yourdemodomain*.onmicrosoft.com then your Microsoft tenant name is *yourdemodomain*.
 
-7.  Click **Next**. This integration supports both Secure Web Authentication (SWA), for password injection, and WS-Federation, for federated single sign-on.
+7. Click **Next**. This integration supports both Secure Web Authentication (SWA), for password injection, and WS-Federation, for federated single sign-on.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image05.png "image_tooltip")
 
-
-8.  Select the radio button for **WS-Federation**.
+8. Select the radio button for **WS-Federation**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image06.png "image_tooltip")
 
-9.  Enter the *username* and *password* for the administrator of your Microsoft tenant.
+9. Enter the *username* and *password* for the administrator of your Microsoft tenant.
 
 10. Click **Fetch and Select** next to Office 365 Domains.
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image07-1.png "image_tooltip")
@@ -102,7 +98,6 @@ The Add Microsoft 365 wizard opens on the General Settings page:
 12. Click **Select**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image08.png "image_tooltip")
-
 
 13. Set *Application username format* to **Custom**.
 
@@ -139,28 +134,29 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable
 provisioning, Okta must be granted authority to call these APIs. Follow
 the steps below to grant this access and enable integration:
 
-1.  If you are not already there, open your Okta administration UI,
+1. If you are not already there, open your Okta administration UI,
+
    > navigate to **Applications \> Applications**, and select the **Microsoft Office 365** app definition.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image09.png "image_tooltip")
 
-2.  Click on the **Provisioning** tab and click the **Configure API**
+2. Click on the **Provisioning** tab and click the **Configure API**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image010.png "image_tooltip")
 
-3.  Check the checkbox for **Enable API integration**.
+3. Check the checkbox for **Enable API integration**.
 
-4.  Click the **Authenticate with Microsoft Office 365** button.
+4. Click the **Authenticate with Microsoft Office 365** button.
 
-5.  Authenticate as the administrative user for your Microsoft tenant.
+5. Authenticate as the administrative user for your Microsoft tenant.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image011.png "image_tooltip")
 
-6.  Click **Accept** to allow your Okta org to manage users in your org.
+6. Click **Accept** to allow your Okta org to manage users in your org.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image012.png "image_tooltip")
 
-7.  Click **Save**.
+7. Click **Save**.
 
 The API connection for provisioning is now in place. Provisioning
 configuration is now shown under the Provisioning tab. The integration
@@ -185,17 +181,17 @@ Follow these steps to enable provisioning:
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image013-1.png "image_tooltip")
 
-1.  Click **Edit** to set the options for Okta provisioning to Azure AD.
+1. Click **Edit** to set the options for Okta provisioning to Azure AD.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image014.png "image_tooltip")
 
-2.  Click the **Enable** checkbox for *Create Users*.
+2. Click the **Enable** checkbox for *Create Users*.
 
-3.  Click the **Enable** checkbox for *Update User Attributes*.
+3. Click the **Enable** checkbox for *Update User Attributes*.
 
-4.  Click the **Enable** checkbox for *Deactivate Users*.
+4. Click the **Enable** checkbox for *Deactivate Users*.
 
-5.  Click **Save**.
+5. Click **Save**.
 
 ### Configure attribute mapping
 
@@ -210,51 +206,52 @@ Follow these steps:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
 
-1.  If not already there, open the **To App** settings under the Provisioning tab of the Microsoft Office 365 application.
+1. If not already there, open the **To App** settings under the Provisioning tab of the Microsoft Office 365 application.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image016.png "image_tooltip")
 
-2.  Scroll to the bottom of the page and click **Show Unmapped**.
+2. Scroll to the bottom of the page and click **Show Unmapped**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/3a364fb9695bd6b1c1cb8c97e0bc2feb8af7b624/images/009/image017-1.png "image_tooltip")
 
-3.  Click the **Edit** icon for the **Licenses** attribute.
+3. Click the **Edit** icon for the **Licenses** attribute.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
 
-4.  Select **Same value for all users** from the drop-down list. 
+4. Select **Same value for all users** from the drop-down list.
+
    > The available options are shown. These have been pulled via API and so reflect the options relevant for your Microsoft tenant:
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image018.png "image_tooltip")
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
 
-5.  Select the checkboxes for the following licenses:
+5. Select the checkboxes for the following licenses:
 
-    -   **Nucleus**
+    - **Nucleus**
 
-    -   **Content_Explorer**
+    - **Content_Explorer**
 
-    -   **Microsoft_Search**
+    - **Microsoft_Search**
 
-    -   **Sharepoint Online (Plan 2)**
+    - **Sharepoint Online (Plan 2)**
 
-    -   **Office Online**
+    - **Office Online**
 
-    -   **Office 365 ProPlus**
+    - **Office 365 ProPlus**
 
-    -   **Exchange Online Advanced Threat Protection**
+    - **Exchange Online Advanced Threat Protection**
 
-    -   **Microsoft Teams**
+    - **Microsoft Teams**
 
-    -   **Intune**
+    - **Intune**
 
-    -   **Exchange Online (Plan 2)**
+    - **Exchange Online (Plan 2)**
 
  These will give access to Office apps and few additional features.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
 
-6.  Scroll to the bottom of the window and click **Save**.
+6. Scroll to the bottom of the window and click **Save**.
 
 OK. Provisioning is enabled and attribute mapping is done. You're ready
 to test.
@@ -278,73 +275,71 @@ For this test you will directly assign your Okta admin user to the
 Office 365 app. You'll notice that it's also possible to assign
 via group membership - you'll set that up later.
 
-1.  If not already there, navigate to **Applications \> Applications**
+1. If not already there, navigate to **Applications \> Applications**
 
-2.  Select the **Assignments** tab.
+2. Select the **Assignments** tab.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image021.png "image_tooltip")
 
-3.  Click the **Assign** button and select **Assign to People** from the dropdown list.
+3. Click the **Assign** button and select **Assign to People** from the dropdown list.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
 
-4.  Select your admin user and click **Assign**.
+4. Select your admin user and click **Assign**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
 
    > The User Name has been set based on the custom expression you specified during configuration of single sign-on.
-    
+
    > The *Immutable ID* is blank. This would only be populated if the user was AD sourced and already had an immutable ID synced from Azure AD via Microsoft AD Connect or similar. In this case, the immutable ID will be populated during provisioning to Azure AD.
 
    > Licenses have been set based on the attribute mapping you created.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
-5.  Scroll down to the *roles* and select the **Global Administrator**
+5. Scroll down to the *roles* and select the **Global Administrator**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image025.png "image_tooltip")
 
-6.  Scroll to the bottom and click **Save and Go Back**.
+6. Scroll to the bottom and click **Save and Go Back**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image026.png "image_tooltip")
 
-7.  Click **Done**.
+7. Click **Done**.
 
     > In the background, Okta is now attempting to create this user in your Microsoft 365 tenant and assign the selected roles licenses. This should only take a few seconds to complete.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
 
-8.  In the Okta Admin UI, navigate to **Reports \> System Log**.
+8. In the Okta Admin UI, navigate to **Reports \> System Log**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image027.png "image_tooltip")
 
-9.  Confirm that the records indicating successful provisioning are found.
-
+9. Confirm that the records indicating successful provisioning are found.
 
 ### Test single sign-on (SSO)
 
 You can now test single sign-on to Microsoft 365 for the assigned user.
 
-1.  Open a new browser window that is not signed into Okta or Microsoft
+1. Open a new browser window that is not signed into Okta or Microsoft
 
-2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
+2. Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
 
-3.  Authenticate as your test user: e.g. ***your.name*\@okta.com**
+3. Authenticate as your test user: e.g. ***your.name*\@okta.com**
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image029.png "image_tooltip")
 
-4.  Click the tile for **Microsoft Office 365 Office Portal**.
+4. Click the tile for **Microsoft Office 365 Office Portal**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image030.png "image_tooltip")
 
-5.  Click **Yes** to stay signed in.
+5. Click **Yes** to stay signed in.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image031.png "image_tooltip")
 
-6.  Click the identity icon in the top-right of the page.
+6. Click the identity icon in the top-right of the page.
 
-7.  Click **Sign out** to clear the session. Close the browser you used.
-
+7. Click **Sign out** to clear the session. Close the browser you used.
 
 # Configure group assignment
 
@@ -367,19 +362,18 @@ Office 365 app. Alternatively you can assign Office365 to the groups that you al
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
 
-1.  In the administration UI for your Okta org, navigate to **Directory
+1. In the administration UI for your Okta org, navigate to **Directory
     \> Groups**.
 
-2.  Click the **Add group** button.
+2. Click the **Add group** button.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image033.png "image_tooltip")
 
-3.  Enter **O365Users** as the Name of the group.
+3. Enter **O365Users** as the Name of the group.
 
-4.  Enter **Office 365 Users** as the Description.
+4. Enter **Office 365 Users** as the Description.
 
-5.  Click **Save**.
-
+5. Click **Save**.
 
 ## Assign Group to Application
 
@@ -388,33 +382,31 @@ within the app definition or by adding the app to the
 group definition. In this case you will add the app from the
 group definition.
 
-1.  If not already there, navigate to **Directory \> Groups**.
+1. If not already there, navigate to **Directory \> Groups**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image034.png "image_tooltip")
 
-2.  Click on the link for the **O365Users** group.
+2. Click on the link for the **O365Users** group.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image035.png "image_tooltip")
 
+3. Select the **Applications** tab in the group properties.
 
-3.  Select the **Applications** tab in the group properties.
-
-4.  Click **Assign applications**.
+4. Click **Assign applications**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image036.png "image_tooltip")
 
-5.  Click the **Assign** button next to the *Microsoft Office 365*
-
+5. Click the **Assign** button next to the *Microsoft Office 365*
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image038.png "image_tooltip")
 
-6. Refer to the above licenses and roles to assign the group. 
+6. Refer to the above licenses and roles to assign the group.
 
-7.  Scroll to the bottom of the page and click **Save and Go Back**.
+7. Scroll to the bottom of the page and click **Save and Go Back**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image039.png "image_tooltip")
 
-8.  Click **Done**.
+8. Click **Done**.
 
 The application is now assigned to the O365Users group.
 
@@ -424,14 +416,13 @@ You will now assign a test user to the *O365Users* group. This will
 cause the user to be assigned the Microsoft Office 365 app
 which, in turn, will trigger provisioning of an account.
 
-1.  If not already there, navigate to **Directory \> Groups** and Click on the link for the **O365Users** group.
+1. If not already there, navigate to **Directory \> Groups** and Click on the link for the **O365Users** group.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image040.png "image_tooltip")
 
-2.  Select the **People** tab within the **O365Users** group.
+2. Select the **People** tab within the **O365Users** group.
 
-
-3.  Click **Assign people**.
+3. Click **Assign people**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image041.png "image_tooltip")
 
@@ -439,7 +430,7 @@ which, in turn, will trigger provisioning of an account.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image042.png "image_tooltip")
 
-4.  Click the **+ icon** for a test user in your Okta org.
+4. Click the **+ icon** for a test user in your Okta org.
 
 The user is now assigned to the group and will be assigned to the
 Microsoft Office 365 app using the attribute mapping associated
@@ -449,29 +440,28 @@ with the group assignment.
 
 You can now test single sign-on to Microsoft 365 for your test user.
 
-1.  Open a new browser window that is not signed into Okta or Microsoft
+1. Open a new browser window that is not signed into Okta or Microsoft
 
-2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
+2. Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
 
-3.  Authenticate as your test user: e.g.
+3. Authenticate as your test user: e.g.
 
-    > ***alex.anderson@yourdemodomain.com***
+    > ***<alex.anderson@yourdemodomain.com>***
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
-4.  Click the tile for **Microsoft Office 365 Word Online**.
+4. Click the tile for **Microsoft Office 365 Word Online**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image044.png "image_tooltip")
 
-5.  Click **Yes** to stay signed in.
+5. Click **Yes** to stay signed in.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image045.png "image_tooltip")
 
-6.  Click the identity icon in the top-right of the page.
+6. Click the identity icon in the top-right of the page.
 
-7.  Click **Sign out** to clear the session. Close the browser you used.
+7. Click **Sign out** to clear the session. Close the browser you used.
 
 ## Challenge 2: Conclusion
 
-Congratulations! You have successfully onboarded Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. If Microsoft was that easy, imagine how quick and easy it will be to integrate the rest of you application ecosystem!
-
+Congratulations! You have successfully onboarded Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. If Microsoft was that easy, imagine how quick and easy it will be to integrate the rest of your application ecosystem!

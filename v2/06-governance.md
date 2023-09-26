@@ -22,7 +22,6 @@ Okta Access Governance plays a central role in the solution, simplifying access 
 
 With these combined capabilities, OIG helps organizations improve their security posture, mitigate modern risks, and improve efficiency. Unlike traditional IGA products, which can require complex and custom integrations that are difficult to deploy and expensive to maintain, Okta's unified approach brings together identity, access, and governance to improve an organization's security posture holistically. For example, customers today can integrate Okta with existing HR systems and directories and manage who gets access to what resources. If Okta detects unusual activity, such as a high-risk login through Okta ThreatInsights or a lifecycle status change, you can trigger a certification campaign and immediately suspend access to a resource.
 
-
 ## Workshop description
 
 In this section of the workshop, we will explore the following capabilities:
@@ -51,7 +50,7 @@ This document section will explore the unconfigured Access Requests, walk throug
 6. Find your Admin account and click **+** (far right) to assign the Admin to the group.
 
 7. Click **Done**.
- 
+
 8. Select **Applications** > **Applications** and click the **Okta Access Requests** app.
 
 9. Select the **Assignments** tab.
@@ -60,31 +59,32 @@ This document section will explore the unconfigured Access Requests, walk throug
 
 11. In the assignment window, for both the Admin and New Employee, click **Assign**.
 
-12. Click **Done**.  
+12. Click **Done**.
 This will assign the Okta Access Requests app to these users.
 
 13. Select the **Push Groups** tab.
 
 14. Click **Push Groups** and then select **Find groups by name**.
 
-15. Enter the group name: Request Approvers and click **Save**.      
+15. Enter the group name: Request Approvers and click **Save**.
 This will push the group to the Okta Access Requests app.
 
-16. Select **Identity Governance** > **Access Requests**.  
+16. Select **Identity Governance** > **Access Requests**.
 This will open the Access Requests Console.
 
 17. In the left-hand panel, select **Settings**.
 
 18. Select the **Resources** tab.
 
-19. For both Applications and Okta Groups, click **Update now**.  
+19. For both Applications and Okta Groups, click **Update now**.
 This will sync the resources from Okta.
 
 20. In the left-hand panel, select **Teams**.
 
-21. Click **Add Team**.  
+21. Click **Add Team**.
 
 22. Configure the team as follows:
+
 - Name: App Request Approvers
 - Member: You (your Admin)
 - Auto Assign: On
@@ -109,10 +109,11 @@ This will sync the resources from Okta.
 
 31. In the left-hand panel, click **Access Requests**.
 
-32. Click **Create request type**.  
+32. Click **Create request type**.
 This will open the Request Type Details window.
 
 33. Configure the request as follows:
+
 - Name: Cornerstone Access Request
 - Team: App Request Approvers
 - Audience: Everyone at your org
@@ -122,6 +123,7 @@ This will open the Request Type Details window.
 35. For Approval, click **Add to request type**.
 
 36. In the right-hand panel, configure the approval as follows:
+
 - Text: Admin Approval
 - Make it a required task: On
 - Assigned to: A specific user... > You (this will enable approval from your own Admin account)
@@ -129,6 +131,7 @@ This will open the Request Type Details window.
 37. At the bottom of the page, click **Action** > **Assign individual app to user**.
 
 38. In the right-hand panel, configure the action as follows:
+
 - Text: Assign to Cornerstone
 - Make it a required task: On
 - Run automatically: On
@@ -141,9 +144,9 @@ This will open the Request Type Details window.
 
 1. Sign out of your org as Admin.
 
-2. Sign in to the org as the New Employee. 
+2. Sign in to the org as the New Employee.
 
-3. In the End-User Dashboard, open the **Okta Access Requests** app.  
+3. In the End-User Dashboard, open the **Okta Access Requests** app.
 This will open the Access Requests Console.
 
 4. In the left-hand panel, select **App Catalog**.
@@ -164,7 +167,7 @@ This will open the Access Requests Console.
 
 12. In the End-User Dashboard, you can now see Cornerstone available.
 
-# Workflow 
+# Workflow
 
 ## Workflow Setup
 
@@ -184,9 +187,7 @@ For the workflows in the Okta Workflow Pack to work, you will first need to crea
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img3.png "image_tooltip")
 
-
 ### Workflow Connections
-
 
 Now, you must configure the following Okta connectors in your Okta Tenant with Workflow enabled.
 
@@ -194,12 +195,11 @@ Different components within Okta have other API endpoints and connectors. In thi
 
 #### Create an API Connection
 
-
 1. Open Okta Workflows by navigating to Okta Admin Console > **Workflow** > **Workflows Console**. This will redirect you to a new page
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img4.png "image_tooltip")
 
-2. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan 
+2. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img5.png "image_tooltip")
 
@@ -211,9 +211,7 @@ Different components within Okta have other API endpoints and connectors. In thi
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img7.png "image_tooltip")
 
-
 5. Enter **Authorization** for the Header Name field and  **SSWS** + the token generated in the Okta Admin console into the Value field
-
 
 #### Create an Okta Connection
 
@@ -225,11 +223,11 @@ Different components within Okta have other API endpoints and connectors. In thi
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img10.png "image_tooltip")
 
-3. Copy and note down the **Client ID** and **Client secret** for later use in this secation.
+3. Copy and note down the **Client ID** and **Client secret** for later use in this section.
 
 4. Open Okta Workflows by navigating to Okta Admin Console > **Workflow** > **Workflows Console**. This will redirect you to a new page.
 
-5. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan and create a 2nd connection by clicking the **new connection** button 
+5. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan and create a 2nd connection by clicking the **new connection** button
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
 
@@ -239,7 +237,7 @@ Different components within Okta have other API endpoints and connectors. In thi
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
 
- > The domain should be provided without **https://** or **-admin**.for example, if you copy the following domain from the URL bar 'https://atko-admin.okta.com,' then you should enter 'atko.okta.com' as the domain.
+ > The domain should be provided without **https://** or **-admin**.for example, if you copy the following domain from the URL bar '<https://atko-admin.okta.com>,' then you should enter 'atko.okta.com' as the domain.
 
 8. Paste the **Client ID** and **Client secret** from step 3.
 
@@ -247,7 +245,7 @@ Different components within Okta have other API endpoints and connectors. In thi
 
 The two connections have been created, and the Okta Workflow is ready to import.
 
-##  Configuring the Flow
+## Configuring the Flow
 
 ### Importing the Flow
 
@@ -259,16 +257,15 @@ The two connections have been created, and the Okta Workflow is ready to import.
 
 3. Create a new folder by clicking the **+** icon and name folder “Title Change”
 
-4. Click on the **...** next to the newly created folder and select Import 
+4. Click on the **...** next to the newly created folder and select Import
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
 
-5. Select or Drag&Drop the downloaded flow pack
+5. Click **Choose file from computer**,or drag and drop the downloaded flow pack, to complete the import.
 
-You have successfully imported the Flow.  
+You have successfully imported the Flow.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img14.png "image_tooltip")
-
 
 ### Modify the imported Flow
 
@@ -284,10 +281,9 @@ There are a few modifications needed within the Workflow.
 
 3. Click **Save**
 
-    > When saving the first time, you might see the below pop-up. Ensure the **Save all data that passes through the Flow?** box is checked, and click Save. 
+    > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img17.png "image_tooltip")
-
 
 4. Click the **Flow is Off** button and click the Flow is Off to turn on the Flow
 
@@ -299,7 +295,7 @@ You now have the Flow correctly configured and running.
 
 In order to trigger this Flow, an action we're listening to should occur. In this case, an existing user that has a manager will have their title updated.
 
-1. Assigne the user a manager, navigate to **Directory** > **People** > and select your test user. 
+1. Assign the user a manager, navigate to **Directory** > **People**  and select your test user.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img19.png "image_tooltip")
 
@@ -307,23 +303,21 @@ In order to trigger this Flow, an action we're listening to should occur. In thi
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img20.png "image_tooltip")
 
-3. In a Saparate page navigate to your **BambooHR** instance, Find the user and add a new **Job Entry**. 
+3. In a separate browser tab, navigate to your **BambooHR** instance, Find the user and add a new **Job Entry**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img21.png "image_tooltip")
 
-
 4. Back in the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
 
-5. In the **Import tab**, click **Import Now**, you should see that 1 user was updated 
+5. In the **Import tab**, click **Import Now**, you should see that 1 user was updated
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img22.png "image_tooltip")
 
 6. Confirm changes to your user by selecting them and clicking **Confirm Assignments**.
 
-This Event should now trigger the Flow we imported, which will launch a certification campaign. 
+This Event should now trigger the Flow we imported, which will launch a certification campaign.
 
 ## Access Certification
-
 
 The following capability we will explore is Access Certification. Access Certification (aka attestation, recertification, etc.) is the mechanism to validate that a user still needs the access they have. It is a common control in compliance regulations. Certification campaigns may be run periodically, or there may be continuous certification when user roles change. Okta Identity Governance currently supports user-group memberships and user-application assignments. Participants in a campaign (such as the user's manager) will approve (access retained) or revoke access (access should be removed).
 
@@ -333,11 +327,11 @@ This section of the document will explore the Access Certification mechanism in 
 
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns.
 
-We will review the created campaign for users that was triggered by the **Title change**. 
+We will review the created campaign for users that was triggered by the **Title change**.
 
 #### Validate the created campaign
 
-Before proceeding with the certification campaign, make sure that the user has at least one application assigned and the user is able to access that application. 
+Before proceeding with the certification campaign, make sure that the user has at least one application assigned and the user is able to access that application.
 
 Campaigns can be created via API and the UI of the admin platform. To review and validate the campaign that was created by the Workflow we set, you will need to perform the following actions:
 
@@ -361,11 +355,11 @@ Campaigns can be created via API and the UI of the admin platform. To review and
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img24.png "image_tooltip")
 
-2. In the search bar, enter **Okta Access Certification Reviews** and click on the results. 
+2. In the search bar, enter **Okta Access Certification Reviews** and click on the results.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img25.png "image_tooltip")
 
-> This tile (Okta application) is tied to a group where membership is dynamically managed within Okta. If an Okta user is flagged as a reviewer in any active campaign, they will be in the group and see the application on the dashboard.
+> **Note:** This app is tied to a group where membership is dynamically managed within Okta. If an Okta user is flagged as a reviewer in any active campaign, they will be in the group and see the application on the dashboard.
 
 You are presented with a list of campaigns for which the user is a reviewer. You see a summary of information about each active campaign.
 
@@ -399,10 +393,8 @@ After each action, you will see a message displayed, and the item will disappear
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img32.png "image_tooltip")
 
-9. Now, you can return to Identity Governance > Access Certifications to end the campaign. The campaign can be completed manually once the review is done or automatically after the **Set duration** passes. 
+9. Now, you can return to Identity Governance > Access Certifications to end the campaign. The campaign can be completed manually once the review is done or automatically after the **Set duration** passes.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img34.png "image_tooltip")
-
-
