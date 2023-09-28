@@ -4,8 +4,6 @@
 
 Okta integration with Microsoft Office 365 is a common pattern that provides Single Sign-On and Lifecycle Management to that application.
 
-The Okta Integration Network (OIN) will be used in order to speed up the time it takes to complete the integration.
-
 Microsoft Office 365 uses Microsoft Azure AD as its user store and to manage federation for single sign-on. This means that when you're configuring integration with Microsoft Office 365 in Okta, you're really configuring integration with Azure AD - even though the integration name
 in the OIN is "Microsoft Office 365".
 
@@ -31,9 +29,6 @@ You will find the admin credentials and tenant URL in the lab environment.
 
 Okta maintains a specific integration for Microsoft Office 365 in the Okta Integration Network (OIN). To add this to your Okta org, follow these steps:
 
-<!--
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
--->
 1. In the Admin Console select **Applications** >  **Applications**.
 2. Click **Browse App Catalog**.
 3. Type *office 365* into the **Search...**, and then click **Microsoft Office 365**.
@@ -41,28 +36,22 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image03.png "image_tooltip")
 
-<!--The Add Microsoft 365 wizard opens on the General Settings page:-->
-
-6. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
-7. Click **Next**.
+5. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
+6. Click **Next**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
-8. In the **Sign On Options** tab, select **WS-Federation**.
-9. Enter your Office 365 Admin *username* and *password*.
-10. Click **Fetch and Select**. This displays a list of your Office 365 Domains.
-
-<!--This integration supports both Secure Web Authentication (SWA), for password injection, and WS-Federation, for federated single sign-on.
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image05.png "image_tooltip")
--->
+7. In the **Sign On Options** tab, select **WS-Federation**.
+8. Enter your Office 365 Admin *username* and *password*.
+9. Click **Fetch and Select**. This displays a list of your Office 365 Domains.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image06.png "image_tooltip")
 
-11. Select your lab tenant domain
+10. Select your lab tenant domain
 
 > **Hint:**  Don't select the domain that ends in *onmicrosoft.com*.
 
-12. Click **Select**.
+11. Click **Select**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image07-1.png "image_tooltip")
 
@@ -165,8 +154,6 @@ For Microsoft 365, the licenses and roles to be assigned to users can beset up i
 
    > The available options are shown. These have been pulled via API and so reflect the options relevant for your Microsoft tenant:
 
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image018.png "image_tooltip")
--->
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
 
 5. Select the following licenses:
@@ -182,15 +169,9 @@ For Microsoft 365, the licenses and roles to be assigned to users can beset up i
 
 OK. Provisioning is enabled and attribute mapping is done. You're ready to test.
 
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
--->
-
 ## Test provisioning and single sign-on
 
 Now that provisioning and single sign-on have both been configured, you can test them by assigning your Okta admin user to the Microsoft Office 365 app and then attempting single sign-on.
-
-This section uses the Okta admin user ***your.name*\@okta com** as the test user. This user will be mapped to ***your.name*\@yourdemodomain.com** by the custom username mapping you
-set up when configuring single sign-on.
 
 ## Assign user to Microsoft Office 365 app
 
@@ -219,13 +200,7 @@ For this test you will directly assign your Okta admin user to the Office 365 ap
 5. Scroll down to the *roles* and select the **Global Administrator**
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
 
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image025.png "image_tooltip")
--->
-
 6. Scroll to the bottom and click **Save and Go Back**.
-
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image026.png "image_tooltip")
--->
 7. Click **Done**.
 
     > In the background, Okta is provisioning the user account in your Microsoft 365 tenant and assigning the selected licenses and role. This should only take a few seconds to complete.
@@ -235,15 +210,12 @@ For this test you will directly assign your Okta admin user to the Office 365 ap
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
 
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image027.png "image_tooltip")
--->
-
 ### Test single sign-on (SSO)
 
 You can now test single sign-on to Microsoft 365 for the assigned user.
 
 1. Open a new browser window that is not signed into Okta or Microsoft
-2. Enter the sign-in URL to your Okta org. For example,  **<https://demo-xxxxxx-xxxxx-xxxxx.okta.com>**
+2. Enter the sign-in URL to your Okta org. For example,  **<https://demo-xxxxxx-xxxxx-xxxxx.okta.com>>**
 
 3. Authenticate as your user. For example, ***your.name*\@okta.com**
 
@@ -271,9 +243,6 @@ When assigning a group to an app, you can specify values for app attributes. The
 You will now create a group that will be assigned to the Microsoft
 Office 365 app. Alternatively you can assign Office365 to the groups that you already created before (*Sales, Marketing, Human Resources*).
 
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image032.png "image_tooltip")
--->
-
 1. In the Admin Console select **Directory** > **Groups**.
 2. Click the **Add group** button.
 3. Enter **O365Users** as the Name of the group.
@@ -290,12 +259,7 @@ group definition. In this case you will add the app from the
 group definition.
 
 1. In the Admin Console select **Directory** > **Groups**.
-<!-->
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image034.png "image_tooltip")
--->
-
 2. Click on the link for the **O365Users** group.
-
 3. Select the **Applications** tab in the group properties.
 4. Click **Assign applications**.
 
@@ -359,10 +323,7 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
-4. Click the **Microsoft Office 365 Word Online** app./
-
-<!--![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image044.png "image_tooltip")
--->
+4. Click the **Microsoft Office 365 Word Online** app.
 5. Click **Yes** to stay signed in.
 6. In the top-right corner of the page, click the identity icon.
 7. Click **Sign out** to clear the session, and then close the browser.
