@@ -1,8 +1,8 @@
-# Challenge 1: Onboard New Team Member
+# Onboard New Team Member
 
 ## Introduction
 
-One of the most powerful features of Okta is the quick time to market that it provides. In this challenge, Bamboo HR will be integrated with Okta so it can act as the authoritative source of Identity Data.
+One of the most powerful features of Okta is the quick time to market that it provides. In this challenge, BambooHR will be integrated with Okta so it can act as the authoritative source of Identity Data.
 
 Sourcing Identity Data from an HR system (such as BambooHR) has several advantages. New Employees typically get added to the HR system as part of their corporate onboarding process. Once integrated, Okta imports the selected attributes into Okta and provisions birthright access to applications.
 
@@ -10,20 +10,42 @@ The Okta feature that brings it all together is Universal Directory, which not o
 
 This lab uses a pre-built and managed instance of BambooHR. The environment has users and groups defined in a pre-designed organizational structure. The integration has two connections. The first uses SSO integration to access the BambooHR tenant. The Second uses an API connection to import users from BambooHR into Okta’s Universal Directory.
 
-   > **Info:** \
-   > You will find the credentials and tenant URL in the lab environment.
+## Add/Hire a new employee to BambooHR (joiner flow)
 
-## Launch BambooHR
+1. In the Lab environment, click **Launch** for BambooHR.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
+
+> **Note:** The launch window will display your **BambooHR tenant subdomain** and your **BambooHR admin account credentials**.
 >
-> **NOTE** Before a learner
 
-## CHALLENGE 1 - SETUP: Add BambooHR App to Okta
+2.Click **Login to Tenant**, and the sign in using the provided BambooHR admin account credentials.
+3. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
-Okta maintains a specific integration for BambooHR in the
-Okta Integration Network (OIN). To add this to your Okta org, follow
-these steps:
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
 
-1. To access your Okta org, click **Launch** in the lab environment.
+4. Enter the following information for the **New Employee**.
+
+|||
+|:-----:|:-----:|
+|First Name |Flynn|
+|Last Name |Rider|
+|Work Email |<flynn.rider@01.mywiclab.com>|
+|Hire Date |*Today*|
+|Job Title | Director of Marketing|
+|Reports To | Trent Walsh|
+|Department | Marketing|
+|Location | Remote Worker|
+|Self-service access |*No Access*|
+
+5. Click **Save**.
+6. Make note of the BambooHR tenant subdomain name in the URL. You will need this name in the next part of this lab.
+
+## Add the BambooHR App to Okta
+
+Okta maintains a specific integration for BambooHR in the Okta Integration Network (OIN). To add this to your Okta org, follow these steps:
+
+1. In the Lab environment, click **Launch** for Workforce Identity Cloud.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")
 
@@ -33,7 +55,7 @@ these steps:
 
 3. Click **Browse App Catalog**.
 
-4. Type **Bamboo** into the **Search...** bar, and then click **BambooHR** in the dropdown list.
+4. Type *bamboohr* into the **Search...** bar, and then click **BambooHR**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
 
@@ -41,85 +63,76 @@ these steps:
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image002.png "image_tooltip")
 
-6. In the **General Settings** tab complete the required fields using the information below
+6. In **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
 
-- Verify that the **Subdomain** is your BambooHR subdomain. For example, enter **yourwiclabdomain** for http://**yourwiclabdomain**.bamboohr.com/.
+>**Tip** You may need to refer back to the BambooHR launch page if you forgot your BambooHR tenant subdomain
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
+<!-->![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
+-->
+7. Click **Next**.
 
-7. Click **Next** on the bottom right.
+8. In **Sign On Options** verify that the sign-on method is set to **Secure Web Authentication**.
+9. Click **Done**.
 
-8. In the Sign On Methods section of the Sign-On Options panel, select **Secure Web Authentication** as a sign-on option.
+>**Note:** For the purposes of this lab, we will not be authenticating into BambooHR using Okta SSO. We are only sourcing users from BambooHR using Okta Import.
 
->If you select SAML 2.0, click **View Setup Instructions** and follow the instructions.\
-You do not need to configure this parameter, as we will be mainly sourcing users from BambooHR, not logging to BambooHR using SSO.
+## Enable Integration and Provisioning
 
-9. Leave the other settings as is and click **Done**.
+1. Select the **Provisioning** tab.
+1. Click **Configure API Integration**, and then select **Enable API integration**.
 
-## Challenge 1 Setup: Enable Integration and Provisioning
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-1.png "image_tooltip")-->
 
-1. In the **Provisioning tab** complete the required fields as follows:
+3. Click **Authenticate with BambooHR**
 
-- Click **Configure API Integration**
+> **Note:** If you don't already have an active BambooHR session, you will be prompted to login using your BambooHR admin account credentials.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-1.png "image_tooltip")
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip") -->
 
-- Check the checkbox for **Enable API integration**.
-- Click **Authenticate with BambooHR** and login using your BambooHR admin account credentials.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip")
-
-- Leave other parameters unchanged and click **Save** when the successful verification message appears.
+4. After the success message appears, click **Save**
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
 
-2. Change the *Okta to BambooHR* provisioning settings:
-
-- Select the **Provisioning** tab then select **To App** in the Settings list.
-- Click **Edit**.
-- Click **Enable** in Update User Attributes.
-- Click **Save**.
+5. Select **To App** under **Settings**.
+7. Click **Edit**.
+8. Select **Enable** for Update User Attributes.
+9. Click **Save**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/to-bamboo.png "image_tooltip")
 
-3. Change the *BambooHR to Okta* provisioning settings:
+10. Select **To Okta** under **Settings**.
+11. In the **Profile & Lifecycle Sourcing** section click **Edit**
+12. Select **Allow BambooHR to source Okta users**.
+13. Click **OK** to **Enable Profile Mastering**.
+13. Click **Save**.
+14. Refresh the browser page and confirm, in the **General** section, that **Update application username on** is set to **Create and update**.
 
-- Select the **Provisioning** tab, and then select **To Okta** in the Settings list.
-- Click **Edit** in the *Profile & Lifecycle Sourcing*
-- Click the **Allow BambooHR to source Okta users** checkbox.
-- A prompt will appear to *Enable Profile Mastering*. Click **OK**. Leave other settings as is.
-*Click **Save**.
-
-- Click **Save** and confirm that your **Update application username on** is set to **Create and update**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")-->
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-2.png "image_tooltip")
 
 ### Configure Import
 
-In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import so you can assign your existing users to your Okta user (in Okta Universal Directory).
+In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import of existing users into Okta Universal Directory.
 
 In fact, you could perform this one-time import without doing any configuration, and manually match the account, but it makes sense to set up account matching for completeness.  Follow these steps:
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
+1. In the **General** section, click **Edit** to define import settings.
 
-1. Select the **Provisioning** tab in the BambooHR app definition.
-2. Select **To Okta**.
-3. In the **General** section, click **Edit** to define import settings.
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-2.png "image_tooltip")
 
-The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BambooHR account.  You will use a custom expression to specify a replacement domain.
+The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BambooHR account.  <!--You will use a custom expression to specify a replacement domain.-->
 
-4. Select *Custom* for Okta username format.
-5. Enter the following expression, *using your own domain*:
+4. Select *Email Address* for Okta username format.
+<!--5. Enter the following expression, *using your own domain*:
 
     > appuser.firstName + "." + appuser.lastName + *"@yourwiclabdomain.com"*
-
+-->
 6. Click **Save**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
 
 7. In the **Okta Attribute Mappings** section, scroll to *Primary Email* and click the *Pencil Icon* to *Edit*.
 8. In the text box enter the transformational expression
@@ -129,32 +142,7 @@ The Okta username format specifies the Okta username that will be used if a new 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
 
 9. Click **Save**.
-
-## Challenge 1 - Validate: Add/Hire a new employee to BambooHR (joiner flow)
-
-1. In the Lab environment, click **Launch** BambooHR.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
-
-2. Click **Login to Tenant** and login using your *Credentials*.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
-
-3. In the BambooHR tenant, select **People** tab and click **New Employee**.
-
-4. Add your new employee as a **New Employee** with the following **Job Information**.
-
-|||
-|:-----:|:-----:|
-|Hire Date |*Today*|
-|Work Email |*Your Email*|
-|Job Title | Director of Marketing|
-|Department | Marketing|
-|Location | Remote Worker|
-|Reports To | Trent Walsh|
-|Self-service access |*No Access*|
-
-5. Click **Save**.
+<!--
 
 ## Challenge 1 - Setup: Configure Group Assignments
 
@@ -198,41 +186,47 @@ The Okta username format specifies the Okta username that will be used if a new 
 |Sales | SalesForce|
 |Human Resources | Office 365 |
 |Human Resources | ServiceNow |
+-->
+## Import Users
 
-## Challenge 1 - Setup: Import Users
+<!--1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.-->
 
-1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
+1. On the **Import** tab, click **Import Now**. You will see a popup box that shows the number of users and groups scanned.
+1. Click **OK** on the popup.
 
-2. In the **Import tab**, click **Import Now**. You should see a popup box that shows the number of users and groups scanned. Click **OK** on the popup.
-
-3. Find the Employee that you added into Bamboo HR. Click **Confirm Assignments** of that employee.
+1. Use the **Search** to find the new employee that you added into Bamboo HR.
+1. Select the employee via the checkbox
+1. Click **Confirm Assignments** for that employee.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
 
-3. Select **Auto-activate users after confirmation** and click **Confirm**.
+3. Select **Auto-activate users after confirmation**, and then click **Confirm**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
-4. In the **Directory > People/Groups** tab, check if your users and groups are reflected.
+4. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported.
+5. Select the new employee to view their **Assigned Applications**.
+6. Select the **Groups** tab to view their group memberships.
+7. Select the **Profile** tab to view their imported attributes.
 
-For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in the BambooHR tenant.
+<!--For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in the BambooHR tenant.
 
-Please do not configure "Schedule Import" in your own Okta tenant.
-
-5. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
+Please do not configure "Schedule Import" in your own Okta tenant. -->
+<!-->
+6. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
+-->
+## Activate New Employee Okta Account and Login to Okta Dashboard
 
-## Challenge 1 - Validate: Activate New Employee Okta Account and Login to Okta Dashboard
-
-You need to activate your Okta Account before testing single sign-on for your test user.
+You need to activate your Okta Account before testing single sign-on for your new employee.
 
    > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant. \
 Please expect your user activation emails there.
 
 1. In the Lab environment, click **Launch** Office365.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")-->
 
 2. Click **Login to Tenant** and login using your admin *Credentials*.
 
@@ -245,16 +239,16 @@ Please expect your user activation emails there.
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
 
 5. Set a new Password and Okta Verify as your security methods.
-
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw2.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-ov.png "image_tooltip")
-
+-->
 6. Review your Okta End-user dashboard and the apps that the account got automatically provisioned to.
 
-## Challenge 1 - Conclusion
+## Conclusion
 
 Congrats! In just a few minutes, you made your HR system the authoritative source of Identities. You configured attribute mapping and created a transformation such that the username and email address would be a certain way upon the import.
 

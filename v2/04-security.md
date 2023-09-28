@@ -1,4 +1,4 @@
-# Challenge 3: Okta Security
+# Okta Security
 
 ## Overview
 
@@ -8,7 +8,7 @@ To use Okta Verify, you must install the app on your device and set it up. This 
 
 Okta Verify also enables setting up the Okta FastPass which  provides passwordless authentication to any app in Okta. This means you don't have to enter your password when signing in, so the login experience is as smooth as possible but still highly secure. Okta FastPass obviously reduces the probability of data breaches that can occur from compromised credentials. The solution is supported on Android, iOS, macOS and Windows devices, from any location or network.
 
-## Challenge 3 - Setup: Okta Verify and Fastpass
+## Setup Okta Verify and Fastpass
 
 ### Install Okta Verify on Your Virtual Machine
 

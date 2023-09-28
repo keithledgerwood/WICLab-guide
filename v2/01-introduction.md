@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-Welcome to the Okta’s Workforce Identity Cloud Lab!
+Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.9.28)
 
 Congratulations! You got the job - you’re in charge of handling your organization’s Workforce Identity Management. You’ve been given the high level directive by the CIO to do the following:
 
@@ -85,7 +85,9 @@ In this lab, you will complete a series of Workforce Identity related challenges
 ## Lab Environment and Okta Org
 
 In this lab, you will be working in a dedicated environment and Okta org.
-
+> **Note:** In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
+   >
+<!--
 If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps.
 
 ### Creating the Lab Environment
@@ -113,14 +115,13 @@ This will open the Okta Labs website.
 
 10. Under Your Lab Name field, click **Get Started**.
 This will launch your own lab environment. You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
-
+-->
 ### Signing On to Your Okta Org
 
-1. In the mailbox you used for registration, find the "Your New Okta account" email and click **Sign On**.
+1. In the mailbox you used for registration, find the "Your New Okta account" email.
+2. Copy the temporary password, and then click **Sign On**.
+3. Follow the instructions on the screen to sign on to your Okta org.
 
-2. Follow the instructions on the screen to sign on to your Okta org.
-This will require that you sign in with your temporary password (which can be found in the "Your New Okta account" email), set up a new password and set up the Okta Verify app on your mobile device.
+>This will require that you sign in with your temporary password (which can be found in the "Your New Okta account" email), set up a new password and set up the Okta Verify app on your mobile device.>
+
 After successful sign on, you will see the Okta End-User Dashboard.
-
-   > **Note:** In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
-   >
