@@ -67,8 +67,6 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 >**Tip** You may need to refer back to the BambooHR launch page if you forgot your BambooHR tenant subdomain
 
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
--->
 7. Click **Next**.
 
 8. In **Sign On Options** verify that the sign-on method is set to **Secure Web Authentication**.
@@ -80,16 +78,9 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 1. Select the **Provisioning** tab.
 1. Click **Configure API Integration**, and then select **Enable API integration**.
-
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-1.png "image_tooltip")-->
-
 3. Click **Authenticate with BambooHR**
 
 > **Note:** If you don't already have an active BambooHR session, you will be prompted to login using your BambooHR admin account credentials.
-
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip")
--->
 
 4. After the success message appears, click **Save**
 
@@ -109,10 +100,6 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 13. Click **Save**.
 14. Refresh the browser page and confirm, in the **General** section, that **Update application username on** is set to **Create and update**.
 
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
--->
-
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-2.png "image_tooltip")
 
 ### Configure Import
@@ -125,102 +112,32 @@ In fact, you could perform this one-time import without doing any configuration,
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
 
+2. For **Okta username format**, select **Email Address**.
+3. Click **Save**.
+
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-2.png "image_tooltip")
 
-The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BambooHR account.  <!--You will use a custom expression to specify a replacement domain.-->
-
-4. Select *Email Address* for Okta username format.
-<!--
-5. Enter the following expression, *using your own domain*:
-
-    > appuser.firstName + "." + appuser.lastName + *"@yourwiclabdomain.com"*
--->
-6. Click **Save**.
-
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
-
-7. In the **Okta Attribute Mappings** section, scroll to *Primary Email* and click the *Pencil Icon* to *Edit*.
-8. In the text box enter the transformational expression
-
-    > appuser.firstName + "." + appuser.lastName + "@yourwiclabdomain.com"
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
-
-9. Click **Save**.
-
-## Challenge 1 - Setup: Configure Group Assignments
-
-1. In Okta Admin Console, navigate to **Directory > Groups**
-
-2. Click **Add Group**.
-
-3. Complete the details on the *Add group* page using the table below and click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image007.png "image_tooltip")
-
-4. Repeat your steps by creating another group for **Sales** and **Human Resources** department.
-
-## Challenge 1 - Setup: Configure Group Rules
-
-1. On the Groups page, select the **Rules** tab.
-
-2. Click **Add Rule**.
-
-3. Complete the details on the *Add Rule* page using the table below and click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image008.png "image_tooltip")
-
-4. On the Groups page, select **Activate** from the *Actions* drop-down list.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image009.png "image_tooltip")
-
-5. Repeat your steps by creating another rule for **Sales** and **Human Resources** department.
-
-## Challenge 1 - Setup: Assign Groups to Applications
-
-1. On the Groups page, select your newly created Universal Directory Groups.
-
-2. In the **Applications tab**, click **Assign applications** to assign your applications according to the table below.
-
-|Group|Application|
-|:-----:|:-----:|
-|Marketing | Office 365|
-|Marketing | Marketo|
-|Sales | Office 365|
-|Sales | SalesForce|
-|Human Resources | Office 365 |
-|Human Resources | ServiceNow |
--->
 ## Import Users
-
-<!--
-1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
--->
 
 1. On the **Import** tab, click **Import Now**. You will see a popup box that shows the number of users and groups scanned.
 1. Click **OK** on the popup.
 
-1. Use the **Search** to find the new employee that you added into Bamboo HR.
-1. Select the employee via the checkbox
-1. Click **Confirm Assignments** for that employee.
+2. Use the **Search** to find the new employee that you added into Bamboo HR.
+3. Select the employee via the checkbox
+4. Click **Confirm Assignments** for that employee.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
 
-3. Select **Auto-activate users after confirmation**, and then click **Confirm**.
+5. Select **Auto-activate users after confirmation**, and then click **Confirm**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
-4. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported.
-5. Select the new employee to view their **Assigned Applications**.
-6. Select the **Groups** tab to view their group memberships.
-7. Select the **Profile** tab to view their imported attributes.
+6. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported.
+7. Select the new employee to view their **Assigned Applications**.
+8. Select the **Groups** tab to view their group memberships.
+9. Select the **Profile** tab to view their imported attributes.
 
-<!--For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in the BambooHR tenant.
-Please do not configure "Schedule Import" in your own Okta tenant.
--->
-
-6. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
+10. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
 
@@ -232,13 +149,7 @@ You need to activate your Okta Account before testing single sign-on for your ne
 Please expect your user activation emails there.
 
 1. In the Lab environment, click **Launch** Office365.
-
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")
--->
-
 2. Click **Login to Tenant** and login using your admin *Credentials*.
-
 3. Access your Admin's **Outlook** account from the **Apps** section.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
@@ -248,14 +159,7 @@ Please expect your user activation emails there.
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
 
 5. Set a new Password and Okta Verify as your security methods.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-pw2.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/setup-ov.png "image_tooltip")
--->
-6. Review your Okta End-user dashboard and the apps that the account got automatically provisioned to.
+6. Review your Okta End-user dashboard and the apps that were automatically provisioned to the account.
 
 ## Conclusion
 
