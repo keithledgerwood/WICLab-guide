@@ -12,20 +12,16 @@ Okta Verify also enables setting up the Okta FastPass which  provides passwordle
 
 ### Install Okta Verify on Your Virtual Machine
 
-Launch your Virtual Machine by going to the lab portal and click **Launch Virtual Machine**.
+<!-- Launch your Virtual Machine by going to the lab portal and click **Launch Virtual Machine**.
+-->
 
-To install Okta Verify on your Windows VM (Windows Server), open a preferred browser (Chrome or Firefox) in your VM and proceed with the following steps:
+To install Okta Verify on your Windows VM (Windows Server), open Chrome in your VM and proceed with the following steps:
 
-1. In your lab environment, in the left-hand Okta Workforce panel, under Workforce Identity Cloud, Click **Launch**.
-This will open the Okta org tab in your browser.
+1. In your lab environment, in the left-hand Launch panel, under Workforce Identity Cloud, click **Launch**.
 
-1. Login with your Username, Password, and Okta Verify code or push notification.
-You can now see the Okta End-User Dashboard.
+>This will open the Admin Console tab in your browser.
 
-1. Click **Admin**.
-This will open the Admin Console tab in your browser.
-
-1. In the Admin Console, select **Settings** > **Downloads**.
+2. In the Admin Console, select **Settings** > **Downloads**.
 
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download Latest**.
 
@@ -34,7 +30,7 @@ This will open the Admin Console tab in your browser.
 1. In the Okta Verify installation window, select **I agree to the License terms and conditions** and click **Install**.
 Wait for confirmation saying that Okta Verify was successfully installed.
 
-2. Click **Finish**.
+1. Click **Finish**.
 
 ### Configure Okta Verify
 

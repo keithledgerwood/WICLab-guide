@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.9.28)
+Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.9.28.2)
 
 Congratulations! You got the job - you’re in charge of handling your organization’s Workforce Identity Management. You’ve been given the high level directive by the CIO to do the following:
 
@@ -86,36 +86,7 @@ In this lab, you will complete a series of Workforce Identity related challenges
 
 In this lab, you will be working in a dedicated environment and Okta org.
 > **Note:** In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
-   >
-<!--
-If you can read this Lab Guide, this means that you should have already created your lab environment and can access it. However, if this is not the case, please proceed with the following steps.
-
-### Creating the Lab Environment
-
-1. Open a browser and go to <https://demo.okta.com>.
-This will open the Okta Demo website.
-
-2. Click **Continue with Okta Guests**.
-
-3. Click **Sign up** to register your Okta Demo account.
-
-4. Enter the Email address and Password you want to use for this account.
-
-5. Click **Continue**.
-
-6. Read the "Okta demo.okta.com Access Agreement" and select **I accept the access agreement**.
-
-7. Click **Accept**.
-Your Okta Demo account is created.
-
-8. Go to <https://labs.demo.okta.com>.
-This will open the Okta Labs website.
-
-9. Under [Okta Workforce - Name of Lab - TBD] click **Start**.
-
-10. Under Your Lab Name field, click **Get Started**.
-This will launch your own lab environment. You will now see the Okta Workforce panel with several Launch buttons and the Lab Guide instructions.
--->
+>
 ### Signing On to Your Okta Org
 
 1. In the mailbox you used for registration, find the "Your New Okta account" email.

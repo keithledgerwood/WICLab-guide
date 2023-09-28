@@ -19,7 +19,8 @@ This lab uses a pre-built and managed instance of BambooHR. The environment has 
 > **Note:** The launch window will display your **BambooHR tenant subdomain** and your **BambooHR admin account credentials**.
 >
 
-2.Click **Login to Tenant**, and the sign in using the provided BambooHR admin account credentials.
+2. Click **Login to Tenant**, and sign in using the provided BambooHR admin account credentials.
+
 3. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
@@ -50,10 +51,9 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")
 
 2. In the Admin Console select **Applications** > **Applications**.
+3. Click **Browse App Catalog**.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
-
-3. Click **Browse App Catalog**.
 
 4. Type *bamboohr* into the **Search...** bar, and then click **BambooHR**.
 
@@ -63,11 +63,11 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image002.png "image_tooltip")
 
-6. In **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
+6. In the **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
 
 >**Tip** You may need to refer back to the BambooHR launch page if you forgot your BambooHR tenant subdomain
 
-<!-->![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
+<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003.png "image_tooltip")
 -->
 7. Click **Next**.
 
@@ -87,7 +87,9 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 > **Note:** If you don't already have an active BambooHR session, you will be prompted to login using your BambooHR admin account credentials.
 
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip") -->
+<!--
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004-2.png "image_tooltip")
+-->
 
 4. After the success message appears, click **Save**
 
@@ -107,7 +109,9 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 13. Click **Save**.
 14. Refresh the browser page and confirm, in the **General** section, that **Update application username on** is set to **Create and update**.
 
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")-->
+<!--
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-1.png "image_tooltip")
+-->
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-2.png "image_tooltip")
 
@@ -126,13 +130,15 @@ In fact, you could perform this one-time import without doing any configuration,
 The Okta username format specifies the Okta username that will be used if a new user needs to be created to own an imported BambooHR account.  <!--You will use a custom expression to specify a replacement domain.-->
 
 4. Select *Email Address* for Okta username format.
-<!--5. Enter the following expression, *using your own domain*:
+<!--
+5. Enter the following expression, *using your own domain*:
 
     > appuser.firstName + "." + appuser.lastName + *"@yourwiclabdomain.com"*
 -->
 6. Click **Save**.
 
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
+<!--
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-3.png "image_tooltip")
 
 7. In the **Okta Attribute Mappings** section, scroll to *Primary Email* and click the *Pencil Icon* to *Edit*.
 8. In the text box enter the transformational expression
@@ -142,7 +148,6 @@ The Okta username format specifies the Okta username that will be used if a new 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-4.png "image_tooltip")
 
 9. Click **Save**.
-<!--
 
 ## Challenge 1 - Setup: Configure Group Assignments
 
@@ -189,7 +194,9 @@ The Okta username format specifies the Okta username that will be used if a new 
 -->
 ## Import Users
 
-<!--1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.-->
+<!--
+1. In the Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition.
+-->
 
 1. On the **Import** tab, click **Import Now**. You will see a popup box that shows the number of users and groups scanned.
 1. Click **OK** on the popup.
@@ -210,13 +217,13 @@ The Okta username format specifies the Okta username that will be used if a new 
 7. Select the **Profile** tab to view their imported attributes.
 
 <!--For the best experience, create your own BambooHR provisioning with your own Okta tenant so that you can perform the manual import to verify the new employee that you created in the BambooHR tenant.
+Please do not configure "Schedule Import" in your own Okta tenant.
+-->
 
-Please do not configure "Schedule Import" in your own Okta tenant. -->
-<!-->
 6. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
--->
+
 ## Activate New Employee Okta Account and Login to Okta Dashboard
 
 You need to activate your Okta Account before testing single sign-on for your new employee.
@@ -226,7 +233,9 @@ Please expect your user activation emails there.
 
 1. In the Lab environment, click **Launch** Office365.
 
-<!--![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")-->
+<!--
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/launch-o365.png "image_tooltip")
+-->
 
 2. Click **Login to Tenant** and login using your admin *Credentials*.
 
