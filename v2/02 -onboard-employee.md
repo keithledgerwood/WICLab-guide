@@ -86,21 +86,11 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
 
-5. Select **To App** under **Settings**.
-7. Click **Edit**.
-8. Select **Enable** for Update User Attributes.
+5. Select **To Okta** under **Settings**.
+6. In the **Profile & Lifecycle Sourcing** section click **Edit**
+7. Select **Allow BambooHR to source Okta users**.
+8. Click **OK** to **Enable Profile Mastering**.
 9. Click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/to-bamboo.png "image_tooltip")
-
-10. Select **To Okta** under **Settings**.
-11. In the **Profile & Lifecycle Sourcing** section click **Edit**
-12. Select **Allow BambooHR to source Okta users**.
-13. Click **OK** to **Enable Profile Mastering**.
-13. Click **Save**.
-14. Refresh the browser page and confirm, in the **General** section, that **Update application username on** is set to **Create and update**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005-2.png "image_tooltip")
 
 ### Configure Import
 
@@ -132,12 +122,10 @@ In fact, you could perform this one-time import without doing any configuration,
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
-6. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported.
+6. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported. The user status will be *Pending user action*.
 7. Select the new employee to view their **Assigned Applications**.
 8. Select the **Groups** tab to view their group memberships.
 9. Select the **Profile** tab to view their imported attributes.
-
-10. In the **Directory > Groups**, check if your user was assigned to the group according to the rules you prepared.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/group-assigned.png "image_tooltip")
 
@@ -145,12 +133,15 @@ In fact, you could perform this one-time import without doing any configuration,
 
 You need to activate your Okta Account before testing single sign-on for your new employee.
 
-   > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant. \
+   > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant.\
 Please expect your user activation emails there.
 
+>**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
+>
+
 1. In the Lab environment, click **Launch** Office365.
-2. Click **Login to Tenant** and login using your admin *Credentials*.
-3. Access your Admin's **Outlook** account from the **Apps** section.
+2. Click **Login to Tenant** and login using your labadmin *Credentials*.
+3. Clik the **Microsotft 365 app launcher** icon, and then click **Outlook**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
 
@@ -158,7 +149,7 @@ Please expect your user activation emails there.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
 
-5. Set a new Password and Okta Verify as your security methods.
+5. Set a **password** and set up **Okta Verify** as your security methods.
 6. Review your Okta End-user dashboard and the apps that were automatically provisioned to the account.
 
 ## Conclusion

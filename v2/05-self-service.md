@@ -1,29 +1,18 @@
-# Challenge 4: Self Service
+# Self Service Solutions
 
-## Set Up Self-Service Password Reset
+## Access Requests
 
-### Configure Self-Service Password Reset
+### Request access to an app
 
-1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment**.
+1. Sign in to your org as the new employee.
 
-2. Click the **password policy** link.
+2. In the End-User Dashboard, open the **Okta Access Requests** app.
+This will open the Access Requests Console.
 
-3. Scroll down and click **Add rule**.
+3. In the left-hand panel, select **App Catalog**.
 
-4. Configure the rule as follows:
+4. Under Concur Access Request, click **Request access**.
 
-- Rule name: Self-Service Password Reset
-- Users can perform self-service: Password reset is checked
-- Users can initiate recovery with: Email is checked
+5. Click **Submit new request**.
 
-5. Click **Create rule**.
-
-### Test Self-Service Password Reset
-
-1. Make an attempt to sign in to your org as the New Employee with your Username, Password, and Okta Verify code or push notification. Do not use Okta FastPass for this test. When prompted to Verify with your password, click **Forgot password?**.
-
-2. Click **Send me an Email**.
-
-3. In the mailbox you used for registration, find the "Account password reset" email and click **Reset Password**.
-
-4. Follow the instructions on screen to reset your password.
+6. In the End-User Dashboard,  you can now see Cornerstone available.

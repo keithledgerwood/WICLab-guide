@@ -33,17 +33,16 @@ This document section will explore the unconfigured Access Requests, walk throug
 
 # Self-Service Access Requests
 
-## Set Up Okta Access Requests  
+## Set Up Okta Access Requests
 
 ### Configure Access Requests
 
-1. In the Admin Console, select **Directory** > **Groups**.
-
+1. In the Admin Console select **Directory** > **Groups**.
 2. Click **Add group**.
-
-3. Enter a group name: Request Approvers and click **Save**.
-
-4. Click the **Request Approvers** link to open the group page.
+3. Set the **Name** to  **Request Approvers**.
+4. Set the **Description** to **Request Approvers**
+5. Click **Save**.
+6. Select the **Request Approvers** grouplink to open the group page.
 
 5. Click **Assign people**.
 
@@ -51,39 +50,35 @@ This document section will explore the unconfigured Access Requests, walk throug
 
 7. Click **Done**.
 
-8. Select **Applications** > **Applications** and click the **Okta Access Requests** app.
+### Assign Access Request App to Everyone
 
-9. Select the **Assignments** tab.
-
-10. Click **Assign** and then select **Assign to people**.
-
-11. In the assignment window, for both the Admin and New Employee, click **Assign**.
-
-12. Click **Done**.
-This will assign the Okta Access Requests app to these users.
-
-13. Select the **Push Groups** tab.
-
-14. Click **Push Groups** and then select **Find groups by name**.
-
-15. Enter the group name: Request Approvers and click **Save**.
+1. In the Admin Console select **Applications** > **Applications**
+2. Select the **Okta Access Requests** app.
+3. Select the **Assignments** tab.
+4. Click **Assign** and then select **Assign to Groups**.
+5. Find for the **Everyone** group, and then click **Assign**.
+6. Click **Done**.
+7. Select the **Push Groups** tab.
+8. Click **Push Groups**,  and then select **Find groups by name**.
+9. Enter **Request Approvers**,  and then click **Save**.
 This will push the group to the Okta Access Requests app.
 
-16. Select **Identity Governance** > **Access Requests**.
-This will open the Access Requests Console.
+### Configure Settings
 
-17. In the left-hand panel, select **Settings**.
+1. In the Okta Admin Console select **Identity Governance** > **Access Requests**.
+2. In the Access Requests Admin Console select **Settings**.
+3. Select the **Resources** tab.
 
-18. Select the **Resources** tab.
-
-19. For both Applications and Okta Groups, click **Update now**.
+4. Select **Applications**, and then click **Update now**.
+5. Select **Okta Groups**, and then click **Update now**.
 This will sync the resources from Okta.
 
-20. In the left-hand panel, select **Teams**.
+> **JZ ? :** I'm not sold on the idea of creating a new team as the IT team should suffice. We simply need to add the okta admin as a member of the team.  This may also allow us to eliminate the "update connection" steps and sycning.
 
-21. Click **Add Team**.
+6. In the Access Requests Admin Console, select **Teams**.
 
-22. Configure the team as follows:
+7. Click **Add Team**.
+8. Configure the team as follows:
 
 - Name: App Request Approvers
 - Member: You (your Admin)
@@ -91,81 +86,86 @@ This will sync the resources from Okta.
 - Assignment style: To a specific user
 - Assign all requests to: You (your Admin)
 
-23. Click **Create Team**.
+9. Click **Create Team**.
+10. In the Access Requests Admin Console, select **Settings**.
+11. Select the **Integrations** tab.
+12. Under Access Request Configurations for Okta, click **Edit connection**.
+13. Click **Select teams** and then select **App Request Approvers**.
+14. Click **Update connection**.
 
-24. In the left-hand panel, select **Settings**.
+> **JZ ? :** Does the update connection sync the Push Group ( App Request Approvers) membership?
 
-25. Select the **Integrations** tab.
+15. Select the **Resources** tab.
+16. For both Applications and Okta Groups, click **Manage Access** and select the **App Request Approvers** team.
 
-26. Under Access Request Configurations for Okta, click **Edit connection**.
+### Create a Request Type
 
-27. Click **Select teams** and then select **App Request Approvers**.
-
-28. Click **Update connection**.
-
-29. Select the **Resources** tab.
-
-30. For both Applications and Okta Groups, click **Manage Access** and select the **App Request Approvers** team.
-
-31. In the left-hand panel, click **Access Requests**.
-
-32. Click **Create request type**.
+1. In the Access Requests Admin Console, select **Access Requests**.
+2. Click **Create request type**.
 This will open the Request Type Details window.
 
-33. Configure the request as follows:
+3. Configure the request type as follows:
 
-- Name: Cornerstone Access Request
-- Team: App Request Approvers
-- Audience: Everyone at your org
+|||
+|:-----:|:-----:|
+|Name|**Concur**|
+|Description |  **Corporate Travel App**|
+|Team |**App Request Approvers**|
+|Audience|**Everyone**|'
 
-34. Click **Continue**.
+4. Click **Continue**.
 
-35. For Approval, click **Add to request type**.
+> **Note:** A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an Action step.
 
-36. In the right-hand panel, configure the approval as follows:
+5. To add an **Approval** step, click **Add to request type**.
 
-- Text: Admin Approval
-- Make it a required task: On
-- Assigned to: A specific user... > You (this will enable approval from your own Admin account)
+6. In the Approval panel, configure the approval as follows:
 
-37. At the bottom of the page, click **Action** > **Assign individual app to user**.
+|||
+|:-----:|:-----:|
+|Text|**Admin Approval**|
+|Make it a required task |  **Enabled**|
+|Assigned to |Select **A specific user...** and click **You**|
+|Audience|**Everyone**|'
 
-38. In the right-hand panel, configure the action as follows:
+7. At the bottom of the page, click **Action**, and then select **Assign individual app to user**.
 
-- Text: Assign to Cornerstone
-- Make it a required task: On
-- Run automatically: On
-- Email address: Requester email
-- Select application: Cornerstone
+8. In the **Action** panel, configure the action as follows:
 
-39. Click **Publish**.
+|||
+|:-----:|:-----:|
+|Text|**Assign to Concur**|
+|Make it a required task |  **Enabled**|
+|Type | **Assign individual app to user**|
+|Run automatically |**Enabled**|
+|Email address|**Requester email**|
+|Select application | **Concur**|'
 
-### Test Access Requests
+9. Click **Publish**.
 
-1. Sign out of your org as Admin.
+### As the new employee, request access to an app
 
-2. Sign in to the org as the New Employee.
-
+1. Open a new Chrome window using the Guest profile
+2. Sign in to your Okta org as the New Employee.
 3. In the End-User Dashboard, open the **Okta Access Requests** app.
-This will open the Access Requests Console.
-
-4. In the left-hand panel, select **App Catalog**.
-
-5. Under Cornerstone Access Request, click **Request access**.
-
+5. To request the **Concur** app, click **Request access**.
 6. Click **Submit new request**.
+The *Request* and *Requester* details are displayed
+78. Leave this browser session open as you will return back to it momentarily.
 
-7. Sign out of your org as the New Employee.
+### As the Okta admin, approve the access request
 
-8. In the mailbox you used for registration, find the "Cornerstone Access Request" email and click **Approve**.
+1. In the mailbox you used for registration, find the "Concur Access Request" email and click **Approve**.
 
-9. Sign in to the org as Admin.
+2. Sign in to the org as Admin.
 
-10. You can see the confirmation of granting access to Cornerstone to the New Employee.
+3. Verify that there is a confirmation of granting access to Concur to the New Employee.
 
-11. Sign out of your org as Admin and sign in as the New Employee.
+### As the the new employee, verify access to the app
 
-12. In the End-User Dashboard, you can now see Cornerstone available.
+1. Return back to the new employee browser session.
+
+2. Reload the End-User Dashboard, and then verify that you have access to the Concur app.
 
 # Workflow
 
