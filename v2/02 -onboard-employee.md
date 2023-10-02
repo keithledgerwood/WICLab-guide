@@ -28,16 +28,14 @@ This lab uses a pre-built and managed instance of BambooHR. The environment has 
 4. Enter the following information for the **New Employee**.
 
 |||
-|:-----:|:-----:|
-|First Name |Flynn|
-|Last Name |Rider|
-|Work Email |<flynn.rider@01.mywiclab.com>|
+|:-----|:-----|
+|First Name |**Flynn**|
+|Last Name |**Rider**|
+|Work Email |**<flynn.rider@wiclab.com>**|
 |Hire Date |*Today*|
-|Job Title | Director of Marketing|
-|Reports To | Trent Walsh|
-|Department | Marketing|
-|Location | Remote Worker|
-|Self-service access |*No Access*|
+|Job Title | **Director of Marketing**|
+|Department | **Marketing**|
+|Location | **Remote Worker**|
 
 5. Click **Save**.
 6. Make note of the BambooHR tenant subdomain name in the URL. You will need this name in the next part of this lab.
@@ -141,7 +139,7 @@ Please expect your user activation emails there.
 
 1. In the Lab environment, click **Launch** Office365.
 2. Click **Login to Tenant** and login using your labadmin *Credentials*.
-3. Clik the **Microsotft 365 app launcher** icon, and then click **Outlook**.
+3. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
 
