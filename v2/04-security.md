@@ -8,7 +8,7 @@ To use Okta Verify, you must install the app on your device and set it up. This 
 
 Okta Verify also enables setting up the Okta FastPass which  provides passwordless authentication to any app in Okta. This means you don't have to enter your password when signing in, so the login experience is as smooth as possible but still highly secure. Okta FastPass obviously reduces the probability of data breaches that can occur from compromised credentials. The solution is supported on Android, iOS, macOS and Windows devices, from any location or network.
 
-## Setup Okta Verify and Fastpass
+## Setup Okta Verify and Okta FastPass
 
 ### Install Okta Verify on Your Virtual Machine
 
@@ -47,59 +47,82 @@ Your account is added to the Okta Verify desktop app.
 
 ### Configure Enrollment Policy for Your Users
 
-1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment**.
+1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment** tab.
 
 1. For the Default Policy, click **Edit**.
 This will open the Edit Policy window.
 
-1. Make sure that Okta Verify is set to Optional and Password is set to Required.
+1. Verify that Okta Verify is set to Optional and Password is set to Required.
 
 1. Click **Update policy**.
 
 ### Enable Okta Verify for FastPass Authentication
 
-1. In the Admin Console, select **Security** > **Authenticators**.
+1. In the Admin Console, select **Security** > **Authenticators** >**Setup** tab.
 
-1. For Okta Verify, click **Actions**, and then select **Edit**.
-This will open the Okta Verify window.
+1. For **Okta Verify**, click **Actions**, and then select **Edit**.
+This will display the Okta Verify options.
 
-1. Make sure that the following options are checked:
+2. In **Verification options**, check that the following options are selected:
 
 - Push notification (Android and iOS only)
 - Okta FastPass (All platforms)
-- Show the "Sign in with Okta FastPass" button
+
+3. Select **Show the "Sign in with Okta FastPass" button**.
 
 4. Scroll down and click **Save**.
 
-### Configure a FastPass Rule
+### Configure a FastPass Rule for Microsoft O365
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
 
-2. Click **Microsoft Office365**.
+2. Click **Microsoft Office 365**.
 
-3. Click **Add Rule**. Name the rule O365 - Access for Marketing rule.
+3. Click **Add Rule**.
+4. Set the **Rule name** to **Okta FastPass Access for Marketing and Sales**.
+5. Set the following **IF** conditions for the rule:
 
-4. Make sure that the following options are selected:
+|||
+|:-----:|:-----:|
+|User's group membership includes|**At least one of the following groups:**|
+| Enter groups to include: |  **Marketing** and **Sales**|
+|Device State |**Registered**|
+|Device management |**Not Managed**|
+|Client is |**Web Browser** and **Modern Authentication**|'
 
-- User's group membership includes: At least one of the following Groups: Add Marketing Group
-- Device state is: **Registered**
-- Device management is: **Not Managed**
-- Client is: One of the following clients: **Web Browser** and **Modern Authentication**
-- User must authenticate with: **Possession factor**
-- Possession factor constraints are
-  - Phishing Resistant
-  - Hardware protected
-  - If Okta FastPass is used: The user must approve a prompt in Okta Verify or provide biometrics
+ 6. Set the following **THEN** access and authentication settings for the rule:
 
-5. Click **Save**.
+|||
+|:-----:|:-----:|
+|User must authenticate with:| **Possession factor**|
+|Possession factor constraints are|  **Phishing resistant** and **Hardware protected**|
+|If Okta FastPass is used |**The user must approve a prompt in Okta Verify or provide biometrics**|
 
-### Challenge 3 - Verify: Test FastPass Passwordless Login
+7. Click **Save**.
+8. Using the *vertical waffle*, move the new rule up to the top of the priority list.
 
-1. Sign in to your org as the New Employee (being a member of the Marketing group).
+### Experience a Passwordless Login
+
+1. Sign in to your org as the New Employee, who is a member of the Marketing group.
 
 1. In the End-User Dashboard, open the **Office365** app.
 
 1. Click **Sign in with Okta FastPass** to sign in without using your password.
+
+### Enable Okta ThreatInsight
+
+Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
+
+To enable Okta ThreatInsight, proceed with the following steps:
+
+1. In the Admin Console, select **Security** > **General**.
+
+2. Scroll down to Okta ThreatInsight settings and click **Edit**.
+
+3. Select **Log and enforce security based on threat level**.
+This setting will make Okta automatically deny access to sign-in requests that come from potentially malicious IP addresses that ThreatInsight detects.
+
+4. Click **Save**.
 
 ## Set Up User Behavioral Analytics
 
@@ -193,7 +216,7 @@ This will disable this policy rule.
 30. Click **Save**.
 
 31. On the phone on which you installed the Okta Verify app, open the app, and under your org and Admin username tap **Launch Dashboard** link.
-Because you are now trying to log in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.
+Because you are now trying to sign in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.
 
 32. Go back to your virtual environment.
 
@@ -211,19 +234,4 @@ This will disable this policy rule.
 - Access is: Allowed after successful authentication.
 
 38. Click **Save**.
-This will enable login from your phone again.
-
-### Enable Okta ThreatInsight
-
-Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
-
-To enable Okta ThreatInsight, proceed with the following steps:
-
-1. In the Admin Console, select **Security** > **General**.
-
-2. Scroll down to Okta ThreatInsight settings and click **Edit**.
-
-3. Select **Log and enforce security based on threat level**.
-This setting will make Okta automatically deny access to sign-in requests that come from potentially malicious IP addresses that ThreatInsight detects.
-
-4. Click **Save**.
+This will enable sign in from your phone again.
