@@ -310,7 +310,7 @@ You can now test single sign-on to Microsoft 365 for your new employee.
 
 3. Authenticate as the new employee. For example,
 
-    > ***<flynn.rider@your.wiclab.com>***
+    > ***<flynn.rider@wiclab.com>***
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
@@ -323,4 +323,4 @@ You can now test single sign-on to Microsoft 365 for your new employee.
 
 ## Challenge 2: Conclusion
 
-Congratulations! You have successfully onboarded Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. If Microsoft was that easy, imagine how quick and easy it will be to integrate the rest of your application ecosystem!
+Congratulations! You have successfully integrated Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. Considering how easy it was to integrate Microsoft Office 365, imagine how quick and easy it will be to integrate the rest of your application ecosystem!

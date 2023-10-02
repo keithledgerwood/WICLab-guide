@@ -26,8 +26,8 @@ With these combined capabilities, OIG helps organizations improve their security
 
 In this section of the workshop, we will explore the following capabilities:
 Access Requests. Once configured, it can be used to grant access.
-Access Certifications for Running Access Review Campaigns
-Workflows to trigger actions based on specific events like the Change of the job title of one of the employees
+Access Certifications for running Access Review Campaigns.
+Workflows to trigger actions based on specific events like the change of the job title of one of the employees
 This document section will use a pre-built flow and two connections with the Okta tenant.
 This document section will explore the unconfigured Access Requests, walk through standard configuration, and then create and run a simple approval flow.
 
@@ -107,7 +107,7 @@ This will open the Request Type Details window.
 3. Configure the request type as follows:
 
 |||
-|:-----:|:-----:|
+|:-----|:-----|
 |Name|**Concur**|
 |Description |  **Corporate Travel App**|
 |Team |**App Request Approvers**|
@@ -122,7 +122,7 @@ This will open the Request Type Details window.
 6. In the Approval panel, configure the approval as follows:
 
 |||
-|:-----:|:-----:|
+|:-----|:-----|
 |Text|**Admin Approval**|
 |Make it a required task |  **Enabled**|
 |Assigned to |Select **A specific user...** and click **You**|
@@ -133,7 +133,7 @@ This will open the Request Type Details window.
 8. In the **Action** panel, configure the action as follows:
 
 |||
-|:-----:|:-----:|
+|:-----|:-----|
 |Text|**Assign to Concur**|
 |Make it a required task |  **Enabled**|
 |Type | **Assign individual app to user**|

@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.10.02.1)
+Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.10.2.2)
 
 Congratulations! You got the job - you’re in charge of handling your organization’s Workforce Identity Management. You’ve been given the high level directive by the CIO to do the following:
 
