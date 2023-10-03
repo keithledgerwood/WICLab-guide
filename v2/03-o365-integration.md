@@ -42,8 +42,8 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image04.png "image_tooltip")
 
 7. In the **Sign On Options** tab, select **WS-Federation**.
-8. Enter your Office 365 Admin *username* and *password*.
-9. Click **Fetch and Select**. This displays a list of your Office 365 Domains.
+8. Enter your **Office 365 Admin Username** and **Office 365 Admin password**.
+9. Click **Fetch and Select**. This will display a list of your Office 365 Domains.
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image06.png "image_tooltip")
 
@@ -67,7 +67,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image08.png "image_tooltip")
 
-Congratuations! Your Okta org and Microsoft 365 tenant are now configured for single sign-on from Okta to Azure AD.
+Congratulations! Your Okta org and Microsoft 365 tenant are now configured for single sign-on from Okta to Azure AD.
 
 > **Note:** You can't test single sign-on until you have enabled provisioning and assigned at least one user to this app in Okta.
 
@@ -93,12 +93,8 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable provisioning, 
 ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image010.png "image_tooltip")
 
 5. Authenticate as the lab admin user for your Microsoft tenant.
-
 6. Click **Accept** to grant the permissions requested by the Okta Microsoft Graph Client.
-
 7. Click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image012.png "image_tooltip")
 
 The API connection for provisioning is now in place. Provisioning configuration is now shown under the Provisioning tab. The integration configuration you just created is under the Integration tab.
 
@@ -121,114 +117,7 @@ Follow these steps to enable provisioning:
 5. For **Update User Attributes**, select **Enable**.
 6. For **Deactivate Users**, select **Enable**.
 7. Click **Save**.
-<!-- Skipping down to line 232
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image014.png "image_tooltip")
 
-### Configure attribute mapping
-
-When a user is assigned to an app, attribute mapping determines
-the default values that will be set for attributes in the app.
-If attribute mapping is not configured, values for attributes must be manually set whenever a user is assigned.
-
-For Microsoft 365, the licenses and roles to be assigned to users can beset up in attribute mapping. This is what you will configure here.
-
-1. Verify that you are on the Microsoft Office 365 app  **Provisioning** tab with the **To App** setting selected.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image015.png "image_tooltip")
-
-2. Scroll to the bottom of the page and click **Show Unmapped Attributes**.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image016.png "image_tooltip")
-
-3. Locate the **Licenses** attribute, and then click the **Pencil** icon to edit the attribute.
-4. For the **Attribute value** select **Same value for all users**
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/3a364fb9695bd6b1c1cb8c97e0bc2feb8af7b624/images/009/image017-1.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image017.png "image_tooltip")
-
-4. Select  from the drop-down list.
-
-   > The available options are shown. These have been pulled via API and so reflect the options relevant for your Microsoft tenant:
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image019.png "image_tooltip")
-
-5. Select the following licenses:
-
-    - **Sharepoint Online (Plan 2)**
-    - **Office Online**
-    - **Office 365 ProPlus**
-    - **Microsoft Teams**
-
-6. Scroll to the bottom of the window and click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image020.png "image_tooltip")
-
-OK. Provisioning is enabled and attribute mapping is done. You're ready to test.
-
-## Test provisioning and single sign-on
-
-Now that provisioning and single sign-on have both been configured, you can test them by assigning your Okta admin user to the Microsoft Office 365 app and then attempting single sign-on.
-
-## Assign user to Microsoft Office 365 app
-
-For this test you will directly assign your Okta admin user to the Office 365 app. You'll notice that it's also possible to assign via group membership - you'll set that up later.
-
-1. Verify O365 app. If not already there, navigate to **Applications \> Applications**
-
-2. Select the **Assignments** tab.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image021.png "image_tooltip")
-
-3. Click **Assign**, and then select **Assign to People**.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image022.png "image_tooltip")
-
-4. Select your admin user and click **Assign**.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image023.png "image_tooltip")
-
-   > The User Name has been set based on the custom expression you specified during configuration of single sign-on.
-
-   > The *Immutable ID* is blank. This would only be populated if the user was AD sourced and already had an immutable ID synced from Azure AD via Microsoft AD Connect or similar. In this case, the immutable ID will be populated during provisioning to Azure AD.
-
-   > Licenses have been set based on the attribute mapping you created.
-
-5. Scroll down to the *roles* and select the **Global Administrator**
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image024.png "image_tooltip")
-
-6. Scroll to the bottom and click **Save and Go Back**.
-7. Click **Done**.
-
-    > In the background, Okta is provisioning the user account in your Microsoft 365 tenant and assigning the selected licenses and role. This should only take a few seconds to complete.
-
-8. In the Admin Console select **Reports** > **System Log**.
-9. Confirm that the log entries indicating successful provisioning are found.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image028.png "image_tooltip")
-
-### Test single sign-on (SSO)
-
-You can now test single sign-on to Microsoft 365 for the assigned user.
-
-1. Open a new browser window that is not signed into Okta or Microsoft
-2. Enter the sign-in URL to your Okta org. For example,  **<https://demo-xxxxxx-xxxxx-xxxxx.okta.com>>**
-
-3. Authenticate as your user. For example, ***your.name*\@okta.com**
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image029.png "image_tooltip")
-
-4. Click the **Microsoft Office 365 Office Portal** app.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image030.png "image_tooltip")
-
-5. Click **Yes** to stay signed in.
-6. In the top-right corner of the page, click the identity icon.
-
-7. Click **Sign out** to clear the session, and then close the browser.
-
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image031.png "image_tooltip")
--->
 # Configure group assignment
 
 When assigning users to an app, it's common to assign a group to an app and then assign users to the group.
@@ -250,8 +139,7 @@ Office 365 app. Alternatively, you could assign the Office 365 app to existing g
 
 ## Assign Group to Application
 
-You can assign a group to an app by either assigning the group within the app definition or by adding the app to thegroup definition. In this case you will add the app from the
-group definition.
+You can assign a group to an app by either assigning the group within the app definition or by adding the app to the group definition. In this case you will add the app from the group definition.
 
 1. In the Admin Console select **Directory** > **Groups**.
 2. Select the **O365 Users** group.

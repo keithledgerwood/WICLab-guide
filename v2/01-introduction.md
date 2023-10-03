@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.10.3)
+Welcome to the Okta’s Workforce Identity Cloud Lab! (Version 0.10.3.02)
 
 Congratulations! You got the job - you’re in charge of handling your organization’s Workforce Identity Management. You’ve been given the high level directive by the CIO to do the following:
 
@@ -82,17 +82,51 @@ In this lab, you will complete a series of Workforce Identity related challenges
 - Validate
   - Employee provisioned to AD
 
-## Lab Environment and Okta Org
+## An Overview of the Lab Environment - labs.demo.okta.com
 
-In this lab, you will be working in a dedicated environment and Okta org.
-> **Note:** In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
->
-### Signing On to Your Okta Org
+In this lab, you will be working in a dedicated environment that ....
 
-1. In the mailbox you used for registration, find the "Your New Okta account" email.
+### Initial access to your Okta tenant
+
+1. In the mailbox you used for registration, find and open the "Your New Okta account" email.
 2. Copy the temporary password, and then click **Sign On**.
 3. Follow the instructions on the screen to sign on to your Okta org.
 
 >This will require that you sign in with your temporary password (which can be found in the "Your New Okta account" email), set up a new password and set up the Okta Verify app on your mobile device.>
 
 After successful sign on, you will see the Okta End-User Dashboard.
+
+### Launching your  Okta Workforce Identity Cloud tenant
+
+1. In the Lab environment, click **Launch** for Workforce Identity Cloud.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")
+
+### Launching your Virtual Infrastructure
+
+In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
+
+1. In the Lab environment, click **Launch** for Active Directory.
+
+### Launching your HR tenant - BambooHR
+
+1. In the Lab environment, click **Launch** for BambooHR.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
+
+2. Click **Login to Tenant**, and sign in using the provided BambooHR admin account credentials.
+
+> **Note:** The launch window will display your **BambooHR tenant subdomain** and your **BambooHR admin account credentials**. This information will be needed later to configure the integration.
+
+### Launching your Office Productivity tenant - Office 365
+
+1. In the Lab environment, click **Launch** for Office365.
+2. Click Login to Tenant and sign in with your labadmin credentials.
+
+   > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant.\
+Please expect your user activation emails there.
+
+### Chrome Profiles
+>
+>**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
+>

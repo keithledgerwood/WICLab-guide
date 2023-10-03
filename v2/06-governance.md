@@ -1,5 +1,3 @@
-# Identity Governance
-
 ## Identity Governance - Introduction
 
 Okta Identity Governance (OIG) is a unified IAM and governance solution that includes three products to help governance, risk, and compliance teams simplify access fulfillment and entitlement tasks throughout the identity lifecycle:
@@ -18,37 +16,20 @@ Okta Access Governance plays a central role in the solution, simplifying access 
 
 - Access Request simplifies and automates the process of requesting access to applications and resources. It meets users where they are by offering self-service capabilities tightly integrated with collaboration tools, delivering a streamlined, frictionless approach that automatically routes user requests to one or more reviewers for approval and auto-provisions the access.
 - Access Certification campaigns offer a simple process for creating audit campaigns to periodically review user access to critical resources and approve or revoke access automatically. Those processes are important for making sure employees do not accumulate access and only users who need a resource have access to it.
-- Governance Reports help organizations meet audit and compliance requirements. Share a high-level overview of past certification campaigns, including their duration and the resources included—or add more detail, including the users involved and remediation status. Administrators can also provide an audit of who has access to what resources, who approved the access, and how they got the access. Access governance data is stored for three years.
+- Governance Reports help organizations meet audit and compliance requirements. Share a high-level overview of past certification campaigns, including their duration and the resources included, or add more detail, including the users involved and remediation status. Administrators can also provide an audit of who has access to what resources, who approved the access, and how they got the access. Access governance data is stored for three years.
 
 With these combined capabilities, OIG helps organizations improve their security posture, mitigate modern risks, and improve efficiency. Unlike traditional IGA products, which can require complex and custom integrations that are difficult to deploy and expensive to maintain, Okta's unified approach brings together identity, access, and governance to improve an organization's security posture holistically. For example, customers today can integrate Okta with existing HR systems and directories and manage who gets access to what resources. If Okta detects unusual activity, such as a high-risk login through Okta ThreatInsights or a lifecycle status change, you can trigger a certification campaign and immediately suspend access to a resource.
 
-## Workshop description
+## Lab description
 
-In this section of the workshop, we will explore the following capabilities:
+In this section of the lab, we will explore the following capabilities:
 Access Requests. Once configured, it can be used to grant access.
 Access Certifications for running Access Review Campaigns.
 Workflows to trigger actions based on specific events like the change of the job title of one of the employees
 This document section will use a pre-built flow and two connections with the Okta tenant.
 This document section will explore the unconfigured Access Requests, walk through standard configuration, and then create and run a simple approval flow.
 
-# Self-Service Access Requests
-
-## Set Up Okta Access Requests
-
-### Configure Access Requests
-
-1. In the Admin Console select **Directory** > **Groups**.
-2. Click **Add group**.
-3. Set the **Name** to  **Request Approvers**.
-4. Set the **Description** to **Request Approvers**
-5. Click **Save**.
-6. Select the **Request Approvers** grouplink to open the group page.
-
-5. Click **Assign people**.
-
-6. Find your Admin account and click **+** (far right) to assign the Admin to the group.
-
-7. Click **Done**.
+## Okta Access Requests
 
 ### Assign Access Request App to Everyone
 
@@ -58,116 +39,93 @@ This document section will explore the unconfigured Access Requests, walk throug
 4. Click **Assign** and then select **Assign to Groups**.
 5. Find for the **Everyone** group, and then click **Assign**.
 6. Click **Done**.
-7. Select the **Push Groups** tab.
-8. Click **Push Groups**,  and then select **Find groups by name**.
-9. Enter **Request Approvers**,  and then click **Save**.
-This will push the group to the Okta Access Requests app.
 
-### Configure Settings
+### Configure Access Request Settings
 
-1. In the Okta Admin Console select **Identity Governance** > **Access Requests**.
-2. In the Access Requests Admin Console select **Settings**.
-3. Select the **Resources** tab.
-
-4. Select **Applications**, and then click **Update now**.
-5. Select **Okta Groups**, and then click **Update now**.
-This will sync the resources from Okta.
-
-> **JZ ? :** I'm not sold on the idea of creating a new team as the IT team should suffice. We simply need to add the okta admin as a member of the team.  This may also allow us to eliminate the "update connection" steps and sycning.
-
-6. In the Access Requests Admin Console, select **Teams**.
-
-7. Click **Add Team**.
-8. Configure the team as follows:
-
-- Name: App Request Approvers
-- Member: You (your Admin)
-- Auto Assign: On
-- Assignment style: To a specific user
-- Assign all requests to: You (your Admin)
-
-9. Click **Create Team**.
-10. In the Access Requests Admin Console, select **Settings**.
-11. Select the **Integrations** tab.
-12. Under Access Request Configurations for Okta, click **Edit connection**.
-13. Click **Select teams** and then select **App Request Approvers**.
-14. Click **Update connection**.
-
-> **JZ ? :** Does the update connection sync the Push Group ( App Request Approvers) membership?
-
-15. Select the **Resources** tab.
-16. For both Applications and Okta Groups, click **Manage Access** and select the **App Request Approvers** team.
+1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
+2. In the Access Requests Admin Console, select **Teams** > **All**.
+3. Click the **IT** team.
+4. Click **Add Member**.
+5. Enter your name or email and then select **You**.
+6. Click **Add Users**.
+7. Verify that you are listed as a member of the IT team.
+8. In the Access Requests Admin Console, select **Settings**.
+9. Select the **Integrations** tab.
+10. Under Access Request Configurations for Okta, click **Edit connection**.
+11. Click **Update Connection.**
+12. Select the **Resources** tab.
+13. For both Applications and Okta Groups, click **Manage Access** and select the **IT** team.
 
 ### Create a Request Type
 
-1. In the Access Requests Admin Console, select **Access Requests**.
-2. Click **Create request type**.
-This will open the Request Type Details window.
+A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an conditional Action step.
 
+1. In the Access Requests Admin Console, select **Access Requests**
+2. Click **Create request type**.
 3. Configure the request type as follows:
 
-|||
+|Request Type attribute|Value|
 |:-----|:-----|
 |Name|**Concur**|
 |Description |  **Corporate Travel App**|
-|Team |**App Request Approvers**|
-|Audience|**Everyone**|'
+|Team |**IT**|
+|Audience|**Everyone at** your demo org|'
 
 4. Click **Continue**.
-
-> **Note:** A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an Action step.
-
 5. To add an **Approval** step, click **Add to request type**.
-
 6. In the Approval panel, configure the approval as follows:
 
-|||
+|Approval attribute |Value|
 |:-----|:-----|
 |Text|**Admin Approval**|
 |Make it a required task |  **Enabled**|
-|Assigned to |Select **A specific user...** and click **You**|
-|Audience|**Everyone**|'
+|Type| **Approval task**|
+|Assigned to |Select **A specific user...** and click **You**|'
 
-7. At the bottom of the page, click **Action**, and then select **Assign individual app to user**.
-
+7. To add an Action step, click **Action**, and then select **Assign individual app to user**.
 8. In the **Action** panel, configure the action as follows:
 
-|||
+|Action attribute|Value|
 |:-----|:-----|
-|Text|**Assign to Concur**|
+|Text|**Assign to Navan**|
 |Make it a required task |  **Enabled**|
 |Type | **Assign individual app to user**|
 |Run automatically |**Enabled**|
 |Email address|**Requester email**|
-|Select application | **Concur**|'
+|Select application | **Navan**|
+|Run automatically | **Enabled**|'
 
-9. Click **Publish**.
+9. Click **Edit Logic**.
+10. Click **Always show this task**, and then select **Only show this task if**.
+11. Click **Field or Task**.and then select **Admin Approval**
+12. Select **is approved**.
+13. Click **Publish**.
+14. Leave this browser session open as you will return back to it momentarily.
 
 ### As the new employee, request access to an app
 
 1. Open a new Chrome window using the Guest profile
 2. Sign in to your Okta org as the New Employee.
 3. In the End-User Dashboard, open the **Okta Access Requests** app.
-5. To request the **Concur** app, click **Request access**.
-6. Click **Submit new request**.
-The *Request* and *Requester* details are displayed
-78. Leave this browser session open as you will return back to it momentarily.
+5. In the App Catalog, locate **Navan**, and click **Request access**.
+6. Preview the request, and click **Submit new request**.
+7. Leave this browser session open as you will return back to it momentarily.
 
 ### As the Okta admin, approve the access request
 
-1. In the mailbox you used for registration, find the "Concur Access Request" email and click **Approve**.
+1. Return to your Okta admin browser session
+2. In the Access Requests Admin Console, select **Requests** > **Inbox**.
+3. Click on the Navan app request from the new employee, and then click **Approve**.
+4. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
-2. Sign in to the org as Admin.
-
-3. Verify that there is a confirmation of granting access to Concur to the New Employee.
-
-### As the the new employee, verify access to the app
+### As the new employee, verify access to the app
 
 1. Return back to the new employee browser session.
-
-2. Reload the End-User Dashboard, and then verify that you have access to the Concur app.
+2. Reload the End-User Dashboard, and verify the new employee has access to Navan.
 
 # Workflow
+>
+>**JZ** This section still needs work.
 
 ## Workflow Setup
 
