@@ -63,7 +63,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 6. In the **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
 7. Click **Next**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003z.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003z.png "image_tooltip")
 
 8. In **Sign On Options** verify that the sign-on method is set to **Secure Web Authentication**.
 9. Click **Done**.
@@ -78,10 +78,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 4. After the success message appears, click **Save**
 
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
--->
-![alt_text](./images/003/image004.png "BambooHR was verified successfully")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
 
 5. Select **To Okta** under **Settings**.
 6. In the **Profile & Lifecycle Sourcing** section click **Edit**
@@ -101,8 +98,6 @@ In fact, you could perform this one-time import without doing any configuration,
 
 2. For **Okta username format**, select **Email Address**.
 3. Click **Save**.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-2.png "image_tooltip")
 
 ## Import Users
 
