@@ -10,7 +10,7 @@
 
 3. In the **Department** field, select **Sales**, and make sure that the **Effective Date** is set for *Today*, click **Save**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
+    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
 
 ### Import changes to Okta
 
@@ -48,7 +48,7 @@ Deactivate the employee in the BambooHR tenant.
 
 1. In the **People** tab, select your newly added user, change its' **Status** to *Inactive* and click **Save Changes**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
+    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
 
 3. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
 

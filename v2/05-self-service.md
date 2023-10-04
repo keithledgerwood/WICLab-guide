@@ -27,3 +27,13 @@ Or, you can review the following tests on image alignment.
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003z.png "Chuck Rocks!")
 
 7. I also added an image tooltip to the above.
+8. Can I put an image in a table?
+
+   |Attribute|Value|
+   |:-----|:-----|
+   |First Name |**Flynn**|
+   |Last Name |**Rider**|
+   |Image | ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")|
+   |![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")| Image|
+
+5. Click **Save**.
