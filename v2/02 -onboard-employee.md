@@ -6,19 +6,19 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
 
 2. Enter the following information for the **New Employee**.
 
-|Attribute|Value|
-|:-----|:-----|
-|First Name |**Flynn**|
-|Last Name |**Rider**|
-|Work Email |**<flynn.rider@wiclab.com>**|
-|Hire Date |*Today*|
-|Job Title | **Director of Marketing**|
-|Department | **Marketing**|
-|Location | **Remote Worker**|
+   |Attribute|Value|
+   |:-----|:-----|
+   |First Name |**Flynn**|
+   |Last Name |**Rider**|
+   |Work Email |**<flynn.rider@wiclab.com>**|
+   |Hire Date |*Today*|
+   |Job Title | **Director of Marketing**|
+   |Department | **Marketing**|
+   |Location | **Remote Worker**|
 
 5. Click **Save**.
 
@@ -29,15 +29,15 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 1. In the Admin Console select **Applications** > **Applications**.
 2. Click **Browse App Catalog**.
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
 
 3. Type *bamboohr* into the **Search...** bar, and then click **BambooHR**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
 
 4. Click **Add Integration**
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image002.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image002.png "image_tooltip")
 
 5. In the **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
 6. Click **Next**.
@@ -73,7 +73,7 @@ In fact, you could perform this one-time import without doing any configuration,
 
 1. In the **General** section, click **Edit** to define import settings.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/con-imp-1.png "image_tooltip")
 
 2. For **Okta username format**, select **Email Address**.
 3. Click **Save**.
@@ -86,12 +86,12 @@ In fact, you could perform this one-time import without doing any configuration,
 3. Select the new employee via the checkbox.
 4. Click **Confirm Assignments**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image005.png "image_tooltip")
 
 5. Select **Auto-activate users after confirmation**. This will send out an activation email for the new employee's Okta account.
 6. Click **Confirm**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image006.png "image_tooltip")
 
 6. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported with a status of *Pending user action*.
 7. Select the new employee to view their **Assigned Applications**.
@@ -106,15 +106,15 @@ In order to access the new employee activation email, you'll need to sign into y
 2. Click **Login to Tenant** and sign in with your **labadmin** credentials.
 3. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/outlook-access.png "image_tooltip")
 
 4. Locate and open the *Welcome to Okta!* email for the new employee.
 5. Click **Activate Okta Account**. This will open a new browser window.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/activate-okta-account.png "image_tooltip")
 
-5. Set a **password** and set up **Okta Verify** as your security methods.
-6. Review the Okta End-user dashboard and the apps that were automatically provisioned for the new employee.
+6. Set a **password** and set up **Okta Verify** as your security methods.
+7. Review the Okta End-user dashboard and the apps that were automatically provisioned for the new employee.
 
 ## Conclusion
 
