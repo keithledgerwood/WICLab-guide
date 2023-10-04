@@ -1,12 +1,6 @@
 # Onboarding a New Employee
 
-One of the most powerful features of Okta is the quick time to market that it provides. In this challenge, BambooHR will be integrated with Okta so it can act as the authoritative source of Identity Data.
-
-Sourcing Identity Data from an HR system (such as BambooHR) has several advantages. New Employees typically get added to the HR system as part of their corporate onboarding process. Once integrated, Okta imports the selected attributes into Okta and provisions birthright access to applications.
-
-The Okta feature that brings it all together is Universal Directory, which not only stores the employee identity data, but provides an extremely flexible way to map the attributes from one source to another.
-
-This lab uses a pre-built and managed instance of BambooHR. The environment has users and groups defined in a pre-designed organizational structure. The integration has two connections. The first uses SSO integration to access the BambooHR tenant. The Second uses an API connection to import users from BambooHR into Okta’s Universal Directory.
+In this lab, we’ll explore the seamless integration of Okta with your HR system. Envision a world where new team members are onboarded with immediate, role-specific access, eliminating waiting times and ensuring productivity from day one. Our goal is to transform the onboarding process, making it both efficient, streamlined, and secure. Let’s get started on this journey to revolutionize the onboarding experience.
 
 ## Add a New Employee to BambooHR
 
