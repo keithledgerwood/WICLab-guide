@@ -1,29 +1,8 @@
-# Integrate Okta with Microsoft Office 365
+# Integrating Office 365
 
-## Introduction
+## Streamlining Workplace Productivity Tools
 
-Okta integration with Microsoft Office 365 is a common pattern that provides Single Sign-On and Lifecycle Management to that application.
-
-Microsoft Office 365 uses Microsoft Azure AD as its user store and to manage federation for single sign-on. This means that when you're configuring integration with Microsoft Office 365 in Okta, you're really configuring integration with Azure AD - even though the integration name
-in the OIN is "Microsoft Office 365".
-
-Okta's single sign-on to Microsoft Azure AD uses a protocol called WS-Federation. The WS-Federation standard, and the related WS-Trust standard, were developed by Microsoft (and a group of other companies) in the days before SAML 2.0. Today, it's unusual to see WS-Federation except for in relation to integration with Microsoft.
-
-Note: Microsoft has recently added support for SAML 2.0 but the integration is more limited than when using WS-Federation.
-
-The Okta Lifecycle Management integration with Microsoft uses
-Microsoft-specific APIs to manage users in Azure AD. Integration with Microsoft is relatively simple if you only need to manage the basic profile attributes available via Microsoft public APIs. However, it can get pretty complex if you need to integrate with an environment that uses Microsoft Azure AD Connect (AAD Connect) to synchronize an on-premises AD with Azure AD in the cloud.
-
-This document covers the simplest integration you need to build a demo system.
-
-As part of this Challenge, you will configure:
-
-- Single Sign-on (SSO) from Okta to Microsoft Office 365
-
-- Lifecycle Management (LCM) for Microsoft Office 365
-
-   > **Info:** \
-You will find the admin credentials and tenant URL in the lab environment.
+In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 environment. By leveraging the Okta Integration Network, you'll experience firsthand how modern application integrations can be both straightforward and rapid. Through the benefits of automated provisioning and single sign-on, employees will be poised for instant productivity. And even as we focus on a user-friendly experience, remember, security is always at the forefront.
 
 ## Add Microsoft Office 365 App to Okta for SSO
 

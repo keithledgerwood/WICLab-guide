@@ -1,24 +1,16 @@
-# Okta Security
+# Boosting Security
 
-## Overview
+## Embracing a Passwordless Experience
 
-Okta Verify is a multifactor authentication (MFA) app developed by Okta. It lets users verify their identity when they sign in to Okta and makes it less likely that someone pretending to be the user can gain access to the account.
-
-To use Okta Verify, you must install the app on your device and set it up. This is something you already did on your mobile device, when you received the "Your New Okta account" e-mail and signed on to your Okta org. You could see that afterwards when signing in to the Okta org you could verify your identity by approving a push notification in the app, or by entering a one-time code provided by the app.
-
-Okta Verify also enables setting up the Okta FastPass which  provides passwordless authentication to any app in Okta. This means you don't have to enter your password when signing in, so the login experience is as smooth as possible but still highly secure. Okta FastPass obviously reduces the probability of data breaches that can occur from compromised credentials. The solution is supported on Android, iOS, macOS and Windows devices, from any location or network.
+In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
 ## Setup Okta Verify and Okta FastPass
 
-### Install Okta Verify on Your Virtual Machine
+### Install Okta Verify on your Virtual Machine
 
-To install Okta Verify on your Windows VM (Windows Server), open Chrome in your VM and proceed with the following steps:
+To install Okta Verify, open Chrome in your Virtual Machine (VM) and proceed with the following steps:
 
-1. In your lab environment, in the left-hand Launch panel, under Workforce Identity Cloud, click **Launch**.
-
->This will open the Admin Console tab in your browser.
-
-2. In the Admin Console, select **Settings** > **Downloads**.
+1. In the Okta Admin Console, select **Settings** > **Downloads**.
 
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download Latest**.
 
@@ -31,7 +23,7 @@ Wait for confirmation saying that Okta Verify was successfully installed.
 
 ### Configure Okta Verify
 
-1. On Desktop, find and open **Okta Verify**.
+1. On the VM desktop, find and open **Okta Verify**.
 
 1. In the Welcome to Okta Verify window, click **Get started**.
 
@@ -50,10 +42,7 @@ Your account is added to the Okta Verify desktop app.
 1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment** tab.
 
 1. For the Default Policy, click **Edit**.
-This will open the Edit Policy window.
-
 1. Verify that Okta Verify is set to Optional and Password is set to Required.
-
 1. Click **Update policy**.
 
 ### Enable Okta Verify for FastPass Authentication
@@ -63,11 +52,7 @@ This will open the Edit Policy window.
 1. For **Okta Verify**, click **Actions**, and then select **Edit**.
 This will display the Okta Verify options.
 
-1. In **Verification options**, verify that the following options are selected:
-
-- Push notification (Android and iOS only)
-- Okta FastPass (All platforms)
-
+1. In **Verification options**, confirm that the following options are selected: **Push notification (Android and iOS only)** and **Okta FastPass (All platforms)**.
 1. Select **Show the "Sign in with Okta FastPass" button**.
 1. Scroll down and click **Save**.
 

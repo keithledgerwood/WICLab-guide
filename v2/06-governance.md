@@ -66,7 +66,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 |Request Type attribute|Value|
 |:-----|:-----|
-|Name|**Concur**|
+|Name|**Navan**|
 |Description |  **Corporate Travel App**|
 |Team |**IT**|
 |Audience|**Everyone at** your demo org|'
@@ -125,9 +125,72 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 # Workflow
 >
->**JZ** This section still needs work.
+>**JZ** This section is still "Under Construction" \
+I think the flow should be as follows: \
+From Okta Admin Console (OAC) launch the Workflow Console (WC)
+then in WC (Connections) new Okta connection
+then in OAC: open Okta Workflows OAuth app & copy client id & secret
+then in WC: paste into Okta connection (back and forth between browser tabs)
+then in WC (Connections) : new API Connector
+then in OAC: generate API token and copy
+then in WC (Connections): paste API token into API connection
+then in WC (flows): import flowpack, add tenant and superadmin value into cards,
 
 ## Workflow Setup
+
+### Workflow Connections
+
+Now, you must configure the following Okta connectors in your Okta Tenant with Workflow enabled.
+
+Different components within Okta have other API endpoints and connectors. In this section, we will build 2 separate connections, one to access the **Universal Directory** and the second to push the configurations to the **Identity Governance**.
+
+#### Create an Okta Connection
+
+1. Open Okta Admin Console and browse to **Applications** > **Applications** and search for **Okta Workflows OAuth**
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img9.png "image_tooltip")
+
+2. in **Okta Workflows OAuth** navigate to the **Sign On** Tab
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img10.png "image_tooltip")
+
+3. Copy and note down the **Client ID** and **Client secret** for later use in this section.
+
+4. Open Okta Workflows by navigating to Okta Admin Console > **Workflow** > **Workflows Console**. This will open the Worflows Console in a new browser tab.
+
+5. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan and create a connection by clicking the **new connection** button
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
+
+6. Enter **Okta** in the search bar, and choose **Okta** from the results
+
+7. Enter the **Domain** of your Okta tenant
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
+
+ > The domain should be provided without **https://** or **-admin**.for example, if you copy the following domain from the URL bar '<https://atko-admin.okta.com>,' then you should enter 'atko.okta.com' as the domain.
+
+8. Return to the Okta Admin Console browser tab and copy the Paste the **Client ID** and **Client secret** into the Okta Workflows Connection in the other browser tab.
+
+9. Click on **Create**
+
+#### Create an API Connection
+
+1. In the Workflows Console , select **CONNECTIONS**.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img5.png "image_tooltip")
+
+3. Create a new connection by clicking the **NEW CONNECTION** button and selecting **API Connector** as a connection type.
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img6.png "image_tooltip")
+
+4. Enter **Okta API - Token-based Auth** as a connection name and **Custom** as the Auth Type
+
+![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img7.png "image_tooltip")
+
+5. Enter **Authorization** for the Header Name field and  **SSWS** + the token generated in the Okta Admin console into the Value field
+
+#### Create API Token
 
 For the workflows in the Okta Workflow Pack to work, you will first need to create a token to connect Okta APIs for that :
 
@@ -144,62 +207,6 @@ For the workflows in the Okta Workflow Pack to work, you will first need to crea
 4. Copy the token value and store as it will be the only time that you will be able to view it
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img3.png "image_tooltip")
-
-### Workflow Connections
-
-Now, you must configure the following Okta connectors in your Okta Tenant with Workflow enabled.
-
-Different components within Okta have other API endpoints and connectors. In this section, we will build 2 separate connections, one to access the **Universal Directory** and the second to push the configurations to the **Identity Governance**.
-
-#### Create an API Connection
-
-1. Open Okta Workflows by navigating to Okta Admin Console > **Workflow** > **Workflows Console**. This will redirect you to a new page
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img4.png "image_tooltip")
-
-2. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img5.png "image_tooltip")
-
-3. Create a new connection by clicking the **NEW CONNECTION** button and selecting **API Connector** as a connection type.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img6.png "image_tooltip")
-
-4. Enter **Okta API - Token-based Auth** as a connection name and **Custom** as the Auth Type
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img7.png "image_tooltip")
-
-5. Enter **Authorization** for the Header Name field and  **SSWS** + the token generated in the Okta Admin console into the Value field
-
-#### Create an Okta Connection
-
-1. Open Okta Admin Console and browse to **Applications** > **Applications** and search for **Okta Workflows OAuth**
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img9.png "image_tooltip")
-
-2. in **Okta Workflows OAuth** navigate to the **Sign On** Tab
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img10.png "image_tooltip")
-
-3. Copy and note down the **Client ID** and **Client secret** for later use in this section.
-
-4. Open Okta Workflows by navigating to Okta Admin Console > **Workflow** > **Workflows Console**. This will redirect you to a new page.
-
-5. On the Workflows Console page, Click **CONNECTIONS** in the top navigation pan and create a 2nd connection by clicking the **new connection** button
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
-
-6. Entre **Okta** in the search bar, and choose **Okta** from the results
-
-7. Enter the **Domain** of your Okta tenant
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
-
- > The domain should be provided without **https://** or **-admin**.for example, if you copy the following domain from the URL bar '<https://atko-admin.okta.com>,' then you should enter 'atko.okta.com' as the domain.
-
-8. Paste the **Client ID** and **Client secret** from step 3.
-
-9. Click on **Create**
 
 The two connections have been created, and the Okta Workflow is ready to import.
 
