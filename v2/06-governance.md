@@ -115,7 +115,7 @@ Now, you must configure the following Okta connectors in your Okta Tenant with W
 4. Optional. Modify the default **Connection Nickname**.
 5. Set **Domain** to the domain of your Okta tenant.
 
-You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
+Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 <!-->
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
 -->
@@ -127,10 +127,10 @@ You'll need to switch to your Okta Admin Console to get the **Client ID** and **
 4. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
-
+<!-->
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
-
-#### Create an API Connection
+-->
+### Create an API Connection
 
 1. In the Workflows console, select **Connections**, and then click **New Connection**.
 2. Enter **api** in the search bar, and then click **API Connector**.
@@ -145,7 +145,7 @@ You'll need to switch to your Okta Admin Console to get the **Client ID** and **
 4. For **Auth Type** select **Custom**.
 5. Set **Header Name** to **Authorization**.
 
-Before you can set the **Header Value** for this API Connection,  you'll need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
+Keep this page open. Before you can set the **Header Value** for this API Connection,  you'll need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
 
 #### Create, copy and paste an API Token
 
@@ -185,7 +185,7 @@ Click **Create** to complete the API Connection.
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img12.png "image_tooltip")
 -->
 
-### Import the Flow pac into the Folder
+### Import the Flow into the Folder
 
 1. Click on the **...** next to the newly created folder and select Import
 2. Click **Choose file from computer**,or drag and drop the downloaded flow pack, to complete the import.
@@ -199,23 +199,26 @@ You have successfully imported the Flow.
 
 ### Modify the imported Flow
 
-There are a few modifications needed within the Workflow.
+There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow. You'll also need to specify your Okta tenant domain and your Okta admin account.
 
 1. Click on the Workflow to update the existing cards
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img15.png "image_tooltip")
 -->
-2. Update the first **Compose** card to contain your specific okta tenant name.
+2. In the **User Okta Profile Updated** card, set the **Connection** to your **Okta** connection.
+3. Update the first **Compose** card to contain your Okta tenant name. This card will set **varOktaTenantURL** to the value you entered.
+4. Update the next **Compose** card to contain your Okta admin login.  This card will set **varAdminLogin** to the value you entered.
+5. In the **API Connector Raw Request** card, set the **Connection** to your **API Connector** connection.
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img16.png "image_tooltip")
 -->
-3. Click **Save**
+6. Click **Save**
 
     > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img17.png "image_tooltip")
 -->
-4. Click the **Flow is Off** button and click the Flow is Off to turn on the Flow
+4. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img18.png "image_tooltip")
 -->
