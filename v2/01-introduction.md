@@ -2,7 +2,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.04.1)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.04.2)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -60,3 +60,6 @@ Please expect your user activation emails there.
 >
 >**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
 >
+## Lab Outline
+
+The outline to your left? Consider it your compass, guiding our engaging journey. From optimizing IAM costs to delving into Zero Trust, with Okta's Workforce Identity Cloud, we're set for a seamless adventure. Ready to embark on this insightful and captivating journey?

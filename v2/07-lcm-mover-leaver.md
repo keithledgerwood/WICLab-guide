@@ -1,6 +1,6 @@
-# Lifecycle Management - Mover
+# Internal Mobility
 
-## Lifecycle Management - Mover - Setup
+## Navigating Employee Transitions Efficiently
 
 1. Move your user to the new *Department* in the BambooHR tenant.
 
