@@ -39,36 +39,36 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 2. Click **Create request type**.
 3. Configure the request type as follows:
 
-|Request Type attribute|Value|
-|:-----|:-----|
-|Name|**Navan**|
-|Description |  **Corporate Travel App**|
-|Team |**IT**|
-|Audience|**Everyone at** your demo org|'
+    |Request Type attribute|Value|
+    |:-----|:-----|
+    |Name|**Navan**|
+    |Description |  **Corporate Travel App**|
+    |Team |**IT**|
+    |Audience|**Everyone at** your demo org|'
 
 4. Click **Continue**.
 5. To add an **Approval** step, click **Add to request type**.
 6. In the Approval panel, configure the approval as follows:
 
-|Approval attribute |Value|
-|:-----|:-----|
-|Text|**Admin Approval**|
-|Make it a required task |  **Enabled**|
-|Type| **Approval task**|
-|Assigned to |Select **A specific user...** and click **You**|'
+    |Approval attribute |Value|
+    |:-----|:-----|
+    |Text|**Admin Approval**|
+    |Make it a required task |  **Enabled**|
+    |Type| **Approval task**|
+    |Assigned to |Select **A specific user...** and click **You**|'
 
 7. To add an Action step, click **Action**, and then select **Assign individual app to user**.
 8. In the **Action** panel, configure the action as follows:
 
-|Action attribute|Value|
-|:-----|:-----|
-|Text|**Assign to Navan**|
-|Make it a required task |  **Enabled**|
-|Type | **Assign individual app to user**|
-|Run automatically |**Enabled**|
-|Email address|**Requester email**|
-|Select application | **Navan**|
-|Run automatically | **Enabled**|'
+    |Action attribute|Value|
+    |:-----|:-----|
+    |Text|**Assign to Navan**|
+    |Make it a required task |  **Enabled**|
+    |Type | **Assign individual app to user**|
+    |Run automatically |**Enabled**|
+    |Email address|**Requester email**|
+    |Select application | **Navan**|
+    |Run automatically | **Enabled**|'
 
 9. Click **Edit Logic**.
 10. Click **Always show this task**, and then select **Only show this task if**.
@@ -190,7 +190,7 @@ Click **Create** to complete the API Connection.
 1. Click on the **...** next to the newly created folder and select Import
 2. Click **Choose file from computer**,or drag and drop the downloaded flow pack, to complete the import.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
+    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
 
 You have successfully imported the Flow.
 <!-->
@@ -239,8 +239,8 @@ In order to trigger this Flow, an action we're listening to should occur. In thi
 <!-->
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img21.png "image_tooltip")
 -->
-5. On the **Import tab**, click **Import Now**.
-6. When the scan completes, confirm that one user was updated.
+3. On the **Import tab**, click **Import Now**.
+4. When the scan completes, confirm that one user was updated.
 <!-->
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img22.png "image_tooltip")
 -->
@@ -338,7 +338,7 @@ The campaign can be completed manually once the review is done or automatically 
 3. To end the campaign, click **Actions**, and then select **End**.
 4. Click **End Campaign**.
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
+    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img34.png "image_tooltip")
 -->
