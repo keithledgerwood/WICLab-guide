@@ -6,7 +6,7 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
-   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
+   ![alt_text](/images/003/bamboohr-user-1.png "image_tooltip")
 
 2. Enter the following information for the **New Employee**.
 
