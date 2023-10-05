@@ -1,5 +1,3 @@
-# Onboarding a New Employee
-
 In this lab, we’ll explore the seamless integration of Okta with your HR system. Envision a world where new team members are onboarded with immediate, role-specific access, eliminating waiting times and ensuring productivity from day one. Our goal is to transform the onboarding process, making it both efficient, streamlined, and secure. Let’s get started on this journey to revolutionize the onboarding experience.
 
 ## Add a New Employee to BambooHR
@@ -47,7 +45,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 7. In **Sign On Options** verify that the sign-on method is set to **Secure Web Authentication**.
 8. Click **Done**.
 
-## Enable Integration and Provisioning
+### Enable Integration and Provisioning
 
 1. Select the **Provisioning** tab.
 1. Click **Configure API Integration**, and then select **Enable API integration**.

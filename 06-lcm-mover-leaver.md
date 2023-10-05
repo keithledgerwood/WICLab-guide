@@ -1,8 +1,8 @@
-# Internal Mobility
-
 ## Navigating Employee Transitions Efficiently
 
-### Departmental Transfer
+In this lab, you will leverage the dynamic integration of Okta with your HR application. Experience firsthand how a change in an employee's job seamlessly translates into automatic adjustments in their application access. But that's not all - when employees bid adieu to the company, watch as their access is instantaneously disabled. Dive into the world of automation that not only streamlines processes but also ensures consistent security, equipping transitioning employees with the right tools for success and safeguarding company assets every step of the way.
+
+## Employee Transfer
 
 1. Move your user to the new *Department* in the BambooHR tenant.
 
@@ -42,7 +42,7 @@
 
 4. You should see a new set of apps, that were assigned to the user based on the *Department* that they were moved into.
 
-# Terminate Employee
+## Employee Termination
 
 Deactivate the employee in the BambooHR tenant.
 

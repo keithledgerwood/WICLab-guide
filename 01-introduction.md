@@ -1,8 +1,7 @@
-# Okta Workforce Identity Lab
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.04.5)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.05.1)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -14,7 +13,7 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## An Overview of the Lab Environment - labs.demo.okta.com
+## Lab Environment
 
 In this lab, you will be working in a dedicated environment that ....
 
