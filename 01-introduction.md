@@ -1,7 +1,17 @@
 
+## Under Construction
+
+Hey there... we have some exciting enhancements and automated tasks planned for this lab, however, there are still some "to be automated" steps that need to be manually by wonderful people like yourself.
+
+ So, after you've signed into your demo org, but before you've added your first employee, please see you manual chore list: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link> "Manual Chores")
+
+THANK YOU! THANK YOU! THANK YOU!
+
+The above section will self-destruct on ....TBD
+
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.4)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.five)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -13,9 +23,29 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## Lab Environment
+## An Overview of the Environment
 
-In this lab, you will be working in a dedicated environment that ....
+Before we get started,  here are your resources for today’s mission:
+
+**Okta Workforce Identity Cloud Tenant**: Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
+
+**Virtual Desktop**: The virtual environment where today's real workshop challenges await.
+
+**HR Application**: What's a Workforce identity mission without a genuine HR application for employee sourcing?
+
+**Microsoft Office 365**: Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
+
+## But wait, there's more
+
+Here’s some additional information to help you familiarize yourself with the environment
+
+### Launch Panel
+
+Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources. Click the **HIDE** and watch it slide!
+
+### Lab Outline
+
+Don’t forget the map! In the lower left, you’ll find an outline of today’s mission, guiding you to infinity and beyond!
 
 ### Initial access to your Okta tenant
 
@@ -59,6 +89,3 @@ Please expect your user activation emails there.
 >
 >**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
 >
-## Lab Outline
-
-The outline to your left? Consider it your compass, guiding our engaging journey. From optimizing IAM costs to delving into Zero Trust, with Okta's Workforce Identity Cloud, we're set for a seamless adventure. Ready to embark on this insightful and captivating journey?
