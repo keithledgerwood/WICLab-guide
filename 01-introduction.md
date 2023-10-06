@@ -5,7 +5,7 @@ Hey there... we have some exciting enhancements and automated tasks planned for 
 
 However, there are still some steps that, have not been automated, and need to be done manually.
 
- So, after you've signed into your demo org, but before you've added your first employee, please see your chore list: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
+ So, after you've signed into your demo org, but before you've added your first employee, please please open the following in a new tab: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
 
 THANK YOU! THANK YOU! THANK YOU!
 
@@ -13,7 +13,7 @@ The above section will self-destruct in 5, 4, 3 ... days.
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.6)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.7)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -29,13 +29,13 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 Before we get started,  here are your resources for today’s mission:
 
-**Okta Workforce Identity Cloud Tenant**: Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
+   **Okta Workforce Identity Cloud Tenant**: Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
 
-**Virtual Desktop**: The virtual environment where today's real workshop challenges await.
+   **Virtual Desktop**: The virtual environment where today's real workshop challenges await.
 
-**HR Application**: What's a Workforce identity mission without a genuine HR application for employee sourcing?
+   **HR Application**: What's a Workforce identity mission without a genuine HR application for employee sourcing?
 
-**Microsoft Office 365**: Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
+   **Microsoft Office 365**: Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
 
 ## But wait, there's more
 
