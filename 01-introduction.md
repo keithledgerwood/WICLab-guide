@@ -1,19 +1,7 @@
 
-## Under Construction
-
-Hey there... we have some exciting enhancements and automated tasks planned for this lab.
-
-However, there are still some steps that, have not been automated, and need to be done manually.
-
- So, after you've signed into your demo org, but before you've added your first employee, please please open the following in a new tab: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
-
-THANK YOU! THANK YOU! THANK YOU!
-
-The above section will self-destruct in 5, 4, 3 ... days.
-
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.7)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.8)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -24,6 +12,28 @@ Imagine being entrusted with your organization’s Workforce Identity Management
 And... all the while ensuring an incredible user experience that amplifies productivity. Sounds intense, doesn’t it?
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
+
+### Initial access to your Okta tenant
+
+1. In the mailbox you used for registration, find and open the "Your New Okta account" email.
+2. Copy the temporary password, and then click **Sign On**.
+3. Follow the instructions on the screen to sign on to your Okta org.
+
+> **Note:** This will require that you sign in with your temporary password, set up a new password and set up the Okta Verify app on your mobile device. After successful sign on, you will see the Okta End-User Dashboard.
+
+4. Return to this lab guide for more fun and excitement.
+
+## Under Construction...beep...beep...beep
+
+Hey there... we have some exciting enhancements and automated tasks planned for this lab.
+
+However, there are still some steps that, have not been automated, and need to be done manually.
+
+ So, after you've signed into your demo org, but before you've added your first employee, please please open the following in a new tab: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
+
+THANK YOU! THANK YOU! THANK YOU!
+
+The above section will self-destruct in 5, 4, 3 or so days.
 
 ## An Overview of the Environment
 
@@ -49,15 +59,7 @@ Peek into the fashionably gray box on your left, and you'll discover your creden
 
 Don’t forget the map! In the lower left, you’ll find an outline of today’s mission, guiding you to infinity and beyond!
 
-### Initial access to your Okta tenant
-
-1. In the mailbox you used for registration, find and open the "Your New Okta account" email.
-2. Copy the temporary password, and then click **Sign On**.
-3. Follow the instructions on the screen to sign on to your Okta org.
-
->This will require that you sign in with your temporary password, set up a new password and set up the Okta Verify app on your mobile device. After successful sign on, you will see the Okta End-User Dashboard.
-
-### Launching your  Okta Workforce Identity Cloud tenant
+<!-- ### Launching your  Okta Workforce Identity Cloud tenant
 
 1. In the Lab environment, click **Launch** for Workforce Identity Cloud.
 
@@ -86,7 +88,7 @@ In this lab, you will be provided with a Virtual Infrastructure with a Windows V
 
    > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant.\
 Please expect your user activation emails there.
-
+-->
 ### Chrome Profiles
 >
 >**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
