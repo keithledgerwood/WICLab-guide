@@ -1,17 +1,19 @@
 
 ## Under Construction
 
-Hey there... we have some exciting enhancements and automated tasks planned for this lab, however, there are still some "to be automated" steps that need to be manually by wonderful people like yourself.
+Hey there... we have some exciting enhancements and automated tasks planned for this lab.
 
- So, after you've signed into your demo org, but before you've added your first employee, please see you manual chore list: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link> "Manual Chores")
+However, there are still some steps that, have not been automated, and need to be done manually.
+
+ So, after you've signed into your demo org, but before you've added your first employee, please see your chore list: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
 
 THANK YOU! THANK YOU! THANK YOU!
 
-The above section will self-destruct on ....TBD
+The above section will self-destruct in 5, 4, 3 ... days.
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.five)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.6)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
