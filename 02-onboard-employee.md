@@ -9,14 +9,14 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
 
       >**Note:** There is a single instance of BambooHR for all lab participants.  Use your own name when adding a new employee, as opposed to Flynn Rider.  Also, for the **Work Email** domain, use your Office 365 Domain from the Launch Panel. \
-           ![app_bamboohr_general_settings](images/011/launch_O365_domain.png "O365 lab domain")
+           ![app_bamboohr_general_settings](images/011/launch_O365_domain_r74_324_276.png "O365 lab domain")
 
 2. Enter the following information for the **New Employee**.
 
    |Attribute|Value|
    |:-----|:-----|
-   |First Name |**Flynn**|
-   |Last Name |**Rider**|
+   |First Name |< your first name>|
+   |Last Name |< your last name>|
    |Work Email |**<flynn.rider@nn.mywiclab.com>**|
    |Hire Date |*Today*|
    |Job Title | **Director of Marketing**|

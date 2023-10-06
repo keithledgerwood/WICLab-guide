@@ -42,3 +42,14 @@ Or, you can review the following tests on image alignment.
 
  >**Note:**: There is a single instance of BambooHR for all lab participants.  Use your own name when adding a new employee, as opposed to Flynn Rider.  Also, for the **Work Email** domain, use your Office 365 Domain from the Launch Panel. \
         ![app_bamboohr_general_settings](images/011/launch_O365_domain.png "this is a tooltip")
+
+7. O365 Domain as a Resolution 74 image ( 584 x 488)
+
+      ![BambooHr General Settings](images/011/launch_O365_domain_r74.png "BambooHr General Settings")
+
+8. R 74 image in a hidden table?
+
+   |||
+   |:-----|:-----|
+   | ![BambooHr General Settings](images/011/launch_O365_domain_r74.png "BambooHr General Settings")  |
+   |324 x 271|![Alt text](images/011/launch_O365_domain_r74_324x276.png)|
