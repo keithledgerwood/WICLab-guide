@@ -6,7 +6,10 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
-   ![alt_text](images/003/bamboohr-user-1.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
+
+      >**Note:** There is a single instance of BambooHR for all lab participants.  Use your own name when adding a new employee, as opposed to Flynn Rider.  Also, for the **Work Email** domain, use your Office 365 Domain from the Launch Panel. \
+           ![app_bamboohr_general_settings](images/011/launch_O365_domain.png "O365 lab domain")
 
 2. Enter the following information for the **New Employee**.
 
@@ -14,7 +17,7 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
    |:-----|:-----|
    |First Name |**Flynn**|
    |Last Name |**Rider**|
-   |Work Email |**<flynn.rider@wiclab.com>**|
+   |Work Email |**<flynn.rider@nn.mywiclab.com>**|
    |Hire Date |*Today*|
    |Job Title | **Director of Marketing**|
    |Department | **Marketing**|
@@ -39,12 +42,12 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image002.png "image_tooltip")
 
-5. In the **General Settings** set **Subdomain** to your BambooHR tenant subdomain.
-6. Click **Next**.
+5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain** which can be found in the lab launch panel.
+6. For **Application Visibility**, select **Do not display application icon to to users.**
+7. Click **Next**.
 
-   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image003z.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/011/app_bamboohr_general_settings "image_tooltip")
 
-7. In **Sign On Options** verify that the sign-on method is set to **Secure Web Authentication**.
 8. Click **Done**.
 
 ### Enable Integration and Provisioning
@@ -52,17 +55,15 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 1. Select the **Provisioning** tab.
 1. Click **Configure API Integration**, and then select **Enable API integration**.
 3. Click **Authenticate with BambooHR**
+4. After the success message appears, click **Save**
 
 > **Note:** If you don't already have an active BambooHR session, you will be prompted to login using your BambooHR admin account credentials.
-
-4. After the success message appears, click **Save**
 
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image004.png "image_tooltip")
 
 5. In the **Settings** panel, select **To Okta**.
 6. In the **Profile & Lifecycle Sourcing** section click **Edit**
 7. Select **Allow BambooHR to source Okta users**.
-8. Click **OK** to **Enable Profile Mastering**.
 9. Click **Save**.
 
 ### Configure Import from BambooHR to Okta

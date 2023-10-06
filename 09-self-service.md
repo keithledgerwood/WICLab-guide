@@ -37,3 +37,8 @@ Or, you can review the following tests on image alignment.
    |![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")| Image|
 
 5. Click **Save**.
+
+6. Images added to a block of text with tooltip
+
+ >**Note:**: There is a single instance of BambooHR for all lab participants.  Use your own name when adding a new employee, as opposed to Flynn Rider.  Also, for the **Work Email** domain, use your Office 365 Domain from the Launch Panel. \
+        ![app_bamboohr_general_settings](images/011/launch_O365_domain.png "this is a tooltip")
