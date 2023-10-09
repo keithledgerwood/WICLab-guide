@@ -4,7 +4,7 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 ## Add a New Employee to BambooHR
 
-1. To access the **BambooHR** dashboard, in the  **Launch Panel**, click **Launch**..
+1. To access the **BambooHR** dashboard, in the  **Launch Panel**, click **Launch**.
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
@@ -46,7 +46,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain** which can be found in the lab launch panel.
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
-   ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_general_settings_r72_w800.png "image_tooltip")
 7. Click **Next**.
 8. Click **Done**.
 

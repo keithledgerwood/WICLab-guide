@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.4)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.M)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -13,7 +13,15 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-### Initial access to your Okta tenant
+## Launch your Virtual Desktop
+
+1. To access the **Virtual Desktop**, in the  **Launch Panel** on the left, click **Launch**.
+
+ |||
+   |:-----|:-----|
+   |![Alt text](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes. So please sit back and enjoy today's featured presentation.|
+
+## Initial access to your Okta tenant
 
 1. In the mailbox you used for registration, find and open the "Your New Okta account" email.
 2. Copy the temporary password, and then click **Sign On**.
@@ -21,7 +29,8 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 > **Note:** This will require that you sign in with your temporary password, set up a new password and set up the Okta Verify app on your mobile device. After successful sign on, you will see the Okta End-User Dashboard.
 
-4. Return to this lab guide for more fun and excitement.
+4. Sign out of your Okta tenant and close the browser.
+5. Return to this lab guide for more fun and excitement.
 
 ## Under Construction...beep...beep...beep
 
