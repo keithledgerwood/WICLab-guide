@@ -60,18 +60,22 @@ Or, you can review the following tests on image alignment.
 
 ## Test for resolution and size
 
-1. Decent size
+1. Decent size - 1274 x 576 R 72 - 100%
 
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
 
-1. Decent Size
+1. Decent Size - 1595 x 496 R 72 100%
 
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
 
-1. Too big
+1. Too big - 1522 x 1034  R144 100%
 
    ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
 
-1. Too narrow
+1. Too narrow - 600 x 446 R72
 
    ![alt_text](images/003/image004.png "image_tooltip")
+
+1. Was Too big, now R is 72  - 1522 x 1034  R72 100%
+
+   ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
