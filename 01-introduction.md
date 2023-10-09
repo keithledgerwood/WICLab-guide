@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.1)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.2)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -31,7 +31,7 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 ### Manual Tasks
 
- After you have signed into your demo org, but before you've added your first employee, **Open Link in New Tab**: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
+ After you have signed into your demo org, but before you've added your first employee, click  [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores") and then select **Open Link in New Tab**.
 
 THANK YOU! THANK YOU! THANK YOU!
 
