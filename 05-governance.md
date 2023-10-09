@@ -1,10 +1,7 @@
-# Bridging the Access Gap
 
 ## Requests, Approvals, and Access Certifications
 
 In this lab, you will navigate the pathways of application access requests, demonstrating the seamless experience for employees itching to get their hands on the tools they need. But there's a twist, approvals are in play! You'll witness the streamlined process of granting access post-approval, while also exploring the administrative side of things. Here, setting up approvals becomes a breeze, and configuring certification for periodic access reviews? Consider it done. Ready to experience the future of governed access?
-
-## Requests, Approvals, and Access Certifications
 
 ### Assign Access Request App to Everyone
 
@@ -116,7 +113,7 @@ Now, you must configure the following Okta connectors in your Okta Tenant with W
 5. Set **Domain** to the domain of your Okta tenant.
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
 -->
 #### Copy and paste the Client ID and Client Secret
@@ -127,7 +124,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 4. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
 -->
 ### Create an API Connection
@@ -136,7 +133,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 2. Enter **api** in the search bar, and then click **API Connector**.
 3. Optional. Modify the default **Connection Nickname**.
 
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img6.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img7.png "image_tooltip")
@@ -152,7 +149,7 @@ Keep this page open. Before you can set the **Header Value** for this API Connec
 For the workflows in the Okta Workflow Pack to work, you will first need to create a token to connect Okta APIs for that :
 
 1. In the Okta Admin Console, select **Security** > **API**, and then select the **Tokens** tab
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img1.png "image_tooltip")
 -->
 
@@ -162,17 +159,17 @@ For the workflows in the Okta Workflow Pack to work, you will first need to crea
 5. Return to the **Workflows console** >  **New Connection** dialog.
 6. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
 Click **Create** to complete the API Connection.
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/image2.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img3.png "image_tooltip")
 -->
 
-## Configuring the Flow
+## Leveraging Flowpacks
 
 ### Download the **Title Change** flowpack
 
-1. Download the lab flow "titleChanged.flow"
+1. Download the lab flowpack **titleChanged.flow**  from the link provided.
 
 ### Create a new Folder
 
@@ -188,7 +185,7 @@ Click **Create** to complete the API Connection.
 ### Import the Flow into the Folder
 
 1. Click on the **...** next to the newly created folder and select Import
-2. Click **Choose file from computer**,or drag and drop the downloaded flow pack, to complete the import.
+2. Click **Choose file from computer**, and then click **Open**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
 
@@ -205,7 +202,7 @@ There are a few modifications needed within the workflow. You will need to assig
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img15.png "image_tooltip")
 -->
-2. In the **User Okta Profile Updated** card, set the **Connection** to your **Okta** connection.
+2. In the **User Okta Profile Updated** card, and then set the **Connection** to your **Okta** connection.
 3. Update the first **Compose** card to contain your Okta tenant name. This card will set **varOktaTenantURL** to the value you entered.
 4. Update the next **Compose** card to contain your Okta admin login.  This card will set **varAdminLogin** to the value you entered.
 5. In the **API Connector Raw Request** card, set the **Connection** to your **API Connector** connection.
@@ -235,27 +232,23 @@ In order to trigger this Flow, an action we're listening to should occur. In thi
 ### Import the Title Change into Okta
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
-2. Select the  **BambooHR** app
-<!-->
+2. Select the  **BambooHR** app, and then select the **Import** tab.
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img21.png "image_tooltip")
 -->
-3. On the **Import tab**, click **Import Now**.
+3. Click **Import Now**.
 4. When the scan completes, confirm that one user was updated.
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img22.png "image_tooltip")
 -->
 
-This event will trigger the imported **Title Change** flow, which creates and launches a certification campaign.
+This event will trigger the imported **Title Changed** flow, which creates and launches a certification campaign.
 
 ## Access Certification
 
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns.
 Campaigns can be created via API and the UI of the admin platform.
-<!-->
-The following capability we will explore is Access Certification. Access Certification (aka attestation, recertification, etc.) is the mechanism to validate that a user still needs the access they have. It is a common control in compliance regulations. Certification campaigns may be run periodically, or there may be continuous certification when user roles change. Okta Identity Governance currently supports user-group memberships and user-application assignments. Participants in a campaign (such as the user's manager) will approve (access retained) or revoke access (access should be removed).
 
-This section of the document will explore the Access Certification mechanism in Okta Identity Governance by creating a campaign, launching it, and having a manager review access.
--->
 ### Verifying the Access Certification Campaign
 
 To verify that a certification campaign was created by the flowpack, you will need to perform the following actions:
@@ -290,7 +283,7 @@ For the purposes of this lab, we decided to assign the Okta tenant administrator
  by clicking on the **Drop down menu** in the top right corner and click on **My End User Dashboard**
 2. In the End User Dashboard, launch the **Okta Access Certification Reviews** app.
 3. Click on the **Title Change** to see an overview of the campaign.
-<!-->
+<!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img24.png "image_tooltip")
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img25.png "image_tooltip")
@@ -303,6 +296,7 @@ You are presented with a list of campaigns for which the user is a reviewer. You
 
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img27.png "image_tooltip")
 -->:
+
 4. You will see all applications assigned to this user.
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img28.png "image_tooltip")

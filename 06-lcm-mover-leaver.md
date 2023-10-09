@@ -4,11 +4,13 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 ## Employee Transfer
 
-1. Move your user to the new *Department* in the BambooHR tenant.
+In the Add Job Information dialog, select a different department, and then click Save.
 
-2. In the **People > Personal** tab, select your newly added user, and click **+ Add Entry** in the **Job Information** field.
+1. In the BambooHR dashboard search for and select your employee.
 
-3. In the **Department** field, select **Sales**, and make sure that the **Effective Date** is set for *Today*, click **Save**.
+2. On the **Job** tab, for **Job Information**, click **Add Entry**.
+
+3. In the **Department** field, select **Sales**, and then click **Save**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
 

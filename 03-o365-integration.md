@@ -164,13 +164,11 @@ The user is now assigned to the group and will be assigned to the Microsoft Offi
 
 You can now test single sign-on to Microsoft 365 for your new employee.
 
-1. Open a new browser window that is not signed into Okta or Microsoft
+1. Open a new browser window that is not signed in to Okta or Microsoft.
 
-2. Navigate to your Okta tenant. For example, ***demo-xxxxxx-xxxxx-xxxx*.okta.com**
+2. Enter the sign-in URL to your Okta org, For example *<https://demo-xxxxxx-xxxxx-nnnnn.okta.com>*
 
-3. Authenticate as the new employee. For example,
-
-    > ***<flynn.rider@wiclab.com>***
+3. Authenticate as the new employee. For example *<flynn.rider@04.mywiclab.com>*
 
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 

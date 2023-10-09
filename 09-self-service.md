@@ -53,3 +53,11 @@ Or, you can review the following tests on image alignment.
    |:-----|:-----|
    | ![BambooHr General Settings](images/011/launch_O365_domain_r74.png "BambooHr General Settings")  |
    |324 x 271|![Alt text](images/011/launch_O365_domain_r74_324x276.png)|
+
+   |||
+   |:-----|:-----|
+   |**JZ:** .|![Alt text](images/011/launch_okta_end_user_r74_400x238.png)|
+
+   |||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_200.png "Marc says...")||

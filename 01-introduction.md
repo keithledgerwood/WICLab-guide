@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.06.8)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.1)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -24,6 +24,10 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 4. Return to this lab guide for more fun and excitement.
 
 ## Under Construction...beep...beep...beep
+
+   |||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_200.png "Marc says...")||
 
 Hey there... we have some exciting enhancements and automated tasks planned for this lab.
 
@@ -59,36 +63,6 @@ Peek into the fashionably gray box on your left, and you'll discover your creden
 
 Don’t forget the map! In the lower left, you’ll find an outline of today’s mission, guiding you to infinity and beyond!
 
-<!-- ### Launching your  Okta Workforce Identity Cloud tenant
-
-1. In the Lab environment, click **Launch** for Workforce Identity Cloud.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/launch-wic.png "image_tooltip")
-
-### Launching your Virtual Infrastructure
-
-In this lab, you will be provided with a Virtual Infrastructure with a Windows Virtual Machine (VM). We recommend that you complete the lab in this virtual environment, unless otherwise stated.
-
-1. In the Lab environment, click **Launch** for Active Directory.
-
-### Launching your HR tenant - BambooHR
-
-1. In the Lab environment, click **Launch** for BambooHR.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/launch-bamboohr.png "image_tooltip")
-
-2. Click **Login to Tenant**, and sign in using the provided BambooHR admin account credentials.
-
-> **Note:** The launch window will display your **BambooHR tenant subdomain** and your **BambooHR admin account credentials**. This information will be needed later to configure the integration.
-
-### Launching your Office Productivity tenant - Office 365
-
-1. In the Lab environment, click **Launch** for Office365.
-2. Click Login to Tenant and sign in with your labadmin credentials.
-
-   > There's a rule setup to copy all of the @yourwiclabdomain.com emails to your administrator's Outlook inbox of the Office365 tenant.\
-Please expect your user activation emails there.
--->
 ### Chrome Profiles
 >
 >**Tip:** It is recommended that you create a Chrome profile for your new employee so that you can have separate browser sessions
