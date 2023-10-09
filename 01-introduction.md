@@ -27,19 +27,15 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
    |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_200.png "Marc says...")||
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Hey there... we have some exciting enhancements and automated tasks planned for this lab. However, there are still some steps that, have not been automated, and need to be done manually.*|
 
-Hey there... we have some exciting enhancements and automated tasks planned for this lab.
+### Manual Tasks
 
-However, there are still some steps that, have not been automated, and need to be done manually.
-
-### Prereqs
-
- So, after you've signed into your demo org, but before you've added your first employee, **Open Link in New Tab**: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
+ After you have signed into your demo org, but before you've added your first employee, **Open Link in New Tab**: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
 
 THANK YOU! THANK YOU! THANK YOU!
 
-The above section will self-destruct in 5, 4, 3 or so days.
+*The above section will self-destruct in 5, 4, 3, 2 .... or more days.*
 
 ## An Overview of the Environment
 
