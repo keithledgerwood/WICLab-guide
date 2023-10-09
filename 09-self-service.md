@@ -58,4 +58,20 @@ Or, you can review the following tests on image alignment.
    |:-----|:-----|
    |**JZ:** .|![Alt text](images/011/launch_okta_end_user_r74_400x238.png)|
 
-1. Test for resolution and size
+## Test for resolution and size
+
+1. Decent size
+
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/bamboohr-user-1.png "image_tooltip")
+
+1. Decent Size
+
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
+
+1. Too big
+
+   ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
+
+1. Too narrow
+
+   ![alt_text](images/003/image004.png "image_tooltip")
