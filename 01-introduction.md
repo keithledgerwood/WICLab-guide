@@ -33,7 +33,9 @@ Hey there... we have some exciting enhancements and automated tasks planned for 
 
 However, there are still some steps that, have not been automated, and need to be done manually.
 
- So, after you've signed into your demo org, but before you've added your first employee, please please open the following in a new tab: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
+### Prereqs
+
+ So, after you've signed into your demo org, but before you've added your first employee, **Open Link in New Tab**: [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores")
 
 THANK YOU! THANK YOU! THANK YOU!
 
