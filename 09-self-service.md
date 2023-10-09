@@ -58,6 +58,4 @@ Or, you can review the following tests on image alignment.
    |:-----|:-----|
    |**JZ:** .|![Alt text](images/011/launch_okta_end_user_r74_400x238.png)|
 
-   |||
-   |:-----|:-----|
-   |![Alt text](images/011/marc_r74_200.png "Marc says...")||
+1. Test for resolution and size
