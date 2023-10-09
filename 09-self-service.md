@@ -72,10 +72,16 @@ Or, you can review the following tests on image alignment.
 
    ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
 
+ Was Too big, now R is 72  - 1522 x 1034  R72 100%
+
+   ![alt_text](images/011/app_bamboohr_general_settings_r72.png "image_tooltip")
+
+1. Was Too big, now R is 72, and Width is   - 1522 x 1034  R72 100%
+
+   ![alt_text](images/011/app_bamboohr_general_settings_r72_w800.png "image_tooltip")
+
 1. Too narrow - 600 x 446 R72
 
    ![alt_text](images/003/image004.png "image_tooltip")
 
-1. Was Too big, now R is 72  - 1522 x 1034  R72 100%
-
-   ![alt_text](images/011/app_bamboohr_general_settings.png "image_tooltip")
+1.
