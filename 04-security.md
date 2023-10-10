@@ -39,6 +39,10 @@ Your account is added to the Okta Verify desktop app.
 
 ## Configure Security Policies and FastPass
 
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know with Okta Adaptive MFA, you get personalized security that learns from your habits, making logging in a breeze while keeping intruders at bay? Think of it as the bouncer who always spots the VIP - that's you!*|
+
 ### Configure Enrollment Policy for Your Users
 
 1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment** tab.
@@ -135,6 +139,10 @@ If you login immediately after setting up the policy rule, it may happen that yo
 17. Click **Any two factors**.
 18. For Travel Not Allowed, click **Actions** and then **Deactivate**.
 This will disable this policy rule.
+
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that with Okta Adaptive MFA's smart tech, you're not just getting a lock but a security system that learns? It's the future of personalized digital safety, today!*|
 
 ### Enable Okta ThreatInsight
 

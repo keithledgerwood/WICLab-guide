@@ -98,6 +98,10 @@ Follow these steps to enable provisioning:
 6. For **Deactivate Users**, select **Enable**.
 7. Click **Save**.
 
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
+
 # Configure group assignment
 
 When assigning users to an app, it's common to assign a group to an app and then assign users to the group.

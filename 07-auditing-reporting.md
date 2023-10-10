@@ -33,6 +33,9 @@ This will filter the log results to show only the events when a change in user b
 9. Search for the Behaviors line.
 You should see a record confirming a change in user behavior. For the event in which you logged in from a New Device (following instructions in the User Behavioral Analytics section), this should be "New Device=POSITIVE" .
 -->
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's rich system log and auditing prowess can seamlessly flow into your organization's security operations tools, helping paint a clearer view of your security posture? It's like having night vision goggles in the realm of cybersecurity!*|
 
 ## Okta Reports
 

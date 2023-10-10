@@ -97,7 +97,7 @@ In fact, you could perform this one-time import without doing any configuration,
 
    |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Hey there... for the purposes of the lab we are doing a manual import of users and their updates. In a real environment, the updates would be synced in near real time or on a schedule.*|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR integrations allow on-demand and scheduled imports, as well as instant access termination when needed? Isn’t that efficient!.*|
 
 ### Verfify New Employee Import
 

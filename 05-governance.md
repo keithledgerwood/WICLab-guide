@@ -95,11 +95,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Return back to the new employee browser session.
 2. Reload the End-User Dashboard, and verify the new employee has access to Navan.
 
-# Workflow
-
 ## Workflow Connections
 
-Now, you must configure the following Okta connectors in your Okta Tenant with Workflow enabled.
+Now, let's configure the following Okta connectors in your Okta Tenant with Workflow enabled.
 
 ### Create an Okta Connection
 
@@ -166,6 +164,10 @@ Click **Create** to complete the API Connection.
 -->
 
 ## Leveraging Flowpacks
+
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta Identity Governance, powered by Okta Workflows, lets you smoothly look up a user's manager or application owner during access certifications? It's technology bending to fit your business process, not the other way around – like having your digital cake and eating it too!*|
 
 ### Download the **Title Change** flowpack
 

@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (version 0.10.09.M)
+Step into the Future of Workforce Identity Management with Okta!  (version 0.10.10.M1)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -19,7 +19,7 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
  |||
    |:-----|:-----|
-   |![Alt text](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes. So please sit back and enjoy today's featured presentation.|
+   |![Alt text](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
 ## Initial access to your Okta tenant
 
