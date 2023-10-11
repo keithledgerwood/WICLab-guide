@@ -19,7 +19,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...") Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH! ||
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")  |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!|
    <https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>
 
 1. Open the downloaded **OktaVerifySetup-4.4.exe** file.
