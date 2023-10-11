@@ -47,45 +47,43 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
    ![alt_text](images/011/app_bamboohr_general_settings_r72_w800.png "image_tooltip")
-7. Click **Next**.
-8. Click **Done**.
+7. Click **Next** to view the **Sign-On Options**.
+8. Click **Done** to accept the defaults.
 
-### Enable Integration and Provisioning
+### Enable Provisioning via API Integration
 
-In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a one-time import of existing users into Okta Universal Directory.
-
-In fact, you could perform this one-time import without doing any configuration, and manually match the account, but it makes sense to set up account matching for completeness.  Follow these steps:
+In this section you will configure inbound provisioning from BambooHR to Okta.  This will allow you to perform a import of BambooHR users into Okta Universal Directory.
 
 1. Select the **Provisioning** tab.
-1. Click **Configure API Integration**, and then select **Enable API integration**.
-3. Click **Authenticate with BambooHR**
-4. After the success message appears, click **Save**
+1. Click **Configure API Integration**.
+1. Select **Enable API integration**.
+1. Click **Authenticate with BambooHR**
+1. After the success message appears, click **Save**
 
 > **Note:** If you don't already have an active BambooHR session, you will be prompted to login using your BambooHR admin account credentials.
 
    ![alt_text](images/003/image004.png "image_tooltip")
 
-5. In the **Settings** panel, select **To Okta**.
-6. In the **Profile & Lifecycle Sourcing** section click **Edit**
-7. Select **Allow BambooHR to source Okta users**.
-9. Click **Save**.
+### Configure BambooHR to Okta Provisioning
 
-### Configure Import from BambooHR to Okta
-
+1. In the **Settings** panel, select **To Okta**
 1. In the **General** section, click **Edit** to define import settings.
+3. For **Okta username format**, select **Email Address**.
 
    ![alt_text](images/003/con-imp-1.png "image_tooltip")
 
-2. For **Okta username format**, select **Email Address**.
-3. Click **Save**.
+4. Click **Save**.
+5. Scroll to  the **Profile & Lifecycle Sourcing** section, adn then click **Edit**
+6. Select **Allow BambooHR to source Okta users**.
+7. Click **Save**.
 
 ## Import New Employee from BambooHR to Okta
 
-1. On the **Import** tab, click **Import Now**.
-1. When the scan of users and groups is complete, click **OK**.
+1. Select the **Import** tab, and then click **Import Now**.
+1. When the import and scan of users and groups is complete, click **OK**.
 2. Use **Search** to find the new employee that you added into Bamboo HR.
 3. Select the new employee via the checkbox.
-4. Click **Confirm Assignments**.
+4. Click **Confirm Assignments**. This will open a confirmation dialog.
 
    ![alt_text](images/003/image005.png "image_tooltip")
 
@@ -110,7 +108,7 @@ In fact, you could perform this one-time import without doing any configuration,
 
 In order to access the new employee activation email, you'll need to sign into your Office 365 tenant as the labadmin.
 
-1. In the Lab environment, click **Launch** Office365.
+1. To access the **Office 365** dashboard, in the  **Launch Panel**, click **Launch**.
 2. Click **Login to Tenant** and sign in with your **labadmin** credentials.
 3. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 

@@ -84,4 +84,26 @@ Or, you can review the following tests on image alignment.
 
    ![alt_text](images/003/image004.png "image_tooltip")
 
-1.
+## Save the O365 Fastpass Policy
+
+1. Set the following **IF** conditions for the rule:
+
+    | IF | Value|
+    |:-----|:-----|
+    |User's  type is| Accept the default |
+    |User's group membership includes|**At least one of the following groups:**|
+    | Enter groups to include: |  **Marketing** and **Sales**|
+    |Device State |**Registered**|
+    |Device management |**Not Managed**|
+    |Client is |**Web Browser** and **Modern Authentication**|'
+
+2. Set the following **THEN** access and authentication settings for the rule:
+
+    |THEN||
+    |:-----|:-----|
+    |User must authenticate with:| **Possession factor**|
+    |Possession factor constraints are|  **Phishing resistant** and **Hardware protected**|
+    |If Okta FastPass is used |**The user must approve a prompt in Okta Verify or provide biometrics**|
+
+3. Click **Save**.
+8. Using the *vertical waffle*, move the new rule up to the top of the priority list.

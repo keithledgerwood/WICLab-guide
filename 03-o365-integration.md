@@ -32,9 +32,9 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 11. Click **Select**.
 
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image07-1.png "image_tooltip")
-
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image07.png "image_tooltip")
+
+### Customization using Okta Expression Language
 
 13. For **Application username format** select **Custom**.
 
@@ -46,7 +46,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image08.png "image_tooltip")
 
-Congratulations! Your Okta org and Microsoft 365 tenant are now configured for single sign-on from Okta to Azure AD.
+Congratulations! Your Okta Workforce Identity Cloud and Office 365 tenant are now configured for single sign-on from Okta to Office 365.
 
 > **Note:** You can't test single sign-on until you have enabled provisioning and assigned at least one user to this app in Okta.
 
