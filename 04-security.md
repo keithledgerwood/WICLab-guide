@@ -19,14 +19,14 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")  |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!|
-   <https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>
+   |![Alt text](images/011/marc_r74_100.png "Marc says...") |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!
+   <https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>|
 
-1. Open the downloaded **OktaVerifySetup-4.4.exe** file.
-1. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
+5. Open the downloaded **OktaVerifySetup-4.4.exe** file.
+6. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
-1. Click **Finish**.
-1. Sign out of Okta and close the browser.
+7. Click **Finish**.
+8. Sign out of Okta and close the browser.
 
 ### Add New Employee Account to Okta Verify
 
