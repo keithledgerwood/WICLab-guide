@@ -2,7 +2,7 @@
 
 ![Overview](images/011/lab_overview_image.png)
 
-(Version **0.10.11.pod**)
+(Version **0.10.12.pod2**)
 
 In this Workshop, you will learn how to integrate Okta with different identity directories and applications.
 

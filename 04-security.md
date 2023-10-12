@@ -20,7 +20,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 |||
    |:-----|:-----|
    |![Alt text](images/011/marc_r74_100.png "Marc says...") |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!
-   <https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>|
+<https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>>|
 
 5. Open the downloaded **OktaVerifySetup-4.4.exe** file.
 6. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
@@ -60,10 +60,10 @@ This will display the Okta Verify options.
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
 1. Scroll down and click **Save**.
 
-### Add a rule to the "Any Two Factors" policy
+### Add a rule to the "Any two factors" policy
 
-1. In the Admin Console, select **Security** > **Authentication policies**.
-2. Select the  **Any Two Factors** authentication policy.
+1. In the Admin Console, select **Security** > **Authentication Policies**.
+2. Select the  **Any two factors** authentication policy.
 3. Click **Add Rule**.
 4. Set the **Rule name** to **Okta FastPass Access for Marketing and Sales**.
 5. Set the following **IF** conditions for the rule:
@@ -72,15 +72,16 @@ This will display the Okta Verify options.
     |:-----|:-----|
     |User's  type is| Accept the default |
     |User's group membership includes|**At least one of the following groups:**|
-    | Enter groups to include: |  **Marketing** and **Sales**|'
+    | Enter groups to include: |  **Marketing** and **Sales**|
+     | Device state is: |  **Registered**|'
 
 6. Set the following **THEN** access and authentication settings for the rule:
 
     |THEN||
     |:-----|:-----|
     |User must authenticate with:| **Possession factor**|
-    |Possession factor constraints are|  **Phishing resistant** and **Hardware protected**|
-    |If Okta FastPass is used |**The user must approve a prompt in Okta Verify or provide biometrics**|
+    |Possession factor constraints are|  **Hardware protected**|
+    |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
 

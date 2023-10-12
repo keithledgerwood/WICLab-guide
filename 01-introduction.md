@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.11.pod.1**)
+Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.12.pod2**)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
