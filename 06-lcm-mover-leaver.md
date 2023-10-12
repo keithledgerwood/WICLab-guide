@@ -1,14 +1,16 @@
-# Internal Mobility
-
 ## Navigating Employee Transitions Efficiently
 
-### Departmental Transfer
+In this lab, you will leverage the dynamic integration of Okta with your HR application. Experience firsthand how a change in an employee's job seamlessly translates into automatic adjustments in their application access. But that's not all - when employees bid adieu to the company, watch as their access is instantaneously disabled. Dive into the world of automation that not only streamlines processes but also ensures consistent security, equipping transitioning employees with the right tools for success and safeguarding company assets every step of the way.
 
-1. Move your user to the new *Department* in the BambooHR tenant.
+## Employee Transfer
 
-2. In the **People > Personal** tab, select your newly added user, and click **+ Add Entry** in the **Job Information** field.
+In the Add Job Information dialog, select a different department, and then click Save.
 
-3. In the **Department** field, select **Sales**, and make sure that the **Effective Date** is set for *Today*, click **Save**.
+1. In the BambooHR dashboard search for and select your employee.
+
+2. On the **Job** tab, for **Job Information**, click **Add Entry**.
+
+3. In the **Department** field, select **Sales**, and then click **Save**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
 
@@ -31,18 +33,17 @@
 
 1. Open a new browser window that is not signed into Okta.
 
-2. Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
+2. Navigate to your Okta tenant. e.g. ***demo-xxxx-xxxx-nnnn*.okta.com**
 
-3. Authenticate as your test user: e.g.
+3. Authenticate as your new employee. For example ***<flynn.rider@04.mywiclab.com>***
 
-    > ***<Charlotte.Abbott@yourwiclabdomain.com>***
-<!-->
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
--->
+4. You should see a new set of apps, that were assigned to your employee based on their newly assigned *Department*.
 
-4. You should see a new set of apps, that were assigned to the user based on the *Department* that they were moved into.
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR application integration streamlines employee job changes, ensuring they have just the right access and preventing a digital pile-up of permissions? It's like a digital wardrobe cleanse, keeping things tidy and just-right for security!*|
 
-# Terminate Employee
+## Employee Termination
 
 Deactivate the employee in the BambooHR tenant.
 

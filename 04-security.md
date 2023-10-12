@@ -1,4 +1,3 @@
-# Boosting Security
 
 ## Embracing a Passwordless Experience
 
@@ -6,60 +5,65 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ## Setup Okta Verify and Okta FastPass
 
+>**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+
 ### Install Okta Verify on your Virtual Machine
 
-To install Okta Verify, open Chrome in your Virtual Machine (VM) and proceed with the following steps:
+<!-->
+1. To install Okta Verify,launch your Virtual Machine (VM) from the launch panel, and then open Chrome.
 
+1. Enter the sign-in URL to your Okta org, For example *<https://demo-xxxxxx-xxxxx-nnnnn.okta.com>, and then sign in with your administrator account.
+-->
 1. In the Okta Admin Console, select **Settings** > **Downloads**.
+1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
 
-1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download Latest**.
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...") |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!
+   <https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>|
 
-1. Open the downloaded Okta Verify Setup .exe file.
+5. Open the downloaded **OktaVerifySetup-4.4.exe** file.
+6. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
+    Wait for confirmation saying that Okta Verify was successfully installed.
+7. Click **Finish**.
+8. Sign out of Okta and close the browser.
 
-1. In the Okta Verify installation window, select **I agree to the License terms and conditions** and click **Install**.
-Wait for confirmation saying that Okta Verify was successfully installed.
-
-1. Click **Finish**.
-
-### Configure Okta Verify
+### Add New Employee Account to Okta Verify
 
 1. On the VM desktop, find and open **Okta Verify**.
 
-1. In the Welcome to Okta Verify window, click **Get started**.
+1. On **Welcome to Okta Verify**, click **Get started**.
 
 1. Click **Next**.
 
-1. Enter the sign-in URL to your Okta org: <https://demo-xxxxxx-xxxxx-xxxxx.okta.com>
-This will open your Okta org sign-in page in the browser.
+1. For **New Account**, enter your Okta tenant URL. For example: <https://demo-xxxxxx-xxxxx-xxxxx.okta.com>.
+1. Click **Next**.
+This will open your Okta tenant's sign-in page.
 
-1. Verify with your Password and Okta Verify mobile code or push notification.
-Your account is added to the Okta Verify desktop app.
+1. Sign in with your **New Employee** username and password and Okta Verify MFA.
+Upon successful authentication, the new employee account will be added to the Okta Verify desktop app.
 
 ## Configure Security Policies and FastPass
 
-### Configure Enrollment Policy for Your Users
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know with Okta Adaptive MFA, you get personalized security that learns from your habits, making logging in a breeze while keeping intruders at bay? Think of it as the bouncer who always spots the VIP - that's you!*|
 
-1. In the Admin Console, select **Security** > **Authenticators** > **Enrollment** tab.
+## Enable Okta Verify for FastPass Authentication
 
-1. For the Default Policy, click **Edit**.
-1. Verify that Okta Verify is set to Optional and Password is set to Required.
-1. Click **Update policy**.
-
-### Enable Okta Verify for FastPass Authentication
-
-1. In the Admin Console, select **Security** > **Authenticators** >**Setup** tab.
+1. In the Admin Console, select **Security** > **Authenticators** > **Setup** tab.
 
 1. For **Okta Verify**, click **Actions**, and then select **Edit**.
 This will display the Okta Verify options.
 
-1. In **Verification options**, confirm that the following options are selected: **Push notification (Android and iOS only)** and **Okta FastPass (All platforms)**.
-1. Select **Show the "Sign in with Okta FastPass" button**.
+1. For **Verification options**, confirm that the following options are selected: **Push notification (Android and iOS only)** and **Okta FastPass (All platforms)**.
+1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
 1. Scroll down and click **Save**.
 
-### Configure a FastPass Rule for Microsoft O365
+### Add a rule to the "Any Two Factors" policy
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
-2. Select the  **Microsoft Office 365** authentication policy.
+2. Select the  **Any Two Factors** authentication policy.
 3. Click **Add Rule**.
 4. Set the **Rule name** to **Okta FastPass Access for Marketing and Sales**.
 5. Set the following **IF** conditions for the rule:
@@ -68,10 +72,7 @@ This will display the Okta Verify options.
     |:-----|:-----|
     |User's  type is| Accept the default |
     |User's group membership includes|**At least one of the following groups:**|
-    | Enter groups to include: |  **Marketing** and **Sales**|
-    |Device State |**Registered**|
-    |Device management |**Not Managed**|
-    |Client is |**Web Browser** and **Modern Authentication**|'
+    | Enter groups to include: |  **Marketing** and **Sales**|'
 
 6. Set the following **THEN** access and authentication settings for the rule:
 
@@ -82,15 +83,12 @@ This will display the Okta Verify options.
     |If Okta FastPass is used |**The user must approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
-8. Using the *vertical waffle*, move the new rule up to the top of the priority list.
 
 ### Experience a Passwordless Login
 
-1. Sign in to your org as the new employee, who is a member of the Marketing group.
-
-1. In the End-User Dashboard, open the **Office365** app.
-
-1. Click **Sign in with Okta FastPass** to sign in without using your password.
+1. Launch a Chrome browser window using the Guest profile.
+1. Enter your Okta tenant URL in the browser.
+1. At the Okta login, click **Sign in with Okta FastPass** . You will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up User Behavioral Analytics
 
@@ -133,6 +131,10 @@ If you login immediately after setting up the policy rule, it may happen that yo
 17. Click **Any two factors**.
 18. For Travel Not Allowed, click **Actions** and then **Deactivate**.
 This will disable this policy rule.
+
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that with Okta Adaptive MFA's smart tech, you're not just getting a lock but a security system that learns? It's the future of personalized digital safety, today!*|
 
 ### Enable Okta ThreatInsight
 

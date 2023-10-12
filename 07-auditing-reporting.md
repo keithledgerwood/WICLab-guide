@@ -1,10 +1,8 @@
-# Insights and Oversight
-
 ## Audits and Reporting Essentials
 
 In this lab, you will navigate through Okta's comprehensive audit and reporting functionalities. You'll get an in-depth look at the various activities performed within your organization on a daily basis. Embrace the advantages of centralized audit and reporting, a cornerstone for robust security and stringent compliance. Moreover, discover how these insights can serve as a potent enhancer to your organization's broader security operations, fortifying your defense mechanisms and optimizing operations.
 
-### Okta System Log
+## Okta System Log
 
 1. In the Admin Console select  **Reports** > **System Log**.
 
@@ -35,8 +33,11 @@ This will filter the log results to show only the events when a change in user b
 9. Search for the Behaviors line.
 You should see a record confirming a change in user behavior. For the event in which you logged in from a New Device (following instructions in the User Behavioral Analytics section), this should be "New Device=POSITIVE" .
 -->
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's rich system log and auditing prowess can seamlessly flow into your organization's security operations tools, helping paint a clearer view of your security posture? It's like having night vision goggles in the realm of cybersecurity!*|
 
-### Okta Reports
+## Okta Reports
 
 1. In the Admin Console select **Reports** > **Reports**.
 This will take you to the Reports page, where you can find Okta’s out-of-the-box auditing reports.

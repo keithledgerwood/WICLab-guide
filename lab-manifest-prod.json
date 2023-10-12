@@ -1,0 +1,133 @@
+{
+    "id": "wic_acceleration",
+    "title": "TechCamps - WIC Lab",
+    "state": "hidden",
+    "duration": "3 hours",
+    "description": "In this Workshop, you will learn how to integrate Okta with different identity directories and applications.",
+    "idp_type": "workforce-identity",
+    "overview": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/00-overview.md",
+    "contributors": "Okta Presales",
+    "tags": [
+        "workforce"
+    ],
+    "applications": [
+        "1b187e8b-e90a-4469-829b-8051a02729a3"
+    ],
+    "resources": [
+        "61601555-bb49-4ba6-8adb-cb2342a884cc",
+        "c3d43ebe-74d1-4459-8d98-64bc42335f1f",
+        "de1cd9c3-e721-4d3e-aa99-338fa77d0420"
+    ],
+    "steps": [
+        {
+            "step": "Introduction",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/01-introduction.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Onboarding a New Employee",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/02-onboard-employee.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Integrating Office 365",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/03-o365-integration.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Boosting Security",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/04-security.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Bridging the Access Gap",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/05-governance.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Internal Mobility",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/06-lcm-mover-leaver.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Insights and Oversight",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/07-auditing-reporting.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Optional - Active Directory",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/08-active-directory-integration.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "For Testing Purposes",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/09-self-service.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        },
+        {
+            "step": "Conclusion",
+            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/999-conclusion.md",
+            "applications": [
+                "1b187e8b-e90a-4469-829b-8051a02729a3"
+            ],
+            "resources": [
+                "61601555-bb49-4ba6-8adb-cb2342a884cc",
+                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
+            ]
+        }
+    ]
+}

@@ -32,9 +32,9 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 11. Click **Select**.
 
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image07-1.png "image_tooltip")
-
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image07.png "image_tooltip")
+
+### Customization using Okta Expression Language
 
 13. For **Application username format** select **Custom**.
 
@@ -46,7 +46,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image08.png "image_tooltip")
 
-Congratulations! Your Okta org and Microsoft 365 tenant are now configured for single sign-on from Okta to Azure AD.
+Congratulations! Your Okta Workforce Identity Cloud and Office 365 tenant are now configured for single sign-on from Okta to Office 365.
 
 > **Note:** You can't test single sign-on until you have enabled provisioning and assigned at least one user to this app in Okta.
 
@@ -97,6 +97,10 @@ Follow these steps to enable provisioning:
 5. For **Update User Attributes**, select **Enable**.
 6. For **Deactivate Users**, select **Enable**.
 7. Click **Save**.
+
+|||
+   |:-----|:-----|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
 
 # Configure group assignment
 
@@ -164,13 +168,11 @@ The user is now assigned to the group and will be assigned to the Microsoft Offi
 
 You can now test single sign-on to Microsoft 365 for your new employee.
 
-1. Open a new browser window that is not signed into Okta or Microsoft
+1. Open a new browser window that is not signed in to Okta or Microsoft.
 
-2. Navigate to your Okta tenant. For example, ***demo-xxxxxx-xxxxx-xxxx*.okta.com**
+2. Enter the sign-in URL to your Okta org, For example *<https://demo-xxxxxx-xxxxx-nnnnn.okta.com>*
 
-3. Authenticate as the new employee. For example,
-
-    > ***<flynn.rider@wiclab.com>***
+3. Authenticate as the new employee. For example *<flynn.rider@04.mywiclab.com>*
 
     ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
 
