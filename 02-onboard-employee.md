@@ -73,7 +73,7 @@ In this section you will configure inbound provisioning from BambooHR to Okta.  
    ![alt_text](images/003/con-imp-1.png "image_tooltip")
 
 4. Click **Save**.
-5. Scroll to  the **Profile & Lifecycle Sourcing** section, adn then click **Edit**
+5. Scroll to  the **Profile & Lifecycle Sourcing** section, and then click **Edit**
 6. Select **Allow BambooHR to source Okta users**.
 7. Click **Save**.
 
