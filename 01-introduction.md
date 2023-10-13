@@ -1,7 +1,7 @@
 
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.12.pod2**)
+Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.13.pod3**)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -13,10 +13,12 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## 1. Initial access to your Okta tenant
+## 1. Initial sign in to your Okta tenant
 
-1. In the mailbox you used for registration, find and open the "Your New Okta account" email.
-2. Copy the temporary password, and then click **Sign On**.
+As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an admin account was created that corresponds to the email address that you used to sign in to labs.demo.okta.com.
+
+1. Check your inbox for an email from **The Okta Team** with the subject line **Your New Okta account**.
+2. Copy the **Temporary password**, and then click **Sign On**.
 3. Follow the instructions on the screen to sign on to your Okta org.
 
 > **Note:** This will require that you sign in with your temporary password, set up a new password and set up the Okta Verify app on your mobile device. After successful sign on, you will see the Okta End-User Dashboard.
@@ -43,7 +45,7 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 ### Manual Tasks
 
- After you have signed into your demo org, but before you've added your first employee, do the following:
+ After you have initially signed into your Okta tenant, but before you've added your first employee, do the following:
 
  1. Click [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores") and then select **Open Link in New Tab**
  2. Follow the instructions in the **READ.ME** file.

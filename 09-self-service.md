@@ -6,6 +6,11 @@
 
 ### Return fully charged to continue with the rest of the lab
 
+|||
+   |:-----|:-----|
+   |**Note:** There is a single instance of BambooHR for use by all lab participants. When adding new employees, we ask that you use your own name, or those of your favorite alias. **For the work email address, your email domain needs to match your unique Office 365 domain name in the lab launch panel.**|![Alt text](images/011/launch_O365_domain_r74.png)|
+   |For example, if you were a charming swashbuckler, your work email would be <flynn.rider@04.mywiclab.com>|,
+
 Or, you can review the following tests on image alignment.
 
 # Image size and alignment
