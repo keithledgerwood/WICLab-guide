@@ -12,7 +12,9 @@ In this lab, you will navigate the pathways of application access requests, demo
 5. Find for the **Everyone** group, and then click **Assign**.
 6. Click **Done**.
 
-### Configure Access Request Settings
+### Configure Teams and Access Request Settings
+
+#### Add the Okta admin to the IT team
 
 1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
 2. In the Access Requests Admin Console, select **Teams** > **All**.
@@ -20,13 +22,25 @@ In this lab, you will navigate the pathways of application access requests, demo
 4. Click **Add Member**.
 5. Enter your Okta Admin name and then select **You**.
 6. Click **Add Users**.
-7. Verify that you are listed as a member of the IT team.
+
+ ![alt_text](images/011/oig_ar_settings_add_team_members.png "image_tooltip")
+
+7. Verify that you are listed as a member of the **IT** team.
+
+#### Update the Access Request Configuration for Okta
+
 8. In the Access Requests Admin Console, select **Settings**.
 9. Select the **Integrations** tab.
 10. Under Access Request Configurations for Okta, click **Edit connection**.
 11. Click **Update Connection.**
+
+#### Update Resources
+
 12. Select the **Resources** tab.
-13. For both Applications and Okta Groups, click **Manage Access** and select the **IT** team.
+13. For **Applications**, click **Manage Access**.
+14. Select the **IT** team, and then click **Save**.
+15. Select **Okta Groups**, and then click **Manage Access**.
+16. Select the **IT** team, and then click **Save**.
 
 ### Create a Request Type
 
@@ -41,11 +55,14 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Name|**Navan**|
     |Description |  **Corporate Travel App**|
     |Team |**IT**|
-    |Audience|**Everyone at** your demo org|'
+    |Audience|**Everyone at** your Okta tenant|'
 
 4. Click **Continue**.
+
+    ![alt_text](images/011/oig_ar_create_request_screen_1.png "image_tooltip")
+
 5. To add an **Approval** step, click **Add to request type**.
-6. In the Approval panel, configure the approval as follows:
+6. In the Approval panel, on the right, configure the approval as follows:
 
     |Approval attribute |Value|
     |:-----|:-----|
@@ -106,7 +123,7 @@ Now, let's configure the following Okta connectors in your Okta Tenant with Work
 >**Note:** Your browser window now has an open tab open for the **Okta Admin Console** and another tab for the **Workflows Console**. Throughout this lab, you will be navigating between the two consoles, so pay close attention.
 
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
-3. Enter **okta** in the search bar, and then click **Okta**.
+3. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
 4. Optional. Modify the default **Connection Nickname**.
 5. Set **Domain** to the full domain of your Okta tenant.
  Be sure to include the **.okta.com** portion of the domain.
@@ -122,38 +139,30 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
 
-![alt_text](images/011/workflows_connection_okta.png "image_tooltip")
+    ![alt_text](images/011/workflows_connection_okta.png "image_tooltip")
 
 ### Create an API Connection
 
 1. In the Workflows console, select **Connections**, and then click **New Connection**.
-2. Enter **api** in the search bar, and then click **API Connector**.
+2. In the **New Connection** dialog search bar, enter **api** and then click **API Connector**.
 3. Optional. Modify the default **Connection Nickname**.
 4. For **Auth Type** select **Custom**.
 5. Set **Header Name** to **Authorization**.
 
-Keep this page open. Before you can set the **Header Value** for this API Connection,  you'll need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
+Keep this page open. Before you can set the **Header Value** for this API Connection, you need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
 
 #### Create, copy and paste an API Token
 
-For the workflows in the Okta Workflow Pack to work, you will first need to create a token to connect Okta APIs for that :
+1. In the Okta Admin Console, select **Security** > **API** > **Tokens** tab.
+1. Click **Create Token**.
+1. Set the **token name** to **WIC Lab Token**.
+1. Click **Create token**.
+1. Click the copy button to copy the **Token Value** to the clipboard.
+1. Return to the **Workflows console** >  **New Connection** dialog.
+1. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
+1. Click **Create** to complete the API Connection.
 
-1. In the Okta Admin Console, select **Security** > **API**, and then select the **Tokens** tab
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img1.png "image_tooltip")
--->
-
-2. Set the Token name to **WIC Lab Token**
-3. Click **Create token**.
-4. Copy the **Token Value**.
-5. Return to the **Workflows console** >  **New Connection** dialog.
-6. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
-Click **Create** to complete the API Connection.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/image2.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img3.png "image_tooltip")
--->
+    ![alt_text](images/011/workflows_connection_api_connector_config.png "image_tooltip")
 
 ## Leveraging Flowpacks
 
@@ -196,7 +205,7 @@ There are a few modifications needed within the workflow. You will need to assig
 <!--
 ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img15.png "image_tooltip")
 -->
-2. In the **User Okta Profile Updated** card, and then set the **Connection** to your **Okta** connection.
+2. In the **User Okta Profile Updated** card, set the **Connection** to your **Okta** connection.
 3. Update the first **Compose** card to contain your Okta tenant name. This card will set **varOktaTenantURL** to the value you entered.
 4. Update the next **Compose** card to contain your Okta admin login.  This card will set **varAdminLogin** to the value you entered.
 5. In the **API Connector Raw Request** card, set the **Connection** to your **API Connector** connection.
