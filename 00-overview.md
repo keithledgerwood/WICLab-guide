@@ -2,12 +2,14 @@
 
 ![Overview](images/011/lab_overview_image.png)
 
-(Version **0.10.12.pod2**)
+(Version **0.10.13.pod3**)
 
-In this Workshop, you will learn how to integrate Okta with different identity directories and applications.
+In this workshop, you will experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.
 
-Okta provides Single Sign-On with adaptive MFA and advanced user life-cycle management and workflows to provide a secure and seamless experience for administrators as well as end-users.
+Begin with mastering the art of efficiently onboarding new team members, followed by a deep dive into seamlessly integrating Office 365 to optimize workplace tools.
 
-The goal of the workshop is to build and end-to-end demo environment from integrating applications for Single Sign-On and creating a seamless and enriched onboarding journey for new employees
+Discover the future with our session on bolstering security through a passwordless experience.
 
-Additionally we have prepared some optional advanced use cases.
+Navigate the intricate pathways of application access, from requests to approvals to access certifications. Gain expertise in overseeing employee transitions with ease as they move within and out of the organization.
+
+You will Wrap up your learning journey with a comprehensive understanding of the essentials in audits and reporting, ensuring both insights and oversight.

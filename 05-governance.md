@@ -18,7 +18,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 2. In the Access Requests Admin Console, select **Teams** > **All**.
 3. Click the **IT** team.
 4. Click **Add Member**.
-5. Enter your name or email and then select **You**.
+5. Enter your Okta Admin name and then select **You**.
 6. Click **Add Users**.
 7. Verify that you are listed as a member of the IT team.
 8. In the Access Requests Admin Console, select **Settings**.
@@ -54,7 +54,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Type| **Approval task**|
     |Assigned to |Select **A specific user...** and click **You**|'
 
-7. To add an Action step, click **Action**, and then select **Assign individual app to user**.
+7. To add an Action step, towards the bottom of the page, click **Action**, and then select **Assign individual app to user**.
 8. In the **Action** panel, configure the action as follows:
 
     |Action attribute|Value|
@@ -108,12 +108,11 @@ Now, let's configure the following Okta connectors in your Okta Tenant with Work
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
 3. Enter **okta** in the search bar, and then click **Okta**.
 4. Optional. Modify the default **Connection Nickname**.
-5. Set **Domain** to the domain of your Okta tenant.
+5. Set **Domain** to the full domain of your Okta tenant.
+ Be sure to include the **.okta.com** portion of the domain.
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img8.png "image_tooltip")
--->
+
 #### Copy and paste the Client ID and Client Secret
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
@@ -122,21 +121,14 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 4. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img11.png "image_tooltip")
--->
+
+![alt_text](images/011/workflows_connection_okta.png "image_tooltip")
+
 ### Create an API Connection
 
 1. In the Workflows console, select **Connections**, and then click **New Connection**.
 2. Enter **api** in the search bar, and then click **API Connector**.
 3. Optional. Modify the default **Connection Nickname**.
-
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img6.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img7.png "image_tooltip")
--->
-
 4. For **Auth Type** select **Custom**.
 5. Set **Header Name** to **Authorization**.
 

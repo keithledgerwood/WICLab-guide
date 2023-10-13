@@ -17,12 +17,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 1. In the Okta Admin Console, select **Settings** > **Downloads**.
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
 
-|||
-   |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...") |Did you know that you can also download Okta Verify for Windows directly. I probably should have told you earlier. HAH!
-<https://okta.okta.com/artifacts/WINDOWS_OKTA_VERIFY/4.4.1.0/OktaVerifySetup-4.4.1.0-470900d.exe>>|
-
-5. Open the downloaded **OktaVerifySetup-4.4.exe** file.
+5. Open the downloaded **Okta Verify Setup** executable file.
 6. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
 7. Click **Finish**.
@@ -80,19 +75,19 @@ This will display the Okta Verify options.
     |THEN||
     |:-----|:-----|
     |User must authenticate with:| **Possession factor**|
-    |Possession factor constraints are|  **Hardware protected**|
+    |Possession factor constraints are|  None |
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
 
-### Experience a Passwordless Login
+### Experience an Employee Passwordless Login
 
 1. Launch a Chrome browser window using the Guest profile.
 1. Enter your Okta tenant URL in the browser.
 1. At the Okta login, click **Sign in with Okta FastPass** . You will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up User Behavioral Analytics
-
+<!-->
 ### Configure Behavioral Security Measures
 
 1. In the Admin Console, select **Security** > **Behavior Detection**.
@@ -136,7 +131,7 @@ This will disable this policy rule.
 |||
    |:-----|:-----|
    |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that with Okta Adaptive MFA's smart tech, you're not just getting a lock but a security system that learns? It's the future of personalized digital safety, today!*|
-
+-->
 ### Enable Okta ThreatInsight
 
 Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
