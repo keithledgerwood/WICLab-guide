@@ -12,8 +12,7 @@
 
    |Important step:|Example|
    |:-----|:-----|
-   |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png)|
-   |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
+   |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png)| Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
 
 ## No table - indented image
 

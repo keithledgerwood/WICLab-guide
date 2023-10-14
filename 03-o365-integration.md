@@ -39,17 +39,13 @@ Omit the *onmicrosoft.com* portion of the tenant name.
 
    |Important step:|Example|
    |:-----|:-----|
-   |The expression that you need enter for the **Custom Application username format** transforms the new emoployee's email address domain to the Office 365 Domain you selected for federation. Your expression needs to reference your domain. |![Alt text](images/011/app_o365_custom_expression.png)|
+   |The expression that you need enter for the **Custom Application username format** transforms the new employee's email address domain to the Office 365 Domain you selected for federation. Your expression needs to reference your domain. |![Alt text](images/011/app_o365_custom_expression.png)|
 
 13. Enter the expression:
 
-    > String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
-
-*** Testing **
-
-```
-String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
-```
+    ```javascript
+    String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
+    ```
 
 14. Be sure to replace the **nn.mywiclab.com** in the sample to match your domain.
 15. Click **Done**.
