@@ -17,26 +17,15 @@ In the Add Job Information dialog, select a different department, and then click
 ### Import changes to Okta
 
 1. In the Okta Admin Console select **Applications > Applications**, and then select **BambooHR**.
-
 2. On the **Import tab**, click **Import Now**.
-
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-updated.png "image_tooltip")
--->
 3. In the Okta Admin Console select **Directory > Groups**.
 4. Verify that the employee was automatically assigned to the **Sales**group and has access to the new set of Apps.
 
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-user.png "image_tooltip")
--->
 ### Changes to Okta End-user Dashboard
 
 1. Open a new browser window that is not signed into Okta.
-
 2. Navigate to your Okta tenant. e.g. ***demo-xxxx-xxxx-nnnn*.okta.com**
-
 3. Authenticate as your new employee. For example ***<flynn.rider@04.mywiclab.com>***
-
 4. You should see a new set of apps, that were assigned to your employee based on their newly assigned *Department*.
 
 |||
@@ -54,21 +43,12 @@ Deactivate the employee in the BambooHR tenant.
 3. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
 
 4. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignments**.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-remove.png "image_tooltip")
--->
+
 5. Navigate to **Directory > Users** to check if your user status has changed.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/leaver-user.png "image_tooltip")
--->
 6. Open a new browser window that is not signed into Okta.
-
 7. Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
-
 8. Authenticate as your test user: e.g.
 
     > ***<Charlotte.Abbott@yourwiclabdomain.com>***
-<!-->
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
--->
+
 9. You should see an error, as your account was deactivated.

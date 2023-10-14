@@ -9,11 +9,6 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ### Download Okta Verify on your Virtual Machine
 
-<!-->
-1. To install Okta Verify,launch your Virtual Machine (VM) from the launch panel, and then open Chrome.
-
-1. Enter the sign-in URL to your Okta org, For example *<https://demo-xxxxxx-xxxxx-nnnnn.okta.com>, and then sign in with your administrator account.
--->
 1. In the Okta Admin Console, select **Settings** > **Downloads**.
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
 1. Sign out of Okta and close the browser.

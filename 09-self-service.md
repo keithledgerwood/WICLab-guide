@@ -1,10 +1,35 @@
+## Image in a table
+
+1.
+
+ |||
+   |:-----|:-----|
+   ||![Alt text](images/011/launch_O365_domain_r74.png)|
+   |r74_584x488|![Alt text](images/011/xlaunch_O365_domain_r74_584x488.png)|
+   |r74_467_390|![Alt text](images/011/xlaunch_O365_domain_r74_467x390.png)|
+   |r74_373_311|![Alt text](images/011/xlaunch_O365_domain_r74_373x311.png)|
+   |r144_1172x336|![Alt text](images/011/x_workflows_r144_1172x336.png)|
+   |r144_937x269|![Alt text](images/011/x_workflows_r144_937x269.png)|
+
+## Image resolution
+
+## Image size
+
+Image tag (r74x373x311)
+ ![ image](images/011/xlaunch_O365_domain_r74_373x311.png)
+
+Image tag with width 100
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="100">
+
+  Image tag with width 200
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="200">
+
+  Image tag with width 373
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="373">
+
 ## Self Service Solutions
 
-### Grab a cold beverage
-
-### Take a 15-minute break
-
-### Return fully charged to continue with the rest of the lab
+#
 
 |||
    |:-----|:-----|

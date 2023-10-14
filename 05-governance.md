@@ -181,9 +181,6 @@ Keep this page open. Before you can set the **Header Value** for this API Connec
 3. Set the **Folder name** to **Title Change**.
 4. Optional. Set a **Folder Description**.
 5. Click **Save**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img12.png "image_tooltip")
--->
 
 ### Import the Flow into the Folder
 
@@ -193,35 +190,24 @@ Keep this page open. Before you can set the **Header Value** for this API Connec
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
 
 You have successfully imported the Flow.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img14.png "image_tooltip")
--->
 
 ### Modify the imported Flow
 
 There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow. You'll also need to specify your Okta tenant domain and your Okta admin account.
 
 1. Click on the Workflow to update the existing cards
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img15.png "image_tooltip")
--->
+
 2. In the **User Okta Profile Updated** card, set the **Connection** to your **Okta** connection.
 3. Update the first **Compose** card to contain your Okta tenant name. This card will set **varOktaTenantURL** to the value you entered.
 4. Update the next **Compose** card to contain your Okta admin login.  This card will set **varAdminLogin** to the value you entered.
 5. In the **API Connector Raw Request** card, set the **Connection** to your **API Connector** connection.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img16.png "image_tooltip")
--->
+
 6. Click **Save**
 
     > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img17.png "image_tooltip")
--->
+
 4. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img18.png "image_tooltip")
--->
+
 You now have the Flow correctly configured and running.
 
 ### Change the new employee's title
@@ -236,14 +222,8 @@ In order to trigger this Flow, an action we're listening to should occur. In thi
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img21.png "image_tooltip")
--->
 3. Click **Import Now**.
 4. When the scan completes, confirm that one user was updated.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img22.png "image_tooltip")
--->
 
 This event will trigger the imported **Title Changed** flow, which creates and launches a certification campaign.
 
@@ -255,11 +235,7 @@ Campaigns can be created via API and the UI of the admin platform.
 ### Verifying the Access Certification Campaign
 
 To verify that a certification campaign was created by the flowpack, you will need to perform the following actions:
-<!-->
-#### Validate the created campaign
 
-Before proceeding with the certification campaign, make sure that the user has at least one application assigned and the user is able to access that application.
--->
 1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
 2. Verify that there is **Campaign** whose name starts with **Title Change:**.
 3. Click on the **Title Change:**campaign to see an overview of the campaign.
@@ -267,14 +243,6 @@ Before proceeding with the certification campaign, make sure that the user has a
 The page provides an overview of the campaign, the progress of the campaign, and the items to be reviewed.An administrator can use this page to manage the execution of a campaign. They can see the progress and any items still outstanding. They can reassign one or more items. They can also prematurely end the campaign.
 
 >**Note:** Please notify a lab assistant if there is no campaign listed.
-
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img23.png "image_tooltip")
--->
-
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img26.png "image_tooltip")
--->
 
 ### Participating in an Access Certification Campaign
 
@@ -286,46 +254,16 @@ For the purposes of this lab, we decided to assign the Okta tenant administrator
  by clicking on the **Drop down menu** in the top right corner and click on **My End User Dashboard**
 2. In the End User Dashboard, launch the **Okta Access Certification Reviews** app.
 3. Click on the **Title Change** to see an overview of the campaign.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img24.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img25.png "image_tooltip")
-
-> **Note:** This app is tied to a group where membership is dynamically managed within Okta. If an Okta user is flagged as a reviewer in any active campaign, they will be in the group and see the application on the dashboard.
-
-You are presented with a list of campaigns for which the user is a reviewer. You see a summary of information about each active campaign.
-
-3. On the following page, you can see all of the open and closed review campaigns. Click on the **Campaign Name**
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img27.png "image_tooltip")
--->:
 
 4. You will see all applications assigned to this user.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img28.png "image_tooltip")
--->
+
 > For each item, you have three options as a reviewer: Approve (leave the access as is), Revoke (remove access or flag for it to be removed), or Reassign (to another Okta user). You will see the icons or icons and words depending on the screen resolution.
 
 5. Click on the name of one of the applications to see information about the user and resource
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img29.png "image_tooltip")
--->
 This information is provided to help the reviewer in making their decision. Currently, it includes user details and resource details, but there are plans to include fine-grained access information (if available) and review history.
-
 6. Click **Approve**.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img30.png "image_tooltip")
--->
 7. When prompted, enter a **Justification**,  and then click the **Submit**.
-<!--
-8. Select one user and click the Revok (X) button
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img31.png "image_tooltip")
-
-After each action, you will see a message displayed, and the item will disappear from the view (they can be found under the Closed tab). When all are actioned, you will get confirmation that you are done with the reviews.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img32.png "image_tooltip")
--->
 ### End the Campaign
 
 The campaign can be completed manually once the review is done or automatically after the **Set duration** passes.
@@ -336,6 +274,3 @@ The campaign can be completed manually once the review is done or automatically 
 4. Click **End Campaign**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img34.png "image_tooltip")
--->
