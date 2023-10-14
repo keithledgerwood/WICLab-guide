@@ -7,14 +7,12 @@ In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 en
 Okta maintains a specific integration for Microsoft Office 365 in the Okta Integration Network (OIN). To add this to your Okta org, follow these steps:
 
 1. In the Admin Console select **Applications** >  **Applications**.
-2. Click **Browse App Catalog**.
-3. Type *office 365* into the **Search...**, and then click **Microsoft Office 365**.
-4. Click **Add integration**.
-
-   |Important step:|Example|
-   |:-----|:-----|
-   |
-    Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant_r144_300_224.png)|
+1. Click **Browse App Catalog**.
+1. Type *office 365* into the **Search...**, and then click **Microsoft Office 365**.
+1. Click **Add integration**.
+    >**Tip:** You can find your **Microsoft Tenant Name** in the launch panel.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Omit the *onmicrosoft.com* portion of the tenant name.
 
 5. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
 

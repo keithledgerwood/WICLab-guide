@@ -12,6 +12,36 @@
    |:-----|:-----|
    |Your **Microsoft Tenant Name**|![Alt text](images/011/launch_O365_tenant.png)|
 
+## O365 Launch ( w/o table indented image)
+
+Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+Ignore the *onmicrosoft.com* portion of the tenant name.
+   ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+
+## O365 Launch ( double indented image)
+
+Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+Ignore the *onmicrosoft.com* portion of the tenant name.
+      ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+
+## O365 Launch
+
+>**Tip:** Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Ignore the *onmicrosoft.com* portion of the tenant name.
+
+## Color
+
+$${\color{red}Red}$$
+$${\color{red}Hello}$$ $${\color{red}World}$$
+
+$${\color{lightgreen}Light \space Green}$$
+$${\color{blue}Your Microsoft Tenant Name can be found in the lab Launch Panel}$$
+
+## Red Apple
+
+RED APPLE (&#x1F34E;)
+
 ## Image in a table
 
 1.
