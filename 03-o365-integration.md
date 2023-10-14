@@ -45,6 +45,12 @@ Omit the *onmicrosoft.com* portion of the tenant name.
 
     > String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
 
+*** Testing **
+
+```
+String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
+```
+
 14. Be sure to replace the **nn.mywiclab.com** in the sample to match your domain.
 15. Click **Done**.
 
