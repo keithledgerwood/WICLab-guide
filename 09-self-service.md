@@ -1,3 +1,17 @@
+## O365 Launch
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant_r144_300_224.png)|
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant.png)|
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |Your **Microsoft Tenant Name**|![Alt text](images/011/launch_O365_tenant.png)|
+
 ## Image in a table
 
 1.

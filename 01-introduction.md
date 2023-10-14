@@ -1,4 +1,3 @@
-
 ## Welcome
 
 Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.14.1**)

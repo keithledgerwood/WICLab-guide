@@ -1,6 +1,4 @@
-# Integrating Office 365
-
-## Streamlining Workplace Productivity Tools
+# ## Streamlining Workplace Productivity Tools
 
 In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 environment. By leveraging the Okta Integration Network, you'll experience firsthand how modern application integrations can be both straightforward and rapid. Through the benefits of automated provisioning and single sign-on, employees will be poised for instant productivity. And even as we focus on a user-friendly experience, remember, security is always at the forefront.
 
@@ -16,7 +14,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
    |Important step:|Example|
    |:-----|:-----|
    |
-    Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant.png)|
+    Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant_r144_300_224.png)|
 
 5. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
 
