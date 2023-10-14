@@ -1,3 +1,25 @@
+### Sample 1
+
+1. Click **Add integration**.
+    >**Tip:** You can find your **Microsoft Tenant Name** in the launch panel.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Omit the *onmicrosoft.com* portion of the tenant name.
+
+### Sample 2
+
+1. Click **Add integration**. (double indent, smaller image, IMPORTANT)
+      >**IMPORTANT:** You can find your **Microsoft Tenant Name** in the launch panel.
+         ![tenant name](images/011/launch_O365_tenant_r144_240.png)
+Omit the *onmicrosoft.com* portion of the tenant name.
+
+## Tip - no indent - what is pixel width?
+
+>**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+
+## Tip - indent - what is pixel width?
+
+   >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+
 ## Table - Right image
 
 **Result:**

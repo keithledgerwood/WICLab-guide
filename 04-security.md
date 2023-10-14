@@ -48,14 +48,14 @@ This will display the Okta Verify options.
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
 1. Scroll down and click **Save**.
 
-![alt_text](images/011/okta_verify_show_fastpass_button.png "image_tooltip")
+![alt_text](images/011/okta_verify_show_fastpass_button_r144_800.png "r 144 w 800")
 
 ### Add a rule to the "Any two factors" policy
 
 1. In the Admin Console, select **Security** > **Authentication Policies**.
 2. Select the  **Any two factors** authentication policy.
 3. Click **Add Rule**.
-4. Set the **Rule name** to **Okta FastPass**.
+4. Set the **Rule name** to **Okta FastPass**
 5. Set the following **IF** conditions for the rule:
 
     | IF | Value|
@@ -65,12 +65,13 @@ This will display the Okta Verify options.
     | Enter groups to include: |  **Digital Marketing** and **Digital Sales**|
      | Device state is: |  **Registered**|'
 
+    ![alt_text](images/011/auth_policy_rule_fastpass_if_300.png "r 144 w 300")
+
 6. Set the following **THEN** access and authentication settings for the rule:
 
     |THEN||
     |:-----|:-----|
     |User must authenticate with:| **Possession factor**|
-    |Possession factor constraints are|  None |
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
@@ -85,51 +86,70 @@ This will display the Okta Verify options.
 
 ### Add a Device Assurance Policy
 
-1. Select **Security** > **Device Assurance Policies**.
+With device assurance policies you can check security-related device attributes as part of your authentication policies.
+
+1. In the Admin Console, select **Security** > **Device Assurance Policies**.
 2. Click **Add a policy**.
-3. Configure the device assurance policy as follows:
+3. Set **Policy name** to **Windows 11**
+4. For **Platform**, select **Windows**.
+5. For **Minimum Windows version**, select **Windows 11(21H2)**.
+6. For **Lock Screen**, deselect **Windows Hello must be enabled**.
+7. Click **Save**.
 
-- Policy name: Restrict access to old operating systems
-- Platform: Choose the platform appropriate for the phone on which you installed the Okta Verify app (Android or iOS)
-- Minimum Android/iOS version > Customize: For Major, enter a value higher than your current OS version (even if it is a version not released yet)
+    ![alt_text](images/011/device_assurance_policy_add_win11_400.png "r 144 w 400")
 
-4. Click **Save**.
-5. Select **Security** > **Authentication policies**.
-6. Click **Any two factors**.
-7. Click **Add rule**.
-8. Configure the rule as follows:
+### Add Authentication Policy Rule with Device Assurance
 
-- Rule name: Access on New OS Only
-- Device state is: **Registered**
-- Device management is: **Not managed**
-- Device assurance policy is > Any of the following device assurance policies: Restrict access to old operating systems
-- Access is: **Allowed after successful authentication**
+1. In the Admin Console, select **Security** > **Authentication policies**.
+1. Click **Any two factors**.
+1. Click **Add rule**.
+1. Set the **Rule name** to **Windows 11 or higher**
+1. Set the following **IF** conditions for the rule:
 
-9. Click **Save**.
-10. For Catch-all Rule, click **Actions**, and then **Edit**.
-11. Configure the rule as follows:
+    | IF | Value|
+    |:-----|:-----|
+    |User's  type is| Accept the default |
+    |User's group membership includes|Select the **Digital Marketing** and **Digital Sales** groups.|
+     | Device state is: |  **Registered**|
+     | Device assurance policy is| Select the **Windows 11** policy|'
 
-- Access is: Denied
+    ![alt_text](images/011/auth_policy_rule_device_assurance_win11_300.png "r 144 w 400")
 
-12. Click **Save**.
+1. Set the following **THEN** access and authentication settings for the rule:
+
+    |THEN||
+    |:-----|:-----|
+    |User must authenticate with:| **Possession factor**|
+    |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
+
+1. Click **Save**.
+
+### Add a Deny Rule for non-compliant Devices
+
+1. Within the **Any two factors** policy, click **Add Rule**.
+1. Set the **Rule name** to **Deny Rule - Digital Marketing**
+1. Set the following **IF** conditions for the rule:
+
+    | IF | Value|
+    |:-----|:-----|
+    |User's  type is| Accept the default |
+    |User's group membership includes|Select the **Digital Marketing** and **Digital Sales** groups.|,
+
+1. Set the **THEN**  **Access is** settings to **Denied**.
+1. Click **Save**.
 
 ### Test the Device Assurance Policy
 
-1. On the phone on which you installed the Okta Verify app, open the app, and under your org and Admin username tap **Launch Dashboard** link.
-Because you are now trying to sign in from a device with OS version lower than allowed, your login will be denied and you will get a notification saying that you should update your system to be able to sign in.
+The lab Virtual Desktops are running Windows 10.
 
-2. Go back to your virtual environment.
-3. Select **Security** > **Authentication policies**.
-4. Click **Any two factors**.
-5. For Access on New OS Only, click **Actions** and then **Deactivate**.
-This will disable this policy rule.
-6. For Catch-all Rule, click **Actions** and then **Edit**.
-7. Configure the rule as follows:
+1. In your Virtual Desktop environment, try to sign in to as your new employee. You will be denied.
+1. Go back to your virtual environment.
+1. Select **Security** > **Authentication policies**.
+1. Click **Any two factors**.
+1. For the **Windows 11 or higher** rule, click **Actions** and then select **Deactivate**.
+1. For the **Deny Rule - Digital Marketing**, click **Actions** and then select**Deactivate**.
 
-- Access is: Allowed after successful authentication.
-
-8. Click **Save**.
-This will enable sign in from your phone again.
+This will allow sign in from the Virtual Desktop.
 
 ### Enable Okta ThreatInsight
 
