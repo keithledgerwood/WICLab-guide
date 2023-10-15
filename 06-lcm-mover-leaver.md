@@ -52,3 +52,7 @@ Deactivate the employee in the BambooHR tenant.
     > ***<Charlotte.Abbott@yourwiclabdomain.com>***
 
 9. You should see an error, as your account was deactivated.
+
+## Conclusion
+
+In this lab, we've turbocharged our HR game with Okta's dynamic prowess! Every job transition? Seamlessly mirrored in app access. Every farewell? Marked with instant, secure sign-offs. As we've delved into this automation arena, we've seen streamlined processes and top-notch security in action.

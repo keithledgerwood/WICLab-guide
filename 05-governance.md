@@ -23,7 +23,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 5. Enter your Okta Admin name and then select **You**.
 6. Click **Add Users**.
 
- ![alt_text](images/011/oig_ar_settings_add_team_members.png "image_tooltip")
+ ![alt_text](images/011/oig_ar_settings_add_team_members_400.png "image_tooltip")
 
 7. Verify that you are listed as a member of the **IT** team.
 
@@ -59,7 +59,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 4. Click **Continue**.
 
-    ![alt_text](images/011/oig_ar_create_request_screen_1.png "image_tooltip")
+    ![alt_text](images/011/oig_ar_create_request_screen_1_400.png "image_tooltip")
 
 5. To add an **Approval** step, click **Add to request type**.
 6. In the Approval panel, on the right, configure the approval as follows:
@@ -139,7 +139,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
 
-    ![alt_text](images/011/workflows_connection_okta.png "image_tooltip")
+    ![alt_text](images/011/workflows_okta_connection.png "image_tooltip")
 
 ### Create an API Connection
 
@@ -162,7 +162,7 @@ Keep this page open. Before you can set the **Header Value** for this API Connec
 1. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
 1. Click **Create** to complete the API Connection.
 
-    ![alt_text](images/011/workflows_connection_api_connector_config.png "image_tooltip")
+    ![alt_text](images/011/workflows_connection_api_connector_400.png "image_tooltip")
 
 ## Leveraging Flowpacks
 
@@ -274,3 +274,7 @@ The campaign can be completed manually once the review is done or automatically 
 4. Click **End Campaign**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
+
+## Conclusion
+
+In this lab, we've charted the exciting terrains of application access with a dash of approval spice! While employees are keen to dive into their toolkits, we've ensured that some access is granted with a nod of approval. And for our administrative maestros? Setting up those approvals was as easy as pie, and periodic access reviews? Piece of cake!

@@ -10,6 +10,8 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
 1. Sign out of Okta and close the browser.
 
+>**Tip:** Did you sign out of the Okta Admin Console?. I tend to forget sometimes.
+
 ### Install Okta Verify on your Virtual Machine
 
 1. Open the downloaded **Okta Verify Setup** executable file.
@@ -162,3 +164,7 @@ To enable Okta ThreatInsight, proceed with the following steps:
 3. Select **Log and enforce security based on threat level**.
 This setting will make Okta automatically deny access to sign-in requests that come from potentially malicious IP addresses that ThreatInsight detects.
 4. Click **Save**.
+
+## Conclusion
+
+In this lab, we've journeyed beyond traditional barriers, tapping into the wonders of Okta Verify and FastPass. Goodbye, cumbersome passwords and hello, sleek passwordless wonders! Together, we’ve fortified our defenses against those sneaky phishers and, yes, even our own little mishaps. Here's raising a toast to a future of ease, enhanced security, and fewer facepalms!

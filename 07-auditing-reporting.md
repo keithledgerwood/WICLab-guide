@@ -44,3 +44,7 @@ This will take you to the Reports page, where you can find Okta’s out-of-the-b
 This will take you to the Okta org Admin Console and open the Downloading report window. Your report should download automatically. If it does not, in the Downloading report window, click **Download report**.
 6. Close the Downloading report window.
 7. Open the downloaded "CurrentAssignmentsReport.csv" file and analyze the assignments of particular apps to the users.
+
+## Conclusion
+
+In this lab, we've taken a deep dive into Okta's world of audit and reporting! Seeing our organization's pulse in real-time, we've uncovered the magic of centralization. With these insights in hand, our security stance just got a powerful upgrade.
