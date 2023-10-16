@@ -185,7 +185,7 @@ Keep this page open. Before you can set the **Header Value** for this API Connec
 
 ### Download the **Title Change** flowpack
 
-1. Download the lab flowpack **titleChanged.flow**  from the link provided.
+1. [Download the lab flowpack **titleChanged.flow**](workflows/titleChanged.flow)
 
 ### Create a new Folder
 

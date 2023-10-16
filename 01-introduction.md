@@ -34,24 +34,8 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    |:-----|:-----|
    |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
-3. Return to this lab guide for more fun and excitement.
-
-## 3. Prerequisite Manual Set Up
-
-   |||
-   |:-----|:-----|
-   |![marc emoji](images/011/marc_r74_100.png "Marc says...")|*Hey there... we have some exciting enhancements and automated tasks planned for this lab. However, there are still some steps that, have not been automated, and need to be done manually.*|
-
-### Manual Tasks
-
- After you have initially signed into your Okta tenant, but before you've added your first employee, do the following:
-
- 1. Click [WIC Acceleration Lab](<https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV?usp=drive_link target="_blank"> "Manual Chores") and then select **Open Link in New Tab**
- 2. Follow the instructions in the **READ.ME** file.
-
-THANK YOU!
-
-*The above section will self-destruct in 5, 4, 3, 2 .... or more days.*
+3. Copy this code block.  Open Powershell within the Virtual Desktop, paste and run the command.
+```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
 
 ## An Overview of the Environment
 

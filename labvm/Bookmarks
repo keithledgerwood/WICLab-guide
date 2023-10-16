@@ -1,0 +1,52 @@
+{
+   "checksum": "8dd96cc336aafcad8a30df85060b298a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13341699362253899",
+            "date_last_used": "0",
+            "guid": "79b09ce5-76d9-473a-b1f4-fc58960fb7bb",
+            "id": "5",
+            "name": "Login | Microsoft 365",
+            "type": "url",
+            "url": "https://admin.microsoft.com"
+         }, {
+            "date_added": "13341699378839028",
+            "date_last_used": "0",
+            "guid": "03ee4fb2-12ac-45ae-ae5f-e379dd4fab25",
+            "id": "6",
+            "name": "Okta Workflows Flowpack",
+            "type": "url",
+            "url": "https://drive.google.com/drive/folders/105BjtBmVze3ruoFBdtSuPdW9-bDR8qqV"
+         } ],
+         "date_added": "13318407560822814",
+         "date_last_used": "0",
+         "date_modified": "13341699378839028",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13318407560822817",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13318407560822820",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
