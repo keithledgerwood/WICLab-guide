@@ -6,22 +6,22 @@ Remove-Item C:\Users\*\Desktop\logs -Recurse
 
 #Add Chrome Shortcut and launch as O365
 $shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\O365.lnk")
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Office 365.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "https://admin.microsoft.com"
 $shortcut.Save()
 
 #Shortcut to Flowpack
 $shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\FlowPack.lnk")
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Download Workflows Flowpack.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
+$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/workflows/titleChanged.flow"
 $shortcut.Save()
 
 
 #Add Chrome Shortcut to Okta Demo
 $shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\chrome.lnk")
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch TechCamps WIC Lab Guide.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "http://labs.demo.okta.com"
 $shortcut.Save()
@@ -36,11 +36,11 @@ Stop-Process -ProcessName explorer -Force
 Start-Process explorer 
 
 #Replace Chrome Preferences file
-iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/Preferences -OutFile .\Preferences  
+iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Preferences -OutFile .\Preferences  
 copy-item .\Preferences -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
 
 #Replace Chrome Bookmarks file
-iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/Bookmarks -OutFile .\Bookmarks  
+iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Bookmarks -OutFile .\Bookmarks  
 copy-item .\Bookmarks -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
 
 
