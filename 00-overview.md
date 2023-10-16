@@ -2,7 +2,7 @@
 
 ![Overview](images/011/lab_overview_image.png)
 
-(Version **0.10.16.pod4**)
+(Version **0.10.16.pod4.1**)
 
 In this workshop, you will experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.
 
@@ -12,4 +12,4 @@ Discover the future with our session on bolstering security through a passwordle
 
 Navigate the intricate pathways of application access, from requests to approvals to access certifications. Gain expertise in overseeing employee transitions with ease as they move within and out of the organization.
 
-You will Wrap up your learning journey with a comprehensive understanding of the essentials in audits and reporting, ensuring both insights and oversight.
+You will wrap up your learning journey with a comprehensive understanding of the essentials in audits and reporting, ensuring both insights and oversight.
