@@ -1,10 +1,319 @@
+### Sample 1
+
+1. Click **Add integration**.
+    >**Tip:** You can find your **Microsoft Tenant Name** in the launch panel.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Omit the *onmicrosoft.com* portion of the tenant name.
+
+### Sample 2
+
+1. Click **Add integration**. (double indent, smaller image, IMPORTANT)
+      >**IMPORTANT:** You can find your **Microsoft Tenant Name** in the launch panel.
+         ![tenant name](images/011/launch_O365_tenant_r144_240.png)
+Omit the *onmicrosoft.com* portion of the tenant name.
+
+## Tip - no indent - what is pixel width?
+
+>**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+
+## Tip - indent - what is pixel width?
+
+   >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+
+## Table - Right image
+
+**Result:**
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Image on the right](images/011/launch_O365_tenant_r144_300_224.png)|
+
+## Table - Left image
+
+**Result:**
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png)| Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
+
+## No table - indented image
+
+Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+Ignore the *onmicrosoft.com* portion of the tenant name.
+   ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+
+## No table - double indented
+
+**Result:** Outside of a table, images appear to be centered
+
+Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+Ignore the *onmicrosoft.com* portion of the tenant name.
+      ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+
+## Tip
+
+>**Tip:** Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Ignore the *onmicrosoft.com* portion of the tenant name.
+
+## Tip with image in table?
+>
+>**Tip:** Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
+         ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
+Ignore the *onmicrosoft.com* portion of the tenant name.
+
+## Alerts
+>
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+## Supported color models
+
+`#0969DA`
+`rgb(9, 105, 218)`
+`hsl(212, 92%, 45%)`
+
+## Emoji
+
+You can add emoji to your writing by typing :EMOJICODE:, a colon followed by the name of the emoji.
+
+:+1: This PR looks great - it's ready to merge! :shipit:
+:shark_yay:
+:wink:
+:laughing:
+:point_up:
+:heart:
+:blue_heart:
+:green_heart:
+:done_2:
+:point_left:
+:clapping:
+:idea:
+:smiley:
+
+## github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+## Emphasis
+
+Emphasis, aka italics, with *asterisks* or *underscores*.
+
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
+
+Combined emphasis with **asterisks and *underscores***.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+## Lists
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+
+* Or minuses
+
+* Or pluses
+
+## Links
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links.
+<http://www.example.com> or <http://www.example.com> and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+
+## Images
+
+Here's our logo (hover to see the title text):
+
+Inline-style:
+![alt text](images/011/launch_O365_tenant_r144_300_224.png "Logo Title Text 1")
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+## Code and Syntax
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+
+```javascript
+exports.onExecutePostLogin = async (event, api) => {
+    if(event.organization) {
+      api.idToken.setCustomClaim("license", event.organization.metadata.license);
+      api.idToken.setCustomClaim("organization", event.organization.display_name);
+    }
+};
+```
+
+## Footnotes
+
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].  
+
+You can also use words, to fit your writing style more closely[^note].
+
+[^1]: My reference.
+[^2]: Every new line should be prefixed with 2 spaces.  
+  This allows you to have a footnote with multiple lines.
+[^note]:
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+    This footnote also has been made with a different syntax using 4 spaces for new lines.
+
+### TABLES
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+## Blockquotes
+>
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+### Inline HTML
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+### Horizontal Rule
+
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+
+## Line Breaks
+
+Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+
+## Color
+
+$${\color{red}Red}$$
+$${\color{red}Hello}$$ $${\color{red}World}$$
+
+$${\color{lightgreen}Light \space Green}$$
+$${\color{blue}Your Microsoft Tenant Name can be found in the lab Launch Panel}$$
+
+## Red Apple
+
+RED APPLE (&#x1F34E;)
+
+## Image in a table
+
+1.
+
+ |||
+   |:-----|:-----|
+   ||![Alt text](images/011/launch_O365_domain_r74.png)|
+   |r74_584x488|![Alt text](images/011/xlaunch_O365_domain_r74_584x488.png)|
+   |r74_467_390|![Alt text](images/011/xlaunch_O365_domain_r74_467x390.png)|
+   |r74_373_311|![Alt text](images/011/xlaunch_O365_domain_r74_373x311.png)|
+   |r144_1172x336|![Alt text](images/011/x_workflows_r144_1172x336.png)|
+   |r144_937x269|![Alt text](images/011/x_workflows_r144_937x269.png)|
+
+## Image resolution
+
+## Image size
+
+Image tag (r74x373x311)
+ ![ image](images/011/xlaunch_O365_domain_r74_373x311.png)
+
+Image tag with width 100
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="100">
+
+  Image tag with width 200
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="200">
+
+  Image tag with width 373
+  <img src="images/011/xlaunch_O365_domain_r74_373x311.png" width="373">
+
 ## Self Service Solutions
 
-### Grab a cold beverage
-
-### Take a 15-minute break
-
-### Return fully charged to continue with the rest of the lab
+#
 
 |||
    |:-----|:-----|

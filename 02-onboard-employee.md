@@ -1,5 +1,3 @@
-## Introduction
-
 In this lab, we’ll explore the seamless integration of Okta with your HR system. Envision a world where new team members are onboarded with immediate, role-specific access, eliminating waiting times and ensuring productivity from day one. Our goal is to transform the onboarding process, making it both efficient, streamlined, and secure. Let’s get started on this journey to revolutionize the onboarding experience.
 
 ## Add a New Employee to BambooHR
@@ -12,12 +10,9 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
-   |Important step:|Example|
-   |:-----|:-----|
-   |
-    For the New Employee's work email address, **the email domain needs to match your unique Office 365 domain name** in the lab launch panel.|![Alt text](images/011/launch_O365_domain_r74.png)|
-
-2. Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
+    >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
+    ![domain name](images/011/launch_O365_domain_240.png)
+    The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
 2. Enter the following information to add a **New Employee**.
 
    |Attribute|Value|Example|
@@ -48,15 +43,13 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 4. Click **Add Integration**
 
-   |Important step:|Example|
-   |:-----|:-----|
-   |
-    The **BambooHR Subdomain** can be found in your lab **Launch Panel**.|![Alt text](images/011/launch_bamboohr_subdomain.png)|
+    >**Tip:** Check your **BambooHR Subdomain** in the launch panel; you will need this value for the next step.
+    ![bamboohr subdomain](images/011/launch_bamboohr_subdomain_240.png)|
 
 5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain** which can be found in the lab **Launch panel**.
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
-   ![alt_text](images/011/app_bamboohr_general_settings_r72_w800.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_general_settings_500.png "image_tooltip")
 7. Click **Next** to view the **Sign-On Options**.
 8. Click **Done** to accept the defaults.
 
@@ -69,13 +62,13 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 1. Select **Enable API integration**.
 1. Click **Authenticate with BambooHR**.
 
-   ![alt_text](images/011/app_bamboohr_provisioning.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_provisioning_600.png "image_tooltip")
 
    > **Note:** If you don't have an active BambooHR session, you will be prompted to sign in using the BambooHR username and password from the lab **Launch Panel**.
 
 5. After the success message appears, click **Save**.
 
-   ![alt_text](images/011/app_bamboohr_provisioning_verified_1200.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_verified_successfully.png "image_tooltip")
 
 ### Configure BambooHR to Okta Provisioning
 
@@ -100,12 +93,12 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 3. Select the new employee via the checkbox on the right.
 4. Click **Confirm Assignments**. This will open a confirmation dialog.
 
-   ![alt_text](images/011/app_bamboohr_import_results.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_import_results_600.png "image_tooltip")
 
 5. Select **Auto-activate users after confirmation**. This will send out an activation email for the new employee's Okta account.
 6. Click **Confirm**.
 
-   ![alt_text](images/011/app_bamboohr_import_confirm.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_import_confirm_300.png "image_tooltip")
 
    |||
    |:-----|:-----|
@@ -127,7 +120,7 @@ In order to access the new employee activation email, you'll need to sign into y
 2. Click **Login to Tenant** and sign in with your **labadmin** credentials from the lab **Launch Panel**.
 3. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 
-   ![alt_text](images/011/app_o365_outlook_access.png "image_tooltip")
+   ![alt_text](images/011/app_o365_outlook_access_500.png "image_tooltip")
 
 4. Locate and open the New Employee's *Welcome to Okta!* email.
 5. Click **Activate Okta Account**.
@@ -142,8 +135,4 @@ In order to access the new employee activation email, you'll need to sign into y
 
 ## Conclusion
 
-Congrats! In just a few minutes, you made your HR system the authoritative source of Identities. You configured attribute mapping and created a transformation such that the username and email address would be a certain way upon the import.
-
-Using these powerful features from Okta will allow you the flexibility to onboard users from multiple sources and create a single record containing only the attributes you want, from the sources that you want.
-
-This is critical not just to keep your data clean and business secure, but to onboard other Lines of Business and possibly other companies in an M&A scenario.
+In this lab, we've journeyed together into the world of seamless onboarding with Okta and your HR system. Gone are the days of tedious waiting times for access. Instead, imagine a future where every new employee jumps straight into action from day one with role-specific access.

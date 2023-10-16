@@ -1,5 +1,3 @@
-# Integrating Office 365
-
 ## Streamlining Workplace Productivity Tools
 
 In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 environment. By leveraging the Okta Integration Network, you'll experience firsthand how modern application integrations can be both straightforward and rapid. Through the benefits of automated provisioning and single sign-on, employees will be poised for instant productivity. And even as we focus on a user-friendly experience, remember, security is always at the forefront.
@@ -9,58 +7,53 @@ In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 en
 Okta maintains a specific integration for Microsoft Office 365 in the Okta Integration Network (OIN). To add this to your Okta org, follow these steps:
 
 1. In the Admin Console select **Applications** >  **Applications**.
-2. Click **Browse App Catalog**.
-3. Type *office 365* into the **Search...**, and then click **Microsoft Office 365**.
-4. Click **Add integration**.
+1. Click **Browse App Catalog**.
+1. In the Browse App Integration Catalog **Search...** bar, type *office 365* and then click **Microsoft Office 365**.
+1. Click **Add integration**.
 
-   |Important step:|Example|
-   |:-----|:-----|
-   |
-    Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Alt text](images/011/launch_O365_tenant.png)|
+    >**Tip:** For the next step, you will need the first part of your Office 365 **Tenant ID** from the lab launch panel.  
+    ![tenant name](images/011/launch_O365_tenant_r144_240.png)
+Be sure to leave off the *onmicrosoft.com* portion.
 
 5. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
 
-    ![alt_text](images/011/app_o365_general_tenant_name.png "image_tooltip")
+    ![alt_text](images/011/app_o365_general_tenant_name_500.png "image_tooltip")
 
 6. Scroll down and click **Next**.
 7. In the **Sign On Options** tab, select **WS-Federation**.
-8. Set the **Office 365 Admin Username** and **Office 365 Admin password** to the values from your lab **Launch Panel**.
+8. Set the **Office 365 Admin Username** and **Office 365 Admin password** to the values from the lab launch panel.
 9. Click **Fetch and Select**. This will display a list of your Office 365 Domains.
 
-    ![alt_text](images/011/app_o365_signon_wsfed.png "image_tooltip")
+    ![alt_text](images/011/app_o365_signon_wsfed_500.png "image_tooltip")
 
-10. Select your lab tenant domain
+10. Select the **Office 365 Domain** that corresponds to the **Domain Name** in your lab launch panel.
 
 > **Hint:**  Don't select the domain that ends in *onmicrosoft.com*.
 
-11. Click **Select**.
-
-    ![alt_text](images/011/app_o365_signon_domain_select.png "image_tooltip")
+![alt_text](images/011/app_o365_signon_domain_select_500.png "image_tooltip")
 
 ### Customization with Okta Expression Language
 
 12. In the Credential Details section, for **Application username format** select **Custom**.
+13. For the **Custom** expression, enter the following:
 
-   |Important step:|Example|
+    ```javascript
+    String.substringBefore(user.login,"@") + "@nn.mywiclab.com"
+    ```
+
+14. Be sure to replace  **nn.mywiclab.com** in the expression with your unique **Domain Name**.
+
+|Note:   ||
    |:-----|:-----|
-   |The expression that you need enter for the **Custom Application username format** transforms the new emoployee's email address domain to the Office 365 Domain you selected for federation. Your expression needs to reference your domain. |![Alt text](images/011/app_o365_custom_expression.png)|
+   ![Alt text](images/011/app_o365_custom_expression.png)| The expression for the **Custom Application username format** transforms the new employee's email address domain to the Office 365 Domain you selected for federation.|
 
-13. Enter the expression:
-
-    > String.substringBefore(user.login,\"@\") + "@nn.mywiclab.com"
-
-14. Be sure to replace the **nn.mywiclab.com** in the sample to match your domain.
 15. Click **Done**.
-
->**Tip:** If you copied and pasted the expression above and received an error upon clicking **Done**, check your quote marks, they may need to be typed manually.
 
 Congratulations! Your Okta Workforce Identity Cloud and Office 365 tenant are now configured for single sign-on from Okta to Office 365.
 
-> **Note:** You can't test single sign-on until you have enabled provisioning and assigned at least one user to this app in Okta.
-
 ## Configure Provisioning for Office 365
 
-The single sign-on configuration performed in the previous section allows your Okta org to assert identity information to your Microsoft 365 tenant and it allows your Microsoft 365 tenant to trust it. However that's not enough for single sign-on to complete. Each identity asserted by Okta must link to an existing account in Azure AD.
+The single sign-on configuration performed in the previous section allows your Okta org to assert identity information to your Microsoft 365 tenant. However for single sign-on to work, each identity asserted by Okta must link to an existing Azure AD account.
 
 The required Azure AD accounts could be created manually, or synced from a common identity source such as an on-premises AD but, in this case, you will set up provisioning in Okta so that it can automatically manage accounts in Azure AD. It will create accounts when users are assigned to the Office 365 app and deactivate these accounts when users are unassigned. It will also manage user attributes and licenses.
 
@@ -72,12 +65,12 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable provisioning, 
 2. Select the **Provisioning** tab.
 3. Click **Configure API Integration**.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image09.png "image_tooltip")
+    ![alt_text](images/009/image09_600.png "image_tooltip")
 
 4. Select **Enable API integration**.
 5. Click **Authenticate with Microsoft Office 365**.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image010.png "image_tooltip")
+    ![alt_text](images/009/image010_600.png "image_tooltip")
 
 6. Authenticate as the lab admin user for your Microsoft tenant.
 7. On the **Permissions Requested** dialog, click **Accept** to grant the permissions requested by the Okta Microsoft Graph Client.
@@ -98,7 +91,7 @@ Follow these steps to enable provisioning:
 1. On the **Provisioning** tab, under **Settings**, select **To App**
 2. Click **Edit** to set the options for provisioning from Okta  to Office 365.
 
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/009/image013-1.png "image_tooltip")
+    ![alt_text](images/011/app_o365_to_app_600.png "w600")
 
 3. For **Office 365 Provisioning Type** select **Universal Sync**.
 4. For **Create Users**, select **Enable**.
@@ -106,7 +99,7 @@ Follow these steps to enable provisioning:
 6. For **Deactivate Users**, select **Enable**.
 7. Click **Save**.
 
- ![alt_text](images/011/app_o365_to_app_enable.png "image_tooltip")
+ ![alt_text](images/011/app_o365_to_app_enable_500.png "image_tooltip")
 
 |||
    |:-----|:-----|
@@ -129,7 +122,7 @@ Office 365 app. Alternatively, you could assign the Office 365 app to existing g
 4. Set the **Description** to **Office 365 Users**
 5. Click **Save**.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image033.png "image_tooltip")
+    ![alt_text](images/009/image033.png "image_tooltip")
 
 ## Assign Group to Application
 
@@ -140,13 +133,13 @@ You can assign a group to an app by either assigning the group within the app de
 3. Select the **Applications** tab, and then click **Assign applications**.
 4. Find the the **Microsoft Office 365** app and click **Assign**.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image035.png "image_tooltip")
+    ![alt_text](images/009/image035_400.png "image_tooltip")
 
 5. In the list of Licenses, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 
-![alt_text](images/011/group_app_o365_proplus.png "image_tooltip")
+    >**Hint:**Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
 
->**Hint:**Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
+    ![alt_text](images/011/group_app_o365_proplus_500.png "image_tooltip")
 
 6. Scroll to the bottom of the page and click **Save and Go Back**.
 7. Click **Done**.
@@ -162,11 +155,11 @@ You will now assign the new employee to the *O365 Users* group. This will cause 
 3. Select the **People** tab within the **Office 365Users** group.
 4. Click **Assign people**.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image040.png "image_tooltip")
+    ![alt_text](images/009/image040_600.png "image_tooltip")
 
 5. Click **+** for the **New Employee** to assign them to the group.
 
-    ![alt_text](/images/011/group_assign_user.png "image_tooltip")
+    ![alt_text](/images/011/group_assign_user_600.png "image_tooltip")
 
 The **+** icon will change to say **Assigned**.
 6. Click **Done**.
@@ -183,15 +176,15 @@ You can now test single sign-on to Microsoft 365 for your new employee.
 
 3. Authenticate as the new employee. For example *<flynn.rider@04.mywiclab.com>*
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image043.png "image_tooltip")
+    ![alt_text](images/009/image043_600.png "image_tooltip")
 
 4. Click the **Microsoft Office 365 Word Online** app.
 5. Click **Yes** to stay signed in.
 6. In the top-right corner of the page, click the identity icon.
 7. Click **Sign out** to clear the session, and then close the browser.
 
-    ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image045.png "image_tooltip")
+    ![alt_text](images/009/image045_600.png "image_tooltip")
 
 ## Conclusion
 
-Congratulations! You have successfully integrated Microsoft Office into your Okta environment. Now your users will be able to enjoy a great Single Sign-On experience, not to mention quicker access with the help of Lifecycle Management. Considering how easy it was to integrate Microsoft Office 365, imagine how quick and easy it will be to integrate the rest of your application ecosystem!
+With Okta and Microsoft Office 365 now in sync, we've demystified the art of fast and fuss-free integrations. Ready for immediate productivity? Check! Top-notch security? Double-check!

@@ -12,7 +12,9 @@ In this lab, you will navigate the pathways of application access requests, demo
 5. Find for the **Everyone** group, and then click **Assign**.
 6. Click **Done**.
 
-### Configure Access Request Settings
+### Configure Teams and Access Request Settings
+
+#### Add the Okta admin to the IT team
 
 1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
 2. In the Access Requests Admin Console, select **Teams** > **All**.
@@ -20,13 +22,25 @@ In this lab, you will navigate the pathways of application access requests, demo
 4. Click **Add Member**.
 5. Enter your Okta Admin name and then select **You**.
 6. Click **Add Users**.
-7. Verify that you are listed as a member of the IT team.
+
+ ![alt_text](images/011/oig_ar_settings_add_team_members_400.png "400")
+
+7. Verify that you are listed as a member of the **IT** team.
+
+#### Update the Access Request Configuration for Okta
+
 8. In the Access Requests Admin Console, select **Settings**.
 9. Select the **Integrations** tab.
 10. Under Access Request Configurations for Okta, click **Edit connection**.
 11. Click **Update Connection.**
+
+#### Update Resources
+
 12. Select the **Resources** tab.
-13. For both Applications and Okta Groups, click **Manage Access** and select the **IT** team.
+13. For **Applications**, click **Manage Access**.
+14. Select the **IT** team, and then click **Save**.
+15. Select **Okta Groups**, and then click **Manage Access**.
+16. Select the **IT** team, and then click **Save**.
 
 ### Create a Request Type
 
@@ -41,26 +55,32 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Name|**Navan**|
     |Description |  **Corporate Travel App**|
     |Team |**IT**|
-    |Audience|**Everyone at** your demo org|'
+    |Audience|**Everyone at** your Okta tenant|'
 
 4. Click **Continue**.
+
+    ![ar request](images/011/oig_ar_create_request_screen_1_400.png "400")
+
 5. To add an **Approval** step, click **Add to request type**.
-6. In the Approval panel, configure the approval as follows:
+6. In the Approval panel, on the right, configure the Approval:
 
     |Approval attribute |Value|
     |:-----|:-----|
     |Text|**Admin Approval**|
-    |Make it a required task |  **Enabled**|
+    |Make it a required task | *Enabled*|
     |Type| **Approval task**|
-    |Assigned to |Select **A specific user...** and click **You**|'
+    |Assigned to |Select **A specific user...** and select **You**|
+    |Due Date| *No due date*|'
 
-7. To add an Action step, towards the bottom of the page, click **Action**, and then select **Assign individual app to user**.
-8. In the **Action** panel, configure the action as follows:
+    ![ar request](images/011/ar_step_apprval_admin_700.png "700x194")
+
+7. In the task panel, near the bottom of the page, click **Action**, and then select **Assign individual app to user**.
+8. In the **Action** panel, on the right, configure the Action:
 
     |Action attribute|Value|
     |:-----|:-----|
     |Text|**Assign to Navan**|
-    |Make it a required task |  **Enabled**|
+    |Make it a required task |  *Enabled*|
     |Type | **Assign individual app to user**|
     |Run automatically |**Enabled**|
     |Email address|**Requester email**|
@@ -72,15 +92,22 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 11. Click **Field or Task**.and then select **Admin Approval**
 12. Select **is approved**.
 13. Click **Publish**.
+
+ ![ar request](images/011/ar_navan_publish_700.png "700x194")
+
 14. Leave this browser session open as you will return back to it momentarily.
 
-### As the new employee, request access to an app
+### As the New Employee, request access to an app
 
 1. Open a new Chrome window using the Guest profile
-2. Sign in to your Okta org as the New Employee.
+2. Sign in to your Okta tenant as the New Employee.
 3. In the End-User Dashboard, open the **Okta Access Requests** app.
 5. In the App Catalog, locate **Navan**, and click **Request access**.
-6. Preview the request, and click **Submit new request**.
+6. Click **Submit new request**.
+7. Notice that there 0/1 tasks are complete. The access request is waiting for Admin Approval.
+
+    ![ar request](images/011/ar_awaiting_admin_approval_700.png "700x194")
+
 7. Leave this browser session open as you will return back to it momentarily.
 
 ### As the Okta admin, approve the access request
@@ -88,6 +115,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Return to your Okta admin browser session
 2. In the Access Requests Admin Console, select **Requests** > **Inbox**.
 3. Click on the Navan app request from the new employee, and then click **Approve**.
+
+![ar request](images/011/ar_approve_navan_600.png "700x194")
+
 4. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
 ### As the new employee, verify access to the app
@@ -106,7 +136,7 @@ Now, let's configure the following Okta connectors in your Okta Tenant with Work
 >**Note:** Your browser window now has an open tab open for the **Okta Admin Console** and another tab for the **Workflows Console**. Throughout this lab, you will be navigating between the two consoles, so pay close attention.
 
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
-3. Enter **okta** in the search bar, and then click **Okta**.
+3. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
 4. Optional. Modify the default **Connection Nickname**.
 5. Set **Domain** to the full domain of your Okta tenant.
  Be sure to include the **.okta.com** portion of the domain.
@@ -122,38 +152,30 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
 
-![alt_text](images/011/workflows_connection_okta.png "image_tooltip")
+    ![alt_text](images/011//workflows_connection_okta_600.png "600x144")
 
 ### Create an API Connection
 
 1. In the Workflows console, select **Connections**, and then click **New Connection**.
-2. Enter **api** in the search bar, and then click **API Connector**.
+2. In the **New Connection** dialog search bar, enter **api** and then click **API Connector**.
 3. Optional. Modify the default **Connection Nickname**.
 4. For **Auth Type** select **Custom**.
 5. Set **Header Name** to **Authorization**.
 
-Keep this page open. Before you can set the **Header Value** for this API Connection,  you'll need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
+Keep this page open. Before you can set the **Header Value** for this API Connection, you need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
 
 #### Create, copy and paste an API Token
 
-For the workflows in the Okta Workflow Pack to work, you will first need to create a token to connect Okta APIs for that :
+1. In the Okta Admin Console, select **Security** > **API** > **Tokens** tab.
+1. Click **Create Token**.
+1. Set the **token name** to **WIC Lab Token**.
+1. Click **Create token**.
+1. Click the copy button to copy the **Token Value** to the clipboard.
+1. Return to the **Workflows console** >  **New Connection** dialog.
+1. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
+1. Click **Create** to complete the API Connection.
 
-1. In the Okta Admin Console, select **Security** > **API**, and then select the **Tokens** tab
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img1.png "image_tooltip")
--->
-
-2. Set the Token name to **WIC Lab Token**
-3. Click **Create token**.
-4. Copy the **Token Value**.
-5. Return to the **Workflows console** >  **New Connection** dialog.
-6. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
-Click **Create** to complete the API Connection.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/image2.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img3.png "image_tooltip")
--->
+    ![alt_text](images/011/workflows_connection_api_600x215.png "600x215")
 
 ## Leveraging Flowpacks
 
@@ -163,59 +185,59 @@ Click **Create** to complete the API Connection.
 
 ### Download the **Title Change** flowpack
 
-1. Download the lab flowpack **titleChanged.flow**  from the link provided.
+1. [Download the lab flowpack **titleChanged.flow**](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/workflows/titleChanged.flow)
 
 ### Create a new Folder
 
 1. In the Workflows console, select **Flows**.
 2. In the **Folders** panel, create a new folder by clicking the **+** icon.
-3. Set the **Folder name** to **Title Change**.
+3. Set the **Folder name** to **Title Changed**.
 4. Optional. Set a **Folder Description**.
 5. Click **Save**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img12.png "image_tooltip")
--->
 
 ### Import the Flow into the Folder
 
-1. Click on the **...** next to the newly created folder and select Import
-2. Click **Choose file from computer**, and then click **Open**.
+1. Click the **...** next to the **Title Changed** folder,  and then select **Import**
 
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img13.png "image_tooltip")
+    ![alt_text](images/011/workflows_folder_ellipsis_400.png "322x68")
+2. Click **Choose file from computer**, choose the **titleChanged.flow** and then click **Open**.
 
 You have successfully imported the Flow.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img14.png "image_tooltip")
--->
+
+ ![alt_text](images/011/workflows_titlechanged_import_success_600.png "600x70")
 
 ### Modify the imported Flow
 
 There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow. You'll also need to specify your Okta tenant domain and your Okta admin account.
 
-1. Click on the Workflow to update the existing cards
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img15.png "image_tooltip")
--->
-2. In the **User Okta Profile Updated** card, and then set the **Connection** to your **Okta** connection.
-3. Update the first **Compose** card to contain your Okta tenant name. This card will set **varOktaTenantURL** to the value you entered.
-4. Update the next **Compose** card to contain your Okta admin login.  This card will set **varAdminLogin** to the value you entered.
+>**Tip:** To view a graphic of the complete TitleChanged flow, you can click **Flow Chart**when in edit mode.
+ ![flow chart](images/011/titlechanged_flowchart_access_240.png).
+ Here's a sneak peak look at the cards you will be changing: 1, 3, 8 and 23.
+ ![flow chart detail](images/011/titlechanged_flowchart_700.png)
+
+1. Click the **Title Changed** workflow to open it in edit mode.
+2. In the **User Okta Profile Updated** card, click **Choose Connection**.
+3. Set the contents of the first **Compose** card to your Okta tenant URL. That is, replace the example subdomain **demo-bronze-badger-226947** with your tenant subdomain.
+
+    ![alt_text](images/011/titlechanged_okta_connection_and_compose_card_600.png "600x134")
+
+4. Scroll to the right to locate the next  **Compose** card. It's the eighth card in the flow, and replace the existing login with your Okta admin login.
+
+    ![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")
+
 5. In the **API Connector Raw Request** card, set the **Connection** to your **API Connector** connection.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img16.png "image_tooltip")
--->
+
 6. Click **Save**
 
     > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img17.png "image_tooltip")
--->
+
 4. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img18.png "image_tooltip")
--->
+
+     ![flow is on](images/011/titlechanged_flow_is_on_240.png "240x124")
+
 You now have the Flow correctly configured and running.
 
-### Change the new employee's title
+### In BambooHR, change the New Employee's title
 
 In order to trigger this Flow, an action we're listening to should occur. In this case, an existing user will have their title updated.
 
@@ -227,14 +249,8 @@ In order to trigger this Flow, an action we're listening to should occur. In thi
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img21.png "image_tooltip")
--->
 3. Click **Import Now**.
 4. When the scan completes, confirm that one user was updated.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img22.png "image_tooltip")
--->
 
 This event will trigger the imported **Title Changed** flow, which creates and launches a certification campaign.
 
@@ -243,14 +259,10 @@ This event will trigger the imported **Title Changed** flow, which creates and l
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns.
 Campaigns can be created via API and the UI of the admin platform.
 
-### Verifying the Access Certification Campaign
+### Verify the Access Certification Campaign was created
 
-To verify that a certification campaign was created by the flowpack, you will need to perform the following actions:
-<!-->
-#### Validate the created campaign
+To verify that a certification campaign was created by the flowpack, you will need to perform the following actions as the Okta admin:
 
-Before proceeding with the certification campaign, make sure that the user has at least one application assigned and the user is able to access that application.
--->
 1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
 2. Verify that there is **Campaign** whose name starts with **Title Change:**.
 3. Click on the **Title Change:**campaign to see an overview of the campaign.
@@ -259,64 +271,21 @@ The page provides an overview of the campaign, the progress of the campaign, and
 
 >**Note:** Please notify a lab assistant if there is no campaign listed.
 
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img23.png "image_tooltip")
--->
-
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img26.png "image_tooltip")
--->
-
 ### Participating in an Access Certification Campaign
 
 For the purposes of this lab, we decided to assign the Okta tenant administrator ( You ) to be the certifier of this particular campaign. However, you will need to access the **Okta Access Certification Reviews** app from your End User Dashboard.
 
-### Review the Access Certification Campaign
+1. In the Okta admin's End User Dashboard, launch the **Okta Access Certification Reviews** app.
+2. Click on the **Title Change** to see an overview of the campaign.
+3. You will see all applications assigned to this user.
 
-1. In the Okta Admin Console, click on the *waffle icon* in the top right corner, and select  **My end user dashboard**,
- by clicking on the **Drop down menu** in the top right corner and click on **My End User Dashboard**
-2. In the End User Dashboard, launch the **Okta Access Certification Reviews** app.
-3. Click on the **Title Change** to see an overview of the campaign.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img24.png "image_tooltip")
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img25.png "image_tooltip")
-
-> **Note:** This app is tied to a group where membership is dynamically managed within Okta. If an Okta user is flagged as a reviewer in any active campaign, they will be in the group and see the application on the dashboard.
-
-You are presented with a list of campaigns for which the user is a reviewer. You see a summary of information about each active campaign.
-
-3. On the following page, you can see all of the open and closed review campaigns. Click on the **Campaign Name**
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img27.png "image_tooltip")
--->:
-
-4. You will see all applications assigned to this user.
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img28.png "image_tooltip")
--->
 > For each item, you have three options as a reviewer: Approve (leave the access as is), Revoke (remove access or flag for it to be removed), or Reassign (to another Okta user). You will see the icons or icons and words depending on the screen resolution.
 
 5. Click on the name of one of the applications to see information about the user and resource
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img29.png "image_tooltip")
--->
 This information is provided to help the reviewer in making their decision. Currently, it includes user details and resource details, but there are plans to include fine-grained access information (if available) and review history.
-
 6. Click **Approve**.
-<!-->
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img30.png "image_tooltip")
--->
 7. When prompted, enter a **Justification**,  and then click the **Submit**.
-<!--
-8. Select one user and click the Revok (X) button
 
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img31.png "image_tooltip")
-
-After each action, you will see a message displayed, and the item will disappear from the view (they can be found under the Closed tab). When all are actioned, you will get confirmation that you are done with the reviews.
-
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img32.png "image_tooltip")
--->
 ### End the Campaign
 
 The campaign can be completed manually once the review is done or automatically after the **Set duration** passes.
@@ -327,6 +296,7 @@ The campaign can be completed manually once the review is done or automatically 
 4. Click **End Campaign**.
 
     ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
-<!--
-![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img34.png "image_tooltip")
--->
+
+## Conclusion
+
+In this lab, we've charted the exciting terrains of application access with a dash of approval spice! While employees are keen to dive into their toolkits, we've ensured that some access is granted with a nod of approval. And for our administrative maestros? Setting up those approvals was as easy as pie, and periodic access reviews? Piece of cake!
