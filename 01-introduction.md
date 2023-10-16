@@ -1,6 +1,6 @@
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.14.1**)
+Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.16.pod4**)
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -32,7 +32,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
  |||
    |:-----|:-----|
-   |![Alt text](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
+   |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
 3. Return to this lab guide for more fun and excitement.
 
@@ -40,7 +40,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
    |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Hey there... we have some exciting enhancements and automated tasks planned for this lab. However, there are still some steps that, have not been automated, and need to be done manually.*|
+   |![marc emoji](images/011/marc_r74_100.png "Marc says...")|*Hey there... we have some exciting enhancements and automated tasks planned for this lab. However, there are still some steps that, have not been automated, and need to be done manually.*|
 
 ### Manual Tasks
 

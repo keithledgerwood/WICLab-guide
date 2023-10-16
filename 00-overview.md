@@ -2,7 +2,7 @@
 
 ![Overview](images/011/lab_overview_image.png)
 
-(Version **0.10.14.1**)
+(Version **0.10.16.pod4**)
 
 In this workshop, you will experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.
 
