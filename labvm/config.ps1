@@ -13,7 +13,7 @@ $shortcut.Save()
 
 #Shortcut to Flowpack
 $shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Download Workflows Flowpack.lnk")
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/workflows/titleChanged.flow"
 $shortcut.Save()
@@ -21,13 +21,13 @@ $shortcut.Save()
 
 #Add Chrome Shortcut to Okta Demo
 $shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch TechCamps WIC Lab Guide.lnk")
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Lab Guide.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "http://labs.demo.okta.com"
 $shortcut.Save()
 
 #Add download folder to desktop
-New-Item "$Home\Desktop\Download" -ItemType Directory
+#New-Item "$Home\Desktop\Download" -ItemType Directory
 
 #Remove pinned icons from taskbar
 Remove-Item -Path "$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*" -Force -Recurse 
