@@ -26,6 +26,13 @@ $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "http://labs.demo.okta.com"
 $shortcut.Save()
 
+#Shortcut for Notepad++ on desktop
+ $shell = New-Object -comObject WScript.Shell
+ $shortcut = $shell.CreateShortcut("$Home\Desktop\Notepad++.lnk")
+ $shortcut.TargetPath = "C:\Program Files (x86)\Notepad++\notepad++.exe"
+ $shortcut.Save() 
+
+
 #Add download folder to desktop
 #New-Item "$Home\Desktop\Download" -ItemType Directory
 
@@ -34,6 +41,14 @@ Remove-Item -Path "$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pi
 Remove-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband" -Force -Recurse 
 Stop-Process -ProcessName explorer -Force
 Start-Process explorer 
+
+#Close explorer window that pops up
+$a = (New-Object -comObject Shell.Application).Windows() | 
+ ? { $_.FullName -ne $null} | 
+ ? { $_.FullName.toLower().Endswith('\explorer.exe') }    $a | % {  $_.Quit() } 
+
+$a | % {  $_.Quit() } 
+
 
 #Replace Chrome Preferences file
 iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Preferences -OutFile .\Preferences  
