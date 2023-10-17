@@ -1,6 +1,6 @@
 # Okta **WIC-Labs**
 
-*Lab guide version: 0.10.17.01*
+*Lab guide version: 0.10.17.02*
 
 ![Overview](images/011/lab_overview_image.png "Lab Diagram")
 
