@@ -1,8 +1,8 @@
 {
-    "id": "wic_acceleration",
+    "id": "techcamps_wic",
     "title": "TechCamps - WIC Lab",
     "state": "hidden",
-    "duration": "3 hours",
+    "duration": "8 hours",
     "description": "In this Workshop, you will learn how to integrate Okta with different identity directories and applications.",
     "idp_type": "workforce-identity",
     "overview": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/00-overview.md",
