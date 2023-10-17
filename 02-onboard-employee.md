@@ -6,7 +6,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
 1. To access the **BambooHR** dashboard, in your lab  **Launch Panel**, click **Launch**.
 1. Sign in to **BambooHR** with the username and password provided in the **Launch Panel**
-1. If prompted with **Should we always trust this browser?**, click the appropriate button.
+1. If prompted with **Should we always trust this browser?**, click **Yes**.
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
@@ -23,7 +23,6 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |Hire Date |*Today*|*Today*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
-   |Location | **Remote Worker**| *Remote Worker*|
 
 5. Click **Save**.
 
@@ -31,7 +30,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
 Okta maintains a specific integration for BambooHR in the Okta Integration Network (OIN), that supports Okta SSO using SAML, and Provisioning using APIs.  In this section of the lab our focus will be on sourcing users from BambooHR using Okta Import.
 
-1. To access your **Workforce Identity Cloud** Admin Console, in the **Launch Panel**, click **Launch**.
+1. To access your **Workforce Identity Cloud**, in the **Launch Panel**, click **Launch**.
 1. In the Admin Console select **Applications** > **Applications**.
 2. Click **Browse App Catalog**.
 
@@ -55,7 +54,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 ### Enable Provisioning via API Integration
 
-In this section you will enable inbound provisioning from BambooHR to Okta.  
+In this section you will enable inbound provisioning from BambooHR to Okta.
 
 1. Select the **Provisioning** tab.
 1. Click **Configure API Integration**.
@@ -93,12 +92,12 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 3. Select the new employee via the checkbox on the right.
 4. Click **Confirm Assignments**. This will open a confirmation dialog.
 
-   ![alt_text](images/011/app_bamboohr_import_results_600.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_import_results_600.png "select and confirm new employee")
 
 5. Select **Auto-activate users after confirmation**. This will send out an activation email for the new employee's Okta account.
 6. Click **Confirm**.
 
-   ![alt_text](images/011/app_bamboohr_import_confirm_300.png "image_tooltip")
+   ![alt_text](images/011/app_bamboohr_import_confirm_300.png "auto activate after confirmation")
 
    |||
    |:-----|:-----|
@@ -126,7 +125,7 @@ In order to access the new employee activation email, you'll need to sign into y
 5. Click **Activate Okta Account**.
 
    >This will open a new browser window where you, as the admin, will setup the new employees Okta account.
-6. Set a **password** and set up **Okta Verify**.
+6. Set a **password** and optionally set up **Okta Verify**.
 7. The Okta End-user dashboard will display with the apps that were assigned to the new employee.
    >**Note:** The new employee was assigned to two applications **BambooHR** and **Marketo**.
    *Why is BambooHR not displayed to the user?*
