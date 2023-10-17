@@ -21,6 +21,14 @@
    |:-----|:-----|
    |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
 
+### Part of a list
+
+ |||
+   |:-----|:-----|::----|
+ 4. |Open Powershell |![Image on the left](images/011/powershell_icon_25.png   "25")| within the Virtual Desktop, paste and run the command.|
+
+### Icon mid sentence
+
 ### Sample 1
 
 1. Click **Add integration**.

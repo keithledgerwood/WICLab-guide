@@ -36,8 +36,13 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    |:-----|:-----|
    |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
-3. Copy this code block.  Open Powershell within the Virtual Desktop, paste and run the command.
+3. Copy this code block.
 ```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
+
+ |||
+   |:-----|:-----|
+
+ 4. |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
 
 ## An Overview of the Environment
 
