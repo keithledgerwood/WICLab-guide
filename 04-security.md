@@ -1,10 +1,8 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
-## Setup Okta FastPass on the Virtual Machine
+## Setup Okta FastPass on the Virtual Desktop
 
->**Tip:** You may want paste your Okta tenant url into Notepad for easy copying and pasting in this lab.
-
-### Download Okta Verify on your Virtual Machine
+### Download Okta Verify on your Virtual Dekstop
 
 1. In the Okta Admin Console, select **Settings** > **Downloads**.
 1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
@@ -12,7 +10,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 >**Tip:** Did you sign out of the Okta Admin Console?. I tend to forget sometimes.
 
-### Install Okta Verify on your Virtual Machine
+### Install Okta Verify on your Virtual Desktop
 
 1. Open the **Okta Verify Setup** executable located in the Download folder shortcut on the desktop.
 2. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
@@ -31,8 +29,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 1. Click **Next**.
 This will open your Okta tenant's sign-in page.
 
-1. Sign in with your **New Employee** username and password and Okta Verify MFA.
-Upon successful authentication, the new employee account will be added to the Okta Verify desktop app.
+1. Sign in with your **New Employee** username and password.
 
 ## Configure Security Policies and FastPass
 
@@ -42,11 +39,9 @@ Upon successful authentication, the new employee account will be added to the Ok
 
 ## Enable Okta Verify for FastPass Authentication
 
-1. In the Admin Console, select **Security** > **Authenticators** > **Setup** tab.
+1. In the Admin Console, select **Security** > **Authenticators**.
 
 1. For **Okta Verify**, click **Actions**, and then select **Edit**.
-This will display the Okta Verify options.
-
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
 
     ![alt_text](images/011/okta_verify_show_fastpass_button_600.png "Show FastPass button")
@@ -59,7 +54,6 @@ This will display the Okta Verify options.
 3. Click **Add Rule**.
 4. Set the **Rule name** to **Okta FastPass**
 5. Set the following **IF** conditions for the rule:
-
     | IF | Value|
     |:-----|:-----|
     |User's  type is| Accept the default |
@@ -77,12 +71,13 @@ This will display the Okta Verify options.
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
-8. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
+8. Drag the **Okta FastPass** rule up to make it **Priority 1** in the list of rules for the policy.
 
 ### Experience an Employee Passwordless Login
 
-1. Launch a Chrome browser window using the Guest profile.
-1. Enter your Okta tenant URL in the browser.
+1. In the Virtual Desktop, launch a Chrome browser window using the Guest profile.
+1. Enter your Okta tenant URL in the browser. You will be automatically authenticated to your End-User Dashboard.
+1. Sign out of your Okta tenant.
 1. At the Okta login, click **Sign in with Okta FastPass** . You will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up User Behavioral Analytics
@@ -91,12 +86,13 @@ This will display the Okta Verify options.
 
 With device assurance policies you can check security-related device attributes as part of your authentication policies.
 
+1. Sign in to your Okta tenant as the Okta admin.
 1. In the Admin Console, select **Security** > **Device Assurance Policies**.
-2. Click **Add a policy**.
-3. Set **Policy name** to **Windows 11**
-4. For **Platform**, select **Windows**.
-5. For **Minimum Windows version**, select **Windows 11(21H2)**.
-6. For **Lock Screen**, deselect **Windows Hello must be enabled**.
+1. Click **Add a policy**.
+1. Set **Policy name** to **Windows 11**
+1. For **Platform**, select **Windows**.
+1. For **Minimum Windows version**, select **Windows 11(22H2)**.
+1. For **Lock Screen**, deselect **Windows Hello must be enabled**.
 7. Click **Save**.
 
     ![alt_text](images/011/device_assurance_policy_add_win11_400.png "r 144 w 400")
@@ -114,7 +110,8 @@ With device assurance policies you can check security-related device attributes 
     |User's  type is| Accept the default |
     |User's group membership includes|Select the **Digital Marketing** and **Digital Sales** groups.|
      | Device state is: |  **Registered**|
-     | Device assurance policy is| Select the **Windows 11** policy|'
+     | Device assurance policy is| Any of the following device assurance polices|
+     | |Select the **Windows 11** policy|
 
 1. Set the following **THEN** access and authentication settings for the rule:
 
@@ -124,21 +121,22 @@ With device assurance policies you can check security-related device attributes 
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 1. Click **Save**.
 1. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
-![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "r 144 w 600")
+![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "Okta FastPass rule")
 
-### Assign High Security Apps Policy to Marketo
+### Add Marketo to the High Security Apps Policy
 
-1. In the Admin Console, select **Applications** > **Applications**.
+1. In the **High Security Apps** policy, select the **Applications** tab.
+1. Click **Add app**.
 1. Select the **Marketo** app, and then select the **Sign On** tab.
-1. In User Authentication section, click **Edit**.
-1. For **Authentication policy**, select **High Security Apps**.
-1. Click **Save**.
+1. For **Marketo**, click **Add**, and then click **Done**.
 
-    ![alt_text](images/011/auth_policy_high_security_600.png "r 144 w 600")
+    ![alt_text](images/011/auth_policy_high_security_apps_marketo_600.png "high security policy")
 
 ### Test the Device Assurance Policy
 
 The lab Virtual Desktops are running Windows 10.
+
+1. In the Okta Verify app **Accounts** page, click the device health icon. EDIT THIS
 
 1. In your Virtual Desktop environment, sign in as your new employee.
 1. Select the **Marketo** app. You will be denied.
