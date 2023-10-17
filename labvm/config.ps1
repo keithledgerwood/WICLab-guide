@@ -1,6 +1,6 @@
 # Remove all shortcuts
 #must be run as admin
-Remove-Item C:\Users\*\Desktop\*lnk –Force
+Remove-Item C:\Users\*\Desktop\*lnk -Force
 Remove-Item C:\Users\*\Desktop\Microsoft -Recurse
 Remove-Item C:\Users\*\Desktop\logs -Recurse
 
