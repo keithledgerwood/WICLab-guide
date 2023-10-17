@@ -1,8 +1,8 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
-## Setup Okta Verify and Okta FastPass
+## Setup Okta FastPass on the Virtual Machine
 
->**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+>**Tip:** You may want paste your Okta tenant url into Notepad for easy copying and pasting in this lab.
 
 ### Download Okta Verify on your Virtual Machine
 
@@ -14,7 +14,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ### Install Okta Verify on your Virtual Machine
 
-1. Open the downloaded **Okta Verify Setup** executable file.
+1. Open the **Okta Verify Setup** executable located in the Download folder shortcut on the desktop.
 2. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
 3. Click **Finish**.
@@ -48,9 +48,9 @@ Upon successful authentication, the new employee account will be added to the Ok
 This will display the Okta Verify options.
 
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
-1. Scroll down and click **Save**.
 
-![alt_text](images/011/okta_verify_show_fastpass_button_r144_800.png "r 144 w 800")
+    ![alt_text](images/011/okta_verify_show_fastpass_button_600.png "Show FastPass button")
+1. Scroll down and click **Save**.
 
 ### Add a rule to the Standard Security Apps policy
 
@@ -77,6 +77,7 @@ This will display the Okta Verify options.
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
+8. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
 
 ### Experience an Employee Passwordless Login
 
@@ -121,10 +122,9 @@ With device assurance policies you can check security-related device attributes 
     |:-----|:-----|
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
-
 1. Click **Save**.
-
- ![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "r 144 w 600")
+1. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
+![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "r 144 w 600")
 
 ### Assign High Security Apps Policy to Marketo
 
@@ -152,7 +152,9 @@ The lab Virtual Desktops are running Windows 10.
 
     ![alt_text](images/011/auth_policy_switch_marketo_600.png "r 144 w 600")
 
-Your new employee will now be able to sign in to Marketo from the Virtual Desktop.
+Your new employee will now be able to sign in to ""Marketo"" app from the Virtual Desktop.
+
+>**Note:** With the exception of BambooHR and Office 365, the other apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
 
 ### Enable Okta ThreatInsight
 

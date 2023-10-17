@@ -39,10 +39,11 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 3. Copy this code block.
 ```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
 
- |||
-   |:-----|:-----|
+4. In the Virtual Desktop, open Powershell, and then paste and run the command.
 
- 4. |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
+   |||
+   |:-----|:-----|
+   |![Image on the left](images/011/powershell_icon_25.png   "25")| |
 
 ## An Overview of the Environment
 

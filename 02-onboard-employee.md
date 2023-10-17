@@ -13,7 +13,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
     >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
     ![domain name](images/011/launch_O365_domain_240.png)
     The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
-2. Enter the following information to add a **New Employee**.
+1. Enter the following information to add a **New Employee**.
 
    |Attribute|Value|Example|
    |:-----|:-----|:----|
@@ -24,7 +24,8 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
 
-5. Click **Save**.
+1. Click **Save**.
+1. Close the browser tab for **BambooHR**.
 
 ## Add the BambooHR App to Okta
 
