@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.10.16.05*
+*Lab guide version: 0.10.17.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -18,32 +18,31 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an admin account was created that corresponds to the email address that you used to sign in to labs.demo.okta.com.
 
-1. Check your inbox for an email from **The Okta Team** with the subject line **Your New Okta account**.
-2. Copy the **Temporary password**, and then click **Sign On**.
-3. Follow the instructions on the screen to sign on to your Okta tenant.
-
-> **Note:**  After successful sign on, you will see the Okta End-User Dashboard.
-
-4. Sign out of your Okta tenant and close the browser tab.
-5. Return to this lab guide for more fun and excitement.
+1. Check your email inbox for an email from **The Okta Team** with the subject line **Your New Okta account**.
+1. Copy the **Temporary password**, and then click **Sign On**.
+1. Follow the instructions on the screen to sign in to your Okta tenant. After a successful sign in, you will see the **Okta End-User Dashboard**.
+1. Sign out of your Okta tenant and close the browser tab.
+1. Return to this lab guide for more fun and excitement.
 
 ## 2. Launch your Virtual Desktop
 
-1. To access the **Virtual Desktop**, in the  **Launch Panel** on the left, click **Launch**. This will open a new browser tab.
+1. In the  **Launch Panel** on the left, for **Virtual Desktop**,click **Launch**. This will open a new browser tab.
 2. Click **Launch Virtual Infrastructure**.
 
- |||
-   |:-----|:-----|
-   |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
+   |||
+      |:-----|:-----|
+      |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
 3. Copy this code block.
 ```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
 
-4. In the Virtual Desktop, open Powershell, and then paste and run the command.
+4. In the Virtual Desktop, open PowerShell, and then paste and run the code block.
 
    |||
    |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_25.png   "25")| |
+   |![Image on the left](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
+
+5. Close the PowerShell window.
 
 ## An Overview of the Environment
 
