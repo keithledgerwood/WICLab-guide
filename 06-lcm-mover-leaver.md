@@ -6,27 +6,29 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 In the Add Job Information dialog, select a different department, and then click Save.
 
+1. Sign in to **BambooHR** with the credentials provided in the Launch Panel.
 1. In the BambooHR dashboard search for and select your employee.
+1. On the **Job** tab, for **Job Information**, click **Add Entry**.
+1. For the **Department**, select **Sales**.
+1. Optional. Select a new **Job Title**.
+1. Click **Save**.
 
-2. On the **Job** tab, for **Job Information**, click **Add Entry**.
+    ![alt_text](images/011/flynn_rider_sales_400.png "Flynn Rider - Sales")
 
-3. In the **Department** field, select **Sales**, and then click **Save**.
-
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/mover-bamboo.png "image_tooltip")
-
-### Import changes to Okta
+### Import BambooHR changes to Okta
 
 1. In the Okta Admin Console select **Applications > Applications**, and then select **BambooHR**.
-2. On the **Import tab**, click **Import Now**.
-3. In the Okta Admin Console select **Directory > Groups**.
-4. Verify that the employee was automatically assigned to the **Sales**group and has access to the new set of Apps.
+1. On the **Import** tab, click **Import Now**.
+1. Click **Ok** when the scan completes.
+1. In the Okta Admin Console select **Directory > Groups**.
+1. Verify that the employee was automatically assigned to the **Sales** group and has access to the new set of Apps.
 
-### Changes to Okta End-user Dashboard
+### Verify changes to Okta End-user Dashboard
 
 1. Open a new browser window that is not signed into Okta.
-2. Navigate to your Okta tenant. e.g. ***demo-xxxx-xxxx-nnnn*.okta.com**
-3. Authenticate as your new employee. For example ***<flynn.rider@04.mywiclab.com>***
-4. You should see a new set of apps, that were assigned to your employee based on their newly assigned *Department*.
+2. Enter your Okta tenant URL in the browser.
+3. Authenticate as your new employee.
+4. Notice that you no longer have access to **Marketo**, but you do have access to **Salesforce**. Your app assignments changed based on the change in your group membership.
 
 |||
    |:-----|:-----|
@@ -34,24 +36,30 @@ In the Add Job Information dialog, select a different department, and then click
 
 ## Employee Termination
 
-Deactivate the employee in the BambooHR tenant.
+### Deactivate the employee in the BambooHR tenant
 
-1. In the **People** tab, select your newly added user, change its' **Status** to *Inactive* and click **Save Changes**.
+1. In the BambooHR dashboard search for and select your employee.
+1. On the **Personal** tab, change the **Status** to **Inactive**.
+1. Click **Save Changes**.
 
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/deactivate-user-bhr.jpg "image_tooltip")
+    ![alt_text](images/011/flynn_rider_inactive_400.png "flynn - inactive")
 
-3. Open your Okta administration UI, navigate to **Applications > Applications**, and select the BambooHR app definition to verify user profile and check if it was deactivated in Okta.
+### Import BambooHR changes to Okta
 
-4. In the **Import tab**, click **Import Now**, and confirm changes to your user by selecting them and clicking **Confirm Assignments**.
+1. In the Okta Admin Console select **Applications** > **Applications**, and then select **BambooHR**.
+1. On the **Import** tab, click **Import Now**.
+1. Click **Ok** when the scan completes.
 
-5. Navigate to **Directory > Users** to check if your user status has changed.
-6. Open a new browser window that is not signed into Okta.
-7. Navigate to your Okta tenant. e.g. ***yourwiclabdomain*.okta.com**
-8. Authenticate as your test user: e.g.
+### Verify Employee Status in Okta
 
-    > ***<Charlotte.Abbott@yourwiclabdomain.com>***
+1. In the Okta Admin Console select  **Directory** > **People**.
+1. Verify that your employee's status is **Deactivated**.
 
-9. You should see an error, as your account was deactivated.
+    ![alt_text](images/011/flynn_rider_deactivated_okta_600.png "flynn - deactivated")
+
+1. Open a new browser window that is not signed into Okta.
+1. Enter your Okta tenant URL in the browser.
+1. Attempt to authenticate as your test user, and you will receive an error due to your deactivated account status.
 
 ## Conclusion
 

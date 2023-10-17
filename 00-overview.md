@@ -1,8 +1,8 @@
 # Okta **WIC-Labs**
 
-![Overview](images/011/lab_overview_image.png)
+*Lab guide version: 0.10.17.02*
 
-(Version **0.10.16.pod4.2**)
+![Overview](images/011/lab_overview_image.png "Lab Diagram")
 
 In this workshop, you will experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.
 
