@@ -1,8 +1,8 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
-## Setup Okta Verify and Okta FastPass
+## Setup Okta FastPass on the Virtual Machine
 
->**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
+>**Tip:** You may want paste your Okta tenant url into Notepad for easy copying and pasting in this lab.
 
 ### Download Okta Verify on your Virtual Machine
 
@@ -14,7 +14,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ### Install Okta Verify on your Virtual Machine
 
-1. Open the downloaded **Okta Verify Setup** executable file.
+1. Open the **Okta Verify Setup** executable located in the Download folder shortcut on the desktop.
 2. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
 3. Click **Finish**.
@@ -48,14 +48,14 @@ Upon successful authentication, the new employee account will be added to the Ok
 This will display the Okta Verify options.
 
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
+
+    ![alt_text](images/011/okta_verify_show_fastpass_button_600.png "Show FastPass button")
 1. Scroll down and click **Save**.
 
-![alt_text](images/011/okta_verify_show_fastpass_button_r144_800.png "r 144 w 800")
-
-### Add a rule to the "Any two factors" policy
+### Add a rule to the Standard Security Apps policy
 
 1. In the Admin Console, select **Security** > **Authentication Policies**.
-2. Select the  **Any two factors** authentication policy.
+2. Select the  **Standard Security Apps** authentication policy.
 3. Click **Add Rule**.
 4. Set the **Rule name** to **Okta FastPass**
 5. Set the following **IF** conditions for the rule:
@@ -77,6 +77,7 @@ This will display the Okta Verify options.
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
 7. Click **Save**.
+8. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
 
 ### Experience an Employee Passwordless Login
 
@@ -100,10 +101,10 @@ With device assurance policies you can check security-related device attributes 
 
     ![alt_text](images/011/device_assurance_policy_add_win11_400.png "r 144 w 400")
 
-### Add Authentication Policy Rule with Device Assurance
+### Add Device Assurance Rule to High Security Apps Policy
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
-1. Click **Any two factors**.
+1. Click **High Security Apps**.
 1. Click **Add rule**.
 1. Set the **Rule name** to **Windows 11 or higher**
 1. Set the following **IF** conditions for the rule:
@@ -115,43 +116,45 @@ With device assurance policies you can check security-related device attributes 
      | Device state is: |  **Registered**|
      | Device assurance policy is| Select the **Windows 11** policy|'
 
-    ![alt_text](images/011/auth_policy_rule_device_assurance_win11_300.png "r 144 w 400")
-
 1. Set the following **THEN** access and authentication settings for the rule:
 
     |THEN||
     |:-----|:-----|
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
+1. Click **Save**.
+1. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
+![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "r 144 w 600")
 
+### Assign High Security Apps Policy to Marketo
+
+1. In the Admin Console, select **Applications** > **Applications**.
+1. Select the **Marketo** app, and then select the **Sign On** tab.
+1. In User Authentication section, click **Edit**.
+1. For **Authentication policy**, select **High Security Apps**.
 1. Click **Save**.
 
-### Add a Deny Rule for non-compliant Devices
-
-1. Within the **Any two factors** policy, click **Add Rule**.
-1. Set the **Rule name** to **Deny Rule - Digital Marketing**
-1. Set the following **IF** conditions for the rule:
-
-    | IF | Value|
-    |:-----|:-----|
-    |User's  type is| Accept the default |
-    |User's group membership includes|Select the **Digital Marketing** and **Digital Sales** groups.|,
-
-1. Set the **THEN**  **Access is** settings to **Denied**.
-1. Click **Save**.
+    ![alt_text](images/011/auth_policy_high_security_600.png "r 144 w 600")
 
 ### Test the Device Assurance Policy
 
 The lab Virtual Desktops are running Windows 10.
 
-1. In your Virtual Desktop environment, try to sign in to as your new employee. You will be denied.
-1. Go back to your virtual environment.
-1. Select **Security** > **Authentication policies**.
-1. Click **Any two factors**.
-1. For the **Windows 11 or higher** rule, click **Actions** and then select **Deactivate**.
-1. For the **Deny Rule - Digital Marketing**, click **Actions** and then select**Deactivate**.
+1. In your Virtual Desktop environment, sign in as your new employee.
+1. Select the **Marketo** app. You will be denied.
 
-This will allow sign in from the Virtual Desktop.
+### (Optional) Switch the Authentication Policy for Marketo
+
+1. In the Admin Console, select **Security** > **Authentication Policies**.
+1. Select **High Security Apps** > **Applications** tab.
+1. For the **Marketo** app, click **Switch Policy**.
+1. Select the **Standard Security Apps** policy, and then click **Save** .
+
+    ![alt_text](images/011/auth_policy_switch_marketo_600.png "r 144 w 600")
+
+Your new employee will now be able to sign in to ""Marketo"" app from the Virtual Desktop.
+
+>**Note:** With the exception of BambooHR and Office 365, the other apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
 
 ### Enable Okta ThreatInsight
 

@@ -1,3 +1,34 @@
+
+## Table left-align small images without text
+
+   |||
+   |:-----|:-----|
+   |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png "no text")| |
+
+### Powershell icon - 50
+
+|||
+   |:-----|:-----|
+   |![Image on the left](images/011/powershell_icon_50.png   "50")| |
+
+### Powershell icon - 25
+
+|||
+   |:-----|:-----|
+   |![Image on the left](images/011/powershell_icon_25.png   "25")| |
+
+   |||
+   |:-----|:-----|
+   |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
+
+### Part of a list
+
+ |||
+   |:-----|:-----|::----|
+ 4. |Open Powershell |![Image on the left](images/011/powershell_icon_25.png   "25")| within the Virtual Desktop, paste and run the command.|
+
+### Icon mid sentence
+
 ### Sample 1
 
 1. Click **Add integration**.

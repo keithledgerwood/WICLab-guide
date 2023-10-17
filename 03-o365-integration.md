@@ -89,11 +89,11 @@ In this section you will enable provisioning to Microsoft 365. This will include
 Follow these steps to enable provisioning:
 
 1. On the **Provisioning** tab, under **Settings**, select **To App**
-2. Click **Edit** to set the options for provisioning from Okta  to Office 365.
+2. Click **Edit** to set the options for provisioning from Okta to Office 365.
 
     ![alt_text](images/011/app_o365_to_app_600.png "w600")
 
-3. For **Office 365 Provisioning Type** select **Universal Sync**.
+3. For **Office 365 Provisioning Type**  select **Universal Sync**.
 4. For **Create Users**, select **Enable**.
 5. For **Update User Attributes**, select **Enable**.
 6. For **Deactivate Users**, select **Enable**.
@@ -111,31 +111,13 @@ When assigning users to an app, it's common to assign a group to an app and then
 
 When assigning a group to an app, you can specify values for app attributes. These will override any mapping for those attributes in the app definition. If you don't specify any value for an attribute, the mapping in the app definition will be applied instead.
 
-## Create a Group
-
-You will now create a group that will be assigned the Microsoft
-Office 365 app. Alternatively, you could assign the Office 365 app to existing groups.
-
-1. In the Admin Console select **Directory** > **Groups**.
-2. Click **Add group**.
-3. Set the **Name** to  **Office 365 Users**.
-4. Set the **Description** to **Office 365 Users**
-5. Click **Save**.
-
-    ![alt_text](images/009/image033.png "image_tooltip")
-
 ## Assign Group to Application
 
-You can assign a group to an app by either assigning the group within the app definition or by adding the app to the group definition. In this case you will add the app from the group definition.
+You can assign a group to an app by assigning the group within the app definition.
 
-1. In the Admin Console select **Directory** > **Groups**.
-2. Select the **Office 365 Users** group.
-3. Select the **Applications** tab, and then click **Assign applications**.
-4. Find the the **Microsoft Office 365** app and click **Assign**.
-
-    ![alt_text](images/009/image035_400.png "image_tooltip")
-
-5. In the list of Licenses, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
+1. On the **Assignments** tab, click **Assign**, and then select **Assign to Groups**.
+1. Find the the **App-Office365-ProPlus** group, and then click **Assign**.
+1. In the list of Licenses, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 
     >**Hint:**Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
 
@@ -144,31 +126,31 @@ You can assign a group to an app by either assigning the group within the app de
 6. Scroll to the bottom of the page and click **Save and Go Back**.
 7. Click **Done**.
 
-The application is now assigned to the **O365 Users** group.
+The application is now assigned to the **App-Office365-ProPlus** group.
 
 ## Assign User to Group
 
-You will now assign the new employee to the *O365 Users* group. This will cause the user to be assigned the Microsoft Office 365 app which, in turn, will trigger provisioning of an account.
+You will now assign the new employee to the *App-Office365-ProPlus* group. This will cause the user to be assigned the Microsoft Office 365 app which, in turn, will trigger provisioning of an account.
 
 1. In the Admin Console select **Directory** > **Groups**.
-2. Select the **Office 365 Users** group.
-3. Select the **People** tab within the **Office 365Users** group.
+2. Select the **App-Office365-ProPlus** group.
+3. Select the **People** tab within the **App-Office365-ProPlus** group.
 4. Click **Assign people**.
 
-    ![alt_text](images/009/image040_600.png "image_tooltip")
+    ![alt_text](images/009/image040_600.png "assign people")
 
 5. Click **+** for the **New Employee** to assign them to the group.
 
-    ![alt_text](/images/011/group_assign_user_600.png "image_tooltip")
+    ![alt_text](/images/011/group_assign_user_600.png "assign user")
 
 The **+** icon will change to say **Assigned**.
 6. Click **Done**.
 
 The user is now assigned to the group and will be assigned to the Microsoft Office 365 app using the attribute mapping associated with the group assignment.
 
-## Test single sign-on
+## Verify SSO for New Employee to Office 365
 
-You can now test single sign-on to Microsoft 365 for your new employee.
+In your Virtual Desktop, test single sign-on to Microsoft Office 365 for your new employee.
 
 1. Open a new browser window that is not signed in to Okta or Microsoft.
 
@@ -176,14 +158,17 @@ You can now test single sign-on to Microsoft 365 for your new employee.
 
 3. Authenticate as the new employee. For example *<flynn.rider@04.mywiclab.com>*
 
+4. Click the **Microsoft Office 365 Word Online** app.
+
     ![alt_text](images/009/image043_600.png "image_tooltip")
 
-4. Click the **Microsoft Office 365 Word Online** app.
 5. Click **Yes** to stay signed in.
 6. In the top-right corner of the page, click the identity icon.
-7. Click **Sign out** to clear the session, and then close the browser.
+7. Click **Sign out** to clear the session.
 
     ![alt_text](images/009/image045_600.png "image_tooltip")
+
+8. Sign out the new employee from Okta
 
 ## Conclusion
 

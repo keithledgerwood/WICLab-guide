@@ -1,6 +1,8 @@
 ## Welcome
 
-Step into the Future of Workforce Identity Management with Okta!  (**Version 0.10.16.pod4**)
+*Lab guide version: 0.10.16.05*
+
+Step into the Future of Workforce Identity Management with Okta!
 
 Imagine being entrusted with your organization’s Workforce Identity Management. Your mission, should you choose to accept it:
 
@@ -18,9 +20,9 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
 1. Check your inbox for an email from **The Okta Team** with the subject line **Your New Okta account**.
 2. Copy the **Temporary password**, and then click **Sign On**.
-3. Follow the instructions on the screen to sign on to your Okta org.
+3. Follow the instructions on the screen to sign on to your Okta tenant.
 
-> **Note:** This will require that you sign in with your temporary password, set up a new password and set up the Okta Verify app on your mobile device. After successful sign on, you will see the Okta End-User Dashboard.
+> **Note:**  After successful sign on, you will see the Okta End-User Dashboard.
 
 4. Sign out of your Okta tenant and close the browser tab.
 5. Return to this lab guide for more fun and excitement.
@@ -34,8 +36,14 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    |:-----|:-----|
    |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
-3. Copy this code block.  Open Powershell within the Virtual Desktop, paste and run the command.
+3. Copy this code block.
 ```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
+
+4. In the Virtual Desktop, open Powershell, and then paste and run the command.
+
+   |||
+   |:-----|:-----|
+   |![Image on the left](images/011/powershell_icon_25.png   "25")| |
 
 ## An Overview of the Environment
 
