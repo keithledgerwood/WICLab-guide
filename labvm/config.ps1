@@ -4,13 +4,28 @@ Remove-Item C:\Users\*\Desktop\*lnk -Force
 Remove-Item C:\Users\*\Desktop\Microsoft -Recurse
 Remove-Item C:\Users\*\Desktop\logs -Recurse
 
+##### Desktop Shortcuts
 #Add Chrome Shortcut, blank
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Chrome.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Save()
 
-#Shortcut to Flowpack
+#Add Chrome Shortcut to Okta Lab Guide
+$shell = New-Object -comObject WScript.Shell
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Lab Guide.lnk")
+$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$shortcut.Arguments = "http://labs.demo.okta.com"
+$shortcut.Save()
+
+#Add Chrome Shortcut and launch as O365
+$shell = New-Object -comObject WScript.Shell
+$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Office 365.lnk")
+$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$shortcut.Arguments = "https://admin.microsoft.com"
+$shortcut.Save()
+
+#Add Chrome Shortcut to Flowpack
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
@@ -44,7 +59,7 @@ copy-item .\Preferences -Destination "C:\Users\Administrator\AppData\Local\Googl
 iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Bookmarks -OutFile .\Bookmarks  
 copy-item .\Bookmarks -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
 
-#Downlaod Okta Vertify and place in downloads folder
+#Downlaod Okta Verify and place in downloads folder
 iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile .\Downloads\OktaVerifySetup  
 
 exit
