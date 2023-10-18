@@ -108,7 +108,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
 1. In the Admin Console select  **Directory** > **People** to verify that your new employee was successfully imported with a status of *Pending user action*.
 2. Select the new employee to view their **Assigned Applications:** *Marketo*, *ServiceNow*, *Okta Access Requests*, and *BambooHR*.
-3. Select the **Groups** tab to view their group memberships of *Everyone*, *Marketing (from BambooHR)*, and *Digital Marketing*.
+3. Select the **Groups** tab to view their group memberships of *Everyone*, *Marketing*, and *Digital Marketing*.
 4. Select the **Profile** tab to view their imported attributes.
 
 ## Retrieve New Employee Activation Email
