@@ -145,7 +145,7 @@ You will now assign the new employee to the *App-Office365-ProPlus* group. This 
 
 1. Find your *new employee*, and then click the **+** icon on the right to assign them to the group.
 
-    ![alt_text](/images/011/group_assign_user_600.png "assign user")
+    ![alt_text](images/011/group_assign_user_600.png "assign user")
 
 1. Click **Done**.
 
@@ -165,7 +165,7 @@ In your **Virtual Desktop**, test single sign-on to Microsoft Office 365 for you
 
 1. Click **Yes** to stay signed in.
 1. In the top-right corner of the page, click the identity icon.
-1. Click **Sign out** to clear the session.
+1. Click **Sign out** to clear the session, and then close the browser tab.
 
     ![alt_text](images/009/image045_600.png "image_tooltip")
 

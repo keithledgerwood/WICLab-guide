@@ -25,9 +25,9 @@ In the Add Job Information dialog, select a different department, and then click
 
 ### Verify changes to Okta End-user Dashboard
 
-1. Open a new browser window that is not signed into Okta.
-2. Enter your Okta tenant URL in the browser.
-3. Authenticate as your new employee.
+In the Virtual Desktop, open a new Chrome window using the Guest profile.
+
+1. Sign in to your Okta tenant as the New Employee.
 4. Notice that you no longer have access to **Marketo**, but you do have access to **Salesforce**. Your app assignments changed based on the change in your group membership.
 
 |||

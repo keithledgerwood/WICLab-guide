@@ -2,14 +2,6 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ## Setup Okta FastPass on the Virtual Desktop
 
-### Download Okta Verify on your Virtual Dekstop
-
-1. In the Okta Admin Console, select **Settings** > **Downloads**.
-1. Scroll down to **Okta Verify for Windows (.exe)** and click **Download General Availability**.
-1. Sign out of Okta and close the browser.
-
->**Tip:** Did you sign out of the Okta Admin Console?. I tend to forget sometimes.
-
 ### Install Okta Verify on your Virtual Desktop
 
 1. Open the **Okta Verify Setup** executable located in the Download folder shortcut on the desktop.
@@ -30,6 +22,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 This will open your Okta tenant's sign-in page.
 
 1. Sign in with your **New Employee** username and password.
+1. Close the
 
 ## Configure Security Policies and FastPass
 
@@ -76,9 +69,9 @@ This will open your Okta tenant's sign-in page.
 ### Experience an Employee Passwordless Login
 
 1. In the Virtual Desktop, launch a Chrome browser window using the Guest profile.
-1. Enter your Okta tenant URL in the browser. You will be automatically authenticated to your End-User Dashboard.
-1. Sign out of your Okta tenant.
-1. At the Okta login, click **Sign in with Okta FastPass** . You will be signed in to the End-User Dashboard, no password required.
+1. Enter your Okta tenant URL in the browser. You will be automatically authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
+1. Sign out of Okta.
+1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up User Behavioral Analytics
 
@@ -128,15 +121,15 @@ With device assurance policies you can check security-related device attributes 
 1. In the **High Security Apps** policy, select the **Applications** tab.
 1. Click **Add app**.
 1. Select the **Marketo** app, and then select the **Sign On** tab.
-1. For **Marketo**, click **Add**, and then click **Done**.
+1. For **Marketo**, click **Add**, and then click **Ok**.
 
     ![alt_text](images/011/auth_policy_high_security_apps_marketo_600.png "high security policy")
 
 ### Test the Device Assurance Policy
 
-The lab Virtual Desktops are running Windows 10.
+1. In the Okta Verify app **Accounts** page, click the device health icon to verify that your OS version is version 10.
 
-1. In the Okta Verify app **Accounts** page, click the device health icon. EDIT THIS
+    ![alt_text](images/011/fastpass_healthcheck_button_240.png "")
 
 1. In your Virtual Desktop environment, sign in as your new employee.
 1. Select the **Marketo** app. You will be denied.

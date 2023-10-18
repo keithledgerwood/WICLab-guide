@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.10.17.02*
+*Lab guide version: 0.10.18.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -34,7 +34,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
       |![virtual desktop](images/011/launch_virtual_desktop.png "Launch VD")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
 
 3. Copy this code block.
-```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/config.ps1).Content```
+```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/config.ps1).Content```
 
 4. In the Virtual Desktop, open PowerShell, and then paste and run the code block.
 
