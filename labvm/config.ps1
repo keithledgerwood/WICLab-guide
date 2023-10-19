@@ -29,7 +29,7 @@ $shortcut.Save()
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/workflows/titleChanged.flow"
+$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
 $shortcut.Save()
 
 #Shortcut for Notepad on Desktop
