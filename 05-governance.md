@@ -99,7 +99,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 ### As the New Employee, request access to an app
 
-1. Open a new Chrome window using the Guest profile
+1. In the Virtual Desktop, open a new Chrome window using the Guest profile.
 1. Sign in to your Okta tenant as the New Employee.
 1. In the End-User Dashboard, open the **Okta Access Requests** app.
 1. In the App Catalog, locate **Navan**, and then click **Request access**.
@@ -266,7 +266,7 @@ To verify that a certification campaign was created by the flowpack, you will ne
 
 1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
 1. Verify that there is **Campaign** whose name starts with **Title Change:**.
-1. Click on the **Title Change:**campaign to see an overview of the campaign.
+1. Click on the **Title Change:** campaign to see an overview of the campaign.
 
 The page provides an overview of the campaign, the progress of the campaign, and the items to be reviewed. An administrator can use this page to manage the execution of a campaign. They can see the progress and any items still outstanding. They can reassign one or more items. They can also prematurely end the campaign.
 
