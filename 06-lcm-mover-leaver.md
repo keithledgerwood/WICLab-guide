@@ -2,9 +2,7 @@
 
 In this lab, you will leverage the dynamic integration of Okta with your HR application. Experience firsthand how a change in an employee's job seamlessly translates into automatic adjustments in their application access. But that's not all - when employees bid adieu to the company, watch as their access is instantaneously disabled. Dive into the world of automation that not only streamlines processes but also ensures consistent security, equipping transitioning employees with the right tools for success and safeguarding company assets every step of the way.
 
-## Employee Transfer
-
-In the Add Job Information dialog, select a different department, and then click Save.
+## Employee Departmental Transfer
 
 1. Sign in to **BambooHR** with the credentials provided in the Launch Panel.
 1. In the BambooHR dashboard search for and select your employee.

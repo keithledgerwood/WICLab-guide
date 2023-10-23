@@ -13,13 +13,14 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ### General Settings
 
->**Tip:** For the next step, you will need the first part of your Office 365 **Tenant ID** from the lab launch panel.![tenant name](images/011/launch_O365_tenant_r144_240.png)
+>**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
+![tenant name](images/011/launch_O365_tenant_240.png)
 Be sure to leave off the *onmicrosoft.com* portion.
 
 1. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
 
     ![alt_text](images/011/app_o365_general_tenant_name_500.png "image_tooltip")
-1. Optional. For **Display the following links**, deselect all but: **Mail, Word, Excel, PowerPoint and Office Portal**.
+1. Optional. For **Display the following links**, deselect all but: **Word, Excel, PowerPoint and Office Portal**.
 1. Scroll down and click **Next**.
 
 ### Sign-On Options
@@ -39,13 +40,13 @@ Be sure to leave off the *onmicrosoft.com* portion.
 ### Customization with Okta Expression Language
 
 1. In the Credential Details section, for **Application username format** select **Custom**.
-1. For the **Custom** expression, enter the following:
+1. For the **Custom** expression, enter the following, sample expression:
 
     ```javascript
     String.substringBefore(user.login,"@") + "@nn.mywiclab.com"
     ```
 
-1. Be sure to replace  **nn.mywiclab.com** in the expression with your unique **Domain Name**.
+1. **IMPORTANT:** Be sure to replace  **nn.mywiclab.com** in the expression with your unique **Domain Name**.
 
 |Note:   ||
    |:-----|:-----|
@@ -121,6 +122,9 @@ You can assign a group to an app by assigning the group within the app definitio
 
 1. In the **Microsoft Office 365** app definition, select the **Assignments** tab.
 1. Click **Assign**, and then select **Assign to Groups**.
+    |||
+     |:-----|:-----|
+     |![Alt text](images/011/app_assign_to_groups_240.png "Assign to Groups")||
 1. Find the the **App-Office365-ProPlus** group, and then click **Assign**.
 1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 

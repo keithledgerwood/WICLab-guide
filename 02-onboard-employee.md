@@ -11,15 +11,16 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
     >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
-    ![domain name](images/011/launch_O365_domain_240.png)
+    ![domain name](images/011/launch_O365_domain_name_240.png)
     The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
-1. Enter the following information to add a **New Employee**.
+
+1. The following six attributes are required for your **New Employee**. All other attributes are optional. Use the values for: Job Title, Department and Hire Date. All other fields are optional.
 
    |Attribute|Value|Example|
    |:-----|:-----|:----|
    |First Name |Enter a first name|*Flynn*|
    |Last Name | Enter a last name|*Rider*|
-   |Work Email |firstName.lastName@\<your **Office 365 Domain Name**>|*<flynn.rider@04.mywiclab.com>*|
+   |Work Email |firstName.lastName@\<your **Office 365 Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
    |Hire Date |*Today*|*Today*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
@@ -102,7 +103,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
    |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR integrations allow on-demand and scheduled imports, as well as instant access termination when needed? Isn’t that efficient!.*|
+   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR integrations allow on-demand and scheduled imports, as well as instant access termination when needed? Isn’t that efficient!*|
 
 ### Verify New Employee Import
 
@@ -113,7 +114,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
 ## Retrieve New Employee Activation Email
 
- To access the new employee activation email, you'll need to sign into your Office 365 tenant as the labadmin within the Virttual Desktop.
+ To access the new employee activation email, you'll need to sign into your Office 365 tenant as the labadmin within the Virtual Desktop.
 
 1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
 

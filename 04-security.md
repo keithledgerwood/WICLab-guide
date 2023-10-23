@@ -84,7 +84,7 @@ With device assurance policies you can check security-related device attributes 
 1. Click **Add a policy**.
 1. Set **Policy name** to **Windows 11**
 1. For **Platform**, select **Windows**.
-1. For **Minimum Windows version**, select **Windows 11(22H2)**.
+1. For **Minimum Windows version**, select **Windows 11 (22H2)**.
 1. For **Lock Screen**, deselect **Windows Hello must be enabled**.
 7. Click **Save**.
 
@@ -113,7 +113,7 @@ With device assurance policies you can check security-related device attributes 
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 1. Click **Save**.
-1. Drag the **Okta FastPass** rule up to make **Priority 1** in the list of rules for the policy.
+1. Drag the **Windows 11 or higher** rule up to make **Priority 1** in the list of rules for the policy.
 ![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "Okta FastPass rule")
 
 ### Add Marketo to the High Security Apps Policy
@@ -134,7 +134,7 @@ With device assurance policies you can check security-related device attributes 
 1. In your Virtual Desktop environment, sign in as your new employee.
 1. Select the **Marketo** app. You will be denied.
 
-### (Optional) Switch the Authentication Policy for Marketo
+### Switch the Authentication Policy for Marketo
 
 1. In the Admin Console, select **Security** > **Authentication Policies**.
 1. Select **High Security Apps** > **Applications** tab.
