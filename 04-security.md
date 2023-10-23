@@ -22,7 +22,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 This will open your Okta tenant's sign-in page.
 
 1. Sign in with your **New Employee** username and password.
-1. Close the
+1. Close the Okta Verify window.
 
 ## Configure Security Policies and FastPass
 
@@ -127,7 +127,7 @@ With device assurance policies you can check security-related device attributes 
 
 ### Test the Device Assurance Policy
 
-1. In the Okta Verify app **Accounts** page, click the device health icon to verify that your OS version is version 10.
+1. In your Virtual Desktop environment, on the Okta Verify app **Accounts** page, click the device health icon to verify that your OS version is version 10.
 
     ![alt_text](images/011/fastpass_healthcheck_button_240.png "")
 

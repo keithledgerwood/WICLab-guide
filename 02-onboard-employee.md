@@ -2,6 +2,10 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 ## Add a New Employee to BambooHR
 
+|||
+   |:-----|:-----|
+   |![Small image](images/011/new_employee_flynn_100.png "New Employee")| |
+
 When adding a new employee to BambooHR, we ask that you use a unique name, such as a  **favorite relative or friend, real or imaginary**.
 
 1. To access the **BambooHR** dashboard, in your lab  **Launch Panel**, click **Launch**.
@@ -9,9 +13,13 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. If prompted with **Should we always trust this browser?**, click **Yes, Trust this Browser**.
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 1. If prompted with **Heads Up!**, click **Add Anyway**.
+1. In your lab  **Launch Panel**, click **Hide** to collapse the **BambooHR** portion.
+|||
+   |:-----|:-----|
+   |![Small image](images/011/launch_panel_bamboo_hide_240.png "Hide")| |
 
-    >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
-    ![domain name](images/011/launch_O365_domain_name_240.png)
+   >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
+   ![domain name](images/011/launch_O365_domain_name_240.png)
     The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
 
 1. The following six attributes are required for your **New Employee**. All other attributes are optional. Use the values for: Job Title, Department and Hire Date. All other fields are optional.

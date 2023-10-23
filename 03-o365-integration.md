@@ -128,9 +128,11 @@ You can assign a group to an app by assigning the group within the app definitio
 1. Find the the **App-Office365-ProPlus** group, and then click **Assign**.
 1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 
-    >**Hint:**Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
+    >**Hint:** Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
 
-    ![alt_text](images/011/group_app_o365_proplus_500.png "image_tooltip")
+    |||
+     |:-----|:-----|
+     |![alt_text](images/011/group_app_o365_proplus_500.png "image_tooltip") ||
 
 1. Scroll down and click **Save and Go Back**.
 1. Scroll down and click **Done**.

@@ -15,7 +15,7 @@
 
    |||
    |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
+   |![Small image](images/011/powershell_icon_25.png "25")| |
 
 ### Icon mid sentence
 
