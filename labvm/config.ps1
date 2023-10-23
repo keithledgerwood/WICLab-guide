@@ -29,7 +29,7 @@ $shortcut.Save()
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/workflows/titleChanged.flow"
+$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
 $shortcut.Save()
 
 #Shortcut for Notepad on Desktop
@@ -59,7 +59,7 @@ iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labv
 copy-item .\Bookmarks -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
 
 #Downlaod Okta Verify and place in downloads folder
-iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile .\Downloads\OktaVerifySetup  
+iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile .\Downloads\OktaVerifySetup.exe  
 
 $a = (New-Object -comObject Shell.Application).Windows() |
  ? { $_.FullName -ne $null} |
