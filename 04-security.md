@@ -68,23 +68,28 @@ This will open your Okta tenant's sign-in page.
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
+    |||
+     |:-----|:-----|
+    |![Okta FastPass Rule](images/011/auth_policy_rule_fastpass_then_400.png "Okta FastPass Rule")|
 7. Click **Save**.
 8. Drag the **Okta FastPass** rule up to make it **Priority 1** in the list of rules for the policy.
+    |||
+     |:-----|:-----|
+    |![Rule Priority 1](images/011/auth_policy_rule_drag_priority_400.png "Rule Priority 1")|
 
 ### Experience an Employee Passwordless Login
 
-1. In the Virtual Desktop, launch a Chrome browser window using the Guest profile.
-1. Enter your Okta tenant URL in the browser. You will be automatically authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
+1. In the **Virtual Desktop**, launch a Chrome browser.
+1. Enter your Okta **Tenant** URL in the browser. You will be automatically authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
 1. Sign out of Okta.
 1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
 
-## Set Up User Behavioral Analytics
+## Set Up Device Assurance
 
 ### Add a Device Assurance Policy
 
 With device assurance policies you can check security-related device attributes as part of your authentication policies.
 
-1. Sign in to your Okta tenant as the Okta admin.
 1. In the Admin Console, select **Security** > **Device Assurance Policies**.
 1. Click **Add a policy**.
 1. Set **Policy name** to **Windows 11**
@@ -146,6 +151,10 @@ With device assurance policies you can check security-related device attributes 
 1. In your Virtual Desktop environment, sign in as your new employee.
 1. Select the **Marketo** app. You will be denied.
 
+    |||
+    |:-----|:-----|
+     |![Okta Verify Health Check](images/011/ov_device_assurance_denied_240.png "Okta Verify Health Check")|
+
 ### Switch the Authentication Policy for Marketo
 
 1. In the Admin Console, select **Security** > **Authentication Policies**.
@@ -156,9 +165,9 @@ With device assurance policies you can check security-related device attributes 
      |:-----|:-----|
       |![Standard Security Apps](images/011/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")|
 
-Your new employee will now be able to sign in to ""Marketo"" app from the Virtual Desktop.
+Your new employee will now be able to sign in to **Marketo** from the Virtual Desktop.
 
->**Note:** With the exception of BambooHR and Office 365, the other apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
+>**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
 
 ### Enable Okta ThreatInsight
 
