@@ -19,13 +19,13 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 7. Verify that you are listed as a member of the **IT** team.
 
-#### Update the Access Request Configuration for Okta
+<!-- #### Update the Access Request Configuration for Okta
 
 1. In the Access Requests Admin Console, select **Settings**.
 1. Select the **Integrations** tab.
 1. Under Access Request Configurations for Okta, click **Edit connection**.
 1. Click **Update Connection.**
-
+-->
 #### Update Resources
 
 Enable access to applications and groups to the IT team.
@@ -34,7 +34,10 @@ Enable access to applications and groups to the IT team.
 1. For **Applications**, click **Manage Access**.
 1. Select the **IT** team, and then click **Save**.
 1. Select **Okta Groups**, and then click **Manage Access**.
-1. Select the **IT** team, and then click **Save**.
+1. Toggle on the **IT** team, and then click **Save**.
+    |||
+     |:-----|:-----|
+    |![Toggle on IT](images/011/oig_ar_teams_it_toggled_on_400.png "Toggle on IT")|
 
 ### Create a Request Type
 
@@ -59,7 +62,11 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 #### Add an Approval step
 
 1. To add an Approval step, select **Approval**, and then click **Add to request type**.
-1. In the **Approval Details** tab, on the right, configure the Approval step:
+    |||
+     |:-----|:-----|
+    |![Approval](images/011/oig_ar_approval_page1_400.png "Navan Request Type")|
+
+1. In the **Approval Details** panel, on the right, configure the Approval step:
 
     |Approval attribute |Value|
     |:-----|:-----|
@@ -71,12 +78,11 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
     |||
      |:-----|:-----|
-    ![Approval details](images/011/ar_step_apprval_admin_700.png "Approval details")|
+    ![Approval details](images/011/oig_ar_create_request_approval_details_400.png "Approval details")|
 
-> **Tip:** Look at the bottom of the **Tasks & Actions** for additional step  buttons.
+> **Tip:** Look at the bottom of the **Tasks & Actions** for additional step buttons.
 >
 #### Add an Action step
->
 
 1. To add an Action step, click **Action**, and then select **Assign individual app to user**.
 1. In the **Action Details** tab, on the right, configure the Action step:
@@ -86,12 +92,15 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Text|**Assign to Navan**|
     |Make it a required task |  *Enabled*|
     |Type | **Assign individual app to user**|
-    |Run automatically |**Enabled**|
+    |Run automatically |Toggle to be **Enabled**|
     |Email address|**Requester email**|
     |Select application | **Navan** from the list of apps|
-    |Run automatically | **Enabled**|'
+    |Run automatically | *Enabled*|'
 
-1. Click **Edit Logic**.
+1. Click **Edit Logic**. This will switch you from the Details tab to the Logic tab.
+    |||
+    |:-----|:-----|
+    |![Logic tab](images/011/oig_ar_action_details_logic_tab%20400.png "Logic tab")|
 1. Click **Always show this task**, and then select **Only show this task if**.
 1. Click **Field or Task**.and then select **Admin Approval**
 1. Select **is approved**.
@@ -104,7 +113,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 ### As the New Employee, request access to an app
 
-1. In the Virtual Desktop, open a new Chrome window using the Guest profile.
+1. In the **Virtual Desktop**, open a new Chrome window.
 1. Sign in to your Okta tenant as the New Employee.
 1. In the End-User Dashboard, open the **Okta Access Requests** app.
 1. In the App Catalog, locate **Navan**, and then click **Request access**.
@@ -125,7 +134,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
      |:-----|:-----|
     |![Approve Request](images/011/ar_approve_navan_600.png "Approve Request")|
 
-4. Select the **Activity** tab to verify that the app was assigned to the new employee.
+4. Optional. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
 ### As the new employee, verify access to the app
 
