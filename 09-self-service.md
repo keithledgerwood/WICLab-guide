@@ -1,3 +1,22 @@
+## Old New Employee
+
+   >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
+   ![domain name](images/011/launch_O365_domain_name_240.png "O365 Domain Name")
+    The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
+
+1. The following six attributes are required for your **New Employee**. All other attributes are optional. Use the values for: Job Title, Department and Hire Date. All other fields are optional.
+
+   |Attribute|Value| For Example|
+   |:-----|:-----|:----|
+   |First Name |Enter a first name|*Flynn*|
+   |Last Name | Enter a last name|*Rider*|
+   |Work Email |firstName.lastName@\<your Office 365 **Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
+   |Hire Date |*Today*|*Today*|
+   |Job Title | **Director of Marketing**|*Director of Marketing*|
+   |Department | **Marketing**|*Marketing*|
+
+    >**Tip:** Check your **BambooHR Subdomain** in the launch panel; you will need this value for the next step.
+    ![bamboohr subdomain](images/011/launch_bamboohr_subdomain_240.png "BambooHR Subdomain")|
 
 ## Launch Panel
 

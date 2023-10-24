@@ -13,28 +13,20 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. If prompted with **Should we always trust this browser?**, click **Yes, Trust this Browser**.
 1. In the BambooHR dashboard select **People**, and then click **New Employee**.
 1. If prompted with **Heads Up!**, click **Add Anyway**.
-1. In your lab  **Launch Panel**, click **Hide** to collapse the **BambooHR** portion.
-|||
-   |:-----|:-----|
-   |![Small image](images/011/launch_panel_bamboo_hide_240.png "Hide")| |
 
-   >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
-   ![domain name](images/011/launch_O365_domain_name_240.png)
-    The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
+1. Set the following attributes for your **New Employee**. All other attributes are optional.
 
-1. The following six attributes are required for your **New Employee**. All other attributes are optional. Use the values for: Job Title, Department and Hire Date. All other fields are optional.
-
-   |Attribute|Value|Example|
+   |Attribute|Value| For Example|
    |:-----|:-----|:----|
    |First Name |Enter a first name|*Flynn*|
    |Last Name | Enter a last name|*Rider*|
-   |Work Email |firstName.lastName@\<your **Office 365 Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
-   |Hire Date |*Today*|*Today*|
+   | | Copy your **Office 365 Domain Name** from the **Launch Panel**. This will be used for your new employee's email domain. |![Domain Name](images/011/launch_o365_domain_name_only_240.png "Copy Domain Name")|
+   |Work Email |firstName.lastName@\<Paste your **Office 365 Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
+   |Hire Date |*Today's Date*|*Today's Date*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
 
 1. Click **Save**.
-1. Close the browser tab for **BambooHR**.
 
 ## Add the BambooHR App to Okta
 
@@ -44,21 +36,25 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 1. In the Admin Console select **Applications** > **Applications**.
 2. Click **Browse App Catalog**.
 
-   ![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "image_tooltip")
+   ![Browse App Catalog](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "Browse App Catalog")
 
 3. In the Browse App Integration Catalog **Search...** bar, type *bamboohr*  , and then click **BambooHR**.
 
-   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "image_tooltip")
+   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "BambooHR")
 
 4. Click **Add Integration**
+1. In the **Launch Panel**, copy your **BambooHR Subdomain**.
+   |||
+   |:-----|:-----|
+   |![Small image](images/011/launch_bamboohr_subdomain_only_240.png "Hide")| |
 
-    >**Tip:** Check your **BambooHR Subdomain** in the launch panel; you will need this value for the next step.
-    ![bamboohr subdomain](images/011/launch_bamboohr_subdomain_240.png)|
-
-5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain** which can be found in the lab **Launch panel**.
+5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain**.
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
-   ![alt_text](images/011/app_bamboohr_general_settings_500.png "General Settings")
+   |||
+     |:-----|:-----|
+     |![alt_text](images/011/app_bamboohr_general_settings_500.png "General Settings")||
+
 7. Click **Next** to view the **Sign-On Options**.
 8. Click **Done** to accept the defaults.
 
@@ -71,13 +67,17 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 1. Select **Enable API integration**.
 1. Click **Authenticate with BambooHR**.
 
-   ![alt_text](images/011/app_bamboohr_provisioning_600.png "Enable Provisioning")
+   |||
+      |:-----|:-----|
+    |![alt_text](images/011/app_bamboohr_provisioning_600.png "Enable Provisioning")||
 
    > **Note:** If you don't have an active BambooHR session, you will be prompted to sign in using the BambooHR username and password from the lab **Launch Panel**.
 
 5. After the success message appears, click **Save**.
 
-   ![alt_text](images/011/app_bamboohr_verified_successfully.png "success")
+   |||
+      |:-----|:-----|
+    |![Verfied Successfully](images/011/app_bamboohr_verified_successfully.png "Verfied Successfully")||
 
 ### Configure BambooHR to Okta Provisioning options
 
@@ -86,13 +86,17 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 3. For **Okta username format**, select **Email Address**.
 4. Click **Save**.
 
-   ![alt_text](images/011/app_bamboohr_provisioning_to_okta_600.png "To Okta")
+   |||
+      |:-----|:-----|
+    |![Provisioning - To Okta](images/011/app_bamboohr_provisioning_to_okta_600.png "Provisioning - To Okta")||
 
 5. Scroll to  the **Profile & Lifecycle Sourcing** section, and then click **Edit**
 6. Select **Allow BambooHR to source Okta users**.
 7. Click **Save**.
 
-   ![alt_text](images/011/app_bamboohr_profile_sourcing_600.png "Allow BambooHR to source Okta users")
+    |||
+      |:-----|:-----|
+   |![Allow BambooHR to source Okta users](images/011/app_bamboohr_profile_sourcing_600.png "Allow BambooHR to source Okta users")||
 
 ## Import New Employee from BambooHR to Okta
 
@@ -101,17 +105,20 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 2. Use **Search** to find the new employee that you added into Bamboo HR.
 3. Select the new employee via the checkbox on the right.
 4. Click **Confirm Assignments**. This will open a confirmation dialog.
-
-   ![alt_text](images/011/app_bamboohr_import_results_600.png "select and confirm new employee")
+   |||
+      |:-----|:-----|
+   |![Select and Confirm New Employee](images/011/app_bamboohr_import_results_600.png "Select and Confirm New Employee")||
 
 5. Select **Auto-activate users after confirmation**. This will send out an activation email for the new employee's Okta account.
 6. Click **Confirm**.
 
-   ![alt_text](images/011/app_bamboohr_import_confirm_300.png "auto activate after confirmation")
+   |||
+      |:-----|:-----|
+   |![Auto Activate after Confirmation](images/011/app_bamboohr_import_confirm_300.png "Auto Activate after Confirmation")||
 
    |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR integrations allow on-demand and scheduled imports, as well as instant access termination when needed? Isn’t that efficient!*|
+   |![Marc says...](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's HR integrations allow on-demand and scheduled imports, as well as instant access termination when needed? Isn’t that efficient!*|
 
 ### Verify New Employee Import
 
@@ -122,16 +129,18 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
 ## Retrieve New Employee Activation Email
 
- To access the new employee activation email, you'll need to sign into your Office 365 tenant as the labadmin within the Virtual Desktop.
+ To access the new employee activation email, within the Virtual Desktop, you'll need to sign into your Office 365 tenant using the credentials provided in the launch panel.
 
 1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
+1. Sign in with your Office 365 **Username** and **Password** from from the lab **Launch Panel**.
+1. If prompted to **Stay signed in?**, select **Don't show this again** and click **Yes**.
+1. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 
-2. Sign in with your **labadmin** credentials from the lab **Launch Panel**.
-3. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
+   |||
+   |:-----|:-----|
+   |![Launch Outlook](images/011/app_o365_outlook_access_240.png "Launch Outlook")||
 
-   ![alt_text](images/011/app_o365_outlook_access_500.png "image_tooltip")
-
-4. Locate and open the New Employee's *Welcome to Okta!* email.
+4. Locate and open the New Employee's **Welcome to Okta!** email.
 5. Click **Activate Okta Account**.
 
    >This will open a new browser window where you, as the Okta admin, will setup the new employee's Okta account.

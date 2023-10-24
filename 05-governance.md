@@ -14,7 +14,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 1. Enter your Okta Admin name and then select **You**.
 1. Click **Add Users**.
 
- ![alt_text](images/011/oig_ar_settings_add_team_members_400.png "400")
+ ![Add team members to IT](images/011/oig_ar_settings_add_team_members_400.png "Add team members to IT")
 
 7. Verify that you are listed as a member of the **IT** team.
 
@@ -52,7 +52,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 1. Click **Continue**.
 
-    ![ar request](images/011/oig_ar_create_request_screen_1_400.png "400")
+    ![Navan Request Type](images/011/oig_ar_create_request_screen_1_400.png "Navan Request Type")
 
 #### Add an Approval step
 
@@ -138,8 +138,11 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
 3. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
 4. Optional. Modify the default **Connection Nickname**.
-5. Set **Domain** to the full domain of your Okta tenant.
- Be sure to include the **.okta.com** portion of the domain.
+5. Set **Domain** to the Okta tenant value found in the lab **Launch Panel**.
+
+    |||
+     |:-----|:-----|
+     |![Okta Tenant](images/011/launch_okta_tenant_240.png "Okta Tenant")| |
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
@@ -153,32 +156,6 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 6. Click **Create** to complete the Okta Connection.
 
     ![alt_text](images/011//workflows_connection_okta_600.png "600x144")
-
-### Create an API Connection
-
-1. In the Workflows console, select **Connections**, and then click **New Connection**.
-2. In the **New Connection** dialog, click the **API Connector** which is displayed in the first row.
-3. Optional. Modify the default **Connection Nickname**.
-4. For **Auth Type** select **Custom**.
-5. Set **Header Name** to **Authorization**.
-
-Keep this page open. Before you can set the **Header Value** for this API Connection, you need to switch to your Okta Admin Console to obtain an API token. You will then return to the Workflows console to finish this configuration.
-
-#### Create, copy and paste an API Token
-
-1. In the Okta Admin Console, select **Security** > **API** > **Tokens** tab.
-1. Click **Create Token**.
-1. Set the **token name** to **WIC Lab Token**.
-1. Click **Create token**.
-1. Click the copy button to copy the **Token Value** to the clipboard.
-
->Do NOT close the window until you have pasted the Token Value successfully.
-
-1. Return to the **Workflows console** >  **New Connection** dialog.
-1. Set **Header Value** to **SSWS**, followed by a space, and then paste the **Token Value**.
-1. Click **Create** to complete the API Connection.
-
-    ![alt_text](images/011/workflows_connection_api_600x215.png "600x215")
 
 ## Leveraging Flowpacks
 
@@ -210,7 +187,7 @@ You have successfully imported the Flow.
 
 ### Modify the imported Flow
 
-There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow. You'll also need to specify your Okta tenant domain and your Okta admin account.
+There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow and your Okta admin account.
 
 >**Tip:** To view a graphic of the all the cards in a flow, you can select the **Flow Chart** tab while in edit mode.
  ![flow chart](images/011/titlechanged_flowchart_access_240.png).

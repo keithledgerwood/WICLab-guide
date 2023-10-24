@@ -14,12 +14,12 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 ### General Settings
 
 >**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
-![tenant name](images/011/launch_O365_tenant_240.png)
+![tenant name](images/011/launch_O365_tenant_240.png "Tenant Name")
 Be sure to leave off the *onmicrosoft.com* portion.
 
 1. In the **General Settings** tab, set **Microsoft Tenant Name** to your Office 365 tenant name for the lab.
 
-    ![alt_text](images/011/app_o365_general_tenant_name_500.png "image_tooltip")
+    ![App Defintion Tenant Name](images/011/app_o365_general_tenant_name_500.png "App Defintion Tenant Name")
 1. Optional. For **Display the following links**, deselect all but: **Word, Excel, PowerPoint and Office Portal**.
 1. Scroll down and click **Next**.
 
@@ -29,13 +29,13 @@ Be sure to leave off the *onmicrosoft.com* portion.
 1. Set the **Office 365 Admin Username** and **Office 365 Admin password** to the values from the lab launch panel.
 1. Click **Fetch and Select**. This will display a list of your Office 365 Domains.
 
-    ![alt_text](images/011/app_o365_signon_wsfed_500.png "image_tooltip")
+    ![Fetch and Select](images/011/app_o365_signon_wsfed_500.png "Fetch and Select")
 
 10. Select the **Office 365 Domain** that corresponds to the **Domain Name** in your lab launch panel.
 
 > **Hint:**  Don't select the domain that ends in *onmicrosoft.com*.
 
-![alt_text](images/011/app_o365_signon_domain_select_500.png "image_tooltip")
+![Select Domain](images/011/app_o365_signon_domain_select_500.png "Select Domain")
 
 ### Customization with Okta Expression Language
 
@@ -50,7 +50,7 @@ Be sure to leave off the *onmicrosoft.com* portion.
 
 |Note:   ||
    |:-----|:-----|
-   ![Alt text](images/011/app_o365_custom_expression.png)| The expression for the **Custom Application username format** transforms the new employee's email address domain to the Office 365 Domain you selected for federation.|
+   ![Custom Expression](images/011/app_o365_custom_expression.png "Custom Expression")| The expression for the **Custom Application username format** transforms the new employee's email address domain to the Office 365 Domain you selected for federation.|
 
 4. Click **Done**.
 
@@ -69,12 +69,12 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable provisioning, 
 1. In the **Microsoft Office 365** app definition, select the **Provisioning** tab.
 1. Click **Configure API Integration**.
 
-    ![alt_text](images/009/image09_600.png "image_tooltip")
+    ![Configure API Integration](images/009/image09_600.png "Configure API Integration")
 
 1. Select **Enable API integration**.
 1. Click **Authenticate with Microsoft Office 365**.
 
-    ![alt_text](images/009/image010_600.png "image_tooltip")
+    ![Authenticate with Microsoft Office 365](images/009/image010_600.png "Authenticate with Microsoft Office 365")
 
 1. Authenticate as the lab admin user for your Microsoft tenant.
 1. On the **Permissions Requested** dialog, click **Accept** to grant the permissions requested by the Okta Microsoft Graph Client.
@@ -96,7 +96,7 @@ Follow these steps to enable provisioning:
 1. On the **Provisioning** tab, under **Settings**, select **To App**.
 1. Click **Edit** to set the options for provisioning from Okta to Office 365.
 
-    ![alt_text](images/011/app_o365_to_app_600.png "w600")
+    ![Provisioning to O365](images/011/app_o365_to_app_600.png "Provisioning to O365")
 
 1. For **Office 365 Provisioning Type**  select **Universal Sync**.
 1. For **Create Users**, select **Enable**.
@@ -104,11 +104,11 @@ Follow these steps to enable provisioning:
 1. For **Deactivate Users**, select **Enable**.
 1. Click **Save**.
 
- ![alt_text](images/011/app_o365_to_app_enable_500.png "image_tooltip")
+ ![Enable Create, Update, Deactivate](images/011/app_o365_to_app_enable_500.png "Enable Create, Update, Deactivate")
 
 |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
+   |![Marc says...](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
 
 # Configure group assignment
 
@@ -124,7 +124,7 @@ You can assign a group to an app by assigning the group within the app definitio
 1. Click **Assign**, and then select **Assign to Groups**.
     |||
      |:-----|:-----|
-     |![Alt text](images/011/app_assign_to_groups_240.png "Assign to Groups")||
+     |![Assign to Groups](images/011/app_assign_to_groups_240.png "Assign to Groups")||
 1. Find the the **App-Office365-ProPlus** group, and then click **Assign**.
 1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 
@@ -132,7 +132,7 @@ You can assign a group to an app by assigning the group within the app definitio
 
     |||
      |:-----|:-----|
-     |![alt_text](images/011/group_app_o365_proplus_500.png "image_tooltip") ||
+     |![Office 365 ProPlus](images/011/group_app_o365_proplus_500.png "Office 365 ProPlus") ||
 
 1. Scroll down and click **Save and Go Back**.
 1. Scroll down and click **Done**.
@@ -147,11 +147,11 @@ You will now assign the new employee to the *App-Office365-ProPlus* group. This 
 1. Find and select the **App-Office365-ProPlus** group.
 1. On the **People** click **Assign people**.
 
-    ![alt_text](images/009/image040_600.png "assign people")
+    ![Assign people](images/009/image040_600.png "Assign people")
 
 1. Find your *new employee*, and then click the **+** icon on the right to assign them to the group.
 
-    ![alt_text](images/011/group_assign_user_600.png "assign user")
+    ![Find new employee](images/011/group_assign_user_600.png "Find new employee")
 
 1. Click **Done**.
 
@@ -167,13 +167,13 @@ In your **Virtual Desktop**, test single sign-on to Microsoft Office 365 for you
 1. Authenticate as the new employee.
 1. Click the **Microsoft Office 365 Word Online** app.
 
-    ![alt_text](images/009/image043_600.png "image_tooltip")
+    ![Microsoft Office 365 Word Online](images/009/image043_600.png "Microsoft Office 365 Word Online")
 
 1. Click **Yes** to stay signed in.
 1. In the top-right corner of the page, click the identity icon.
 1. Click **Sign out** to clear the session, and then close the browser tab.
 
-    ![alt_text](images/009/image045_600.png "image_tooltip")
+    ![Sign out](images/009/image045_600.png "Sign out")
 
 8. Sign out the new employee from Okta
 

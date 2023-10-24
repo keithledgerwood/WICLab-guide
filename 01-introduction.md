@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.10.23.01*
+*Lab guide version: 0.10.24.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -40,7 +40,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
    |||
    |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
+   |![PowerShell icon](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
 
 ## An Overview of the Environment
 

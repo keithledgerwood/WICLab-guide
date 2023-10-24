@@ -37,7 +37,7 @@ This will open your Okta tenant's sign-in page.
 1. For **Okta Verify**, click **Actions**, and then select **Edit**.
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
 
-    ![alt_text](images/011/okta_verify_show_fastpass_button_600.png "Show FastPass button")
+    ![Sign in with Okta FastPass](images/011/okta_verify_show_fastpass_button_600.png "Sign in with Okta FastPass")
 1. Scroll down and click **Save**.
 
 ### Add a rule to the Standard Security Apps policy
@@ -54,7 +54,7 @@ This will open your Okta tenant's sign-in page.
     | Enter groups to include: |  **Digital Marketing** and **Digital Sales**|
      | Device state is: |  **Registered**|'
 
-    ![alt_text](images/011/auth_policy_rule_fastpass_if_300.png "r 144 w 300")
+    ![Okta FastPass Rule](images/011/auth_policy_rule_fastpass_if_300.png "Okta FastPass Rule")
 
 6. Set the following **THEN** access and authentication settings for the rule:
 
@@ -88,7 +88,7 @@ With device assurance policies you can check security-related device attributes 
 1. For **Lock Screen**, deselect **Windows Hello must be enabled**.
 7. Click **Save**.
 
-    ![alt_text](images/011/device_assurance_policy_add_win11_400.png "r 144 w 400")
+    ![Device Assurance Policy](images/011/device_assurance_policy_add_win11_400.png "Device Assurance Policy")
 
 ### Add Device Assurance Rule to High Security Apps Policy
 
@@ -114,7 +114,7 @@ With device assurance policies you can check security-related device attributes 
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 1. Click **Save**.
 1. Drag the **Windows 11 or higher** rule up to make **Priority 1** in the list of rules for the policy.
-![alt_text](images/011/auth_policy_rule_windows11_saved_600.png "Okta FastPass rule")
+![Windows 11 or higher](images/011/auth_policy_rule_windows11_saved_600.png "Windows 11 or higher rule")
 
 ### Add Marketo to the High Security Apps Policy
 
@@ -123,7 +123,7 @@ With device assurance policies you can check security-related device attributes 
 1. Select the **Marketo** app, and then select the **Sign On** tab.
 1. For **Marketo**, click **Add**, and then click **Ok**.
 
-    ![alt_text](images/011/auth_policy_high_security_apps_marketo_600.png "high security policy")
+    ![alt_text](images/011/auth_policy_high_security_apps_marketo_600.png "High Security Apps")
 
 ### Test the Device Assurance Policy
 
@@ -141,7 +141,7 @@ With device assurance policies you can check security-related device attributes 
 1. For the **Marketo** app, click **Switch Policy**.
 1. Select the **Standard Security Apps** policy, and then click **Save** .
 
-    ![alt_text](images/011/auth_policy_switch_marketo_600.png "r 144 w 600")
+    ![Standard Security Apps](images/011/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")
 
 Your new employee will now be able to sign in to ""Marketo"" app from the Virtual Desktop.
 
