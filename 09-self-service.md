@@ -1,3 +1,9 @@
+## Old O365
+
+>**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
+![tenant name](images/011/launch_O365_tenant_240.png "Tenant Name")
+Be sure to leave off the *onmicrosoft.com* portion.
+
 ## Old New Employee
 
    >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
