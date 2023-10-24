@@ -13,8 +13,9 @@ In this lab, you will navigate the pathways of application access requests, demo
 1. Click **Add member**.
 1. Enter your Okta Admin name and then select **You**.
 1. Click **Add Users**.
-
- ![Add team members to IT](images/011/oig_ar_settings_add_team_members_400.png "Add team members to IT")
+    |||
+     |:-----|:-----|
+    |![Add team members to IT](images/011/oig_ar_settings_add_team_members_400.png "Add team members to IT")|
 
 7. Verify that you are listed as a member of the **IT** team.
 
@@ -51,8 +52,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Audience|**Everyone at** your Okta tenant|'
 
 1. Click **Continue**.
-
-    ![Navan Request Type](images/011/oig_ar_create_request_screen_1_400.png "Navan Request Type")
+    |||
+     |:-----|:-----|
+    |![Navan Request Type](images/011/oig_ar_create_request_screen_1_400.png "Navan Request Type")|
 
 #### Add an Approval step
 
@@ -67,7 +69,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Assigned to |Select **A specific user...** and select **You**|
     |Due Date| *No due date*|'
 
-    ![ar request](images/011/ar_step_apprval_admin_700.png "700x194")
+    |||
+     |:-----|:-----|
+    ![Approval details](images/011/ar_step_apprval_admin_700.png "Approval details")|
 
 > **Tip:** Look at the bottom of the **Tasks & Actions** for additional step  buttons.
 >
@@ -92,8 +96,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Click **Field or Task**.and then select **Admin Approval**
 1. Select **is approved**.
 1. Click **Publish**.
-
- ![ar request](images/011/ar_navan_publish_700.png "700x194")
+    |||
+     |:-----|:-----|
+    |![Logic Details](images/011/ar_navan_publish_700.png "Logic Details")|
 
 8. Leave this browser session open as you will return back to it momentarily.
 
@@ -105,8 +110,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. In the App Catalog, locate **Navan**, and then click **Request access**.
 1. Click **Submit new request**.
 1. Notice that there 0/1 tasks are complete. The access request is waiting for Admin Approval.
-
-    ![ar request](images/011/ar_awaiting_admin_approval_700.png "700x194")
+    |||
+     |:-----|:-----|
+    |![Tasks complete](images/011/ar_awaiting_admin_approval_700.png "Tasks complete")|
 
 7. Leave this browser session open as you will return back to it momentarily.
 
@@ -115,8 +121,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Return to your Okta admin browser session
 1. In the Access Requests Admin Console, select **Requests** > **Inbox**.
 1. Click on the Navan app request from the new employee, and then click **Approve**.
-
-![ar request](images/011/ar_approve_navan_600.png "700x194")
+    |||
+     |:-----|:-----|
+    |![Approve Request](images/011/ar_approve_navan_600.png "Approve Request")|
 
 4. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
@@ -154,14 +161,15 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 4. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 5. Repeat the copy and paste steps for the **Client secret**.
 6. Click **Create** to complete the Okta Connection.
-
-    ![alt_text](images/011//workflows_connection_okta_600.png "600x144")
+    |||
+     |:-----|:-----|
+     |![Okta Connection](images/011//workflows_connection_okta_600.png "Okta Connection")|
 
 ## Leveraging Flowpacks
 
 |||
    |:-----|:-----|
-   |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta Identity Governance, powered by Okta Workflows, lets you smoothly look up a user's manager or application owner during access certifications? It's technology bending to fit your business process, not the other way around – like having your digital cake and eating it too!*|
+   |![Marc says...](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta Identity Governance, powered by Okta Workflows, lets you smoothly look up a user's manager or application owner during access certifications? It's technology bending to fit your business process, not the other way around – like having your digital cake and eating it too!*|
 
 ### Download the **Title Change** flowpack
 
@@ -178,12 +186,15 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 ### Import the Flow into the Folder
 
 1. Click the **...** next to the **Title Changed** folder,  and then select **Import**
+    |||
+     |:-----|:-----|
+    |![Import flowpack](images/011/workflows_folder_ellipsis_400.png "Import flowpack")|
 
-    ![alt_text](images/011/workflows_folder_ellipsis_400.png "322x68")
 2. Click **Choose file from computer**, choose the **titleChanged.flow** and then click **Open**.
 You have successfully imported the Flow.
-
- ![alt_text](images/011/workflows_titlechanged_import_success_600.png "600x70")
+    |||
+     |:-----|:-----|
+    |![Imported flow](images/011/workflows_titlechanged_import_success_600.png "Imported flow")|
 
 ### Modify the imported Flow
 
@@ -197,12 +208,14 @@ There are a few modifications needed within the workflow. You will need to assig
 1. Click the **Title Changed** workflow to open it in edit mode.
 1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
 1. Set the contents of the first **Compose** card to your Okta tenant URL.
-
-    ![alt_text](images/011/titlechanged_okta_connection_and_compose_card_600.png "600x134")
+    |||
+     |:-----|:-----|
+    |![Set Okta Connection](images/011/titlechanged_okta_connection_and_compose_card_600.png "Set Okta Connection")|
 
 1. Scroll to the right to locate the next  **Compose** card. It's the eighth card in the flow, and replace the existing login with your Okta admin login.
-
-    ![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")
+    |||
+     |:-----|:-----|
+    |![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")|
 
 1. Scroll to the right and locate the **API Connector Raw Request** card, and then click **Choose Connection**.
 1. Set the **Connection** to your **API Connector**.
@@ -211,8 +224,9 @@ There are a few modifications needed within the workflow. You will need to assig
     > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
 
 1. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
-
-     ![flow is on](images/011/titlechanged_flow_is_on_240.png "240x124")
+    |||
+     |:-----|:-----|
+     |![flow is on](images/011/titlechanged_flow_is_on_240.png "flow is on")|
 
 You now have the Flow correctly configured and running.
 
