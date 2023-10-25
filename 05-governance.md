@@ -152,24 +152,36 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 >**Note:** Your browser window now has an open tab open for the **Okta Admin Console** and another tab for the **Workflows Console**. Throughout this lab, you will be navigating between the two consoles, so pay close attention.
 
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
-3. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
-4. Optional. Modify the default **Connection Nickname**.
-5. Set **Domain** to the Okta tenant value found in the lab **Launch Panel**.
+1. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
+1. Optional. Modify the default **Connection Nickname**.
+1. From the **Launch Panel**, copy the Workforce Identity Cloud **Tenant** value.
 
     |||
      |:-----|:-----|
      |![Okta Tenant](images/011/launch_okta_tenant_240.png "Okta Tenant")| |
+1. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Tenant** value into the Okta Connection **Domain**.
+
+    |||
+     |:-----|:-----|
+     |![Okta Connection Domain](images/011/workflows_connection_okta_domain%20600.png "Okta Connection Domain")| |
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
-#### Copy and paste the Client ID and Client Secret
+#### Grant Consent to Okta Access Certification Scopes
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
-2. Select the **Okta Workflows OAuth** app, and then select the **Sign On** tab.
-3. Copy the **Client ID**
-4. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
-5. Repeat the copy and paste steps for the **Client secret**.
-6. Click **Create** to complete the Okta Connection.
+1. Select the **Okta Workflows OAuth** app, and then select the **Okta API Scopes** tab.
+1. In the **Consent** panel on the right, select **Not Granted**.
+1. In the list of scopes find **okta.governance.accessCertifications.manage**, and then click **Grant**.
+1. Also, find the scope **okta.governance.accessCertifications.read**, and then click **Grant**.
+
+#### Copy and paste the Client ID and Client Secret
+
+1. In the **Okta Workflows OAuth** app, and then select the **Sign On** tab.
+1. Copy the **Client ID**
+1. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
+1. Repeat the copy and paste steps for the **Client secret**.
+1. Click **Create** to complete the Okta Connection.
     |||
      |:-----|:-----|
      |![Okta Connection](images/011//workflows_connection_okta_600.png "Okta Connection")|
@@ -182,7 +194,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 ### Download the **Title Change** flowpack
 
-1. [Download the lab flowpack **titleChanged.flow**](https://keithledgerwood.github.io/WICLab-guide/workflows/titleChanged.flow)
+1. [Download the lab flowpack *identityGovernanceAccessCertificationOnTitleChange.folder*](https://keithledgerwood.github.io/WICLab-guide/workflows/identityGovernanceAccessCertificationOnTitleChange.folder)
 
 ### Create a new Folder
 
@@ -205,37 +217,39 @@ You have successfully imported the Flow.
      |:-----|:-----|
     |![Imported flow](images/011/workflows_titlechanged_import_success_600.png "Imported flow")|
 
-### Modify the imported Flow
+### Modify the Imported Flow
 
-There are a few modifications needed within the workflow. You will need to assign the Okta and API connections to the flow and your Okta admin account.
+This workflow consists of an App Event flow, two Helper flows, and a table.
 
->**Tip:** To view a graphic of the all the cards in a flow, you can select the **Flow Chart** tab while in edit mode.
- ![flow chart](images/011/titlechanged_flowchart_access_240.png).
- Here's a sneak peak. You will be changing cards: **1, 3, 8 and 23**.
- ![flow chart detail](images/011/titlechanged_flowchart_700.png)
+#### Initialize Environment
 
-1. Click the **Title Changed** workflow to open it in edit mode.
+1. Click the **[RUN ME FIRST] Initialize Environment** flow to open it.
+1. Click **Run**, and then enter your Okta admin email in the **Certification Approval Override**.
+    |||
+     |:-----|:-----|
+    |![Run prompt](images/011/workflow_run_prompt_600.png "Run prompt")|
+1. Click **Run Test**.
+Verify success.
+Return to  Title Changed flows
+
+#### Set Okta Connection in MAIN flow
+
+1. Click the **[MAIN] Create Access Certification on User Title Changed** flow to open it.
 1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
-1. Set the contents of the first **Compose** card to your Okta tenant URL.
-    |||
-     |:-----|:-----|
-    |![Set Okta Connection](images/011/titlechanged_okta_connection_and_compose_card_600.png "Set Okta Connection")|
-
-1. Scroll to the right to locate the next  **Compose** card. It's the eighth card in the flow, and replace the existing login with your Okta admin login.
-    |||
-     |:-----|:-----|
-    |![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")|
-
-1. Scroll to the right and locate the **API Connector Raw Request** card, and then click **Choose Connection**.
-1. Set the **Connection** to your **API Connector**.
 1. Click **Save**.
+Return to  Title Changed flows
 
-    > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
+#### Set Okta Custom API Action Connection
 
-1. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
-    |||
-     |:-----|:-----|
-     |![flow is on](images/011/titlechanged_flow_is_on_240.png "flow is on")|
+1. Click the [HELPER] Create and Launch Access Certification Campaign** flow to open it.
+1. In the **Okta Custom API Action** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
+1. Click **Save**.
+Return to  Title Changed flows
+Need to Grant okta.governance.accessCertifications.manage
+
+#### Turn on the MAIN and HELPER flows
+
+1. Toggle on the flows.
 
 You now have the Flow correctly configured and running.
 
@@ -260,18 +274,6 @@ This event will trigger the imported **Title Changed** flow, which creates and l
 
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns. Campaigns can be created via API and the UI of the admin platform.
 
-### Verify the Access Certification Campaign was created
-
-To verify that a certification campaign was created by the flowpack, you will need to perform the following actions as the Okta admin:
-
-1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
-1. Verify that there is **Campaign** whose name starts with **Title Change:**.
-1. Click on the **Title Change:** campaign to see an overview of the campaign.
-
-The page provides an overview of the campaign, the progress of the campaign, and the items to be reviewed. An administrator can use this page to manage the execution of a campaign. They can see the progress and any items still outstanding. They can reassign one or more items. They can also prematurely end the campaign.
-
->**Note:** Please notify a lab assistant if there is no campaign listed.
-
 ### Participating in an Access Certification Campaign
 
 For the purposes of this lab, we decided to assign the Okta tenant administrator ( You ) to be the reviewer of this particular campaign. Reviews are performed with the **Okta Access Certification** app on your End User Dashboard.
@@ -288,17 +290,6 @@ This information is provided to help the reviewer in making their decision. Curr
 1. Click **Approve**.
 1. When prompted, enter a **Justification**,  and then click the **Submit**.
 1. Review the rest of the applications until you get the message **You have completed all your reviews**.
-
-### End the Campaign
-
-The campaign can be completed manually once the review is done or automatically after the **Set duration** passes.
-
-1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
-2. Click the **Title Change** campaign and verify that the **Progress** is **100%**.
-3. To end the campaign, click **Actions**, and then select **End**.
-4. Click **End Campaign**.
-
-    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/007/img33.png "image_tooltip")
 
 ## Conclusion
 

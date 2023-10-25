@@ -20,7 +20,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |:-----|:-----|:----|
    |First Name |Enter a first name|*Flynn*|
    |Last Name | Enter a last name|*Rider*|
-   | | Copy your **Office 365 Domain Name** from the **Launch Panel**. This will be used for your new employee's email domain. |![Domain Name](images/011/launch_o365_domain_name_only_240.png "Copy Domain Name")|
+   | | Copy your **Office 365 Domain Name** from the **Launch Panel**.  |![Domain Name](images/011/launch_o365_domain_name_only_240.png "Copy Domain Name")|
    |Work Email |firstName.lastName@\<Paste your **Office 365 Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
    |Hire Date |*Today's Date*|*Today's Date*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|

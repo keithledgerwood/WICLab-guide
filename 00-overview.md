@@ -1,6 +1,6 @@
 # Okta **WIC-Labs**
 
-*Lab guide version: 0.10.24.01*
+*Lab guide version: 0.10.25.01*
 
 ![Overview](images/011/lab_overview_wic_conceptual_arch_800.png "Tech Camp Conceptual Architecture")
 

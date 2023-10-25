@@ -1,3 +1,46 @@
+
+## Old Certification
+
+### Verify the Access Certification Campaign was created
+
+To verify that a certification campaign was created by the flowpack, you will need to perform the following actions as the Okta admin:
+
+1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
+1. Verify that there is **Campaign** whose name starts with **Title Change:**.
+1. Click on the **Title Change:** campaign to see an overview of the campaign.
+
+The page provides an overview of the campaign, the progress of the campaign, and the items to be reviewed. An administrator can use this page to manage the execution of a campaign. They can see the progress and any items still outstanding. They can reassign one or more items. They can also prematurely end the campaign.
+
+>**Note:** Please notify a lab assistant if there is no campaign listed.
+
+## Old FLow
+
+>**Tip:** To view a graphic of the all the cards in a flow, you can select the **Flow Chart** tab while in edit mode.
+ ![flow chart](images/011/titlechanged_flowchart_access_240.png).
+ Here's a sneak peak. You will be changing cards: **1, 3, 8 and 23**.
+ ![flow chart detail](images/011/titlechanged_flowchart_700.png)
+
+Set the contents of the first **Compose** card to your Okta tenant URL.
+    |||
+     |:-----|:-----|
+    |![Set Okta Connection](images/011/titlechanged_okta_connection_and_compose_card_600.png "Set Okta Connection")|
+
+1. Scroll to the right to locate the next  **Compose** card. It's the eighth card in the flow, and replace the existing login with your Okta admin login.
+    |||
+     |:-----|:-----|
+    |![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")|
+
+1. Scroll to the right and locate the **API Connector Raw Request** card, and then click **Choose Connection**.
+1. Set the **Connection** to your **API Connector**.
+1. Click **Save**.
+
+    > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
+
+1. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
+    |||
+     |:-----|:-----|
+     |![flow is on](images/011/titlechanged_flow_is_on_240.png "flow is on")|
+
 ## Old O365
 
 >**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
