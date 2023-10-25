@@ -2,7 +2,7 @@
 
 *Lab guide version: 0.10.25.01*
 
-![Overview](images/011/lab_overview_wic_conceptual_arch_800.png "Tech Camp Conceptual Architecture")
+![Overview](images/011/lab_overview_wic_conceptual_arch_600.png "Tech Camp Conceptual Architecture")
 
 In this workshop, you will experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.
 
