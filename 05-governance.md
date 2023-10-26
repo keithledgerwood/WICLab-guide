@@ -30,6 +30,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 Enable access to applications and groups to the IT team.
 
+1. In the Access Requests Admin Console, select **Settings**.
 1. Select the **Resources** tab.
 1. For **Applications**, click **Manage Access**.
 1. Select the **IT** team, and then click **Save**.
@@ -111,7 +112,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 8. Leave this browser session open as you will return back to it momentarily.
 
-### As the New Employee, request access to an app
+### As the New Employee, request access to Navan
 
 1. In the **Virtual Desktop**, open a new Chrome window.
 1. Sign in to your Okta tenant as the New Employee.
@@ -136,9 +137,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 4. Optional. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
-### As the new employee, verify access to the app
+### As the new employee, verify access to Navan
 
-1. Return back to the new employee browser session.
+1. Return back to the new employee browser session
 2. Reload the End-User Dashboard, and verify the new employee has access to Navan.
 
 ## Workflow Connections
@@ -171,13 +172,12 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 1. Select the **Okta Workflows OAuth** app, and then select the **Okta API Scopes** tab.
-1. In the **Consent** panel on the right, select **Not Granted**.
-1. In the list of scopes find **okta.governance.accessCertifications.manage**, and then click **Grant**.
+1. In the list of scopes scroll to find **okta.governance.accessCertifications.manage**, and then click **Grant**.
 1. Also, find the scope **okta.governance.accessCertifications.read**, and then click **Grant**.
 
 #### Copy and paste the Client ID and Client Secret
 
-1. In the **Okta Workflows OAuth** app, and then select the **Sign On** tab.
+1. In the **Okta Workflows OAuth** app, select the **Sign On** tab.
 1. Copy the **Client ID**
 1. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 1. Repeat the copy and paste steps for the **Client secret**.
@@ -196,17 +196,10 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 1. [Download the lab flowpack *identityGovernanceAccessCertificationOnTitleChange.folder*](https://keithledgerwood.github.io/WICLab-guide/workflows/identityGovernanceAccessCertificationOnTitleChange.folder)
 
-### Create a new Folder
+### Import the Flow into the Default Folder
 
-1. In the Workflows console, select **Flows**.
-2. In the **Folders** panel, create a new folder by clicking the **+** icon.
-3. Set the **Folder name** to **Title Changed**.
-4. Optional. Set a **Folder Description**.
-5. Click **Save**.
-
-### Import the Flow into the Folder
-
-1. Click the **...** next to the **Title Changed** folder,  and then select **Import**
+1. In the Workflows console, select **Flows** to display the Flows page.
+1. In the **Folders** panel, click the **...** next to the **Default Folder**,  and then select **Import**
     |||
      |:-----|:-----|
     |![Import flowpack](images/011/workflows_folder_ellipsis_400.png "Import flowpack")|
@@ -224,34 +217,46 @@ This workflow consists of an App Event flow, two Helper flows, and a table.
 #### Initialize Environment
 
 1. Click the **[RUN ME FIRST] Initialize Environment** flow to open it.
-1. Click **Run**, and then enter your Okta admin email in the **Certification Approval Override**.
+1. Click **Run**.
+    |||
+     |:-----|:-----|
+    |![Run button](images/011/workflows_run_me_first_run_600.png "Run button")|
+1. Set **Certification Approval Override** to your Okta admin email in the
     |||
      |:-----|:-----|
     |![Run prompt](images/011/workflow_run_prompt_600.png "Run prompt")|
 1. Click **Run Test**.
-Verify success.
-Return to  Title Changed flows
+The **Execution History** will display with a **Status** of **Success**.
+1. In the top left corner, click the **Default Folder** icon to return to the Flows page.
+    |||
+     |:-----|:-----|
+    |![Return to flowpack](images/011/workflows_run_me_first_return_to_flow_600.png "Return to flowpack")|
 
 #### Set Okta Connection in MAIN flow
 
 1. Click the **[MAIN] Create Access Certification on User Title Changed** flow to open it.
 1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
 1. Click **Save**.
-Return to  Title Changed flows
+    |||
+    |:-----|:-----|
+    |![Set Okta Connection MAIN](images/011/workflows_main_set_okta_connection_600.png "Set Okta Connection MAIN")|
+1. In the top left corner, click the **Default Folder** icon to return to the Flows page.
 
 #### Set Okta Custom API Action Connection
 
-1. Click the [HELPER] Create and Launch Access Certification Campaign** flow to open it.
+1. Click the **[HELPER] Create and Launch Access Certification Campaign** flow to open it.
 1. In the **Okta Custom API Action** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
 1. Click **Save**.
-Return to  Title Changed flows
-Need to Grant okta.governance.accessCertifications.manage
+1. Return to the Flows page.
 
 #### Turn on the MAIN and HELPER flows
 
-1. Toggle on the flows.
+1. Toggle on the Flows.
+    |||
+    |:-----|:-----|
+    |![Flows toggled on](images/011/workflows_toggled_on_600.png "Flows toggled on")|
 
-You now have the Flow correctly configured and running.
+You now have the Flows correctly configured and running.
 
 ### In BambooHR, change the New Employee's title
 
