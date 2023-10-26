@@ -5,7 +5,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 ### Configure Teams and Access Request Settings
 
-#### Add the Okta admin to the IT team
+#### Add Okta admin to the IT team
 
 1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
 1. In the Access Requests Admin Console, select **Teams**.
@@ -19,16 +19,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 7. Verify that you are listed as a member of the **IT** team.
 
-<!-- #### Update the Access Request Configuration for Okta
-
-1. In the Access Requests Admin Console, select **Settings**.
-1. Select the **Integrations** tab.
-1. Under Access Request Configurations for Okta, click **Edit connection**.
-1. Click **Update Connection.**
--->
-#### Update Resources
-
-Enable access to applications and groups to the IT team.
+#### Provide IT Team Access to Okta Apps & Groups
 
 1. In the Access Requests Admin Console, select **Settings**.
 1. Select the **Resources** tab.
@@ -40,7 +31,7 @@ Enable access to applications and groups to the IT team.
      |:-----|:-----|
     |![Toggle on IT](images/011/oig_ar_teams_it_toggled_on_400.png "Toggle on IT")|
 
-### Create a Request Type
+### Create a Request Type for Navan App
 
 A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an conditional Action step.
 
@@ -58,9 +49,9 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Click **Continue**.
     |||
      |:-----|:-----|
-    |![Navan Request Type](images/011/oig_ar_create_request_screen_1_400.png "Navan Request Type")|
+    |![Navan Request Type](images/011/oig_ar_create_request_screen_1_240.png "Navan Request Type")|
 
-#### Add an Approval step
+#### Add an Approval step to the Request
 
 1. To add an Approval step, select **Approval**, and then click **Add to request type**.
     |||
@@ -79,7 +70,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
     |||
      |:-----|:-----|
-    ![Approval details](images/011/oig_ar_create_request_approval_details_400.png "Approval details")|
+    ![Approval details](images/011/oig_ar_create_request_approval_details_240.png "Approval details")|
 
 > **Tip:** Look at the bottom of the **Tasks & Actions** for additional step buttons.
 >
@@ -101,7 +92,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Click **Edit Logic**. This will switch you from the Details tab to the Logic tab.
     |||
     |:-----|:-----|
-    |![Logic tab](images/011/oig_ar_action_details_logic_tab%20400.png "Logic tab")|
+    |![Logic tab](images/011/oig_ar_action_details_logic_tab_240.png "Logic tab")|
 1. Click **Always show this task**, and then select **Only show this task if**.
 1. Click **Field or Task**.and then select **Admin Approval**
 1. Select **is approved**.
@@ -164,7 +155,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
     |||
      |:-----|:-----|
-     |![Okta Connection Domain](images/011/workflows_connection_okta_domain%20600.png "Okta Connection Domain")| |
+     |![Okta Connection Domain](images/011/workflows_connection_okta_domain_600.png "Okta Connection Domain")| |
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
@@ -217,14 +208,11 @@ This workflow consists of an App Event flow, two Helper flows, and a table.
 #### Initialize Environment
 
 1. Click the **[RUN ME FIRST] Initialize Environment** flow to open it.
-1. Click **Run**.
+1. Click **Run**. This will open a dialog window.
     |||
      |:-----|:-----|
     |![Run button](images/011/workflows_run_me_first_run_600.png "Run button")|
-1. Set **Certification Approval Override** to your Okta admin email in the
-    |||
-     |:-----|:-----|
-    |![Run prompt](images/011/workflow_run_prompt_600.png "Run prompt")|
+1. Set **Certification Approval Override** to your Okta admin email.
 1. Click **Run Test**.
 The **Execution History** will display with a **Status** of **Success**.
 1. In the top left corner, click the **Default Folder** icon to return to the Flows page.
@@ -254,7 +242,7 @@ The **Execution History** will display with a **Status** of **Success**.
 1. Toggle on the Flows.
     |||
     |:-----|:-----|
-    |![Flows toggled on](images/011/workflows_toggled_on_600.png "Flows toggled on")|
+    |![Flows toggled on](images/011/workflows_toggled_on_300.png "Flows toggled on")|
 
 You now have the Flows correctly configured and running.
 
