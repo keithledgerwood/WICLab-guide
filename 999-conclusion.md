@@ -4,6 +4,7 @@
 
 ### Bravo, Future Identity Management Leaders
 
+{{Office365.TenantName}}
 You've successfully navigated the intricacies of Workforce Identity Management with Okta's powerful Workforce Identity Cloud platform. Now, you're equipped to:
 
 1. Optimize IAM costs.
