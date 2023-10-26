@@ -163,8 +163,12 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 1. Select the **Okta Workflows OAuth** app, and then select the **Okta API Scopes** tab.
-1. In the list of scopes scroll to find **okta.governance.accessCertifications.manage**, and then click **Grant**.
+1. In the list of scopes, find **okta.governance.accessCertifications.manage**, and then click **Grant**.
 1. Also, find the scope **okta.governance.accessCertifications.read**, and then click **Grant**.
+
+    |||
+      |:-----|:-----|
+     |![Okta Connection Domain](images/011/app_workflows_oauth_api_scopes_400.png "Okta Connection Domain")| |
 
 #### Copy and paste the Client ID and Client Secret
 
