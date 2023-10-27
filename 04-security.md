@@ -4,14 +4,14 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ### Install Okta Verify on your Virtual Desktop
 
-1. Open the **Okta Verify Setup** executable located in the Download folder shortcut on the desktop.
+1. In the Virtual Desktop, there is a Download folder shortcut which contains the **Okta Verify Setup** executable. Run the executable.
 1. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
 1. Click **Finish**.
 
 ### Add New Employee Account to Okta Verify
 
-1. On the Virtual Desktop, find and open **Okta Verify**.
+1. In the Virtual Desktop, find and open **Okta Verify**.
 
 1. On **Welcome to Okta Verify**, click **Get started**.
 

@@ -11,7 +11,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. To access the **BambooHR** dashboard, in your lab  **Launch Panel**, click **Launch**.
 1. Sign in to **BambooHR** with the username and password provided in the **Launch Panel**
 1. If prompted with **Should we always trust this browser?**, click **Yes, Trust this Browser**.
-1. In the BambooHR dashboard select **People**, and then click **New Employee**.
+1. In the BambooHR dashboard, select **People**, and then click **New Employee**.
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
 1. Set the following attributes for your **New Employee**. All other attributes are optional.

@@ -18,7 +18,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
    |:-----|:-----|
    |![Office 365 tenant ](images/011/launch_o365_tenant_only_240.png "O365 Lab Tenant")| |
 
-1. In the **General Settings** tab, set **Microsoft Tenant Name** to your **Office 365 Tenant** name   . Be sure to remove the *.on.microsoft.com* portion.
+1. In the **General Settings** tab, set **Microsoft Tenant Name** to your **Office 365 Tenant** name. Be sure to remove the *.on.microsoft.com* portion.
 
     |||
    |:-----|:-----|
@@ -121,7 +121,7 @@ In this section you will enable provisioning to Microsoft 365. This will include
    |:-----|:-----|
    |![Marc says...](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
 
-# Configure group assignment
+## Configure group assignment
 
 When assigning users to an app, it's common to assign a group to an app and then assign users to the group.
 
@@ -175,7 +175,7 @@ The new employee is now a member of the group and will be assigned the Microsoft
 
 ## Verify SSO for New Employee to Office 365
 
-In your **Virtual Desktop**, test single sign-on to Microsoft Office 365 for your new employee.
+In the **Virtual Desktop**, test single sign-on to Microsoft Office 365 for your new employee.
 
 1. Open a new browser window, and enter your Workforce Identity Cloud **Tenant** into the address bar. You can copy this value from the launch panel.
 
