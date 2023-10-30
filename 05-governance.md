@@ -263,7 +263,7 @@ Promote your employee from Director to Sr. Director.
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.
 3. Click **Import Now**.
-4. When the scan completes, confirm that one user was updated.
+4. When the scan completes, click **Ok**.
 
 This event will trigger the imported **Title Changed** flow, which creates and launches a certification campaign.
 
@@ -277,7 +277,7 @@ For the purposes of this lab, we decided to assign the Okta tenant administrator
 
 1. In the Okta Admin Console, click the *waffle* icon in the top right corner, and then select **My end user dashboard**.
 1. In the Okta admin's **End User Dashboard**, launch the **Okta Access Certification Reviews** app.
-2. Click on the **Title Change** access certification campaign to see an overview of the campaign.
+1. Click on the **Title Change** access certification campaign to see an overview of the campaign.
 1. You will see all applications assigned to this user.
 
     > For each item, you have three options as a reviewer: Approve (leave the access as is), Revoke (remove access or flag for it to be removed), or Reassign (to another Okta user). You will see the icons or icons and words depending on the screen resolution.

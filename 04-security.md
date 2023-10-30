@@ -136,7 +136,7 @@ With device assurance policies you can check security-related device attributes 
 1. In the **High Security Apps** policy, select the **Applications** tab.
 1. Click **Add app**.
 1. Select the **Marketo** app, and then select the **Sign On** tab.
-1. For **Marketo**, click **Add**, and then click **Ok**.
+1. For **Marketo**, click **Add**, and then click **Close**.
     |||
      |:-----|:-----|
     |![High Security Apps](images/011/auth_policy_high_security_apps_marketo_600.png "High Security Apps")|
@@ -149,11 +149,14 @@ With device assurance policies you can check security-related device attributes 
     |![Okta Verify Health Check](images/011/fastpass_healthcheck_button_240.png "Okta Verify Health Check")|
 
 1. In your Virtual Desktop environment, sign in as your new employee.
-1. Select the **Marketo** app. You will be denied.
+1. Select the **Marketo** app. You will be denied[^note].
+
+[^note]:
+    You can customize the access denied error message.
 
     |||
     |:-----|:-----|
-     |![Okta Verify Health Check](images/011/ov_device_assurance_denied_240.png "Okta Verify Health Check")|
+     |![Device Assurance Denied](images/011/ov_device_assurance_denied_240.png "Okta Verify Health Check")|
 
 ### Switch the Authentication Policy for Marketo
 
