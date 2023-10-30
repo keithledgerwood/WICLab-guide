@@ -1,3 +1,13 @@
+#### Footnote
+
+ Select the **Marketo** app.
+
+   |||
+    |:-----|:-----|
+    |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")[^note]|
+
+[^note]:
+  You can customize the access denied error message.[Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
 
 ## Old Certification
 

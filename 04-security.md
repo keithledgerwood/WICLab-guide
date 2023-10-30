@@ -149,14 +149,11 @@ With device assurance policies you can check security-related device attributes 
     |![Okta Verify Health Check](images/011/fastpass_healthcheck_button_240.png "Okta Verify Health Check")|
 
 1. In your Virtual Desktop environment, sign in as your new employee.
-1. Select the **Marketo** app.
+1. Select the **Marketo** app. You will be denied.
 
     |||
     |:-----|:-----|
-    |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")[^note]|
-
-[^note]:
-  You can customize the access denied error message.[Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
+    |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")|
 
 ### Switch the Authentication Policy for Marketo
 
