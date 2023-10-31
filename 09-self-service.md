@@ -1,3 +1,20 @@
+## Lab Guide Variables
+
+Example variables from idp:
+{{idp.dashboard}}
+{{idp.name}}
+Apps / resources can be addressed by GUID or by Name (spaces removed).
+{{93cc0c5f-0ba1-4467-bc06-1df5525f0013.label}} OR {{CredentialResource.label}}
+DeploymentData variables are addressed by Name (spaces removed).
+I.e: “Your Tenant ID” becomes {{CredentialResource.YourTenantID}}
+Credentials object (if exists) can be found at {{RESOURCE.credentials}}
+History object (if exists) can be found at {{RESOURCE.history}}
+Examples:
+{{idp.dashboard}}
+{{Office365.credentials.username}}
+{{#Office365.history}} {{latestMessage}} {{/Office365.history}}
+{{Office365.YourDomainName}}
+
 #### Footnote
 
  Select the **Marketo** app.
