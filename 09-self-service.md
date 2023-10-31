@@ -33,6 +33,8 @@ BambooHR.Subdomain: {{BambooHR.Subdomain}}
 {{#BambooHR.history}} {{latestMessage}} {{/BambooHR.history}}
 
 
+Put this in the right box: `{{Office365.TenantID}}` and hit enter
+
 #### Footnote
 
  Select the **Marketo** app.
