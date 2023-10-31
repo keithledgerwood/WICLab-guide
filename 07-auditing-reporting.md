@@ -26,7 +26,7 @@ Take a moment to analyze how the employee’s lifecycle and access has been reco
 
 6. In the **Search** field, type **positive**.
 This will filter the log results to show only the events when a change in user behavior was detected.
-7. In the **Events table, choose one of the events and on its left-hand side click **>** to see details of this event.
+7. In the **Events** table, choose one of the events and on its left-hand side click **>** to see details of this event.
 8. On the right-hand side of the event, click **Expand All** to expand all the details.
 
 |||

@@ -17,7 +17,7 @@
             "id": "6",
             "name": "Okta Workflows Flowpack",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
+            "url": "https://keithledgerwood.github.io/WICLab-guide/main/workflows/identityGovernanceAccessCertificationOnTitleChange.folder"
          }, {
             "date_added": "13342137478627720",
             "date_last_used": "0",
@@ -44,7 +44,7 @@
          "type": "folder"
       },
       "other": {
-         "children": [  ],
+         "children": [],
          "date_added": "13318407560822817",
          "date_last_used": "0",
          "date_modified": "0",
@@ -54,7 +54,7 @@
          "type": "folder"
       },
       "synced": {
-         "children": [  ],
+         "children": [],
          "date_added": "13318407560822820",
          "date_last_used": "0",
          "date_modified": "0",
