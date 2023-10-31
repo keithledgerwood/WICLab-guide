@@ -74,7 +74,7 @@ copy-item .\Preferences -Destination "C:\Users\Administrator\AppData\Local\Googl
 
 #Replace Chrome Bookmarks file
 iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Bookmarks -OutFile .\Bookmarks  
-if (!$labName){
+if ($labName){
     (Get-Content .\Bookmarks).Replace('https://labs.demo.okta.com/', "https://labs.demo.okta.com/lab/$labName") | Set-Content .\Bookmarks
     (Get-Content .\Bookmarks).Replace('https://demo-lab-name.okta.com', "https://demo-$labName.okta.com") | Set-Content .\Bookmarks
 }
