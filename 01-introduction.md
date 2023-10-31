@@ -34,7 +34,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 2. Click **Launch Virtual Desktop**.
 
 3. Copy this code block.
-```iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/config.ps1).Content```
+```labName="{{idp.name}}; iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/config.ps1).Content```
 
 4. In the Virtual Desktop, open PowerShell, and then paste and run the code block.
 
