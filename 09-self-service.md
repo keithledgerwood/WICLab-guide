@@ -34,7 +34,6 @@ BambooHR.Subdomain: {{BambooHR.Subdomain}}
 
 
 Put this in the right box: `{{Office365.TenantID}}` and hit enter
-Put this in the right box: ```{{Office365.TenantID}}``` and hit enter
 
 #### Footnote
 
