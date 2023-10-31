@@ -1,19 +1,37 @@
 ## Lab Guide Variables
 
-Example variables from idp:
-{{idp.dashboard}}
-{{idp.name}}
-Apps / resources can be addressed by GUID or by Name (spaces removed).
-{{93cc0c5f-0ba1-4467-bc06-1df5525f0013.label}} OR {{CredentialResource.label}}
-DeploymentData variables are addressed by Name (spaces removed).
-I.e: “Your Tenant ID” becomes {{CredentialResource.YourTenantID}}
-Credentials object (if exists) can be found at {{RESOURCE.credentials}}
-History object (if exists) can be found at {{RESOURCE.history}}
-Examples:
-{{idp.dashboard}}
-{{Office365.credentials.username}}
+### IDP Variables:
+idp.dashboard: {{idp.dashboard}}
+
+idp.name:  {{idp.name}}
+
+Okta Sign-In URL:  https://{{idp.name}}.okta.com
+
+### Office365 Variables
+
+Office365.credentials.username: {{Office365.credentials.username}}
+
+Office365.credentials.password: {{Office365.credentials.password}}
+
+Office365.DomainName: {{Office365.DomainName}}
+
+Office365.TenantName: {{Office365.TenantName}}
+
+Office365.TenantID: {{Office365.TenantID}}
+
+**Office365 Provisioning History:**
 {{#Office365.history}} {{latestMessage}} {{/Office365.history}}
-{{Office365.YourDomainName}}
+
+### BambooHR Variables
+BambooHR.credentials.username: {{BambooHR.credentials.username}}
+
+BambooHR.credentials.password: {{BambooHR.credentials.password}}
+
+BambooHR.Subdomain: {{BambooHR.Subdomain}}
+
+**BambooHR History:**
+{{#BambooHR.history}} {{latestMessage}} {{/BambooHR.history}}
+
 
 #### Footnote
 
