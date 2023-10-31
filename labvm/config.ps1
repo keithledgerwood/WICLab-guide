@@ -1,3 +1,5 @@
+echo "Running as Lab Name: $labName"
+
 # Remove all shortcuts
 #must be run as admin
 Remove-Item C:\Users\*\Desktop\*lnk -Force
@@ -9,20 +11,21 @@ Remove-Item C:\Users\*\Desktop\logs -Recurse
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Chrome.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$shortcut.Arguments = "https://demo-$labName.okta.com"
 $shortcut.Save()
 
 #Add Chrome Shortcut to Okta Lab Guide
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Lab Guide.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "http://labs.demo.okta.com"
+$shortcut.Arguments = "http://labs.demo.okta.com/lab/$labName"
 $shortcut.Save()
 
 #Add Chrome Shortcut and launch as O365
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Office 365.lnk")
 $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://admin.microsoft.com"
+$shortcut.Arguments = "https://portal.office.com"
 $shortcut.Save()
 
 #Add Chrome Shortcut to Flowpack
@@ -56,19 +59,40 @@ copy-item .\Preferences -Destination "C:\Users\Administrator\AppData\Local\Googl
 
 #Replace Chrome Bookmarks file
 iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Bookmarks -OutFile .\Bookmarks  
-copy-item .\Bookmarks -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
+if (!$labName){
+    (Get-Content .\Bookmarks).Replace('https://labs.demo.okta.com/', "https://labs.demo.okta.com/lab/$labName") | Set-Content .\Bookmarks
+    (Get-Content .\Bookmarks).Replace('https://demo-lab-name.okta.com', "https://demo-$labName.okta.com") | Set-Content .\Bookmarks
+}
 
-#Downlaod Okta Verify and place in downloads folder
-iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile .\Downloads\OktaVerifySetup.exe  
+copy-item .\Bookmarks -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force  
 
 $a = (New-Object -comObject Shell.Application).Windows() |
  ? { $_.FullName -ne $null} |
  ? { $_.FullName.toLower().Endswith('\explorer.exe') }
  $a | % { $_.Quit() }
 
+ #Open Google Chrome LaunchPad app and Chrome Windows into Appropriate Positions
+ Add-Type '
+ using System;
+ using System.Runtime.InteropServices;
+
+ public class Win32 {
+     [DllImport("user32.dll")]
+     [return: MarshalAs(UnmanagedType.Bool)]
+     public static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
+ }
+' -PassThru
+
+Add-Type -AssemblyName System.Windows.Forms
+$screen=[System.Windows.Forms.SystemInformation]::PrimaryMonitorSize
+
+$googleapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "https://demo-$($labName).okta.com --window-size=$($screen.Width-600),$($screen.Height) --window-position=150,0 " -PassThru
+$launchpadapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "-app=https://labs.demo.okta.com/lab/$($labName)?LaunchPanel" -PassThru
+Start-Sleep -Milliseconds 3000
+$result = [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0 - 10000), 450, $($screen.Height-25), $true) -and [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0), 450, $($screen.Height-25), $true)
+
+#Download Okta Verify and place in downloads folder
+iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile C:\Users\Administrator\Downloads\OktaVerifySetup.exe 
+
 exit
-
-
-
-
 
