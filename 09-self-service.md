@@ -35,18 +35,18 @@ BambooHR.Subdomain: {{BambooHR.Subdomain}}
 
 Put this in the right box: `{{Office365.TenantID}}` and hit enter
 Single Tick Javascript Put this in the right box: 
-`javascript
- {{Office365.TenantID}}
- ` and hit enter
+`javascript {{Office365.TenantID}} ` and hit enter
 Put this in the right box: ```{{Office365.TenantID}}``` and hit enter
 Python Put this in the right box: 
 ```python
  {{Office365.TenantID}}
- ``` and hit enter
+ ``` 
+ and hit enter
 javascript Put this in the right box: 
 ```javascript
  {{Office365.TenantID}}
- ``` and hit enter
+ ```
+ and hit enter
 
 #### Footnote
 
