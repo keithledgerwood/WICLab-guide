@@ -1,5 +1,7 @@
 echo "Running as Lab Name: $labName"
 
+$labName=$labName.replace('demo-','')
+
 # Remove all shortcuts
 #must be run as admin
 Remove-Item C:\Users\*\Desktop\*lnk -Force
