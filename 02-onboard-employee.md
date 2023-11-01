@@ -42,12 +42,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
    ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "BambooHR")
 
 4. Click **Add Integration**
-1. In the **Launch Panel**, copy your **BambooHR Subdomain**.
-   |||
-   |:-----|:-----|
-   |![Small image](images/011/launch_bamboohr_subdomain_only_240.png "Hide")| |
-
-5. In the **General Settings** set **Subdomain** to {{BambooHR.Subdomain}}.
+5. In the **General Settings** set **Subdomain** to `{{BambooHR.Subdomain}}`.
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
    |||
@@ -135,8 +130,8 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
    |||
     |:-----|:-----|
-    |**Username**|`{{Office365.credentials.username}}|
-    |**Password**|`{{Office365.credentials.password}}|
+    |**Username**|`{{Office365.credentials.username}}`|
+    |**Password**|`{{Office365.credentials.password}}`|
 
 1. If prompted to **Stay signed in?**, select **Don't show this again** and click **Yes**.
 1. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
