@@ -13,12 +13,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ### General Settings
 
-1. In the **Launch Panel**, copy your **Office 365 Tenant** name.
-   |||
-   |:-----|:-----|
-   |![Office 365 tenant ](images/011/launch_o365_tenant_only_240.png "O365 Lab Tenant")| |
-
-1. In the **General Settings** tab, set **Microsoft Tenant Name** to your **Office 365 Tenant** name. Be sure to remove the *.on.microsoft.com* portion.
+1. In the **General Settings** tab, set **Microsoft Tenant Name** to {{Office365.TenantID}}.
 
     |||
    |:-----|:-----|
@@ -39,13 +34,11 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
    |:-----|:-----|
     |![Fetch and Select](images/011/app_o365_signon_wsfed_500.png "Fetch and Select")|
 
-10. Select the **Office 365 Domain** that corresponds to the **Domain Name** in your lab launch panel.
+10. For the **Domains** select {{Office365.DomainName}}.
 
     |||
     |:-----|:-----|
     |![Select Domain](images/011/app_o365_signon_domain_select_500.png "Select Domain")|
-
->**Hint:**  Don't select the domain that ends in *onmicrosoft.com*.
 
 ### Customization with Okta Expression Language
 
@@ -53,7 +46,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 1. For the **Custom** expression, enter the following, sample expression:
 
     ```javascript
-    String.substringBefore(user.login,"@") + "@nn.mywiclab.com"
+    String.substringBefore(user.login,"@") + "@{{Office365.DomainName}}"
     ```
 
 1. **IMPORTANT:** Be sure to replace  **nn.mywiclab.com** in the expression with your unique **Office 365 Domain Name** from the launch panel.

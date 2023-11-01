@@ -16,14 +16,14 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
 1. Set the following attributes for your **New Employee**. All other attributes are optional.
 
-   |Attribute|Value| For Example|
-   |:-----|:-----|:----|
-   |First Name |Enter a first name|*Flynn*|
-   |Last Name | Enter a last name|*Rider*|
-   |Work Email |firstName.lastName@ {{Office365.DomainName}}|*<flynn.rider@09.mywiclab.com>*|
+   |Attribute|Value|
+   |:-----|:-----|
+   |First Name |*Enter a first name*|
+   |Last Name | *Enter a last name*|
+   |Work Email |*firstName*.*lastName*@{{Office365.DomainName}}|
    |Hire Date |*Today's Date*|*Today's Date*|
-   |Job Title | **Director of Marketing**|*Director of Marketing*|
-   |Department | **Marketing**|*Marketing*|
+   |Job Title | **Director of Marketing**|
+   |Department | **Marketing**|
 
 1. Click **Save**.
 
