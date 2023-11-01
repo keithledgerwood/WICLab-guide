@@ -174,7 +174,7 @@ In the **Virtual Desktop**, test single sign-on to Microsoft Office 365 for your
     |:-----|:-----|
     |**Okta Sign-In URL:**|`https://{{idp.name}}.okta.com`|
 
-1. Authenticate as the new employee.
+1. Sign in with your **New Employee** username and password.
 1. Click the **Microsoft Office 365 Word Online** app.
     |||
     |:-----|:-----|
