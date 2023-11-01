@@ -20,7 +20,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |:-----|:-----|:----|
    |First Name |Enter a first name|*Flynn*|
    |Last Name | Enter a last name|*Rider*|
-   |Work Email |firstName.lastName@{{Office365.DomainName}}|*<flynn.rider@09.mywiclab.com>*|
+   |Work Email |firstName.lastName@ {{Office365.DomainName}}|*<flynn.rider@09.mywiclab.com>*|
    |Hire Date |*Today's Date*|*Today's Date*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
@@ -133,10 +133,10 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
 1. Sign in with your Office 365 Credentials.
 
-|||
-   |:-----|:-----|
-   |**Username**|{{Office365.credentials.username}}|
-   |**Password**|{{Office365.credentials.password}}|
+   |||
+    |:-----|:-----|
+    |**Username**|`{{Office365.credentials.username}}|
+    |**Password**|`{{Office365.credentials.password}}|
 
 1. If prompted to **Stay signed in?**, select **Don't show this again** and click **Yes**.
 1. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
