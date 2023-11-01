@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.10.31.01*
+*Lab guide version: 0.11.01.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -60,7 +60,7 @@ Here’s some additional information to help you familiarize yourself with the e
 
 ### Launch Panel
 
-Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources. Click the **HIDE** and watch it slide!
+Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources.
 
 ### Lab Outline
 

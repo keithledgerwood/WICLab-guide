@@ -20,8 +20,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |:-----|:-----|:----|
    |First Name |Enter a first name|*Flynn*|
    |Last Name | Enter a last name|*Rider*|
-   | | Copy your **Office 365 Domain Name** from the **Launch Panel**.  |![Domain Name](images/011/launch_o365_domain_name_only_240.png "Copy Domain Name")|
-   |Work Email |firstName.lastName@\<Paste your **Office 365 Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
+   |Work Email |firstName.lastName@{{Office365.DomainName}}|*<flynn.rider@09.mywiclab.com>*|
    |Hire Date |*Today's Date*|*Today's Date*|
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
@@ -48,7 +47,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
    |:-----|:-----|
    |![Small image](images/011/launch_bamboohr_subdomain_only_240.png "Hide")| |
 
-5. In the **General Settings** set **Subdomain** to your **BambooHR Subdomain**.
+5. In the **General Settings** set **Subdomain** to {{BambooHR.Subdomain}}.
 6. For **Application Visibility**, select **Do not display application icon to to users.**
 
    |||
@@ -132,7 +131,13 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
  To access the new employee activation email, within the Virtual Desktop, you'll need to sign into your Office 365 tenant using the credentials provided in the launch panel.
 
 1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
-1. Sign in with your Office 365 **Username** and **Password** from from the lab **Launch Panel**.
+1. Sign in with your Office 365 Credentials.
+
+|||
+   |:-----|:-----|
+   |**Username**|{{Office365.credentials.username}}|
+   |**Password**|{{Office365.credentials.password}}|
+
 1. If prompted to **Stay signed in?**, select **Don't show this again** and click **Yes**.
 1. Click the **Microsoft 365 app launcher** icon, and then click **Outlook**.
 
