@@ -13,7 +13,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ### General Settings
 
-1. In the **General Settings** tab, set **Microsoft Tenant Name** to {{Office365.TenantID}}.
+1. In the **General Settings** tab, set **Microsoft Tenant Name** to **{{Office365.TenantID}}**
 
     |||
    |:-----|:-----|
@@ -34,7 +34,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
    |:-----|:-----|
     |![Fetch and Select](images/011/app_o365_signon_wsfed_500.png "Fetch and Select")|
 
-10. For the **Domains** select {{Office365.DomainName}}.
+10. For the **Domains** select **{{Office365.DomainName}}**.
 
     |||
     |:-----|:-----|
@@ -48,8 +48,6 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
     ```javascript
     String.substringBefore(user.login,"@") + "@{{Office365.DomainName}}"
     ```
-
-1. **IMPORTANT:** Be sure to replace  **nn.mywiclab.com** in the expression with your unique **Office 365 Domain Name** from the launch panel.
 
     |||
     |:-----|:-----|
@@ -170,7 +168,11 @@ The new employee is now a member of the group and will be assigned the Microsoft
 
 In the **Virtual Desktop**, test single sign-on to Microsoft Office 365 for your new employee.
 
-1. Open a new browser window, and enter your Workforce Identity Cloud **Tenant** into the address bar. You can copy this value from the launch panel.
+1. Open a new browser window, and enter your **Workforce Identity Cloud Sign-in URL** into the address bar.
+
+    |||
+    |:-----|:-----|
+    |**Okta Sign-In URL:**|`https://{{idp.name}}.okta.com`|
 
 1. Authenticate as the new employee.
 1. Click the **Microsoft Office 365 Word Online** app.
