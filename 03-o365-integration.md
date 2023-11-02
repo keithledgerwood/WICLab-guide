@@ -44,7 +44,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 ### Customization with Okta Expression Language
 
 1. In the **Credential Details** section, for **Application username format** select **Custom**.
-1. For the **Custom** expression, enter the following, sample expression:
+1. For the **Custom** expression, copy and paste the following expression:
 
     ```javascript
     String.substringBefore(user.login,"@") + "@{{Office365.DomainName}}"
