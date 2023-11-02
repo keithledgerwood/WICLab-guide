@@ -30,25 +30,25 @@ $shortcut.Arguments = "https://demo-$labName.okta.com"
 $shortcut.Save()
 
 #Add Chrome Shortcut to Okta Lab Guide
-$shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Lab Guide.lnk")
-$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "http://labs.demo.okta.com/lab/$labName"
-$shortcut.Save()
+#$shell = New-Object -comObject WScript.Shell
+#$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Lab Guide.lnk")
+#$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+#$shortcut.Arguments = "http://labs.demo.okta.com/lab/$labName"
+#$shortcut.Save()
 
 #Add Chrome Shortcut and launch as O365
-$shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Office 365.lnk")
-$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://portal.office.com"
-$shortcut.Save()
+#$shell = New-Object -comObject WScript.Shell
+#$shortcut = $shell.CreateShortcut("$Home\Desktop\Launch Office 365.lnk")
+#$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+#$shortcut.Arguments = "https://portal.office.com"
+#$shortcut.Save()
 
 #Add Chrome Shortcut to Flowpack
-$shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
-$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
-$shortcut.Save()
+#$shell = New-Object -comObject WScript.Shell
+#$shortcut = $shell.CreateShortcut("$Home\Desktop\Download Flowpack.lnk")
+#$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+#$shortcut.Arguments = "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/workflows/titleChanged.flow"
+#$shortcut.Save()
 
 #Shortcut for Notepad on Desktop
  $shell = New-Object -comObject WScript.Shell 
@@ -90,12 +90,12 @@ $a = (New-Object -comObject Shell.Application).Windows() |
 $screen=[System.Windows.Forms.SystemInformation]::PrimaryMonitorSize
 
 $googleapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "https://demo-$($labName).okta.com --window-size=$($screen.Width-600),$($screen.Height) --window-position=150,0 " -PassThru
-Start-Sleep -Milliseconds 1000
-$launchpadapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "-app=https://labs.demo.okta.com/lab/$($labName)?LaunchPanel" -PassThru
+#Start-Sleep -Milliseconds 1000
+#$launchpadapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "-app=https://labs.demo.okta.com/lab/$($labName)?LaunchPanel" -PassThru
 Start-Sleep -Milliseconds 3000
-$result = [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0 - 10000), 450, $($screen.Height-25), $true) -and [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0), 450, $($screen.Height-25), $true)
-Start-Sleep -Milliseconds 1000
-$result = [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0 - 10000), 450, $($screen.Height-25), $true) -and [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0), 450, $($screen.Height-25), $true)
+#$result = [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0 - 10000), 450, $($screen.Height-25), $true) -and [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0), 450, $($screen.Height-25), $true)
+#Start-Sleep -Milliseconds 1000
+#$result = [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0 - 10000), 450, $($screen.Height-25), $true) -and [Win32]::MoveWindow($googleapp.MainWindowHandle, $($screen.Width-450), (0), 450, $($screen.Height-25), $true)
 
 #Download Okta Verify and place in downloads folder
 iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile C:\Users\Administrator\Downloads\OktaVerifySetup.exe 
