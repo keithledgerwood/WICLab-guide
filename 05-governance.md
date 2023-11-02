@@ -145,13 +145,8 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 2. In the Workflows console, select **Connections**, and then click **New Connection**.
 1. In the **New Connection** dialog search bar, enter **okta** and then click **Okta**.
-1. Optional. Modify the default **Connection Nickname**.
-1. From the **Launch Panel**, copy the Workforce Identity Cloud **Tenant** value.
-
-    |||
-     |:-----|:-----|
-     |![Okta Tenant](images/011/launch_okta_tenant_240.png "Okta Tenant")| |
-1. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Tenant** value into the Okta Connection **Domain**.
+1. Optional. Change the **Connection Nickname**.
+1. Set the **Domain** to `{{idp.name}}.okta.com`
 
     |||
      |:-----|:-----|
@@ -159,6 +154,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
+<!-->
 #### Grant Consent to Okta Access Certification Scopes
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
@@ -169,6 +165,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
     |||
       |:-----|:-----|
      |![Okta Connection Domain](images/011/app_workflows_oauth_api_scopes_400.png "Okta Connection Domain")| |
+-->
 
 #### Copy and paste the Client ID and Client Secret
 
@@ -209,6 +206,7 @@ You have successfully imported the Flow.
 
 This workflow consists of an App Event flow, two Helper flows, and a table.
 
+<!-->
 #### Initialize Environment
 
 1. Click the **[RUN ME FIRST] Initialize Environment** flow to open it.
@@ -223,6 +221,7 @@ The **Execution History** will display with a **Status** of **Success**.
     |||
      |:-----|:-----|
     |![Return to flowpack](images/011/workflows_run_me_first_return_to_flow_600.png "Return to flowpack")|
+-->
 
 #### Set Okta Connection in MAIN flow
 

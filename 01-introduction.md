@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.10.31.01*
+*Lab guide version: 0.11.01.02*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -42,17 +42,44 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    |:-----|:-----|
    |![PowerShell icon](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
 
-## An Overview of the Environment
+## An Overview of the Lab Environment
 
 Before we get started,  here are your resources for today’s mission:
 
-   **Okta Workforce Identity Cloud Tenant**: Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
+### Okta Workforce Identity Cloud Tenant
 
-   **Virtual Desktop**: The virtual environment where today's real workshop challenges await.
+Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
 
-   **HR Application**: What's a Workforce identity mission without a genuine HR application for employee sourcing?
+The Okta tenant will be available to you for seven days in case you want to continue to explore it features and capabilities.
 
-   **Microsoft Office 365**: Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
+Your Okta tenant Sign-On URL is:  `https://{{idp.name}}.okta.com`
+
+### Virtual Desktop
+
+The virtual environment where today's real workshop challenges await.
+
+## HR Application
+
+ What's a Workforce identity mission without a genuine HR application for employee sourcing?
+
+ In this lab, all participants are sharing a single instance of BambooHR: `https://{{BambooHR.Subdomain}}.bamboohr.com/login.php`
+
+   |BambooHR ||
+    |:-----|:-----|
+    |**Username:**|{{BambooHR.credentials.username}}|
+    |**Password:**|{{BambooHR.credentials.password}}|
+
+## Microsoft Office 365
+
+Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
+
+In this lab, each participant gets their own Office 365 tenant that is pre-configured with a domain name.
+
+   |Office 365 ||
+    |:-----|:-----|
+    |**Username:**|{{Office365.credentials.username}}|
+    |**Password:**|{{Office365.credentials.password}}|
+    |**Domain Name**|{{Office365.DomainName}}|
 
 ## But wait, there's more
 
@@ -60,7 +87,7 @@ Here’s some additional information to help you familiarize yourself with the e
 
 ### Launch Panel
 
-Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources. Click the **HIDE** and watch it slide!
+Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources.
 
 ### Lab Outline
 

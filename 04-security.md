@@ -17,7 +17,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 1. Click **Next**.
 
-1. For **New Account**, enter **https://** followed by your Okta **Tenant** from the launch panel.
+1. For **New Account**, enter `https://{{idp.name}}.okta.com`
     |||
      |:-----|:-----|
      |![sign-in URL ](images/011/ov_sign_in_url_240.png "sign-in URL ")| |
@@ -102,30 +102,15 @@ With device assurance policies you can check security-related device attributes 
    |:-----|:-----|
     |![Device Assurance Policy](images/011/device_assurance_policy_add_win11_400.png "Device Assurance Policy")|
 
-### Add Device Assurance Rule to High Security Apps Policy
+### Modify Device Assurance Rule for High Security Apps Policy
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
 1. Click **High Security Apps**.
 1. Click **Add rule**.
-1. Set the **Rule name** to **Windows 11 or higher**
-1. Set the following **IF** conditions for the rule:
-
-    | IF | Value|
-    |:-----|:-----|
-    |User's  type is| Accept the default |
-    |User's group membership includes|Select the **Digital Marketing** and **Digital Sales** groups.|
-     | Device state is: |  **Registered**|
-     | Device assurance policy is| Any of the following device assurance polices|
-     | |Select the **Windows 11** policy|
-
-1. Set the following **THEN** access and authentication settings for the rule:
-
-    |THEN||
-    |:-----|:-----|
-    |User must authenticate with:| **Possession factor**|
-    |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
+1. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Edit**
+1. In the **IF** conditions, set **Device assurance policy is** to **Windows 11**.
 1. Click **Save**.
-1. Drag the **Windows 11 or higher** rule up to make **Priority 1** in the list of rules for the policy.
+1. Drag the **Windows 11 or higher** rule up to make it **Priority 1** in the list of rules for the policy.
 
     |||
    |:-----|:-----|
