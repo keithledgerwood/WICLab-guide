@@ -1,6 +1,6 @@
 # Okta **TechCamp (WIC)Lab**
 
-*Lab guide version: 0.11.01.02*
+*Lab guide version: 0.11.02.01*
 
 |||
 |:-----|:-----|

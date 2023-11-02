@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.11.01.02*
+*Lab guide version: 0.11.02.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -66,8 +66,8 @@ The virtual environment where today's real workshop challenges await.
 
    |BambooHR ||
     |:-----|:-----|
-    |**Username:**|{{BambooHR.credentials.username}}|
-    |**Password:**|{{BambooHR.credentials.password}}|
+    |**Username:**|`{{BambooHR.credentials.username}}`|
+    |**Password:**|`{{BambooHR.credentials.password}}`|
 
 ## Microsoft Office 365
 
@@ -77,9 +77,9 @@ In this lab, each participant gets their own Office 365 tenant that is pre-confi
 
    |Office 365 ||
     |:-----|:-----|
-    |**Username:**|{{Office365.credentials.username}}|
-    |**Password:**|{{Office365.credentials.password}}|
-    |**Domain Name**|{{Office365.DomainName}}|
+    |**Username:**|`{{Office365.credentials.username}}`|
+    |**Password:**|`{{Office365.credentials.password}}`|
+    |**Domain Name**|`{{Office365.DomainName}}`|
 
 ## But wait, there's more
 
