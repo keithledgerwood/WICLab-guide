@@ -189,7 +189,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 ### Download the **Title Change** flowpack
 
-1. [Download the lab flowpack *identityGovernanceAccessCertificationOnTitleChange.folder*](https://keithledgerwood.github.io/WICLab-guide/workflows/identityGovernanceAccessCertificationOnTitleChange.folder)
+1. [Download the lab flowpack *identityGovernanceAccessCertificationOnTitleChange.folder*](https://keithledgerwood.github.io/WICLab-guide/workflows/EmployeeLifecycleFlows.folder)
 
 ### Import the Flow into the Default Folder
 
