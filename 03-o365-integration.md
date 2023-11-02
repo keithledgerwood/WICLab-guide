@@ -27,7 +27,8 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
     |||
    |:-----|:-----|
     |![WS-Federation](images/011/app_o365_select_federation_240.png "WS-Federation   ")|
-1. Set the **Office 365 Admin Username** and **Office 365 Admin password** to the values from the lab launch panel.
+1. Set the **Office 365 Admin Username** to `{{Office365.credentials.username}}`
+1. Set the **Office 365 Admin password** to `{{Office365.credentials.password}}`
 1. Click **Fetch and Select**. This will display a list of your Office 365 Domains.
 
     |||
