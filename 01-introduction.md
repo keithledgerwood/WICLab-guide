@@ -26,12 +26,12 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
 ## Launch your Virtual Desktop
 
-1. In the  **Launch Panel** on the left, for **Virtual Desktop**, click **Launch**. This will open a new browser tab.
+1. In the  **Launch Panel** on the right, under **Virtual Desktop**, click **Launch**. This will open a new browser tab.
 
    |||
       |:-----|:-----|
-      |![Virtual Desktop](images/011/launch_virtual_desktop.png "Launch Virtual Desktop")| This will take about 10 minutes, so please sit back and enjoy today's featured presentation.|
-2. Click **Launch Virtual Desktop**.
+      |![Virtual Desktop](images/011/launch_virtual_desktop.png "Launch Virtual Desktop")| |
+2. Click **Launch Virtual Infrastructure**. It may take up to five minutes for your Virtual Desktop to start, so please sit back and enjoy today's featured presentation.
 
 3. Copy this code block.
 ```$labName="{{idp.name}}"; iex (iwr https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/labvm/config.ps1).Content```
@@ -42,15 +42,37 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    |:-----|:-----|
    |![PowerShell icon](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
 
-## An Overview of the Lab Environment
+## An Overview of your Lab Environment
 
-Before we get started,  here are your resources for today’s mission:
+Before we get started, here are your resources for today’s mission:
+
+### TechCamps Outline
+
+Where's my GPS? On the left, you’ll find an outline of today’s mission which also serves as your control panel. This TechCamps - Workforce Identity Cloud consists of seven sections, each with its own subsections. As you progress through the sections, the subsections will display. You also have the ability to collapse the outline by clicking on the arrow icon.
+
+   |||
+   |:-----|:-----|
+   |![TechCamps Outline](images/011/TechCamps_outline_control_250.png   "TechCamps Outline")| |
+
+At the bottom of each section, there's a handy control to navigate forwards and backwards between the sections.
+
+   |||
+   |:-----|:-----|
+   |![VCR control?](images/011/techcamps_step_controller_200.png   "VCR control?")| |
+
+### Launch Pad
+
+Peek into the fashionably gray box on your right, and you'll discover an easy way to launch your lab resources.  Each resource has it's own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
+
+#### Dynamic Lab Guide Variables
+
+In addition to the ability to copy credentials from the Launch Pad, we've also produced this lab guide using dynamic variables. These variables will display values specific to your lab environment. Simply copy and paste them as needed.
 
 ### Okta Workforce Identity Cloud Tenant
 
 Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
 
-The Okta tenant will be available to you for seven days in case you want to continue to explore it features and capabilities.
+Your Okta tenant will be available for seven days in case you want to continue to explore it features and capabilities.
 
 Your Okta tenant Sign-On URL is:  `https://{{idp.name}}.okta.com`
 
@@ -58,37 +80,14 @@ Your Okta tenant Sign-On URL is:  `https://{{idp.name}}.okta.com`
 
 The virtual environment where today's real workshop challenges await.
 
-## HR Application
+### HR Application
 
  What's a Workforce identity mission without a genuine HR application for employee sourcing?
 
- In this lab, all participants are sharing a single instance of BambooHR: `https://{{BambooHR.Subdomain}}.bamboohr.com/login.php`
+ In this lab, all participants are sharing a single instance of BambooHR. In the next section, you'll be asked to create a new employee, so make it unique so as not to cause any confusion.
 
-   |BambooHR ||
-    |:-----|:-----|
-    |**Username:**|`{{BambooHR.credentials.username}}`|
-    |**Password:**|`{{BambooHR.credentials.password}}`|
-
-## Microsoft Office 365
+### Microsoft Office 365
 
 Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
 
 In this lab, each participant gets their own Office 365 tenant that is pre-configured with a domain name.
-
-   |Office 365 ||
-    |:-----|:-----|
-    |**Username:**|`{{Office365.credentials.username}}`|
-    |**Password:**|`{{Office365.credentials.password}}`|
-    |**Domain Name**|`{{Office365.DomainName}}`|
-
-## But wait, there's more
-
-Here’s some additional information to help you familiarize yourself with the environment
-
-### Launch Panel
-
-Peek into the fashionably gray box on your left, and you'll discover your credentials and links to the above mentioned resources.
-
-### Lab Outline
-
-Don’t forget the map! In the lower left, you’ll find an outline of today’s mission, guiding you to infinity and beyond!

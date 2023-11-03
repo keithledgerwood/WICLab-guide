@@ -186,7 +186,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 ### Download the **Title Change** flowpack
 
-1. [Download the lab flowpack *Employee Lifecycle Flows*](https://keithledgerwood.github.io/WICLab-guide/workflows/EmployeeLifecycleFlows.folder)
+1. Download the lab flowpack:  [*Employee Lifecycle Flows*](https://keithledgerwood.github.io/WICLab-guide/workflows/EmployeeLifecycleFlows.folder)
 
 ### Import the Flow into the Default Folder
 
@@ -197,32 +197,15 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
     |![Import flowpack](images/011/workflows_folder_ellipsis_400.png "Import flowpack")|
 
 2. Click **Choose file from computer**, choose the **EmployeeLifecycleFlows.folder** and then click **Open**.
-1. Select the **Employee Lifecycle** subfolder. This will display
-You have successfully imported the Flow.
+1. Select the **Employee Lifecycle** subfolder. This will display three flows.
+
     |||
      |:-----|:-----|
-    |![Imported flow](images/011/workflows_titlechanged_import_success_600.png "Imported flow")|
+    |![Imported flow](images/011/workflows_lifecycle_change_imported_600.png "Imported flow")|
 
 ### Modify the Imported Flow
 
 This workflow consists of an App Event flow, and a Helper flow.
-
-<!-->
-#### Initialize Environment
-
-1. Click the **[RUN ME FIRST] Initialize Environment** flow to open it.
-1. Click **Run**. This will open a dialog window.
-    |||
-     |:-----|:-----|
-    |![Run button](images/011/workflows_run_me_first_run_600.png "Run button")|
-1. Set **Certification Approval Override** to your Okta admin email.
-1. Click **Run Test**.
-The **Execution History** will display with a **Status** of **Success**.
-1. In the top left corner, click the **Default Folder** icon to return to the Flows page.
-    |||
-     |:-----|:-----|
-    |![Return to flowpack](images/011/workflows_run_me_first_return_to_flow_600.png "Return to flowpack")|
--->
 
 #### Set Okta Connection in App Event flow
 

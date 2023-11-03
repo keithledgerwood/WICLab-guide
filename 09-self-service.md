@@ -1,6 +1,7 @@
 ## Lab Guide Variables
 
-### IDP Variables:
+### IDP Variables
+
 idp.dashboard: {{idp.dashboard}}
 
 idp.name:  {{idp.name}}
@@ -23,6 +24,7 @@ Office365.TenantID: {{Office365.TenantID}}
 {{#Office365.history}} {{latestMessage}} {{/Office365.history}}
 
 ### BambooHR Variables
+
 BambooHR.credentials.username: {{BambooHR.credentials.username}}
 
 BambooHR.credentials.password: {{BambooHR.credentials.password}}
@@ -32,8 +34,7 @@ BambooHR.Subdomain: {{BambooHR.Subdomain}}
 **BambooHR History:**
 {{#BambooHR.history}} {{latestMessage}} {{/BambooHR.history}}
 
-
-Put this in the right box: `{{Office365.TenantID}}` and hit enter
+Dynamic lab variables will have a black background and a copy button, just like this one for example: `{{Office365.TenantID}}`.
 
 #### Footnote
 
@@ -45,8 +46,6 @@ Put this in the right box: `{{Office365.TenantID}}` and hit enter
 
 [^note]:
   You can customize the access denied error message.[Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
-
-## Old Certification
 
 ### Verify the Access Certification Campaign was created
 
@@ -60,7 +59,7 @@ The page provides an overview of the campaign, the progress of the campaign, and
 
 >**Note:** Please notify a lab assistant if there is no campaign listed.
 
-## Old FLow
+### Old FLow
 
 >**Tip:** To view a graphic of the all the cards in a flow, you can select the **Flow Chart** tab while in edit mode.
  ![flow chart](images/011/titlechanged_flowchart_access_240.png).
@@ -88,13 +87,13 @@ Set the contents of the first **Compose** card to your Okta tenant URL.
      |:-----|:-----|
      |![flow is on](images/011/titlechanged_flow_is_on_240.png "flow is on")|
 
-## Old O365
+### Old O365
 
 >**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
 ![tenant name](images/011/launch_O365_tenant_240.png "Tenant Name")
 Be sure to leave off the *onmicrosoft.com* portion.
 
-## Old New Employee
+### Old New Employee
 
    >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
    ![domain name](images/011/launch_O365_domain_name_240.png "O365 Domain Name")
@@ -152,11 +151,11 @@ Omit the *onmicrosoft.com* portion of the tenant name.
 
 >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
 
-## Tip - indent - what is pixel width?
+### Tip - indent - what is pixel width?
 
    >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
 
-## Table - Right image
+### Table - Right image
 
 **Result:**
 
@@ -164,7 +163,7 @@ Omit the *onmicrosoft.com* portion of the tenant name.
    |:-----|:-----|
    |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Image on the right](images/011/launch_O365_tenant_r144_300_224.png)|
 
-## Table - Left image
+### Table - Left image
 
 **Result:**
 
@@ -172,13 +171,13 @@ Omit the *onmicrosoft.com* portion of the tenant name.
    |:-----|:-----|
    |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png)| Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
 
-## No table - indented image
+### No table - indented image
 
 Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
 Ignore the *onmicrosoft.com* portion of the tenant name.
    ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
 
-## No table - double indented
+### No table - double indented
 
 **Result:** Outside of a table, images appear to be centered
 
@@ -343,7 +342,7 @@ You can also use words, to fit your writing style more closely[^note].
     Named footnotes will still render with numbers instead of the text but allow easier identification and linking. [Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
     This footnote also has been made with a different syntax using 4 spaces for new lines.
 
-### TABLES
+## TABLES
 
 Colons can be used to align columns.
 
@@ -458,7 +457,7 @@ Image tag with width 100
 
 Or, you can review the following tests on image alignment.
 
-# Image size and alignment
+## Image size and alignment
 
 1. Image.
 
