@@ -74,8 +74,6 @@ Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organ
 
 Your Okta tenant will be available for seven days in case you want to continue to explore it features and capabilities.
 
-Your Okta tenant Sign-On URL is:  `https://{{idp.name}}.okta.com`
-
 ### Virtual Desktop
 
 The virtual environment where today's real workshop challenges await.

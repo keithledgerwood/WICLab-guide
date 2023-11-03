@@ -13,7 +13,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 ### General Settings
 
-1. In the **General Settings** tab, set **Microsoft Tenant Name** to **{{Office365.TenantID}}**
+1. In the **General Settings** tab, set **Microsoft Tenant Name** to `{{Office365.TenantID}}`
 
     |||
    |:-----|:-----|
