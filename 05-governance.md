@@ -196,7 +196,8 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
      |:-----|:-----|
     |![Import flowpack](images/011/workflows_folder_ellipsis_400.png "Import flowpack")|
 
-2. Click **Choose file from computer**, choose the **titleChanged.flow** and then click **Open**.
+2. Click **Choose file from computer**, choose the **EmployeeLifecycleFlows.folder** and then click **Open**.
+1. Select the **Employee Lifecycle** subfolder. This will display
 You have successfully imported the Flow.
     |||
      |:-----|:-----|
@@ -204,7 +205,7 @@ You have successfully imported the Flow.
 
 ### Modify the Imported Flow
 
-This workflow consists of an App Event flow, two Helper flows, and a table.
+This workflow consists of an App Event flow, and a Helper flow.
 
 <!-->
 #### Initialize Environment
@@ -223,26 +224,28 @@ The **Execution History** will display with a **Status** of **Success**.
     |![Return to flowpack](images/011/workflows_run_me_first_return_to_flow_600.png "Return to flowpack")|
 -->
 
-#### Set Okta Connection in MAIN flow
+#### Set Okta Connection in App Event flow
 
-1. Click the **[MAIN] Create Access Certification on User Title Changed** flow to open it.
-1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
-1. Click **Save**.
+1. Click the **[Event] User Title Changed** flow to open it.
+1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
+1. Click **Save**. This will open the **Save flow** dialog.
     |||
     |:-----|:-----|
     |![Set Okta Connection MAIN](images/011/workflows_main_set_okta_connection_600.png "Set Okta Connection MAIN")|
-1. In the top left corner, click the **Default Folder** icon to return to the Flows page.
+1. Click **Save**.
+1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
 #### Set Okta Custom API Action Connection
 
-1. Click the **[HELPER] Create and Launch Access Certification Campaign** flow to open it.
-1. In the **Okta Custom API Action** card, click **Choose Connection**, and then click your Okta connection. This will cause the card to expand.
+1. Click the **[Action] Create Access Re-Certification Campaign** flow to open it.
+1. In the **Search for Lab Admin User** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
+1. Click **Save**. This will open the **Save flow** dialog.
 1. Click **Save**.
-1. Return to the Flows page.
+1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
-#### Turn on the MAIN and HELPER flows
+#### Turn on the flows
 
-1. Toggle on the Flows.
+1. Toggle on the App Event and Helper flows.
     |||
     |:-----|:-----|
     |![Flows toggled on](images/011/workflows_toggled_on_300.png "Flows toggled on")|
