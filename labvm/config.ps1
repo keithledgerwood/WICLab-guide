@@ -55,11 +55,11 @@ Stop-Process -ProcessName explorer -Force
 Start-process -WindowStyle hidden explorer 
 
 #Replace Chrome Preferences file
-iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Preferences -OutFile .\Preferences  
+iwr -uri https://cdn.demo.okta.com/labs/techcamps_wic/labvm/Preferences -OutFile .\Preferences  
 copy-item .\Preferences -Destination "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default" -recurse -Force 
 
 #Replace Chrome Bookmarks file
-iwr -uri https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/labvm/Bookmarks -OutFile .\Bookmarks  
+iwr -uri https://cdn.demo.okta.com/labs/techcamps_wic/labvm/Bookmarks -OutFile .\Bookmarks  
 if ($labName){
     (Get-Content .\Bookmarks).Replace('https://labs.demo.okta.com/', "https://labs.demo.okta.com/lab/$labName") | Set-Content .\Bookmarks
     (Get-Content .\Bookmarks).Replace('https://demo-lab-name.okta.com', "https://demo-$labName.okta.com") | Set-Content .\Bookmarks

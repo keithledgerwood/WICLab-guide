@@ -37,11 +37,11 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 1. In the Admin Console select **Applications** > **Applications**.
 2. Click **Browse App Catalog**.
 
-   ![Browse App Catalog](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/009/image01.png "Browse App Catalog")
+   ![Browse App Catalog](images/009/image01.png "Browse App Catalog")
 
 3. In the Browse App Integration Catalog **Search...** bar, type *bamboohr* , and then click **BambooHR**.
 
-   ![alt_text](https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/images/003/image001.png "BambooHR")
+   ![alt_text](images/003/image001.png "BambooHR")
 
 4. Click **Add Integration**
 5. In the **General Settings** set **Subdomain** to `{{BambooHR.Subdomain}}`.

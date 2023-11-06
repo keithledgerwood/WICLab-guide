@@ -173,7 +173,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 ### Download the **Title Change** flowpack
 
-1. Download the lab flowpack:  [*Employee Lifecycle Flows*](https://keithledgerwood.github.io/WICLab-guide/workflows/EmployeeLifecycleFlows.folder)
+1. Download the lab flowpack:  [*Employee Lifecycle Flows*](https://cdn.demo.okta.com/labs/techcamps_wic/workflows/EmployeeLifecycleFlows.folder)
 
 ### Import the Flow into the Default Folder
 
