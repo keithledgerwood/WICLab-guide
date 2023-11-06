@@ -128,12 +128,12 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 4. Optional. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
-## As the new employee, verify access to Navan
+## As the New Employee, verify access to Navan
 
 1. Return back to the new employee browser session
 2. Reload the End-User Dashboard, and verify the new employee has access to Navan.
 
-## Workflow Connections
+## Okta Workflows for Access Certifications
 
  In this section of the lab, you'll set up two workflow connections and then import and configure a flowpack. When activated, this flow will automate the creation of access certification campaigns whenever an employee's title changes.
 
@@ -230,7 +230,7 @@ Promote your employee from Director to Sr. Director.
 2. On the **Job** tab, for **Job Information** click  **Add Entry**.
 3. In the **Add Job Information** dialog, set the **Job Title** to **Sr. Director of Marketing**, and then click **Save**.
 
-## Import the Title Change into Okta
+## In Okta,  Import the Title Change
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.
