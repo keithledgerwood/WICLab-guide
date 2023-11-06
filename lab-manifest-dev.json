@@ -1,9 +1,10 @@
 {
     "id": "techcamps_wic_dev",
-    "title": "TechCamps - WIC Lab (dev)",
+    "title": "tech{camps} - Workforce Identity Cloud (dev)",
     "state": "hidden",
-    "duration": "4 hours",
-    "description": "In this Workshop, you will learn how to integrate Okta with different identity directories and applications.",
+    "registrationHook": "https://wiclabs.workflows.okta.com/api/flo/3ad4b4e88d6324668be7730e4406ea3a/invoke?clientToken=966f2a944860af58508e49cd2f07d8185423f5a7c9ede59b95fd2db193b43b6c",
+    "duration": "PT8H",
+    "description": "Experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.",
     "idp_type": "workforce-identity",
     "overview": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/00-overview.md",
     "contributors": "Okta Presales",
