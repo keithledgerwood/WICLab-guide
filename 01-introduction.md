@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.11.06.01*
+*Lab guide version: 0.11.06.02*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -26,7 +26,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
 
 ## Launch your Virtual Desktop
 
-1. In the  **Launch Panel** on the right, under **Virtual Desktop**, click **Launch**. This will open a new browser tab.
+1. In the  **Launch Pad** on the right, under **Virtual Desktop**, click **Launch**. This will open a new browser tab.
 
    |||
       |:-----|:-----|

@@ -17,7 +17,7 @@ In this lab, you will navigate the pathways of application access requests, demo
      |:-----|:-----|
     |![Add team members to IT](images/011/oig_ar_settings_add_team_members_400.png "Add team members to IT")|
 
-7. Verify that you are listed as a member of the **IT** team.
+7. Verify that you are listed as **IT** team member.
 
 ### Provide IT Team Access to Okta Apps & Groups
 
@@ -44,7 +44,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |Name|**Navan**|
     |Description |  **Corporate Travel App**|
     |Team |**IT**|
-    |Audience|**Everyone at** your Okta tenant|'
+    |Audience|**Everyone at {{idp.name}}**|'
 
 1. Click **Continue**.
     |||
@@ -83,10 +83,10 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
     |:-----|:-----|
     |Text|**Assign to Navan**|
     |Make it a required task |  *Enabled*|
-    |Type | **Assign individual app to user**|
-    |Run automatically |Toggle to be **Enabled**|
-    |Email address|**Requester email**|
-    |Select application | **Navan** from the list of apps|
+    |Type | *Assign individual app to user*|
+    |Run automatically |Toggle **On**. Additional fields will appear.|
+    |Email address| Select **Requester email**|
+    |Select application |Select  **Navan** from the list of apps|
     |Run automatically | *Enabled*|'
 
 1. Click **Edit Logic**. This will switch you from the Details tab to the Logic tab.
@@ -139,7 +139,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 ## Create an Okta Connection
 
-1. In the Okta Admin Console select **Workflow** > **Workflows console**.
+1. In the Okta Admin Console select **Workflow** > **Workflows console**. This will open the Workflows console in a new browser tab.
 
 >**Note:** Your browser window now has an open tab open for the **Okta Admin Console** and another tab for the **Workflows Console**. Throughout this lab, you will be navigating between the two consoles, so pay close attention.
 
@@ -156,7 +156,8 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 
 ### Copy and paste the Client ID and Client Secret
 
-1. In the **Okta Workflows OAuth** app, select the **Sign On** tab.
+1. In the Okta Admin Console select **Applications** > **Applications**, and then select the **Okta Workflows OAuth** app.
+1. In the app definition, select the **Sign On** tab.
 1. Copy the **Client ID**
 1. Return to the **Workflows console** >  **New Connection** dialog, and then paste the **Client ID**.
 1. Repeat the copy and paste steps for the **Client secret**.
@@ -178,7 +179,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 ### Import the Flow into the Default Folder
 
 1. In the Workflows console, select **Flows** to display the Flows page.
-1. In the **Folders** panel, click the **...** next to the **Default Folder**,  and then select **Import**
+1. In the **Folders** panel, click the vertical ellipsis **...** next to the **Default Folder**,  and then select **Import**.
     |||
      |:-----|:-----|
     |![Import flowpack](images/011/workflows_folder_ellipsis_400.png "Import flowpack")|
@@ -190,22 +191,22 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
      |:-----|:-----|
     |![Imported flow](images/011/workflows_lifecycle_change_imported_600.png "Imported flow")|
 
-## Modify the Imported Flow
+## Customize the Imported Flow
 
 This workflow consists of an App Event flow, and a Helper flow.
 
-### Set Okta Connection in App Event flow
+### In User Title Changed flow, Choose Connection
 
 1. Click the **[Event] User Title Changed** flow to open it.
 1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
 1. Click **Save**. This will open the **Save flow** dialog.
     |||
     |:-----|:-----|
-    |![Set Okta Connection MAIN](images/011/workflows_main_set_okta_connection_600.png "Set Okta Connection MAIN")|
+    |![Choose Okta Connection ](images/011/workflows_main_set_okta_connection_600.png "Set Choose Okta Connection")|
 1. Click **Save**.
 1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
-### Set Okta Custom API Action Connection
+### In Create Access Re-Certification Campaign,  Choose Connection
 
 1. Click the **[Action] Create Access Re-Certification Campaign** flow to open it.
 1. In the **Search for Lab Admin User** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
@@ -213,7 +214,7 @@ This workflow consists of an App Event flow, and a Helper flow.
 1. Click **Save**.
 1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
-#### Turn on the flows
+### Toggle On the flows
 
 1. Toggle on the App Event and Helper flows.
     |||
@@ -230,7 +231,7 @@ Promote your employee from Director to Sr. Director.
 2. On the **Job** tab, for **Job Information** click  **Add Entry**.
 3. In the **Add Job Information** dialog, set the **Job Title** to **Sr. Director of Marketing**, and then click **Save**.
 
-## In Okta,  Import the Title Change
+## In Okta, Import the Title Change
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.

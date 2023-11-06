@@ -125,7 +125,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
 ## Retrieve New Employee Activation Email
 
- To access the new employee activation email, within the Virtual Desktop, you'll need to sign into your Office 365 tenant using the credentials provided in the launch panel.
+ To access the new employee activation email, within the Virtual Desktop, you'll need to sign into your Office 365 tenant using the credentials provided in the launch pad.
 
 1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
 1. Sign in with your Office 365 Credentials.

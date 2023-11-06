@@ -4,7 +4,7 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 ## Employee Departmental Transfer
 
-1. Sign in to **BambooHR** with the credentials provided in the Launch Panel.
+1. Sign in to **BambooHR** with the credentials provided in the Launch Pad.
 1. In the BambooHR dashboard search for and select your employee.
 1. On the **Job** tab, for **Job Information**, click **Add Entry**.
 1. For the **Department**, select **Sales**.

@@ -81,7 +81,7 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable provisioning, 
     |:-----|:-----|
     |![Authenticate with Microsoft Office 365](images/009/image010_600.png "Authenticate with Microsoft Office 365")|
 
-1. Authenticate using the credentials for your Microsoft tenant from the launch panel.
+1. Authenticate using the credentials for your Microsoft tenant from the launch pad.
 1. On the **Permissions Requested** dialog, click **Accept** to grant the permissions requested by the Okta Microsoft Graph Client.
 1. Click **Save**.
 

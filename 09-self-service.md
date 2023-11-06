@@ -110,10 +110,10 @@ Be sure to leave off the *onmicrosoft.com* portion.
    |Job Title | **Director of Marketing**|*Director of Marketing*|
    |Department | **Marketing**|*Marketing*|
 
-    >**Tip:** Check your **BambooHR Subdomain** in the launch panel; you will need this value for the next step.
+    >**Tip:** Check your **BambooHR Subdomain** in the launch pad; you will need this value for the next step.
     ![bamboohr subdomain](images/011/launch_bamboohr_subdomain_240.png "BambooHR Subdomain")|
 
-## Launch Panel
+## Launch Pad
 
 **Result:**
 
