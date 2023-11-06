@@ -1,6 +1,6 @@
-# Okta **TechCamp (WIC)Lab**
+# Okta **tech{camps} - Workforce Identity Cloud**
 
-*Lab guide version: 0.11.03.01*
+*Lab guide version: 0.11.06.01*
 
 |||
 |:-----|:-----|

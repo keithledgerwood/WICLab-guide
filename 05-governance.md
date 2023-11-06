@@ -3,9 +3,9 @@
 
 In this lab, you will navigate the pathways of application access requests, demonstrating the seamless experience for employees itching to get their hands on the tools they need. But there's a twist, approvals are in play! You'll witness the streamlined process of granting access post-approval, while also exploring the administrative side of things. Here, setting up approvals becomes a breeze, and configuring certification for periodic access reviews? Consider it done. Ready to experience the future of governed access?
 
-### Configure Teams and Access Request Settings
+## Configure Teams and Access Request Settings
 
-#### Add Okta admin to the IT team
+### Add Okta admin to the IT team
 
 1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
 1. In the Access Requests Admin Console, select **Teams**.
@@ -19,7 +19,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 7. Verify that you are listed as a member of the **IT** team.
 
-#### Provide IT Team Access to Okta Apps & Groups
+### Provide IT Team Access to Okta Apps & Groups
 
 1. In the Access Requests Admin Console, select **Settings**.
 1. Select the **Resources** tab.
@@ -31,7 +31,7 @@ In this lab, you will navigate the pathways of application access requests, demo
      |:-----|:-----|
     |![Toggle on IT](images/011/oig_ar_teams_it_toggled_on_400.png "Toggle on IT")|
 
-### Create a Request Type for Navan App
+## Create a Request Type for Navan App
 
 A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an conditional Action step.
 
@@ -51,7 +51,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
      |:-----|:-----|
     |![Navan Request Type](images/011/oig_ar_create_request_screen_1_240.png "Navan Request Type")|
 
-#### Add an Approval step to the Request
+### Add an Approval step to the Request
 
 1. To add an Approval step, select **Approval**, and then click **Add to request type**.
     |||
@@ -74,7 +74,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 > **Tip:** Look at the bottom of the **Tasks & Actions** for additional step buttons.
 >
-#### Add an Action step
+### Add an Action step
 
 1. To add an Action step, click **Action**, and then select **Assign individual app to user**.
 1. In the **Action Details** tab, on the right, configure the Action step:
@@ -103,7 +103,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 8. Leave this browser session open as you will return back to it momentarily.
 
-### As the New Employee, request access to Navan
+## As the New Employee, request access to Navan
 
 1. In the **Virtual Desktop**, open a new Chrome window.
 1. Sign in to your Okta tenant as the New Employee.
@@ -117,7 +117,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 7. Leave this browser session open as you will return back to it momentarily.
 
-### As the Okta admin, approve the access request
+## As the Okta admin, approve the access request
 
 1. Return to your Okta admin browser session
 1. In the Access Requests Admin Console, select **Requests** > **Inbox**.
@@ -128,7 +128,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 4. Optional. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
-### As the new employee, verify access to Navan
+## As the new employee, verify access to Navan
 
 1. Return back to the new employee browser session
 2. Reload the End-User Dashboard, and verify the new employee has access to Navan.
@@ -137,7 +137,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
  In this section of the lab, you'll set up two workflow connections and then import and configure a flowpack. When activated, this flow will automate the creation of access certification campaigns whenever an employee's title changes.
 
-### Create an Okta Connection
+## Create an Okta Connection
 
 1. In the Okta Admin Console select **Workflow** > **Workflows console**.
 
@@ -154,20 +154,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
-<!-->
-#### Grant Consent to Okta Access Certification Scopes
-
-1. In the Okta Admin Console, select **Applications** > **Applications**.
-1. Select the **Okta Workflows OAuth** app, and then select the **Okta API Scopes** tab.
-1. In the list of scopes, find **okta.governance.accessCertifications.manage**, and then click **Grant**.
-1. Also, find the scope **okta.governance.accessCertifications.read**, and then click **Grant**.
-
-    |||
-      |:-----|:-----|
-     |![Okta Connection Domain](images/011/app_workflows_oauth_api_scopes_400.png "Okta Connection Domain")| |
--->
-
-#### Copy and paste the Client ID and Client Secret
+### Copy and paste the Client ID and Client Secret
 
 1. In the **Okta Workflows OAuth** app, select the **Sign On** tab.
 1. Copy the **Client ID**
@@ -203,11 +190,11 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
      |:-----|:-----|
     |![Imported flow](images/011/workflows_lifecycle_change_imported_600.png "Imported flow")|
 
-### Modify the Imported Flow
+## Modify the Imported Flow
 
 This workflow consists of an App Event flow, and a Helper flow.
 
-#### Set Okta Connection in App Event flow
+### Set Okta Connection in App Event flow
 
 1. Click the **[Event] User Title Changed** flow to open it.
 1. In the **User Okta Profile Updated** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
@@ -218,7 +205,7 @@ This workflow consists of an App Event flow, and a Helper flow.
 1. Click **Save**.
 1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
-#### Set Okta Custom API Action Connection
+### Set Okta Custom API Action Connection
 
 1. Click the **[Action] Create Access Re-Certification Campaign** flow to open it.
 1. In the **Search for Lab Admin User** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
@@ -235,7 +222,7 @@ This workflow consists of an App Event flow, and a Helper flow.
 
 You now have the Flows correctly configured and running.
 
-### In BambooHR, change the New Employee's title
+## In BambooHR, change the New Employee's title
 
 Promote your employee from Director to Sr. Director.
 
@@ -243,7 +230,7 @@ Promote your employee from Director to Sr. Director.
 2. On the **Job** tab, for **Job Information** click  **Add Entry**.
 3. In the **Add Job Information** dialog, set the **Job Title** to **Sr. Director of Marketing**, and then click **Save**.
 
-### Import the Title Change into Okta
+## Import the Title Change into Okta
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
 2. Select the  **BambooHR** app, and then select the **Import** tab.
@@ -256,7 +243,7 @@ This event will trigger the imported **Title Changed** flow, which creates and l
 
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns. Campaigns can be created via API and the UI of the admin platform.
 
-### Participating in an Access Certification Campaign
+## Participate in an Access Certification Campaign
 
 For the purposes of this lab, we decided to assign the Okta tenant administrator ( You ) to be the reviewer of this particular campaign. Reviews are performed with the **Okta Access Certification** app on your End User Dashboard.
 

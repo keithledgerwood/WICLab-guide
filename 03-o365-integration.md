@@ -17,7 +17,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
     |||
    |:-----|:-----|
-    |![App Defintion Tenant Name](images/011/app_o365_general_tenant_name_500.png "App Defintion Tenant Name")|
+    |![App Definition Tenant Name](images/011/app_o365_general_tenant_name_500.png "App Defintion Tenant Name")|
 1. Optional. For **Display the following links**, deselect all but: **Word, Excel, PowerPoint and Office Portal**.
 1. Scroll down and click **Next**.
 
