@@ -11,7 +11,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
    |||
      |:-----|:-----|
-   |![Browse App Catalog](images/011/app_bamboohr_new_employee_500.png "Browse App Catalog")||
+   |![Browse App Catalog](images/011/app_bamboohr_new_employee_501.png "Browse App Catalog")||
 
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
