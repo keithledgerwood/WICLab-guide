@@ -4,17 +4,17 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ### Install Okta Verify on your Virtual Desktop
 
-1. In the Virtual Desktop, there is a Download folder shortcut which contains the **Okta Verify Setup** executable. Run the executable.
+1. In the **Virtual Desktop**, locate the shortcut to the **Download folder**. This folder contains the **Okta Verify Setup** executable.
+1. Run the executable.
 1. In the Okta Verify installation window, select **I agree to the License terms and conditions**, and then click **Install**.
     Wait for confirmation saying that Okta Verify was successfully installed.
 1. Click **Finish**.
+1. Close the **Download** window.
 
 ### Add New Employee Account to Okta Verify
 
-1. In the Virtual Desktop, find and open **Okta Verify**.
-
+1. In the **Virtual Desktop**, open the **Okta Verify** application.
 1. On **Welcome to Okta Verify**, click **Get started**.
-
 1. Click **Next**.
 
 1. For **New Account**, enter `https://{{idp.name}}.okta.com`
@@ -25,7 +25,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 This will open your Okta tenant's sign-in page.
 
 1. Sign in with your **New Employee** username and password.
-1. Close the Okta Verify window,and then close the browser.
+1. Close the Okta Verify window, and then close the browser.
 
 ## Configure Security Policies and FastPass
 
@@ -35,6 +35,7 @@ This will open your Okta tenant's sign-in page.
 
 ## Enable Okta Verify for FastPass Authentication
 
+1. Return to your **Okta Admin Console** browser session.
 1. In the Admin Console, select **Security** > **Authenticators**.
 1. For **Okta Verify**, click **Actions**, and then select **Edit**.
 1. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
@@ -52,7 +53,7 @@ This will open your Okta tenant's sign-in page.
 5. Set the following **IF** conditions for the rule:
     | IF | Value|
     |:-----|:-----|
-    |User's  type is| Accept the default |
+    |User's  type is| *Any user type* |
     |User's group membership includes|**At least one of the following groups:**|
     | Enter groups to include: |  **Digital Marketing** and **Digital Sales**|
      | Device state is: |  **Registered**|'
@@ -79,8 +80,9 @@ This will open your Okta tenant's sign-in page.
 
 ### Experience an Employee Passwordless Login
 
-1. In the **Virtual Desktop**, launch a Chrome browser.
-1. Enter your Okta **Tenant** URL in the browser. You will be automatically authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
+1. Return to your **Virtual Desktop**.
+1. In the Virtual Desktop, launch a Chrome browser using the shortcut on the desktop.
+1. You will  automatically be authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
 1. Sign out of Okta.
 1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
 
@@ -90,6 +92,7 @@ This will open your Okta tenant's sign-in page.
 
 With device assurance policies you can check security-related device attributes as part of your authentication policies.
 
+1. Return to your **Okta Admin Console** browser session.
 1. In the Admin Console, select **Security** > **Device Assurance Policies**.
 1. Click **Add a policy**.
 1. Set **Policy name** to **Windows 11**

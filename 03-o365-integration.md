@@ -182,7 +182,7 @@ In the Virtual Desktop, test single sign-on to Microsoft Office 365 for your new
     |:-----|:-----|
     |![Sign out](images/011/o365_word_sign_out_500.png "Sign out")|
 
-8. Sign out the new employee from Okta
+1. Sign out the new employee from Okta, and then close the browser.
 
 ## Conclusion
 
