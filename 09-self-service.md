@@ -40,7 +40,7 @@ BambooHR.Subdomain: {{BambooHR.Subdomain}}
 **BambooHR History:**
 {{#BambooHR.history}} {{latestMessage}} {{/BambooHR.history}}
 
-Dynamic lab variables will have a black background and a copy button, just like this one for example: `{{Office365.TenantID}}`.
+Dynamic lab variables will display with a black background and a copy button. For example: `{{Office365.TenantID}}`.
 
 #### Footnote
 

@@ -74,13 +74,15 @@ Peek into the fashionably gray box on your right, and you'll discover an easy wa
 
 #### Dynamic Lab Guide Variables
 
-In addition to the ability to copy credentials from the Launch Pad, we've also produced this lab guide using dynamic variables. These variables will display values specific to your lab environment. Simply copy and paste them as needed.
+In addition to the ability to copy credentials from the Launch Pad, we've also produced this lab guide using dynamic variables. These variables will display values specific to your lab environment. For example: `{{Office365.TenantID}}`.
+
+Simply copy and paste them as needed.
 
 ### Okta Workforce Identity Cloud Tenant
 
 Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
 
-Your Okta tenant will be available for seven days in case you want to continue to explore it features and capabilities.
+Your registration email address is the Okta admin account, and your Okta tenant will be available for seven days in case you want to continue to explore it features and capabilities.
 
 ### Virtual Desktop
 
