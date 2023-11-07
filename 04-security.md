@@ -102,18 +102,18 @@ With device assurance policies you can check security-related device attributes 
    |:-----|:-----|
     |![Device Assurance Policy](images/011/device_assurance_policy_add_win11_400.png "Device Assurance Policy")|
 
-### Modify Device Assurance Rule for High Security Apps Policy
+### Modify High Security Apps Policy to include Device Assurance Policy
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
 1. Click **High Security Apps**.
 1. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Edit**.
 1. In the **IF** conditions, set **Device assurance policy is** to **At least one of the following groups:** and then add **Windows 11**.
-1. Click **Save**.
-1. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Activate**.
-
     |||
    |:-----|:-----|
     |![Device Assurance Windows 11](images/011/auth_policy_high_security_device_assurance_600.png "Device Assurance Windows 11")|
+
+1. Click **Save**.
+1. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Activate**.
 
 ### Add Marketo to the High Security Apps Policy
 
