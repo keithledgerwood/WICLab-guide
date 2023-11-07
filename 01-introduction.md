@@ -72,7 +72,7 @@ Peek into the fashionably gray box on your right, and you'll discover an easy wa
    |:-----|:-----|
    |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide")|![Credentials](images/011/nav_reveal_creds_key.png "Credentials")|| "Credentials"|
 
-#### Dynamic Lab Guide Variables
+### Dynamic Lab Guide Variables
 
 In addition to the ability to copy credentials from the Launch Pad, we've also produced this lab guide using dynamic variables. These variables will display values specific to your lab environment. For example: `{{Office365.TenantID}}`.
 
