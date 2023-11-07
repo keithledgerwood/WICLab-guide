@@ -79,22 +79,26 @@ In addition to the ability to copy credentials from the Launch Pad, we've also p
 Simply copy and paste them as needed.
 
 ### Okta Workforce Identity Cloud Tenant
+![contexttag](images/persona-okta-admin.png)
 
 Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
 
 Your registration email address is the Okta admin account, and your Okta tenant will be available for seven days in case you want to continue to explore it features and capabilities.
 
 ### Virtual Desktop
+![contexttag](images/context-virtual.png)
 
-The virtual environment where today's real workshop challenges await.
+The virtual environment is where today's real workshop challenges await.
 
-### HR Application
+### HR Application (BambooHR)
+![contexttag](images/persona-bamboo.png)
 
  What's a Workforce identity mission without a genuine HR application for employee sourcing?
 
  In this lab, all participants are sharing a single instance of BambooHR. In the next section, you'll be asked to create a new employee, so make it unique so as not to cause any confusion.
 
 ### Microsoft Office 365
+![contexttag](images/persona-o365-admin.png)
 
 Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
 

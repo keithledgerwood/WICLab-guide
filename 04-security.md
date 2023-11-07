@@ -1,6 +1,7 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
 ## Setup Okta FastPass on the Virtual Desktop
+![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 ### Install Okta Verify on your Virtual Desktop
 
@@ -28,12 +29,12 @@ This will open your Okta tenant's sign-in page.
 1. Close the Okta Verify window, and then close the browser.
 
 ## Configure Security Policies and FastPass
-
 |||
    |:-----|:-----|
    |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know with Okta Adaptive MFA, you get personalized security that learns from your habits, making logging in a breeze while keeping intruders at bay? Think of it as the bouncer who always spots the VIP - that's you!*|
 
 ## Enable Okta Verify for FastPass Authentication
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Return to your **Okta Admin Console** browser session.
 1. In the Admin Console, select **Security** > **Authenticators**.
@@ -78,7 +79,8 @@ This will open your Okta tenant's sign-in page.
      |:-----|:-----|
     |![Rule Priority 1](images/011/auth_policy_rule_drag_priority_400.png "Rule Priority 1")|
 
-### Experience an Employee Passwordless Login
+## Experience an Employee Passwordless Login
+![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. Return to your **Virtual Desktop**.
 1. In the Virtual Desktop, launch a Chrome browser using the **Launch Chrome** shortcut on the desktop.
@@ -87,6 +89,7 @@ This will open your Okta tenant's sign-in page.
 1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up Device Assurance
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 ### Add a Device Assurance Policy
 
@@ -128,7 +131,8 @@ With device assurance policies you can check security-related device attributes 
      |:-----|:-----|
     |![High Security Apps](images/011/auth_policy_high_security_apps_marketo_600.png "High Security Apps")|
 
-### Test the Device Assurance Policy
+## Test the Device Assurance Policy
+![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. Return to your **Virtual Desktop**.
 1. In your Virtual Desktop, open the **Okta Verify** app.
@@ -145,6 +149,7 @@ With device assurance policies you can check security-related device attributes 
     |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")|
 
 ### Switch the Authentication Policy for Marketo
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Return to your **Okta Admin Console** browser session.
 1. In the Admin Console, select **Security** > **Authentication Policies**.
@@ -159,7 +164,8 @@ With device assurance policies you can check security-related device attributes 
 
 >**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
 
-### Enable Okta ThreatInsight
+## Enable Okta ThreatInsight
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
 
