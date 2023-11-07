@@ -1,3 +1,9 @@
+## Navigation Icons
+
+   |Show/Hide|Credentials|
+   |:-----|:-----|
+   |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide")|![Credentials](images/011/nav_reveal_creds_key.png "Credentials")|| "Credentials"|
+
 ## Lab Guide Variables
 
 ### IDP Variables

@@ -14,7 +14,7 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## Initial sign in to your Okta tenant
+## Initial Okta Admin sign in to your Okta tenant
 
 As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to the email address that you used to sign in to labs.demo.okta.com.
 
@@ -63,6 +63,10 @@ At the bottom of each section, there's a handy control to navigate forwards and 
 ### Launch Pad
 
 Peek into the fashionably gray box on your right, and you'll discover an easy way to launch your lab resources.  Each resource has it's own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
+
+   |Show/Hide|Credentials|
+   |:-----|:-----|
+   |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide")|![Credentials](images/011/nav_reveal_creds_key.png "Credentials")|| "Credentials"|
 
 #### Dynamic Lab Guide Variables
 

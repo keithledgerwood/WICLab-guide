@@ -2,16 +2,16 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 ## Add a New Employee to BambooHR
 
-When adding a new employee to BambooHR, we ask that you use a unique name, such as a  **favorite relative** or **friend**, **real** or **imaginary**.
+When adding a new employee to BambooHR, we ask that you use a unique name, such as a  favorite relative or friend, real or imaginary.
 
-1. To access the **BambooHR** dashboard, in the **Launch Pad**, click **Launch**.
-1. Sign in to **BambooHR** with the username and password provided in the **Launch Pad**
+1. In the **Launch Pad** under **BambooHR**, click **Launch**.
+1. Sign in to **BambooHR** with the credentials provided in the **Launch Pad**.
 1. If prompted with **Should we always trust this browser?**, click **Yes, Trust this Browser**.
 1. In the BambooHR dashboard, select **People**, and then click **New Employee**.
 
    |||
      |:-----|:-----|
-   |![Browse App Catalog](images/011/app_bamboohr_new_employee_600.png "Browse App Catalog")||
+   |![Browse App Catalog](images/011/app_bamboohr_new_employee_500.png "Browse App Catalog")||
 
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
