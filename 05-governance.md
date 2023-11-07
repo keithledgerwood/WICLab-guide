@@ -7,7 +7,7 @@ In this lab, you will navigate the pathways of application access requests, demo
 
 ### Add Okta admin to the IT team
 
-1. In the Okta Admin Console select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
+1. In the **Okta Admin Console** select **Identity Governance** > **Access Requests**. This will open the Access Requests Admin Console in a new browser tab.
 1. In the Access Requests Admin Console, select **Teams**.
 1. Click the **IT** team.
 1. Click **Add member**.
@@ -148,10 +148,6 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. Optional. Change the **Connection Nickname**.
 1. Set the **Domain** to `{{idp.name}}.okta.com`
 
-    |||
-     |:-----|:-----|
-     |![Okta Connection Domain](images/011/workflows_connection_okta_domain_600.png "Okta Connection Domain")| |
-
 Keep this page open. You'll need to switch to your Okta Admin Console to get the **Client ID** and **Client Secret** values needed for this Okta Connection and then return to the Workflows console to paste in the values.
 
 ### Copy and paste the Client ID and Client Secret
@@ -202,7 +198,7 @@ This workflow consists of an App Event flow, and a Helper flow.
 1. Click **Save**. This will open the **Save flow** dialog.
     |||
     |:-----|:-----|
-    |![Choose Okta Connection ](images/011/workflows_main_set_okta_connection_600.png "Set Choose Okta Connection")|
+    |![Choose Okta Connection ](images/011/workflows_set_okta_connection_600.png "Set Choose Okta Connection")|
 1. Click **Save**.
 1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
 
@@ -212,11 +208,11 @@ This workflow consists of an App Event flow, and a Helper flow.
 1. In the **Search for Lab Admin User** card, click **Choose Connection**, and then click your **Okta** connection. This will cause the card to expand.
 1. Click **Save**. This will open the **Save flow** dialog.
 1. Click **Save**.
-1. In the top left corner, click the **/Employee Lifecycle** icon to return to the Flows page.
+1. In the top left corner, select the **/Employee Lifecycle** link to return to the Flows page.
 
 ### Toggle On the flows
 
-1. Toggle on the App Event and Helper flows.
+1. Toggle on the **User Title Changed** and **Create Access Re-Certification Campaign** flows.
     |||
     |:-----|:-----|
     |![Flows toggled on](images/011/workflows_toggled_on_300.png "Flows toggled on")|
@@ -250,7 +246,7 @@ For the purposes of this lab, we decided to assign the Okta tenant administrator
 
 1. In the Okta Admin Console, click the *waffle* icon in the top right corner, and then select **My end user dashboard**.
 1. In the Okta admin's **End User Dashboard**, launch the **Okta Access Certification Reviews** app.
-1. Click on the **Title Change** access certification campaign to see an overview of the campaign.
+1. Click on the **Title Changed : Re-Certify** access certification campaign to see an overview of the campaign.
 1. You will see all applications assigned to this user.
 
     > For each item, you have three options as a reviewer: Approve (leave the access as is), Revoke (remove access or flag for it to be removed), or Reassign (to another Okta user). You will see the icons or icons and words depending on the screen resolution.

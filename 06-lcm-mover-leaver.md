@@ -4,8 +4,9 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 ## Employee Departmental Transfer
 
-1. Sign in to **BambooHR** with the credentials provided in the Launch Pad.
-1. In the BambooHR dashboard search for and select your employee.
+1. In the **Launch Pad** under **BambooHR**, click **Launch**.
+1. Sign in to **BambooHR** with the credentials provided in the **Launch Pad**.
+1. In the BambooHR dashboard search for and select your new employee.
 1. On the **Job** tab, for **Job Information**, click **Add Entry**.
 1. For the **Department**, select **Sales**.
 1. Optional. Select a new **Job Title**.
@@ -15,6 +16,7 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 ### Import BambooHR changes to Okta
 
+1. Return to your **Okta Admin Console** browser session.
 1. In the Okta Admin Console select **Applications > Applications**, and then select **BambooHR**.
 1. On the **Import** tab, click **Import Now**.
 1. Click **Ok** when the scan completes.
@@ -23,8 +25,7 @@ In this lab, you will leverage the dynamic integration of Okta with your HR appl
 
 ### Verify changes to Okta End-user Dashboard
 
-In the Virtual Desktop, open a new Chrome window using the Guest profile.
-
+1. Return to your **Virtual Desktop**.
 1. Sign in to your Okta tenant as the New Employee.
 4. Notice that you no longer have access to **Marketo**, but you do have access to **Salesforce**. Your app assignments changed based on the change in your group membership.
 
@@ -55,9 +56,11 @@ In the Virtual Desktop, open a new Chrome window using the Guest profile.
 
     ![alt_text](images/011/flynn_rider_deactivated_okta_600.png "flynn - deactivated")
 
-1. Open a new browser window that is not signed into Okta.
-1. Enter your Okta tenant URL in the browser.
-1. Attempt to authenticate as your test user, and you will receive an error due to your deactivated account status.
+### Verify Terminated Employee has no Access
+
+1. Return to your **Virtual Desktop**.
+1. Attempt to sign in to your Okta tenant as the Terminated Employee.
+1. Verify that you receive an error due to your deactivated account status.
 
 ## Conclusion
 
