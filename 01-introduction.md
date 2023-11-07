@@ -1,6 +1,6 @@
 ## Welcome
 
-*Lab guide version: 0.11.06.02*
+*Lab guide version: 0.11.07.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -14,33 +14,37 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## Initial Okta Admin sign in to your Okta tenant
+## Initial sign in to your Okta tenant
 
-As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to the email address that you used to sign in to labs.demo.okta.com.
+As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to your email address that you used to sign in to labs.demo.okta.com.
 
 1. Check your inbox for an email with the subject line **Your New Okta account**.
 1. Copy the **Temporary password**, and then click **Sign On**.
 1. Follow the instructions on the screen to sign in to your Okta tenant. After a successful sign in, you will see the **Okta End-User Dashboard**.
 1. Sign out of your Okta tenant and close the browser tab.
-1. Return to this lab guide for more fun and excitement.
+   **Be sure to remember your new Okta admin account password**.
 
 ## Launch your Virtual Desktop
+
+The Virtual Desktop image that we’re using for this lab is also used by Okta Education for their training classes.  We created a PowerShell script that will cleanup the desktop and provide you with some helpful shortcuts tha that are specific to this lab.
 
 1. In the  **Launch Pad** on the right, under **Virtual Desktop**, click **Launch**. This will open a new browser tab.
 
    |||
       |:-----|:-----|
       |![Virtual Desktop](images/011/launch_virtual_desktop.png "Launch Virtual Desktop")| |
-2. Click **Launch Virtual Infrastructure**. It may take up to five minutes for your Virtual Desktop to start, so please sit back and enjoy today's featured presentation.
+1. Click **Launch Virtual Infrastructure**. It may take up to five minutes for your Virtual Desktop to start.
 
-3. Copy this code block.
+1. Copy the following PowerShell code block.
 ```$labName="{{idp.name}}"; (iwr https://cdn.demo.okta.com/labs/techcamps_wic/labvm/config.ps1 | iex)```
 
-4. In the Virtual Desktop, open PowerShell, and then paste and run the code block.
+1. In the Virtual Desktop, open the PowerShell application.
 
    |||
    |:-----|:-----|
-   |![PowerShell icon](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop. |
+   |![PowerShell icon](images/011/powershell_icon_25.png   "PowerShell icon")| **Hint:** Look for this PowerShell app icon in the virtual desktop's toolbar. |
+1. Paste and run the PowerShell script.
+1. Verify that your virtual desktop now has shortcuts to Chrome, the Downloads folder, and Notepad. You will also have an open browser window set to your Okta tenant's sign in page.
 
 ## An Overview of your Lab Environment
 

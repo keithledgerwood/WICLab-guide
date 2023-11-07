@@ -1,6 +1,6 @@
 In this lab, we’ll explore the seamless integration of Okta with your HR system. Envision a world where new team members are onboarded with immediate, role-specific access, eliminating waiting times and ensuring productivity from day one. Our goal is to transform the onboarding process, making it both efficient, streamlined, and secure. Let’s get started on this journey to revolutionize the onboarding experience.
 
-## Add a New Employee to BambooHR
+## Add New Employee to BambooHR
 
 When adding a new employee to BambooHR, we ask that you use a unique name, such as a  favorite relative or friend, real or imaginary.
 
@@ -15,7 +15,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
 1. If prompted with **Heads Up!**, click **Add Anyway**.
 
-1. Set the following attributes for your **New Employee**.  All other attributes are optional.
+1. Set the following attributes for your **New Employee**.  No other attributes are required.
 
    |Attribute|Value|
    |:-----|:-----|
@@ -26,14 +26,15 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |Job Title | **Director of Marketing**|
    |Department | **Marketing**|
 
-   **Note:** For this lab, the values in bold font must be used as shown. For example, your new employees' email domain must be **{{Office365.DomainName}}**.
+   **Note:** For this lab, the values in **bold** font must be used as shown. For example, your new employees' email domain must be **{{Office365.DomainName}}**.
 1. Click **Save**.
 
-## Add the BambooHR App to Okta
+## Add BambooHR App to Okta
 
-Okta maintains a specific integration for BambooHR in the Okta Integration Network (OIN), that supports Okta SSO using SAML, and Provisioning using APIs.  In this section of the lab our focus will be on sourcing users from BambooHR using Okta Import.
+Okta maintains a specific integration for BambooHR in the Okta Integration Network (OIN), that supports Okta SSO using SAML, and Provisioning using APIs.  In this section our focus will be on sourcing users from BambooHR using Okta Import. Specifically, we want to import the new employee into Okta.
 
-1. To access your **Workforce Identity Cloud**, in the **Launch Pad**, click **Launch**.
+1. In the **Launch Pad** under **Workforce Identity Cloud**, click **Launch**.
+1. Sign in with your Okta admin account to access the Admin Console.
 1. In the Admin Console select **Applications** > **Applications**.
 2. Click **Browse App Catalog**.
 
@@ -78,8 +79,8 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 ### Configure BambooHR to Okta Provisioning options
 
 1. In the **Settings** panel, select **To Okta**
-1. In the **General** section, click **Edit** to define import settings.
-3. For **Okta username format**, select **Email Address**.
+1. In the **General** section, click **Edit**.
+3. Set **Okta username format** to **Email Address**.
 4. Click **Save**.
 
    |||
@@ -125,9 +126,10 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
 ## Retrieve New Employee Activation Email
 
- To access the new employee activation email, within the Virtual Desktop, you'll need to sign into your Office 365 tenant using the credentials provided in the launch pad.
+ Your new employee's Okta activation email was sent to an Office 365 Administrator account. In this section of the lab, you'll return to your Virtual Desktop, sign into Office 365 and activate the new employee's Okta account on their behalf.
 
-1. In the **Virtual Desktop**, launch **Office 365** using the browser shortcut on the desktop
+1. Return to your **Virtual Desktop**.
+1. Launch **Office 365** using the **Login | Microsoft 365** shortcut in the browser toolbar.
 1. Sign in with your Office 365 Credentials.
 
    |Office 365 Credentials||
@@ -141,14 +143,15 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
    |:-----|:-----|
    |![Launch Outlook](images/011/app_o365_outlook_access_240.png "Launch Outlook")||
 
-4. Locate and open the New Employee's **Welcome to Okta!** email.
-5. Click **Activate Okta Account**.
-6. Set up a new **password** according to the password policy rules displayed.
-7. For Okta Verify, click **Set up later**.
-7. The Okta End-user dashboard will display with the apps that were assigned to the new employee, with the exception of *BambooHR*.
+1. Locate and open the New Employee's **Welcome to Okta!** email.
+1. Click **Activate Okta Account**.
+1. Set up a new **password** according to the password policy rules displayed.
+   **Be sure to remember your new employee's password**.
+1. For Okta Verify, click **Set up later**.
+1. The Okta End-user dashboard will display with the apps that were assigned to the new employee, with the exception of *BambooHR*.
    >**Question:**  *Why is BambooHR not displayed to the user?*
-8. Sign out the New Employee and close the browser tab.
-9. Sign out from Office 365 and close the browser.
+1. Sign out the New Employee and close the browser tab.
+1. Sign out from Office 365 and close the browser.
 
 ## Conclusion
 
