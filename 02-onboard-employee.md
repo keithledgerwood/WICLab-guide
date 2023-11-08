@@ -1,6 +1,7 @@
 In this lab, we’ll explore the seamless integration of Okta with your HR system. Envision a world where new team members are onboarded with immediate, role-specific access, eliminating waiting times and ensuring productivity from day one. Our goal is to transform the onboarding process, making it both efficient, streamlined, and secure. Let’s get started on this journey to revolutionize the onboarding experience.
 
 ## Add New Employee to BambooHR
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-bamboo.png)
 
 When adding a new employee to BambooHR, we ask that you use a unique name, such as a  favorite relative or friend, real or imaginary.
@@ -31,6 +32,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 1. Click **Save**.
 
 ## Add BambooHR App to Okta
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 Okta maintains a specific integration for BambooHR in the Okta Integration Network (OIN), that supports Okta SSO using SAML, and Provisioning using APIs.  In this section our focus will be on sourcing users from BambooHR using Okta Import. Specifically, we want to import the new employee into Okta.
@@ -48,7 +50,7 @@ Okta maintains a specific integration for BambooHR in the Okta Integration Netwo
 
 4. Click **Add Integration**
 5. In the **General Settings** set **Subdomain** to `{{BambooHR.Subdomain}}`.
-6. For **Application Visibility**, select **Do not display application icon to to users.**
+6. For **Application Visibility**, select **Do not display application icon to users.**
 
    |||
      |:-----|:-----|
@@ -98,6 +100,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
    |![Allow BambooHR to source Okta users](images/011/app_bamboohr_profile_sourcing_600.png "Allow BambooHR to source Okta users")||
 
 ## Import New Employee from BambooHR to Okta
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Select the **Import** tab, and then click **Import Now**.
@@ -128,6 +131,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 4. Select the **Profile** tab to view their imported attributes.
 
 ## Retrieve New Employee Activation Email
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-o365-admin.png) ![contexttag](images/persona-newemployee.png)
 
  Your new employee's Okta activation email was sent to an Office 365 Administrator account. In this section of the lab, you'll return to your Virtual Desktop, sign into Office 365 and activate the new employee's Okta account on their behalf.

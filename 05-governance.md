@@ -4,6 +4,7 @@
 In this lab, you will navigate the pathways of application access requests, demonstrating the seamless experience for employees itching to get their hands on the tools they need. But there's a twist, approvals are in play! You'll witness the streamlined process of granting access post-approval, while also exploring the administrative side of things. Here, setting up approvals becomes a breeze, and configuring certification for periodic access reviews? Consider it done. Ready to experience the future of governed access?
 
 ## Configure Teams and Access Request Settings
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 ### Add Okta admin to the IT team
@@ -18,7 +19,7 @@ In this lab, you will navigate the pathways of application access requests, demo
      |:-----|:-----|
     |![Add team members to IT](images/011/oig_ar_settings_add_team_members_400.png "Add team members to IT")|
 
-7. Verify that you are listed as **IT** team member.
+7. Verify that you are listed as an **IT** team member.
 
 ### Provide IT Team Access to Okta Apps & Groups
 
@@ -33,9 +34,10 @@ In this lab, you will navigate the pathways of application access requests, demo
     |![Toggle on IT](images/011/oig_ar_teams_it_toggled_on_400.png "Toggle on IT")|
 
 ## Create a Request Type for Navan App
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
-A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and an conditional Action step.
+A request type can consist of multiple steps including Questions, Tasks, Approvals, and Actions. This request type will consist of an Approval step and a conditional Action step.
 
 1. In the Access Requests Admin Console, select **Access Requests**
 1. Click **Create request type**.
@@ -106,6 +108,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 8. Leave this browser session open as you will return back to it momentarily.
 
 ## As the New Employee, request access to Navan
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. In the **Virtual Desktop**, open a new Chrome window.
@@ -121,6 +124,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 7. Leave this browser session open as you will return back to it momentarily.
 
 ## As the Okta admin, approve the access request
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Return to your Okta admin browser session
@@ -133,6 +137,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 4. Optional. Select the **Activity** tab to verify that the app was assigned to the new employee.
 
 ## As the New Employee, verify access to Navan
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. Return back to the new employee browser session
@@ -143,6 +148,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
  In this section of the lab, you'll set up two workflow connections and then import and configure a flowpack. When activated, this flow will automate the creation of access certification campaigns whenever an employee's title changes.
 
 ## Create an Okta Connection
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. In the Okta Admin Console select **Workflow** > **Workflows console**. This will open the Workflows console in a new browser tab.
@@ -169,6 +175,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
      |![Okta Connection](images/011//workflows_connection_okta_600.png "Okta Connection")|
 
 ## Leveraging Flowpacks
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 |||
@@ -195,6 +202,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
     |![Imported flow](images/011/workflows_lifecycle_change_imported_600.png "Imported flow")|
 
 ## Customize the Imported Flow
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 This workflow consists of an App Event flow, and a Helper flow.
@@ -228,6 +236,7 @@ This workflow consists of an App Event flow, and a Helper flow.
 You now have the Flows correctly configured and running.
 
 ## In BambooHR, change the New Employee's title
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-bamboo.png)
 
 Promote your employee from Director to Sr. Director.
@@ -237,6 +246,7 @@ Promote your employee from Director to Sr. Director.
 3. In the **Add Job Information** dialog, set the **Job Title** to **Sr. Director of Marketing**, and then click **Save**.
 
 ## In Okta, Import the Title Change
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. In the Okta Admin Console, select **Applications** > **Applications**.
@@ -251,6 +261,7 @@ This event will trigger the imported **Title Changed** flow, which creates and l
 Access certification is built into the Okta platform. There is an administrative interface to create and manage campaigns and an end-user interface for participating in campaigns. Campaigns can be created via API and the UI of the admin platform.
 
 ## Participate in an Access Certification Campaign
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 For the purposes of this lab, we decided to assign the Okta tenant administrator ( You ) to be the reviewer of this particular campaign. Reviews are performed with the **Okta Access Certification** app on your End User Dashboard.

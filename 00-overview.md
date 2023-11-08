@@ -1,6 +1,6 @@
 # Okta **tech{camps} - Workforce Identity Cloud**
 
-*Lab guide version: 0.11.07.02*
+*Lab guide version: 0.11.08.01*
 
 |||
 |:-----|:-----|
