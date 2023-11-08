@@ -66,7 +66,7 @@ At the bottom of each section, there's a handy control to navigate forwards and 
 
 ### Launch Pad
 
-Peek into the fashionably gray box on your right, and you'll discover an easy way to launch your lab resources.  Each resource has it's own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
+Peek into the fashionably gray box on your right, and you'll discover an easy way to launch your lab resources.  Each resource has its own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
 
    |Show/Hide|Credentials|
    |:-----|:-----|

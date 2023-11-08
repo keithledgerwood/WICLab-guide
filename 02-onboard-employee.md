@@ -156,7 +156,7 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 1. Set up a new **password** according to the password policy rules displayed.
    **Be sure to remember your new employee's password**.
 1. For Okta Verify, click **Set up later**.
-1. The Okta End-user dashboard will display with the apps that were assigned to the new employee, with the exception of *BambooHR*.
+1. The Okta End-user dashboard will display the apps that were assigned to the new employee, with the exception of *BambooHR*.
    >**Question:**  *Why is BambooHR not displayed to the user?*
 1. Sign out the New Employee and close the browser tab.
 1. Sign out from Office 365 and close the browser.

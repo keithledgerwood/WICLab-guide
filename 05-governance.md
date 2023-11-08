@@ -116,7 +116,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 1. In the End-User Dashboard, open the **Okta Access Requests** app.
 1. In the App Catalog, locate **Navan**, and then click **Request access**.
 1. Click **Submit new request**.
-1. Notice that there 0/1 tasks are complete. The access request is waiting for Admin Approval.
+1. Notice there are 0/1 tasks are complete. The access request is waiting for Admin Approval.
     |||
      |:-----|:-----|
     |![Tasks complete](images/011/ar_awaiting_admin_approval_700.png "Tasks complete")|
@@ -172,7 +172,7 @@ Keep this page open. You'll need to switch to your Okta Admin Console to get the
 1. Click **Create** to complete the Okta Connection.
     |||
      |:-----|:-----|
-     |![Okta Connection](images/011//workflows_connection_okta_600.png "Okta Connection")|
+     |![Okta Connection](images/011/workflows_connection_okta_601.png "Okta Connection")|
 
 ## Leveraging Flowpacks
 

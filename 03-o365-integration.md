@@ -2,6 +2,7 @@
 In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 environment. By leveraging the Okta Integration Network, you'll experience firsthand how modern application integrations can be both straightforward and rapid. Through the benefits of automated provisioning and single sign-on, employees will be poised for instant productivity. And even as we focus on a user-friendly experience, remember, security is always at the forefront.
 
 ## Add Microsoft Office 365 App to Okta for SSO
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png) ![contexttag](images/persona-o365-admin.png)
 
 Okta maintains a specific integration for Microsoft Office 365 in the Okta Integration Network (OIN). To add this to your Okta tenant, follow these steps in a browser that does not currently have a Microsoft session:
@@ -59,6 +60,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 Congratulations! Your Okta Workforce Identity Cloud and Office 365 tenant are now configured for single sign-on from Okta to Office 365.
 
 ## Configure Provisioning for Office 365
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png) ![contexttag](images/persona-o365-admin.png)
 
 For single sign-on to work, each identity asserted by Okta must link to an existing Azure AD account.
@@ -115,6 +117,7 @@ In this section you will enable provisioning to Microsoft 365. This will include
    |![Marc says...](images/011/marc_r74_100.png "Marc says...")|*Did you know that the Okta Integration Network boasts over 7,600 pre-built integrations, making it the Swiss Army knife of seamless connectivity? Integration innovation at its finest!*|
 
 ## Configure group assignment
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 When assigning users to an app, it's common to assign a group to an app and then assign users to the group.
@@ -122,6 +125,7 @@ When assigning users to an app, it's common to assign a group to an app and then
 When assigning a group to an app, you can specify values for app attributes. These will override any mapping for those attributes in the app definition. If you don't specify any value for an attribute, the mapping in the app definition will be applied instead.
 
 ## Assign Group Access to Application
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 You can assign a group to an app within an app definition. This will grant access to the app, and manage the O365 licenses, for all members of the group.
@@ -131,7 +135,7 @@ You can assign a group to an app within an app definition. This will grant acces
     |||
      |:-----|:-----|
      |![Assign to Groups](images/011/app_assign_to_groups_240.png "Assign to Groups")||
-1. Find the the **App-Office365-ProPlus** group, and then click **Assign**.
+1. Find the **App-Office365-ProPlus** group, and then click **Assign**.
 1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
 
     >**Hint:** Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
@@ -146,6 +150,7 @@ You can assign a group to an app within an app definition. This will grant acces
 The application is now assigned to members of the **App-Office365-ProPlus** group.
 
 ## Assign User to Group
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 You will now assign the new employee to the *App-Office365-ProPlus* group. This will grant the user access to the Microsoft Office 365 app and provision their account in Azure AD.
@@ -170,6 +175,7 @@ You will now assign the new employee to the *App-Office365-ProPlus* group. This 
 The new employee is now a member of the group and will be assigned the Microsoft Office 365 app with an E5 Developer Office Pro Plus license.
 
 ## Verify SSO for New Employee to Office 365
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 In the Virtual Desktop, test single sign-on to Microsoft Office 365 for your new employee.
