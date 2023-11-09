@@ -1,5 +1,5 @@
 ## Welcome
-
+---
 *Lab guide version: 0.11.08.01*
 
 Step into the Future of Workforce Identity Management with Okta!
@@ -15,7 +15,7 @@ And... all the while ensuring an incredible user experience that amplifies produ
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
 ## Initial sign in to your Okta tenant
-
+---
 As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to your email address that you used to sign in to labs.demo.okta.com.
 
 1. Check your inbox for an email with the subject line **Your New Okta account**.
@@ -25,7 +25,7 @@ As part of the provisioning process for your Okta Workforce Identity Cloud tenan
    **Be sure to remember your new Okta admin account password**.
 
 ## Launch your Virtual Desktop
-
+---
 The Virtual Desktop image that we’re using for this lab is also used by Okta Education for their training classes.  We created a PowerShell script that will cleanup the desktop and provide you with some helpful shortcuts that are specific to this lab.
 
 1. In the  **Launch Pad** on the right, under **Virtual Desktop**, click **Launch**. This will open a new browser tab.
@@ -46,9 +46,9 @@ The Virtual Desktop image that we’re using for this lab is also used by Okta E
 1. Paste and run the PowerShell script.
 1. Verify that your virtual desktop now has shortcuts to Chrome, the Downloads folder, and Notepad. You will also have an open browser window set to your Okta tenant's sign in page.
 
-## An Overview of your Lab Environment
-
-Before we get started, here are your resources for today’s mission:
+## How to Navigate your Lab Guide
+---
+Before we get started, here is some information about the Labs.Demo.Okta platform you are using today.
 
 ### TechCamps Outline
 
@@ -78,11 +78,17 @@ In addition to the ability to copy credentials from the Launch Pad, we've also p
 
 Simply copy and paste them as needed.
 
+## An Overview of your Lab Environment
+---
+Before we get started, here are your resources for today’s mission:
+
 ### Okta Workforce Identity Cloud Tenant
 
 ![contexttag](images/persona-okta-admin.png)
 
 Aren’t you lucky? Your own dedicated Okta tenant designed to tackle your organization's identity challenges!
+
+**Your Okta Tenant**: `{{idp.name}}.okta.com`
 
 Your registration email address is the Okta admin account, and your Okta tenant will be available for seven days in case you want to continue to explore its features and capabilities.
 
@@ -99,6 +105,7 @@ The virtual environment is where today's real workshop challenges await.
  What's a Workforce identity mission without a genuine HR application for employee sourcing?
 
  In this lab, all participants are sharing a single instance of BambooHR. In the next section, you'll be asked to create a new employee, so make it unique so as not to cause any confusion.
+ #### Your BambooHR Tenant: `{{BambooHR.Subdomain}}` (.BambooHR.com)
 
 ### Microsoft Office 365
 
@@ -107,3 +114,9 @@ The virtual environment is where today's real workshop challenges await.
 Your employees need seamless and secure access to their primary collaboration tool in order to be productive and stay connected.
 
 In this lab, each participant gets their own Office 365 tenant that is pre-configured with a domain name.
+
+#### Company Domain Name: `{{Office365.DomainName}}`
+This domain name serves as your lab's custom domain name for your employees, their identities, and their email addresses!  
+We did all the hard work like DNS settings and it has been pre-configured for you within your Office 365 environment!
+
+#### Office365 Tenant Name: `{{Office365.TenantID}}` (.onmicrosoft.com) 
