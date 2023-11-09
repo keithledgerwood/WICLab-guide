@@ -1,3 +1,131 @@
+## Navigation Icons
+
+   |Show/Hide|Credentials|
+   |:-----|:-----|
+   |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide")|![Credentials](images/011/nav_reveal_creds_key.png "Credentials")|| "Credentials"|
+
+## Lab Guide Variables
+
+### IDP Variables
+
+idp.dashboard: {{idp.dashboard}}
+
+idp.name:  {{idp.name}}
+
+Okta Sign-In URL:  https://{{idp.name}}.okta.com
+
+### Office365 Variables
+
+Office365.credentials.username: {{Office365.credentials.username}}
+
+Office365.credentials.password: {{Office365.credentials.password}}
+
+Office365.DomainName: {{Office365.DomainName}}
+
+Office365.TenantName: {{Office365.TenantName}}
+
+Office365.TenantID: {{Office365.TenantID}}
+
+**Office365 Provisioning History:**
+{{#Office365.history}} {{latestMessage}} {{/Office365.history}}
+
+### BambooHR Variables
+
+BambooHR.credentials.username: {{BambooHR.credentials.username}}
+
+BambooHR.credentials.password: {{BambooHR.credentials.password}}
+
+BambooHR.Subdomain: {{BambooHR.Subdomain}}
+
+**BambooHR History:**
+{{#BambooHR.history}} {{latestMessage}} {{/BambooHR.history}}
+
+Dynamic lab variables will display with a black background and a copy button. For example: `{{Office365.TenantID}}`.
+
+#### Footnote
+
+ Select the **Marketo** app.
+
+   |||
+    |:-----|:-----|
+    |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")[^note]|
+
+[^note]:
+  You can customize the access denied error message.[Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
+
+### Verify the Access Certification Campaign was created
+
+To verify that a certification campaign was created by the flowpack, you will need to perform the following actions as the Okta admin:
+
+1. In the Okta Admin Console select **Identity Governance** > **Access Certifications**.
+1. Verify that there is **Campaign** whose name starts with **Title Change:**.
+1. Click on the **Title Change:** campaign to see an overview of the campaign.
+
+The page provides an overview of the campaign, the progress of the campaign, and the items to be reviewed. An administrator can use this page to manage the execution of a campaign. They can see the progress and any items still outstanding. They can reassign one or more items. They can also prematurely end the campaign.
+
+>**Note:** Please notify a lab assistant if there is no campaign listed.
+
+### Old FLow
+
+>**Tip:** To view a graphic of the all the cards in a flow, you can select the **Flow Chart** tab while in edit mode.
+ ![flow chart](images/011/titlechanged_flowchart_access_240.png).
+ Here's a sneak peak. You will be changing cards: **1, 3, 8 and 23**.
+ ![flow chart detail](images/011/titlechanged_flowchart_700.png)
+
+Set the contents of the first **Compose** card to your Okta tenant URL.
+    |||
+     |:-----|:-----|
+    |![Set Okta Connection](images/011/titlechanged_okta_connection_and_compose_card_600.png "Set Okta Connection")|
+
+1. Scroll to the right to locate the next  **Compose** card. It's the eighth card in the flow, and replace the existing login with your Okta admin login.
+    |||
+     |:-----|:-----|
+    |![alt_text](images/011/titlechanged_compose_admin_600.png "600x144")|
+
+1. Scroll to the right and locate the **API Connector Raw Request** card, and then click **Choose Connection**.
+1. Set the **Connection** to your **API Connector**.
+1. Click **Save**.
+
+    > **Note:** When saving for the first time, select **Save all data that passes through the Flow?**, and then click **Save**.
+
+1. Click **Flow is OFF** and select **Flow is OFF**. The result will be that the **Flow is ON** and **Saving data**.
+    |||
+     |:-----|:-----|
+     |![flow is on](images/011/titlechanged_flow_is_on_240.png "flow is on")|
+
+### Old O365
+
+>**Tip:** For the next step, you will need the first part of your **Office 365 Tenant** from the lab launch panel.
+![tenant name](images/011/launch_O365_tenant_240.png "Tenant Name")
+Be sure to leave off the *onmicrosoft.com* portion.
+
+### Old New Employee
+
+   >**Tip:** Check your **Office 365 Domain Name** in the launch panel; you will need this value for the new employee's email address.
+   ![domain name](images/011/launch_O365_domain_name_240.png "O365 Domain Name")
+    The New Employee's **Work Email** domain needs to match your **Office 365 Domain Name**.
+
+1. The following six attributes are required for your **New Employee**. All other attributes are optional. Use the values for: Job Title, Department and Hire Date. All other fields are optional.
+
+   |Attribute|Value| For Example|
+   |:-----|:-----|:----|
+   |First Name |Enter a first name|*Flynn*|
+   |Last Name | Enter a last name|*Rider*|
+   |Work Email |firstName.lastName@\<your Office 365 **Domain Name**>|*<flynn.rider@09.mywiclab.com>*|
+   |Hire Date |*Today*|*Today*|
+   |Job Title | **Director of Marketing**|*Director of Marketing*|
+   |Department | **Marketing**|*Marketing*|
+
+    >**Tip:** Check your **BambooHR Subdomain** in the launch pad; you will need this value for the next step.
+    ![bamboohr subdomain](images/011/launch_bamboohr_subdomain_240.png "BambooHR Subdomain")|
+
+## Launch Pad
+
+**Result:**
+
+   |Important step:|Example|
+   |:-----|:-----|
+   |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png "tool tip "))| Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
 
 ## Table left-align small images without text
 
@@ -5,27 +133,9 @@
    |:-----|:-----|
    |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png "no text")| |
 
-### Powershell icon - 50
-
-|||
-   |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_50.png   "50")| |
-
-### Powershell icon - 25
-
-|||
-   |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_25.png   "25")| |
-
    |||
    |:-----|:-----|
-   |![Image on the left](images/011/powershell_icon_25.png   "25")| Open Powershell within the Virtual Desktop, paste and run the command.|
-
-### Part of a list
-
- |||
-   |:-----|:-----|::----|
- 4. |Open Powershell |![Image on the left](images/011/powershell_icon_25.png   "25")| within the Virtual Desktop, paste and run the command.|
+   |![Small image](images/011/powershell_icon_25.png "25")| |
 
 ### Icon mid sentence
 
@@ -47,11 +157,11 @@ Omit the *onmicrosoft.com* portion of the tenant name.
 
 >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
 
-## Tip - indent - what is pixel width?
+### Tip - indent - what is pixel width?
 
    >**Tip:** You may want paste your Okta tenant url into Notepad++ for easy copying and pasting in this lab.
 
-## Table - Right image
+### Table - Right image
 
 **Result:**
 
@@ -59,7 +169,7 @@ Omit the *onmicrosoft.com* portion of the tenant name.
    |:-----|:-----|
    |Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|![Image on the right](images/011/launch_O365_tenant_r144_300_224.png)|
 
-## Table - Left image
+### Table - Left image
 
 **Result:**
 
@@ -67,13 +177,13 @@ Omit the *onmicrosoft.com* portion of the tenant name.
    |:-----|:-----|
    |![Image on the left](images/011/launch_O365_tenant_r144_300_224.png)| Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**. Ignore the *onmicrosoft.com* portion of the tenant name.|
 
-## No table - indented image
+### No table - indented image
 
 Your **Microsoft Tenant Name** can be found in the lab **Launch Panel**.
 Ignore the *onmicrosoft.com* portion of the tenant name.
    ![tenant name](images/011/launch_O365_tenant_r144_300_224.png)
 
-## No table - double indented
+### No table - double indented
 
 **Result:** Outside of a table, images appear to be centered
 
@@ -235,10 +345,10 @@ You can also use words, to fit your writing style more closely[^note].
 [^2]: Every new line should be prefixed with 2 spaces.  
   This allows you to have a footnote with multiple lines.
 [^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking. [Customize the access denied message](https://https://help.okta.com/oie/en-us/content/topics/settings/customize-access-denied-message.htm "Okta Documentation")
     This footnote also has been made with a different syntax using 4 spaces for new lines.
 
-### TABLES
+## TABLES
 
 Colons can be used to align columns.
 
@@ -353,7 +463,7 @@ Image tag with width 100
 
 Or, you can review the following tests on image alignment.
 
-# Image size and alignment
+## Image size and alignment
 
 1. Image.
 

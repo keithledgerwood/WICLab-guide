@@ -1,11 +1,12 @@
 {
     "id": "techcamps_wic",
-    "title": "TechCamps - WIC Lab",
+    "title": "tech{camps} - Workforce Identity Cloud",
     "state": "hidden",
-    "duration": "4 hours",
-    "description": "In this Workshop, you will learn how to integrate Okta with different identity directories and applications.",
+    "registrationHook": "https://wiclabs.workflows.okta.com/api/flo/3ad4b4e88d6324668be7730e4406ea3a/invoke?clientToken=966f2a944860af58508e49cd2f07d8185423f5a7c9ede59b95fd2db193b43b6c",
+    "duration": "PT8H",
+    "description": "Experience the power of the Workforce Identity Cloud as you leverage capabilities across the platform to solve common identity challenges facing organizations today.",
     "idp_type": "workforce-identity",
-    "overview": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/00-overview.md",
+    "overview": "https://cdn.demo.okta.com/labs/techcamps_wic/00-overview.md",
     "contributors": "Okta Presales",
     "tags": [
         "workforce"
@@ -21,7 +22,7 @@
     "steps": [
         {
             "step": "Introduction",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/01-introduction.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/01-introduction.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -33,7 +34,7 @@
         },
         {
             "step": "Onboarding a New Employee",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/02-onboard-employee.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/02-onboard-employee.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -44,7 +45,7 @@
         },
         {
             "step": "Integrating Office 365",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/03-o365-integration.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/03-o365-integration.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -55,7 +56,7 @@
         },
         {
             "step": "Boosting Security",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/04-security.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/04-security.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -66,7 +67,7 @@
         },
         {
             "step": "Bridging the Access Gap",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/05-governance.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/05-governance.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -77,7 +78,7 @@
         },
         {
             "step": "Internal Mobility",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/06-lcm-mover-leaver.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/06-lcm-mover-leaver.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -88,7 +89,7 @@
         },
         {
             "step": "Insights and Oversight",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/07-auditing-reporting.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/07-auditing-reporting.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -99,18 +100,7 @@
         },
         {
             "step": "Optional - Active Directory",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/08-active-directory-integration.md",
-            "applications": [
-                "1b187e8b-e90a-4469-829b-8051a02729a3"
-            ],
-            "resources": [
-                "61601555-bb49-4ba6-8adb-cb2342a884cc",
-                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
-            ]
-        },
-        {
-            "step": "For Testing Purposes",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/09-self-service.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/08-active-directory-integration.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],
@@ -121,7 +111,7 @@
         },
         {
             "step": "Conclusion",
-            "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/main/999-conclusion.md",
+            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/999-conclusion.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
             ],

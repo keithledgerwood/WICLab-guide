@@ -3,6 +3,7 @@
 In this lab, you will navigate through Okta's comprehensive audit and reporting functionalities. You'll get an in-depth look at the various activities performed within your organization on a daily basis. Embrace the advantages of centralized audit and reporting, a cornerstone for robust security and stringent compliance. Moreover, discover how these insights can serve as a potent enhancer to your organization's broader security operations, fortifying your defense mechanisms and optimizing operations.
 
 ## Okta System Log
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. In the Admin Console select  **Reports** > **System Log**.
 
@@ -26,7 +27,7 @@ Take a moment to analyze how the employee’s lifecycle and access has been reco
 
 6. In the **Search** field, type **positive**.
 This will filter the log results to show only the events when a change in user behavior was detected.
-7. In the **Events table, choose one of the events and on its left-hand side click **>** to see details of this event.
+7. In the **Events** table, choose one of the events and on its left-hand side click **>** to see details of this event.
 8. On the right-hand side of the event, click **Expand All** to expand all the details.
 
 |||
@@ -34,6 +35,7 @@ This will filter the log results to show only the events when a change in user b
    |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know that Okta's rich system log and auditing prowess can seamlessly flow into your organization's security operations tools, helping paint a clearer view of your security posture? It's like having night vision goggles in the realm of cybersecurity!*|
 
 ## Okta Reports
+![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. In the Admin Console select **Reports** > **Reports**.
 This will take you to the Reports page, where you can find Okta’s out-of-the-box auditing reports.
