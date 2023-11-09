@@ -23,7 +23,7 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |:-----|:-----|
    |First Name |*Enter a first name*|
    |Last Name | *Enter a last name*|
-   |Work Email |*firstName*.*lastName*@**{{Office365.DomainName}}**|
+   |Work Email |*firstName*.*lastName*@**`{{Office365.DomainName}}`**|
    |Hire Date |*Today's Date*|*Today's Date*|
    |Job Title | **Director of Marketing**|
    |Department | **Marketing**|
