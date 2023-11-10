@@ -29,13 +29,6 @@ $shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $shortcut.Arguments = "https://demo-$labName.okta.com"
 $shortcut.Save()
 
-#Add Chrome Shortcut to Okta Lab Guide
-$shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$Home\Desktop\Lab Guide.lnk")
-$shortcut.TargetPath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-$shortcut.Arguments = "-app http://labs.demo.okta.com/lab/$labName"
-$shortcut.Save()
-
 #Shortcut for Notepad on Desktop
  $shell = New-Object -comObject WScript.Shell 
  $shortcut = $shell.CreateShortcut("$Home\Desktop\Notepad.lnk") 
@@ -72,11 +65,14 @@ $a = (New-Object -comObject Shell.Application).Windows() |
  ? { $_.FullName.toLower().Endswith('\explorer.exe') }
  $a | % { $_.Quit() }
 
-#Open Google Chrome into Appropriate Position
-$screen=[System.Windows.Forms.SystemInformation]::PrimaryMonitorSize
-$googleapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "https://demo-$($labName).okta.com --window-size=$($screen.Width-600),$($screen.Height) --window-position=150,0 " -PassThru
+#Open Google Chrome into Appropriate Position - Disabled for now 11/10/2023
+#$screen=[System.Windows.Forms.SystemInformation]::PrimaryMonitorSize
+#$googleapp = Start-Process 'C:\Program Files\Google\Chrome\Application\chrome.exe' -ArgumentList "https://demo-$($labName).okta.com --window-size=$($screen.Width-600),$($screen.Height) --window-position=150,0 " -PassThru
 
 #Download Okta Verify and place in downloads folder
 iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile C:\Users\Administrator\Downloads\OktaVerifySetup.exe 
+
+#Call Workflow Event Hook Callback to report completion!
+iwr -uri "https://wiclabs.workflows.okta.com/api/flo/56e61c09c9f8daea0eb589944e8a0da2/invoke?clientToken=ced202ef1b57d8790a4cd13910e9835073254b6ddb9f65c636b9e339b4b18569&hostname=$env:computername&labid=$labName&type=vm.powershell.run&status=SUCCESS"
 
 exit
