@@ -1,6 +1,7 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
 ## Setup Okta FastPass on the Virtual Desktop
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 ### Install Okta Verify on your Virtual Desktop
@@ -29,11 +30,13 @@ This will open your Okta tenant's sign-in page.
 1. Close the Okta Verify window, and then close the browser.
 
 ## Configure Security Policies and FastPass
+
 |||
    |:-----|:-----|
    |![Alt text](images/011/marc_r74_100.png "Marc says...")|*Did you know with Okta Adaptive MFA, you get personalized security that learns from your habits, making logging in a breeze while keeping intruders at bay? Think of it as the bouncer who always spots the VIP - that's you!*|
 
 ## Enable Okta Verify for FastPass Authentication
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Return to your **Okta Admin Console** browser session.
@@ -74,12 +77,13 @@ This will open your Okta tenant's sign-in page.
      |:-----|:-----|
     |![Okta FastPass Rule](images/011/auth_policy_rule_fastpass_then_400.png "Okta FastPass Rule")|
 7. Click **Save**.
-8. Drag the **Okta FastPass** rule up to make it **Priority 1** in the list of rules for the policy.
+8. Click and drag the vertical dots control to move the **Okta FastPass** rule up to **Priority 1** in the list of rules for the policy.
     |||
      |:-----|:-----|
     |![Rule Priority 1](images/011/auth_policy_rule_drag_priority_400.png "Rule Priority 1")|
 
 ## Experience an Employee Passwordless Login
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. Return to your **Virtual Desktop**.
@@ -89,6 +93,7 @@ This will open your Okta tenant's sign-in page.
 1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
 
 ## Set Up Device Assurance
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 ### Add a Device Assurance Policy
@@ -125,13 +130,14 @@ With device assurance policies you can check security-related device attributes 
 
 1. In the **High Security Apps** policy, select the **Applications** tab.
 1. Click **Add app**.
-1. Select the **Marketo** app, and then select the **Sign On** tab.
-1. For **Marketo**, click **Add**, and then click **Close**.
+1. Locate **Marketo** in the list of apps, and then click **Add**.
+1. Click **Close**.
     |||
      |:-----|:-----|
     |![High Security Apps](images/011/auth_policy_high_security_apps_marketo_600.png "High Security Apps")|
 
 ## Test the Device Assurance Policy
+
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
 1. Return to your **Virtual Desktop**.
@@ -142,29 +148,35 @@ With device assurance policies you can check security-related device attributes 
     |![Okta Verify Health Check](images/011/fastpass_healthcheck_button_240.png "Okta Verify Health Check")|
 
 1. In your Virtual Desktop, sign into your Okta tenant as your new employee.
-1. Select the **Marketo** app. You will be denied.
+1. Select the **Marketo** app. You will be denied access because your device does not meet the device assurance policy.
 
     |||
     |:-----|:-----|
     |![Device Denied](images/011/ov_device_assurance_denied_240.png "Device Denied")|
 
 ### Switch the Authentication Policy for Marketo
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 1. Return to your **Okta Admin Console** browser session.
 1. In the Admin Console, select **Security** > **Authentication Policies**.
 1. Select **High Security Apps** > **Applications** tab.
 1. For the **Marketo** app, click **Switch Policy**.
-1. Select the **Standard Security Apps** policy, and then click **Save** .
+1. Select the **Standard Security Apps** policy, and then click **Save**.
     |||
      |:-----|:-----|
       |![Standard Security Apps](images/011/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")|
 
 1. Return to your Virtual Desktop and verify that your new employee can now access the **Marketo** app.
 
->**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page using Okta applications.
+    |||
+     |:-----|:-----|
+      |![Marketo Bookmark App](images/011/app_marketo_launched_500.png "Marketo Bookmark App")|
+
+**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
 
 ## Enable Okta ThreatInsight
+
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
 Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
