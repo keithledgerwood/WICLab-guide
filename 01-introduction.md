@@ -1,7 +1,7 @@
 ## Welcome
 
 ---
-*Lab guide version: 0.11.10.01*
+*Lab guide version: 0.11.13.01*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -64,7 +64,7 @@ Before we get started, here is some information about the Labs.Demo.Okta platfor
 
 ### TechCamps Outline
 
-Where's my GPS? On the left, you’ll find an outline of today’s mission which also serves as your control panel. This TechCamps - Workforce Identity Cloud consists of seven sections, each with its own subsections. As you progress through the sections, the subsections will display. You also have the ability to collapse the outline by clicking on the arrow icon.
+On the left of the screen, you’ll find an outline of today’s mission which also serves as your navigation control panel. This TechCamps - Workforce Identity Cloud workshop consists of six lab sections, each containing  subsections. You also have the ability to collapse the outline by clicking on the arrow icon.
 
    |||
    |:-----|:-----|
@@ -78,7 +78,7 @@ At the bottom of each section, there's a handy control to navigate forwards and 
 
 ### Launch Pad
 
-Peek into the fashionably gray box on your right, and you'll discover an easy way to launch your lab resources.  Each resource has its own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
+Oon the right of the screen, you'll find an easy way to launch your lab resources.  Each resource has its own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
 
    |Show/Hide|Credentials|
    |:-----|:-----|

@@ -1,6 +1,6 @@
 # Okta **tech{camps} - Workforce Identity Cloud**
 
-*Lab guide version: 0.11.10.01*
+*Lab guide version: 0.11.13.01*
 
 |||
 |:-----|:-----|
@@ -12,6 +12,6 @@ Begin with mastering the art of efficiently onboarding new team members, followe
 
 Discover the future with our session on bolstering security through a passwordless experience.
 
-Navigate the intricate pathways of application access, from requests to approvals to access certifications. Gain expertise in overseeing employee transitions with ease as they move within and out of the organization.
+Navigate the intricate pathways of application access, from requests to approvals to access certifications.
 
-You will wrap up your learning journey with a comprehensive understanding of the essentials in audits and reporting, ensuring both insights and oversight.
+You will wrap up your learning journey by overseeing employee transitions and the impact to their access as they move within and out of the organization.
