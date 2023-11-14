@@ -137,8 +137,8 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
 
  Your new employee's Okta activation email was sent to an Office 365 Administrator account. In this section of the lab, you'll return to your Virtual Desktop, sign into Office 365 and activate the new employee's Okta account on their behalf.
 
-1. Return to your **Virtual Desktop**.
-1. Launch **Office 365** using the **Login | Microsoft 365** shortcut in the browser toolbar.
+1. Return to your **Virtual Desktop** and launch **Chrome**.
+1. Click the **Login | Microsoft 365** shortcut in the browser toolbar.
 1. Sign in with your Office 365 Credentials.
 
    |Office 365 Credentials||

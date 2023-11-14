@@ -1,7 +1,7 @@
 ## Welcome
 
 ---
-*Lab guide version: 0.11.14.1*
+*Lab guide version: 0.11.14.2*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -17,7 +17,8 @@ Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Ide
 
 ## Before You Begin
 
-For the next three hours, you're a 1-person Workforce Identity Management team.  As such, you'll be acting as: an an Okta admin, an HR admin, an O365 tenant admin, a new employee, a workflow administrator, and an access request admin. We suggest you close all unnecessary browser windows and tabs before starting and as you progress through the lab.
+---
+Get ready for a three-hour whirlwind as the solo star of Workforce Identity Management! You’ll be juggling the exciting roles of Okta, HR, O365 tenant admins, a new employee, a workflow whiz, and an access request ace. Tip for success: Keep your online workspace clutter-free by closing unneeded browser windows and tabs throughout your lab journey.
 
 ## Launch your Virtual Desktop
 
