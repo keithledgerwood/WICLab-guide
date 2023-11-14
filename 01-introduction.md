@@ -1,7 +1,7 @@
 ## Welcome
 
 ---
-*Lab guide version: 0.11.13.01*
+*Lab guide version: 0.11.14.1*
 
 Step into the Future of Workforce Identity Management with Okta!
 
@@ -15,16 +15,9 @@ And... all the while ensuring an incredible user experience that amplifies produ
 
 Here’s the Twist: With the unparalleled capabilities of Okta’s Workforce Identity Cloud, it's more than possible. And we're here to guide you every step of the way!
 
-## Initial sign in to your Okta tenant
+## Before You Begin
 
----
-As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to your email address that you used to sign in to labs.demo.okta.com.
-
-1. Check your inbox for an email with the subject line **Your New Okta account**.
-1. Copy the **Temporary password**, and then click **Sign On**.
-1. Follow the instructions on the screen to sign in to your Okta tenant. After a successful sign in, you will see the **Okta End-User Dashboard**.
-1. Sign out of your Okta tenant and close the browser tab.
-   **Be sure to remember your new Okta admin account password**.
+For the next three hours, you're a 1-person Workforce Identity Management team.  As such, you'll be acting as: an an Okta admin, an HR admin, an O365 tenant admin, a new employee, a workflow administrator, and an access request admin. We suggest you close all unnecessary browser windows and tabs before starting and as you progress through the lab.
 
 ## Launch your Virtual Desktop
 
@@ -51,11 +44,22 @@ The Virtual Desktop image that we’re using for this lab is also used by Okta E
       |:-----|:-----|
       |![PowerShell Script](images/011/vm_powershell_pasted_400.png "PowerShell Script")| |
 
-1. Verify that your virtual desktop now has shortcuts to Chrome, the Downloads folder, and Notepad.
+1. Verify that your virtual desktop now has shortcuts to the Downloads folder, Chrome, and Notepad.
 
    |||
       |:-----|:-----|
       |![Clean Virtual Desktop](images/011/vm_post_powershell_script_500.png "Clean Virtual Desktop")| |
+
+## Initial sign in to your Okta tenant
+
+---
+As part of the provisioning process for your Okta Workforce Identity Cloud tenant, an Okta admin account was created that corresponds to your email address that you used to sign in to labs.demo.okta.com.
+
+1. Check your inbox for an email with the subject line **Your New Okta account**.
+1. Copy the **Temporary password**, and then click **Sign On**.
+1. Follow the instructions on the screen to sign in to your Okta tenant. After a successful sign in, you will see the **Okta End-User Dashboard**.
+1. Sign out of your Okta tenant and close the browser tab.
+   **Be sure to remember your new Okta admin account password**.
 
 ## How to Navigate your Lab Guide
 
@@ -78,11 +82,11 @@ At the bottom of each section, there's a handy control to navigate forwards and 
 
 ### Launch Pad
 
-Oon the right of the screen, you'll find an easy way to launch your lab resources.  Each resource has its own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
+On the right of the screen, you'll find an easy way to launch your lab resources.  Each resource has its own launch button along with the tenant names and credentials where applicable. You can collapse and expand the control with the arrow icon and you can reveal the tenant credentials with the key icon.
 
    |Show/Hide|Credentials|
    |:-----|:-----|
-   |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide")|![Credentials](images/011/nav_reveal_creds_key.png "Credentials")|| "Credentials"|
+   |![Show/Hide](images/011/nav_show_hide_arrow.png "Show/Hide Panel")|![Credentials](images/011/nav_reveal_creds_key.png "Show / Hide Credentials")|| "Credentials"|
 
 ### Dynamic Lab Guide Variables
 

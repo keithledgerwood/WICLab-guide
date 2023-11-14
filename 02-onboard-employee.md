@@ -19,6 +19,8 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
 
 1. Set the following attributes for your **New Employee**.  No other attributes are required.
 
+ **Note:** For this lab, the values in **bold** font must be used as shown. For example, your new employees' email domain must be **{{Office365.DomainName}}**.
+
    |Attribute|Value|
    |:-----|:-----|
    |First Name |*Enter a first name*|
@@ -28,7 +30,6 @@ When adding a new employee to BambooHR, we ask that you use a unique name, such 
    |Job Title | **Director of Marketing**|
    |Department | **Marketing**|
 
-   **Note:** For this lab, the values in **bold** font must be used as shown. For example, your new employees' email domain must be **{{Office365.DomainName}}**.
 1. Click **Save**.
 
 ## Add BambooHR App to Okta
