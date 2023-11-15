@@ -6,8 +6,15 @@ In this lab, we’ll explore the seamless integration of Okta with your HR syste
 
 When adding a new employee to BambooHR, we ask that you use a unique name, such as a  favorite relative or friend, real or imaginary.
 
-1. In the **Launch Pad** under **BambooHR**, click **Launch**.
-1. Sign in to **BambooHR** with the credentials provided in the **Launch Pad**.
+1. In the **Launch Pad** under **BambooHR**, click **Launch**. This will open the BambooHR login screen.
+1. Enter your BambooHR Credentials.
+
+   |BambooHR Credentials||
+    |:-----|:-----|
+    |**Username:**|`{{BambooHR.credentials.username}}`|
+    |**Password:**|`{{BambooHR.credentials.password}}`|
+
+1. Click **Log In**.
 1. If prompted with **Should we always trust this browser?**, click **Yes, Trust this Browser**.
 1. In the BambooHR dashboard, select **People**, and then click **New Employee**.
 
@@ -158,7 +165,6 @@ In this section you will enable inbound provisioning from BambooHR to Okta.
    **Be sure to remember your new employee's password**.
 1. For Okta Verify, click **Set up later**.
 1. The Okta End-user dashboard will display the apps that were assigned to the new employee, with the exception of *BambooHR*.
-   >**Question:**  *Why is BambooHR not displayed to the user?*
 1. Sign out the New Employee and close the browser tab.
 1. Sign out from Office 365 and close the browser.
 

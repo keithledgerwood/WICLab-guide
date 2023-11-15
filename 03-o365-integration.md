@@ -5,8 +5,6 @@ In this lab, we'll effortlessly integrate Okta with your Microsoft Office 365 en
 
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png) ![contexttag](images/persona-o365-admin.png)
 
-Okta maintains a specific integration for Microsoft Office 365 in the Okta Integration Network (OIN). To add this to your Okta tenant, follow these steps in a browser that does not currently have a Microsoft session:
-
 1. In the Admin Console select **Applications** >  **Applications**.
 1. Click **Browse App Catalog**.
 1. In the Browse App Integration Catalog **Search...** bar, type *office 365* and then click **Microsoft Office 365**.
@@ -91,8 +89,6 @@ Accounts in Azure AD can be managed via Microsoft APIs. To enable provisioning, 
 
 The API connection for provisioning is now in place. Provisioning configuration is now shown under the Provisioning tab. The integration configuration you just created is under the Integration tab.
 
-There are two provisioning directions supported by this integration.
-
 ### Enable provisioning from Okta to App
 
 In this section you will enable provisioning to Microsoft 365. This will include creation of accounts in Azure AD when users are assigned to the app, updating attributes in Azure AD when things change in Okta, and deactivating accounts in Azure AD when users are unassigned from the app in Okta.
@@ -122,13 +118,13 @@ In this section you will enable provisioning to Microsoft 365. This will include
 
 When assigning users to an app, it's common to assign a group to an app and then assign users to the group.
 
-When assigning a group to an app, you can specify values for app attributes. These will override any mapping for those attributes in the app definition. If you don't specify any value for an attribute, the mapping in the app definition will be applied instead.
+When assigning a group to an app, you can specify values for app attributes, such as Office 365 licenses. These will override any mapping for those attributes in the app definition. If you don't specify any value for an attribute, the mapping in the app definition will be applied instead.
 
 ## Assign Group Access to Application
 
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
-You can assign a group to an app within an app definition. This will grant access to the app, and manage the O365 licenses, for all members of the group.
+You can assign a group to an app within an app definition. This will grant access to the app for all members of the group.
 
 1. In the **Microsoft Office 365** app definition, select the **Assignments** tab.
 1. Click **Assign**, and then select **Assign to Groups**.
@@ -136,7 +132,7 @@ You can assign a group to an app within an app definition. This will grant acces
      |:-----|:-----|
      |![Assign to Groups](images/011/app_assign_to_groups_240.png "Assign to Groups")||
 1. Find the **App-Office365-ProPlus** group, and then click **Assign**.
-1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**.
+1. In the list of **Licenses**, find and select **Microsoft 365 E5 Developer (Without Windows and Audio Conferencing) - Office 365 ProPlus**. The license selection will apply to members of this group.
 
     >**Hint:** Command-F (on Mac) or Win+F ( on Windows) will provide you a search bar into which you can type *proplus*
 
@@ -153,7 +149,7 @@ The application is now assigned to members of the **App-Office365-ProPlus** grou
 
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-okta-admin.png)
 
-You will now assign the new employee to the *App-Office365-ProPlus* group. This will grant the user access to the Microsoft Office 365 app and provision their account in Azure AD.
+You will now assign the new employee to the *App-Office365-ProPlus* group.
 
 1. On the **Assignments** tab, select the **App-Office365-ProPlus** group.
     |||
@@ -181,7 +177,7 @@ The new employee is now a member of the group and will be assigned the Microsoft
 In the Virtual Desktop, test single sign-on to Microsoft Office 365 for your new employee.
 
 1. Return to your **Virtual Desktop**.
-1. Open a new browser window, and then sign in with your **New Employee** username and password.
+1. Open **Chrome**, and then sign in to your **Okta** tenant with your **New Employee** username and password.
 1. Verify that your End-User Dashboard displays the Office 365 applications.
 1. Click the **Microsoft Office 365 Word Online** app.
     |||

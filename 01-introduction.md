@@ -1,7 +1,7 @@
 ## Welcome
 
 ---
-*Lab guide version: 0.11.14.2*
+*Lab guide version: 0.11.15.1*
 
 Step into the Future of Workforce Identity Management with Okta!
 

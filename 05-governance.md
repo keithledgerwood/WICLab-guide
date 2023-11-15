@@ -111,7 +111,7 @@ A request type can consist of multiple steps including Questions, Tasks, Approva
 
 ![contexttag](images/context-virtual.png) ![contexttag](images/persona-newemployee.png)
 
-1. In the **Virtual Desktop**, open a new Chrome window.
+1. In the **Virtual Desktop**, open a new **Chrome** window.
 1. Sign in to your Okta tenant as the New Employee.
 1. In the End-User Dashboard, open the **Okta Access Requests** app.
     |||
@@ -242,8 +242,15 @@ You now have the Flows correctly configured and running.
 
 ![contexttag](images/context-lab.png) ![contexttag](images/persona-bamboo.png)
 
-Promote your employee from Director to Sr. Director.
+In BambooHR you will now promote your employee from Director to Sr. Director, which will change their app access rights.
 
+1. Sign in to BambooHR with your BambooHR Credentials.
+
+   |BambooHR Credentials||
+    |:-----|:-----|
+    |**Username:**|`{{BambooHR.credentials.username}}`|
+    |**Password:**|`{{BambooHR.credentials.password}}`|
+1. Click **Log In**.
 1. In the BambooHR dashboard search for and select your new employee.
 2. On the **Job** tab, for **Job Information** click  **Add Entry**.
 3. In the **Add Job Information** dialog, set the **Job Title** to **Sr. Director of Marketing**, and then click **Save**.
