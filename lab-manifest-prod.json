@@ -88,28 +88,6 @@
             ]
         },
         {
-            "step": "Insights and Oversight",
-            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/07-auditing-reporting.md",
-            "applications": [
-                "1b187e8b-e90a-4469-829b-8051a02729a3"
-            ],
-            "resources": [
-                "61601555-bb49-4ba6-8adb-cb2342a884cc",
-                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
-            ]
-        },
-        {
-            "step": "Optional - Active Directory",
-            "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/08-active-directory-integration.md",
-            "applications": [
-                "1b187e8b-e90a-4469-829b-8051a02729a3"
-            ],
-            "resources": [
-                "61601555-bb49-4ba6-8adb-cb2342a884cc",
-                "c3d43ebe-74d1-4459-8d98-64bc42335f1f"
-            ]
-        },
-        {
             "step": "Conclusion",
             "guide": "https://cdn.demo.okta.com/labs/techcamps_wic/999-conclusion.md",
             "applications": [
