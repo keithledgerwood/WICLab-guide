@@ -44,7 +44,7 @@
             ]
         },
         {
-            "step": "Integrating Office 365",
+            "step": "Optimizing Workplace Productivity",
             "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/03-o365-integration.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
@@ -77,7 +77,7 @@
             ]
         },
         {
-            "step": "Internal Mobility",
+            "step": "Streamlining Employee Transitions",
             "guide": "https://raw.githubusercontent.com/keithledgerwood/WICLab-guide/dev/06-lcm-mover-leaver.md",
             "applications": [
                 "1b187e8b-e90a-4469-829b-8051a02729a3"
