@@ -72,6 +72,15 @@ $a = (New-Object -comObject Shell.Application).Windows() |
 #Download Okta Verify and place in downloads folder
 iwr -uri https://okta.okta.com/api/v1/artifacts/WINDOWS_OKTA_VERIFY/download?releaseChannel=GA -OutFile C:\Users\Administrator\Downloads\OktaVerifySetup.exe 
 
+ # Check the current version of the .NET Framework
+ $dotNetVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Version
+ Write-Output "Current .NET Framework version: $dotNetVersion"  
+ if ($dotNetVersion -lt 4.8) {    
+     #Download .NET 4.8 Offline Installer    
+     iwr -uri https://go.microsoft.com/fwlink/?linkid=2088631 -OutFile C:\Users\Administrator\Downloads\NET4.8Installer.exe    
+     C:\Users\Administrator\Downloads\NET4.8Installer.exe /q
+} 
+
 #Call Workflow Event Hook Callback to report completion!
 iwr -uri "https://wiclabs.workflows.okta.com/api/flo/56e61c09c9f8daea0eb589944e8a0da2/invoke?clientToken=ced202ef1b57d8790a4cd13910e9835073254b6ddb9f65c636b9e339b4b18569&hostname=$env:computername&labid=$labName&type=vm.powershell.run&status=SUCCESS"
 
